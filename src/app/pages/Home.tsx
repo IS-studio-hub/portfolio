@@ -4,6 +4,7 @@ import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, corporateProjects, startupProjects, projects, type Project } from "../data/projects";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { assetPath } from "../lib/assetPath";
 
 const CYCLE_WORDS = ["interfaces", "experiences", "products", "systems"];
 
@@ -58,7 +59,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       >
         <div className="relative aspect-[16/10] overflow-hidden bg-bg">
           <img
-            src={`/projects/${project.slug}/card.png`}
+            src={assetPath(`/projects/${project.slug}/card.png`)}
             alt={project.title}
             className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             onError={(event) => {

@@ -1,5 +1,6 @@
 import type { Project } from "./types";
 import { caseStudyData } from "./caseStudyData";
+import { assetPath } from "../lib/assetPath";
 
 export type {
  ProcessPhase,
@@ -38,8 +39,8 @@ const GOM_DESIGN_LIBRARY =
  "https://www.figma.com/design/UBeOIjHkB23tcxrBk9eSng/GOM---Design-Library";
 const GOM_PORTAL =
  "https://www.figma.com/design/ZRj8qEQfz6PzfRKjOT13jk/Self-Service-e-Licence-Portal---GoM";
-const asset = (file: string) => `/projects/gom/${file}`;
-const projectImg = (slug: string) => `/projects/${slug}/01-hero.png`;
+const asset = (file: string) => assetPath(`/projects/gom/${file}`);
+const projectImg = (slug: string) => assetPath(`/projects/${slug}/01-hero.png`);
 
 const rawProjects = [
  {

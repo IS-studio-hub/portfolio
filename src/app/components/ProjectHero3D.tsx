@@ -3,8 +3,9 @@ import { Center, useGLTF } from "@react-three/drei";
 import { Suspense, useMemo, useRef, type ReactNode, type RefObject } from "react";
 import type { Group } from "three";
 import { MathUtils } from "three";
+import { assetPath } from "../lib/assetPath";
 
-const DEFAULT_MODEL = "/models/manitoba-parks.glb";
+const DEFAULT_MODEL = assetPath("/models/manitoba-parks.glb");
 
 const MODEL_SCALE = 0.88;
 const POINTER_YAW = 0.2;
@@ -12,21 +13,21 @@ const POINTER_PITCH = 0.08;
 const POINTER_SMOOTHING = 0.07;
 
 useGLTF.preload(DEFAULT_MODEL);
-useGLTF.preload("/models/violet-bloom.glb");
-useGLTF.preload("/models/sleek-desk.glb");
-useGLTF.preload("/models/sleek-desk-all-in-one.glb");
-useGLTF.preload("/models/sleek-desk-slt.glb");
-useGLTF.preload("/models/sleek-desk-zg.glb");
-useGLTF.preload("/models/sleek-desk-ctc.glb");
-useGLTF.preload("/models/sleek-desk-sportchek.glb");
-useGLTF.preload("/models/sleek-desk-partycity.glb");
-useGLTF.preload("/models/sleek-desk-marks.glb");
-useGLTF.preload("/models/violet-bloom-anova.glb");
-useGLTF.preload("/models/violet-bloom-ymca.glb");
-useGLTF.preload("/models/sleek-desk-ppjv.glb");
-useGLTF.preload("/models/violet-bloom-westjet.glb");
-useGLTF.preload("/models/sleek-desk-polard.glb");
-useGLTF.preload("/models/violet-bloom-polard.glb");
+useGLTF.preload(assetPath("/models/violet-bloom.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-all-in-one.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-slt.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-zg.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-ctc.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-sportchek.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-partycity.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-marks.glb"));
+useGLTF.preload(assetPath("/models/violet-bloom-anova.glb"));
+useGLTF.preload(assetPath("/models/violet-bloom-ymca.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-ppjv.glb"));
+useGLTF.preload(assetPath("/models/violet-bloom-westjet.glb"));
+useGLTF.preload(assetPath("/models/sleek-desk-polard.glb"));
+useGLTF.preload(assetPath("/models/violet-bloom-polard.glb"));
 
 type PointerTarget = { x: number; y: number };
 type Vec3 = [number, number, number];

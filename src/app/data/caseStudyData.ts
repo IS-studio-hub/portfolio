@@ -1,6 +1,7 @@
 import type { CaseStudyExtras } from "./types";
+import { assetPath } from "../lib/assetPath";
 
-const p = (slug: string, file: string) => `/projects/${slug}/${file}`;
+const p = (slug: string, file: string) => assetPath(`/projects/${slug}/${file}`);
 
 export const caseStudyData: Record<string, CaseStudyExtras> = {
  gom: {

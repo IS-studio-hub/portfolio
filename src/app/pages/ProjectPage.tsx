@@ -5,6 +5,7 @@ import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
 import type { ProjectMedia } from "../data/projects";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { assetPath } from "../lib/assetPath";
 
 const ProjectHero3D = lazy(() =>
   import("../components/ProjectHero3D").then((m) => ({ default: m.ProjectHero3D })),
@@ -85,7 +86,9 @@ export function ProjectPage() {
   const outcomesRef = useScrollReveal<HTMLElement>();
 
   const projectPath = project ? `/project/${project.slug}` : "/";
-  const projectImage = project ? `/projects/${project.slug}/card.png` : "/og-image.png";
+  const projectImage = project
+    ? assetPath(`/projects/${project.slug}/card.png`)
+    : "/og-image.png";
   const jsonLd = useMemo(() => {
     if (!project) return undefined;
     return {
@@ -189,88 +192,88 @@ export function ProjectPage() {
                 <ProjectHero3D
                   {...(project.slug === "gigz"
                     ? {
-                        modelPath: "/models/violet-bloom.glb",
+                        modelPath: assetPath("/models/violet-bloom.glb"),
                         glowColor: "rgba(255,138,101,0.1)",
                         scale: 0.92,
                       }
                     : project.slug === "weebo"
                       ? {
-                          modelPath: "/models/sleek-desk.glb",
+                          modelPath: assetPath("/models/sleek-desk.glb"),
                           glowColor: "rgba(129,140,248,0.12)",
                           scale: 0.9,
                         }
                       : project.slug === "csc"
                         ? {
-                            modelPath: "/models/sleek-desk-all-in-one.glb",
+                            modelPath: assetPath("/models/sleek-desk-all-in-one.glb"),
                             glowColor: "rgba(196,165,116,0.14)",
                             scale: 0.9,
                           }
                         : project.slug === "slt"
                           ? {
-                              modelPath: "/models/sleek-desk-slt.glb",
+                              modelPath: assetPath("/models/sleek-desk-slt.glb"),
                               glowColor: "rgba(196,90,60,0.14)",
                               scale: 0.9,
                             }
                           : project.slug === "zg"
                             ? {
-                                modelPath: "/models/sleek-desk-zg.glb",
+                                modelPath: assetPath("/models/sleek-desk-zg.glb"),
                                 glowColor: "rgba(167,139,250,0.14)",
                                 scale: 0.9,
                               }
                             : project.slug === "ctc"
                               ? {
-                                  modelPath: "/models/sleek-desk-ctc.glb",
+                                  modelPath: assetPath("/models/sleek-desk-ctc.glb"),
                                   glowColor: "rgba(220,38,38,0.14)",
                                   scale: 0.9,
                                 }
                               : project.slug === "sportchek"
                                 ? {
-                                    modelPath: "/models/sleek-desk-sportchek.glb",
+                                    modelPath: assetPath("/models/sleek-desk-sportchek.glb"),
                                     glowColor: "rgba(225,29,46,0.14)",
                                     scale: 0.9,
                                   }
                                 : project.slug === "partycity"
                                   ? {
-                                      modelPath: "/models/sleek-desk-partycity.glb",
+                                      modelPath: assetPath("/models/sleek-desk-partycity.glb"),
                                       glowColor: "rgba(124,58,237,0.14)",
                                       scale: 0.9,
                                     }
                                   : project.slug === "marks"
                                     ? {
-                                        modelPath: "/models/sleek-desk-marks.glb",
+                                        modelPath: assetPath("/models/sleek-desk-marks.glb"),
                                         glowColor: "rgba(251,146,60,0.14)",
                                         scale: 0.9,
                                       }
                                     : project.slug === "anova"
                                       ? {
-                                          modelPath: "/models/violet-bloom-anova.glb",
+                                          modelPath: assetPath("/models/violet-bloom-anova.glb"),
                                           glowColor: "rgba(249,115,22,0.14)",
                                           scale: 0.92,
                                         }
                                       : project.slug === "ymca"
                                         ? {
-                                            modelPath: "/models/violet-bloom-ymca.glb",
+                                            modelPath: assetPath("/models/violet-bloom-ymca.glb"),
                                             glowColor: "rgba(200,16,46,0.14)",
                                             scale: 0.92,
                                           }
                                         : project.slug === "ppjv"
                                           ? {
-                                              modelPath: "/models/sleek-desk-ppjv.glb",
+                                              modelPath: assetPath("/models/sleek-desk-ppjv.glb"),
                                               glowColor: "rgba(37,99,235,0.14)",
                                               scale: 0.9,
                                             }
                                           : project.slug === "westjet"
                                             ? {
-                                                modelPath: "/models/violet-bloom-westjet.glb",
+                                                modelPath: assetPath("/models/violet-bloom-westjet.glb"),
                                                 glowColor: "rgba(14,165,168,0.14)",
                                                 scale: 0.92,
                                               }
                                             : project.slug === "polard"
                                               ? {
-                                                  modelPath: "/models/sleek-desk-polard.glb",
+                                                  modelPath: assetPath("/models/sleek-desk-polard.glb"),
                                                   glowColor: "rgba(124,58,237,0.14)",
                                                   scale: 0.86,
-                                                  secondaryModelPath: "/models/violet-bloom-polard.glb",
+                                                  secondaryModelPath: assetPath("/models/violet-bloom-polard.glb"),
                                                   secondaryScale: 0.28,
                                                   secondaryPosition: [0.72, -0.22, 0.75] as [
                                                     number,
