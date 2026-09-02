@@ -2831,113 +2831,261 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  },
 
  "first-principles": {
- impact: "Design-to-dev time dropped 30% after three squads adopted shared tokens and core components.",
- client: "First Principles (internal product org)",
- timeline: "8 months · 2021",
- team: "Lead UI/UX Designer · 2 product designers · 4 engineers · design systems advocate",
- tools: ["Figma", "Storybook", "Zeroheight", "Style Dictionary", "GitHub", "Notion"],
+ impact:
+ "Designed Saence AI as a conversational product where asking a question becomes the interface, from the first empty state through ongoing AI dialogue.",
+ client: "Saence AI",
+ timeline: "Solo UX/UI Designer · 7-person early-stage startup team",
+ team: "Solo UX/UI Designer · founders · developers · product and technical teammates",
+ tools: [
+ "Figma",
+ "Conversation design",
+ "Information architecture",
+ "Interaction design",
+ "Design system",
+ "Prototyping",
+ "Responsive design",
+ "Design QA",
+ ],
+ figmaUrl: "https://www.figma.com/design/S2xz1AdpOD04JphAfeilZu/Pages-Handoff---Hub---Site",
+ secondaryFigmaUrl: "https://www.figma.com/design/ONbT13PCxxHBc9NegeowVz/FirstPrinciples-DS",
+ secondaryFigmaLabel: "Design system",
+ liveUrl: "https://research.firstprinciples.org",
  context:
- "A fast-growing product team shipped features weekly but every surface looked slightly different, button radii, type scales, and form patterns diverged squad by squad. Engineers copied Figma frames into code one-off; designers reinvented basics each sprint.",
+ "Saence AI is built around one of the most natural ways people interact with technology: conversation. Instead of asking users to navigate complex menus first, the product creates a direct relationship between the user, their question and the intelligence behind the system. I worked as the solo UX/UI Designer inside a seven-person startup, collaborating with founders and developers while the product was still being defined.",
  goals: [
- "Establish shared tokens and 40 core components without slowing initial velocity",
- "Document usage guidance, not just specs, when to use, not only how it looks",
- "Migrate legacy screens through phased adoption, not a big-bang rewrite",
- "Give leadership visible brand consistency without centralized design bottleneck",
+ "Make advanced AI feel simple enough to start without a tutorial",
+ "Help users answer: What can I ask? What is happening? What do I do next?",
+ "Design empty states, message states and response length as first-class product problems",
+ "Guide better questions without turning conversation into another menu",
+ "Keep chat at the centre while supporting history, account and product tools",
+ "Build a design system that grows with a fast-moving startup",
+ "Stay close to founders and developers from idea through design QA",
  ],
  research: [
  {
- title: "UI inventory",
+ title: "What should I ask?",
  description:
- "Screenshot every production screen and clustered inconsistencies into token gaps, redundant components, and undocumented patterns.",
+ "A blank chat input provides almost unlimited possibilities. That freedom can be powerful and confusing. The interface needed to help users understand what the AI could do without turning the conversation into another complicated menu.",
  },
  {
- title: "Squad workflow interviews",
+ title: "AI changes the relationship with navigation",
  description:
- "Interviewed designers and engineers from three squads on how they currently picked components and where system debt slowed releases.",
+ "Traditional products are built around menus, pages, forms, search and filters. AI lets people simply ask. That creates a more direct experience and a new UX problem: orientation without over-structuring the dialogue.",
+ },
+ {
+ title: "Design was part of defining the product",
+ description:
+ "There was no large design department, no separate interaction designer and no dedicated design-system team. I shaped journeys, chat patterns, visual language and prototypes while founders and developers decided what the product should become.",
  },
  ],
  insights: [
- "Systems fail when components ship without decision guidance, teams revert to custom UI under deadline",
- "Token naming must match code variables; designer-friendly labels alone don't migrate",
- "Office hours beat launch announcements for adoption in fast-moving product orgs",
- "40 components is enough if they cover 90% of screens, depth over breadth",
+ "Conversation is the interface, not only a chat bubble pattern",
+ "The empty state has a larger responsibility than in traditional apps",
+ "A message is a sequence of states: input, sending, thinking, responding, complete, error",
+ "AI response length is unpredictable, the system must stay readable anyway",
+ "Suggestions should inspire without limiting the conversation",
+ "Errors should keep users inside the flow, not push them into thinking about the technology",
  ],
  solutions: [
  {
- title: "Token foundation",
+ title: "First experience that answers what this is",
  description:
- "Defined color, type, spacing, and elevation tokens with Style Dictionary export, single source synced to Figma and codebase.",
+ "Designed the empty state to create orientation: what the product is, what someone can do and how to begin, so the first message starts the relationship with the product.",
+ image: p("first-principles", "solution-1.png"),
  },
  {
- title: "Core component library",
+ title: "Input as the primary control",
  description:
- "Built 40 components with usage docs, do/don't examples, and Storybook stories covering states engineers actually implement.",
+ "Detailed the chat and search input across empty, typing, multiline, submitting, disabled and error states, because users return to it after almost every response.",
+ image: p("first-principles", "solution-2.png"),
  },
  {
- title: "Adoption program",
+ title: "Conversation that carries real work",
  description:
- "Ran migration sprints, weekly office hours, and lint rules, measuring adoption by production usage, not Figma library installs.",
+ "Designed meaningful research conversations, not generic greetings, so people can see how Saence AI becomes useful across questions, results and follow-ups.",
+ image: p("first-principles", "solution-3.png"),
+ },
+ {
+ title: "AI responses that can grow",
+ description:
+ "Built hierarchy, spacing and message structure so short, medium and long answers remain scannable without making the interface feel heavy.",
+ image: p("first-principles", "solution-4.png"),
+ },
+ {
+ title: "Architecture around the conversation",
+ description:
+ "Kept chat at the centre while placing history, account, settings and supporting research tools where they help without distracting from the current dialogue.",
+ image: p("first-principles", "solution-5.png"),
+ },
+ {
+ title: "One visual language while the product grew",
+ description:
+ "Built foundations and reusable components alongside the product so a seven-person team could move quickly without inventing a new pattern every sprint.",
+ image: p("first-principles", "solution-6.png"),
  },
  ],
  learnings: [
- "Design systems for startups must ship alongside features, parallel tracks beat freeze periods",
- "Documentation sites need search and scenarios; component galleries alone don't change habits",
+ "Conversational UX is not simply about designing chat bubbles. Timing, feedback, content length, system states, the empty screen and the next question all matter.",
+ "AI can make a product feel extremely simple because the user only needs to ask. The design work behind that simplicity can be surprisingly complex.",
+ "In a small startup, design has to protect the larger experience while ideas move quickly from conversation to production.",
  ],
  metrics: [
- { value: "−30%", label: "Design-to-dev time on migrated flows"},
- { value: "−60%", label: "UI inconsistency bugs in QA"},
- { value: "3", label: "Product squads fully adopted"},
+ { value: "1", label: "Solo UX/UI designer across the product language"},
+ { value: "7", label: "Person startup team"},
+ { value: "Ask → Receive → Continue", label: "Core interaction model"},
  ],
  overview:
- "The team shipped fast but every feature looked slightly different. I led First Principles from UI inventory through token build, 40 core components, documentation site, and squad adoption program.",
+ "I was responsible for shaping how Saence AI should work, how it should look and how users should interact with it. That included user journeys, the chat experience, interface patterns, the visual system, prototypes and direct collaboration with developers as designs moved into the real product.",
  challenge:
- "Engineers wanted copy-paste components. Designers wanted room to solve new problems. Leadership wanted brand consistency yesterday, without a centralized bottleneck on every feature decision.",
+ "AI systems contain models, context, history, processing and failure states. None of that complexity should become the user's problem. The interface needed to help people focus on one thing: the conversation.",
  process: [
  {
  phase: "01",
- title: "UI inventory",
+ title: "Define the conversational product",
  description:
- "Screenshot production and clustered inconsistencies into token and component gaps with severity scoring for migration priority.",
+ "Started from product questions with the founders: what problem are we solving, when does the user need it, does it belong inside chat, and what happens before and after.",
  },
  {
  phase: "02",
- title: "Token & component build",
+ title: "Design states and content behaviour",
  description:
- "Defined tokens and 40 core components with usage guidance. Paired with engineers on Storybook and code parity from day one.",
+ "Designed empty states, message states, response length handling, suggestion patterns and trust feedback before polishing individual screens.",
  },
  {
  phase: "03",
- title: "Documentation site",
+ title: "Build the system with the product",
  description:
- "Published Zeroheight site with scenarios, search, and migration guides, not just static component thumbnails.",
+ "Created typography, colour, spacing, chat components, inputs, feedback and responsive behaviour as reusable structure for a fast-moving team.",
  },
  {
  phase: "04",
- title: "Adoption program",
+ title: "Evolve with the build",
  description:
- "Ran office hours, migration sprints, and lint rules. Tracked production usage and bug trends squad by squad.",
+ "Worked hand in hand with developers through interaction behaviour, AI states, edge cases and design QA so the Figma file was never the goal. The product was.",
  },
  ],
  deliverables: [
- "Design token library, Figma and code sync",
- "40 core components with Storybook stories",
- "Documentation site with usage scenarios",
- "Migration guide for legacy screens",
- "Adoption playbook and office hours program",
+ "Conversation UX strategy and information architecture",
+ "Empty-state, suggestion and chat input patterns",
+ "Message and AI response systems across content lengths",
+ "Supporting product surfaces around the conversation",
+ "Design system foundations and component states",
+ "Responsive layouts, prototypes and design QA",
  ],
  outcomes: [
- "Design-to-dev time decreased 30% on migrated flows",
- "UI inconsistency bugs dropped 60% in QA cycles",
- "System adopted by all three product squads",
- "Leadership visibility into consistency without design review gate on every PR",
+ "A conversational product organised around ask, receive and continue",
+ "Clear feedback for working, complete and unable-to-answer conditions",
+ "Guidance that helps people begin without limiting what they can ask",
+ "A shared product language that stayed consistent as the startup shipped",
+ "Design that influenced product strategy, not only visual polish",
  ],
  gallery: [
- { type: "image", src: p("first-principles", "01-hero.png"), caption: "Token scale, color, type, and spacing"},
- { type: "image", src: p("first-principles", "02-detail.png"), caption: "Core component library overview"},
- { type: "image", src: p("first-principles", "03-detail.png"), caption: "Usage documentation with do/don't"},
- { type: "image", src: p("first-principles", "04-detail.png"), caption: "Storybook stories and code parity"},
- { type: "image", src: p("first-principles", "05-detail.png"), caption: "Migration guide and squad adoption tracker"},
+ {
+ type: "image",
+ src: p("first-principles", "01-hero.png"),
+ caption: "First experience, orientation before the first message",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "02-detail.png"),
+ caption: "Conversation beginning to carry real product content",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "03-detail.png"),
+ caption: "Meaningful dialogue with results, not a generic greeting",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "04-detail.png"),
+ caption: "Detail surfaces that keep the user inside the flow",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "05-detail.png"),
+ caption: "Chat input explorations across empty, typing and suggestion states",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "06-detail.png"),
+ caption: "AI overview states from compact summary to expanded response",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "07-detail.png"),
+ caption: "The same conversation adapting across mobile, tablet and desktop",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "08-detail.png"),
+ caption: "One visual language across colour, type, buttons and inputs",
+ },
  ],
+ narrative: [
+ {
+ eyebrow: "Product",
+ title: "Conversation is the interface",
+ body: [
+ "A chatbot can look simple: user message, AI response, input field. The real experience contains much more. Messages can be short or extremely long. Responses can include structured information. The AI may need time. Conversations continue, fail, restart and return.",
+ "The chat experience needed to feel natural even when the system underneath it was doing something complex.",
+ ],
+ },
+ {
+ eyebrow: "Challenge",
+ title: "Make advanced AI feel simple",
+ body: [
+ "The user should understand what they can ask, what is happening, whether the system understood them, whether it is still working, how to continue and what happens when the AI does not know.",
+ "My responsibility was to create an interface that made the technology feel approachable without hiding important feedback.",
+ ],
+ bullets: [
+ "What can I ask?",
+ "What is happening right now?",
+ "Can I continue this conversation?",
+ "What happens when the AI does not know?",
+ ],
+ },
+ {
+ eyebrow: "Standout",
+ title: "Empty states, message states and response length",
+ body: [
+ "The first moment inside an AI product may contain no content and no history. That means the empty state has a much larger responsibility than in many traditional applications.",
+ "I also designed the messaging patterns as a sequence of states rather than a single finished bubble, and built hierarchy so unpredictable AI answers could grow without losing readability.",
+ ],
+ cards: [
+ {
+ title: "First experience",
+ description: "Orientation, suggested starting point and a clear primary action before the first message.",
+ image: p("first-principles", "01-hero.png"),
+ },
+ {
+ title: "Input system",
+ description: "The smallest component with the biggest responsibility across empty, typing, multiline and submitting states.",
+ image: p("first-principles", "05-detail.png"),
+ },
+ {
+ title: "AI response length",
+ description: "Short, medium and longer answers using the same message language.",
+ image: p("first-principles", "06-detail.png"),
+ },
+ {
+ title: "Responsive conversation",
+ description: "One experience adapting across mobile, tablet and desktop.",
+ image: p("first-principles", "07-detail.png"),
+ },
+ ],
+ },
+ {
+ eyebrow: "Ownership",
+ title: "One designer. Directly with founders and developers.",
+ body: [
+ "Working in a seven-person startup meant ideas often began as product questions. What if users could do this? Where should this feature live? Should it stay inside chat?",
+ "I helped turn those questions into experiences, then stayed close through implementation and design QA. The design was not handed off. It evolved with the build.",
+ ],
+ },
+ ],
+ image: p("first-principles", "01-hero.png"),
+ closing:
+ "AI is complex. The conversation should not be. Ask. Receive. Continue. Saence AI · Solo UX/UI Designer.",
  },
 
  westjet: {

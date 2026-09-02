@@ -262,7 +262,13 @@ export function ProjectPage() {
                                               glowColor: "rgba(37,99,235,0.14)",
                                               scale: 0.9,
                                             }
-                                          : project.slug === "westjet"
+                                            : project.slug === "first-principles"
+                                              ? {
+                                                  modelPath: assetPath("/models/violet-bloom.glb"),
+                                                  glowColor: "rgba(37,99,235,0.14)",
+                                                  scale: 0.92,
+                                                }
+                                            : project.slug === "westjet"
                                             ? {
                                                 modelPath: assetPath("/models/violet-bloom-westjet.glb"),
                                                 glowColor: "rgba(14,165,168,0.14)",

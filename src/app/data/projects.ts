@@ -988,55 +988,63 @@ const rawProjects = [
  },
  {
  slug: "first-principles",
- title: "First Principles Design System",
- shortTitle: "First Principles",
- subtitle: "Design system built from scratch",
+ title: "Saence AI",
+ shortTitle: "Saence AI",
+ subtitle: "Designing an AI conversation experience from the ground up",
  description:
- "Design system built from scratch for a fast-growing product team that had outgrown one-off UI decisions.",
- year: "2021",
- role: "Lead UI/UX Designer",
- tags: ["Design System", "Product", "Documentation"],
- accent: "#2DD4BF",
+ "Solo UX/UI design for Saence AI, an early-stage conversational product where asking a question becomes the interface.",
+ year: "2025",
+ role: "Solo UX/UI Designer",
+ tags: ["AI", "Conversation Design", "Startup", "Design System"],
+ accent: "#2563EB",
  gridSpan: "half",
  image: projectImg("first-principles"),
  gallery: [
- { type: "image" as const, src: img(1522071820081, 1400, 900), caption: "Token and type scale"},
- { type: "image" as const, src: img(1558655146, 1400, 900), caption: "Component documentation"},
+ {
+ type: "image" as const,
+ src: projectImg("first-principles"),
+ caption: "Saence AI, conversation at the centre of the product",
+ },
  ],
+ figmaUrl: "https://www.figma.com/design/S2xz1AdpOD04JphAfeilZu/Pages-Handoff---Hub---Site",
+ secondaryFigmaUrl: "https://www.figma.com/design/ONbT13PCxxHBc9NegeowVz/FirstPrinciples-DS",
+ secondaryFigmaLabel: "Design system",
  overview:
- "The team shipped fast but every feature looked slightly different. First Principles gave them shared foundations without slowing velocity.",
+ "As the solo UX/UI Designer on a seven-person startup team, I shaped how Saence AI should work, look and feel while the product was still being defined. Design was part of product strategy, not a late handoff.",
  challenge:
- "Engineers wanted copy-paste components. Designers wanted room to solve new problems. Leadership wanted brand consistency yesterday.",
+ "A blank conversational input can feel powerful or confusing. The interface needed to help people understand what to ask, what the system was doing and how to continue, without turning AI into another complicated menu.",
  process: [
  {
  phase: "01",
- title: "UI inventory",
+ title: "Start with conversation",
  description:
- "Screenshot every screen in production and clustered inconsistencies into token and component gaps.",
+ "Defined the product around asking, receiving and continuing, then decided which supporting areas belong outside the chat.",
  },
  {
  phase: "02",
- title: "Token and component build",
+ title: "Design states, not only screens",
  description:
- "Defined color, type, spacing, and 40 core components with usage guidance, not just specs.",
+ "Mapped empty, sending, thinking, responding, complete and error states so the system felt alive without feeling technical.",
  },
  {
  phase: "03",
- title: "Adoption program",
+ title: "Build the system with the product",
  description:
- "Ran office hours, migration sprints, and lint rules so the system lived in code, not just Figma.",
+ "Created foundations and reusable chat patterns alongside founders and developers as features moved into the build.",
  },
  ],
  deliverables: [
- "Design token library",
- "40 core components",
- "Documentation site",
- "Migration guide for legacy screens",
+ "Conversation UX and empty-state strategy",
+ "Chat and AI response patterns across content lengths",
+ "Input, history and supporting product architecture",
+ "Design system for a fast-moving startup team",
+ "Responsive layouts and design QA through implementation",
  ],
  outcomes: [
- "Design-to-dev time down 30%",
- "UI inconsistency bugs dropped 60%",
- "System adopted by all three product squads",
+ "A conversational product centred on ask, receive and continue",
+ "Clear system feedback without exposing model complexity",
+ "A shared visual language across chat, search and supporting surfaces",
+ "Design decisions that stayed connected to the real product build",
  ],
  },
  {
