@@ -1,0 +1,640 @@
+{
+  "handoff1": {
+    "key": "M3yIrSWJ3AAPNWuRJCjWE2",
+    "frames": [
+      {
+        "id": "24:3578",
+        "name": "Custom_template",
+        "w": 1440.0,
+        "h": 1420.0,
+        "page": "access"
+      },
+      {
+        "id": "24:3132",
+        "name": "Unlock account email",
+        "w": 1440.0,
+        "h": 1298.0,
+        "page": "access"
+      },
+      {
+        "id": "24:3355",
+        "name": "Password Breach",
+        "w": 1440.0,
+        "h": 1298.0,
+        "page": "access"
+      },
+      {
+        "id": "28:5062",
+        "name": "Important Notice: Activity Alert on Your Account",
+        "w": 1440.0,
+        "h": 1298.0,
+        "page": "access"
+      },
+      {
+        "id": "25:4321",
+        "name": "Change Password Email Content",
+        "w": 1440.0,
+        "h": 1262.0,
+        "page": "access"
+      },
+      {
+        "id": "24:3802",
+        "name": "MFA Reset - confirmation",
+        "w": 1440.0,
+        "h": 1173.0,
+        "page": "access"
+      },
+      {
+        "id": "3595:25510",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 1628.0,
+        "page": "originator-list"
+      },
+      {
+        "id": "3959:41460",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 1554.0,
+        "page": "originator-list"
+      },
+      {
+        "id": "4159:21341",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 920.0,
+        "page": "originator-list"
+      },
+      {
+        "id": "4159:28417",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 920.0,
+        "page": "originator-list"
+      },
+      {
+        "id": "4159:24413",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 920.0,
+        "page": "originator-list"
+      },
+      {
+        "id": "4159:26202",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 920.0,
+        "page": "originator-list"
+      },
+      {
+        "id": "4237:9987",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 920.0,
+        "page": "navigation"
+      },
+      {
+        "id": "8428:76504",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 920.0,
+        "page": "navigation"
+      },
+      {
+        "id": "4237:14428",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 900.0,
+        "page": "navigation"
+      },
+      {
+        "id": "8428:78133",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 900.0,
+        "page": "navigation"
+      },
+      {
+        "id": "5919:45542",
+        "name": "Edit Originator - Validation",
+        "w": 1512.0,
+        "h": 2906.0,
+        "page": "manage-originator"
+      },
+      {
+        "id": "5919:47345",
+        "name": "Edit Originator - Validation",
+        "w": 1512.0,
+        "h": 2906.0,
+        "page": "manage-originator"
+      },
+      {
+        "id": "5210:10886",
+        "name": "New Business - Blank Form",
+        "w": 1512.0,
+        "h": 2875.0,
+        "page": "manage-originator"
+      },
+      {
+        "id": "5210:12694",
+        "name": "New Business - Blank Form",
+        "w": 1512.0,
+        "h": 2875.0,
+        "page": "manage-originator"
+      },
+      {
+        "id": "7691:40402",
+        "name": "Add Originator to Existing Business - Pre-filled Business info",
+        "w": 1512.0,
+        "h": 2724.0,
+        "page": "manage-originator"
+      },
+      {
+        "id": "7691:43322",
+        "name": "Add Originator to Existing Business - Pre-filled Business info",
+        "w": 1512.0,
+        "h": 2724.0,
+        "page": "manage-originator"
+      },
+      {
+        "id": "8024:41970",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 900.0,
+        "page": "notifications"
+      },
+      {
+        "id": "8024:45409",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 900.0,
+        "page": "notifications"
+      },
+      {
+        "id": "8068:37140",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 900.0,
+        "page": "notifications"
+      },
+      {
+        "id": "8631:122992",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 900.0,
+        "page": "notifications"
+      },
+      {
+        "id": "8631:121225",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 900.0,
+        "page": "notifications"
+      },
+      {
+        "id": "9456:42243",
+        "name": "RecordZ_View_set_v3",
+        "w": 2973.0,
+        "h": 3251.0,
+        "page": "transfer"
+      },
+      {
+        "id": "9456:48033",
+        "name": "Transaction_Review_set_v3",
+        "w": 2887.0,
+        "h": 3251.0,
+        "page": "transfer"
+      },
+      {
+        "id": "9438:40286",
+        "name": "RecordA_ViewOnly_set_v3",
+        "w": 1440.0,
+        "h": 3032.0,
+        "page": "transfer"
+      },
+      {
+        "id": "9456:40729",
+        "name": "LimitsCharts_set_v3",
+        "w": 1420.0,
+        "h": 3032.0,
+        "page": "transfer"
+      },
+      {
+        "id": "9395:46857",
+        "name": "UploadTransferSummary_Expanded",
+        "w": 1512.0,
+        "h": 1687.0,
+        "page": "transfer"
+      },
+      {
+        "id": "9456:52213",
+        "name": "UploadTransferSummary_Expanded",
+        "w": 1512.0,
+        "h": 1687.0,
+        "page": "transfer"
+      }
+    ]
+  },
+  "handoff2": {
+    "key": "lCkuJJCNMUhCTFQAOSA85E",
+    "frames": [
+      {
+        "id": "17841:54131",
+        "name": "Originator Details Page",
+        "w": 1512.0,
+        "h": 1728.0,
+        "page": "originator-grid"
+      },
+      {
+        "id": "3595:25510",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 1628.0,
+        "page": "originator-grid"
+      },
+      {
+        "id": "3959:41460",
+        "name": "Manage Originators | CAFT",
+        "w": 1512.0,
+        "h": 1554.0,
+        "page": "originator-grid"
+      },
+      {
+        "id": "17841:10575",
+        "name": "Search_Originators",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "originator-grid"
+      },
+      {
+        "id": "17841:10901",
+        "name": "Search_Originators_Loading",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "originator-grid"
+      },
+      {
+        "id": "17841:11544",
+        "name": "Search_Originators_Loading",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "originator-grid"
+      },
+      {
+        "id": "5919:45542",
+        "name": "Edit Originator - Validation",
+        "w": 1512.0,
+        "h": 2906.0,
+        "page": "originator-edit"
+      },
+      {
+        "id": "5919:47345",
+        "name": "Edit Originator - Validation",
+        "w": 1512.0,
+        "h": 2906.0,
+        "page": "originator-edit"
+      },
+      {
+        "id": "5210:10886",
+        "name": "New Business - Blank Form",
+        "w": 1512.0,
+        "h": 2875.0,
+        "page": "originator-edit"
+      },
+      {
+        "id": "5210:12694",
+        "name": "New Business - Blank Form",
+        "w": 1512.0,
+        "h": 2875.0,
+        "page": "originator-edit"
+      },
+      {
+        "id": "7691:40402",
+        "name": "Add Originator to Existing Business - Pre-filled Business info",
+        "w": 1512.0,
+        "h": 2724.0,
+        "page": "originator-edit"
+      },
+      {
+        "id": "7691:43322",
+        "name": "Add Originator to Existing Business - Pre-filled Business info",
+        "w": 1512.0,
+        "h": 2724.0,
+        "page": "originator-edit"
+      },
+      {
+        "id": "17601:86560",
+        "name": "Released File_DE_Details",
+        "w": 1512.0,
+        "h": 2450.0,
+        "page": "transactions"
+      },
+      {
+        "id": "17837:141876",
+        "name": "PPJV_Released_DE_Details",
+        "w": 1512.0,
+        "h": 2449.0,
+        "page": "transactions"
+      },
+      {
+        "id": "17601:86095",
+        "name": "Released File_File_Details",
+        "w": 1512.0,
+        "h": 1982.0,
+        "page": "transactions"
+      },
+      {
+        "id": "17837:141400",
+        "name": "PPJV_Released_FileUpload_Details",
+        "w": 1512.0,
+        "h": 1981.0,
+        "page": "transactions"
+      },
+      {
+        "id": "17436:19537",
+        "name": "Notification - Recall Request - request - to PPJV Staff",
+        "w": 1440.0,
+        "h": 1498.0,
+        "page": "transactions"
+      },
+      {
+        "id": "17436:14049",
+        "name": "Recall_Transactions_prompt_to_confirm",
+        "w": 1512.0,
+        "h": 986.0,
+        "page": "transactions"
+      },
+      {
+        "id": "18956:110712",
+        "name": "CU_UserTab_PermissionSettings_Grid",
+        "w": 1512.0,
+        "h": 2569.0,
+        "page": "manage-team"
+      },
+      {
+        "id": "18956:127212",
+        "name": "CU_UserTab_Originator level - ",
+        "w": 1512.0,
+        "h": 2557.0,
+        "page": "manage-team"
+      },
+      {
+        "id": "18956:128337",
+        "name": "Business Details Tab (expanded)",
+        "w": 1512.0,
+        "h": 2535.0,
+        "page": "manage-team"
+      },
+      {
+        "id": "18956:113863",
+        "name": "CU_UserTab_Edit - Names",
+        "w": 1512.0,
+        "h": 2403.0,
+        "page": "manage-team"
+      },
+      {
+        "id": "18956:119263",
+        "name": "1 CU_UserTab_Add - New User",
+        "w": 1512.0,
+        "h": 2403.0,
+        "page": "manage-team"
+      },
+      {
+        "id": "18956:123196",
+        "name": "2 CU_UserTab_Add - Existing User",
+        "w": 1512.0,
+        "h": 2403.0,
+        "page": "manage-team"
+      },
+      {
+        "id": "19405:128178",
+        "name": "Dashboard_Member_select Biz1",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "manage-caft"
+      },
+      {
+        "id": "19405:128291",
+        "name": "Dashboard_Member_select Biz2",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "manage-caft"
+      },
+      {
+        "id": "19405:128421",
+        "name": "Dashboard_Member_restricted to the only business they are associated with",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "manage-caft"
+      },
+      {
+        "id": "19405:128519",
+        "name": "Dashboard_Member_select Biz3",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "manage-caft"
+      },
+      {
+        "id": "19405:128639",
+        "name": "I change my password_Dashboard_1",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "manage-caft"
+      },
+      {
+        "id": "19405:129563",
+        "name": "I change my password_SSO User",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "manage-caft"
+      },
+      {
+        "id": "22843:10282",
+        "name": "CU_Select_report",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "reporting"
+      },
+      {
+        "id": "22843:10300",
+        "name": "PPJV_Select_report",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "reporting"
+      },
+      {
+        "id": "23224:133862",
+        "name": "PPJV_Select_report",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "reporting"
+      },
+      {
+        "id": "22863:69754",
+        "name": "PPJV_Generate_ChangeReports",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "reporting"
+      },
+      {
+        "id": "22843:10442",
+        "name": "Member_Select_report",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "reporting"
+      },
+      {
+        "id": "22864:70769",
+        "name": "Member_Generate_ChangeReports",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "reporting"
+      },
+      {
+        "id": "20815:119707",
+        "name": "Search CAFT Security Data - Multiple selections sample",
+        "w": 1512.0,
+        "h": 1089.0,
+        "page": "security"
+      },
+      {
+        "id": "23359:15959",
+        "name": "No Results_Search CAFT Security Data",
+        "w": 1512.0,
+        "h": 1063.0,
+        "page": "security"
+      },
+      {
+        "id": "21052:124522",
+        "name": "No Results_Search CAFT Security Data",
+        "w": 1512.0,
+        "h": 1063.0,
+        "page": "security"
+      },
+      {
+        "id": "20815:119308",
+        "name": "Search CAFT Security Data",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "security"
+      },
+      {
+        "id": "20815:119490",
+        "name": "Search CAFT Security Data",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "security"
+      },
+      {
+        "id": "21052:124233",
+        "name": "Spinner_Search CAFT Security Data",
+        "w": 1512.0,
+        "h": 982.0,
+        "page": "security"
+      }
+    ]
+  },
+  "aurora": {
+    "key": "8uI6GauoTwcBRWSV4yxBJb",
+    "frames": [
+      {
+        "id": "55343:12390",
+        "name": ".Shape",
+        "w": 8733.0,
+        "h": 951.0,
+        "page": "colors"
+      },
+      {
+        "id": "59984:3660",
+        "name": "Colours",
+        "w": 1280.0,
+        "h": 1833.0,
+        "page": "colors"
+      },
+      {
+        "id": "60032:7750",
+        "name": "scheme",
+        "w": 1180.105224609375,
+        "h": 777.0,
+        "page": "colors"
+      },
+      {
+        "id": "60001:2913",
+        "name": "Heading",
+        "w": 3297.0,
+        "h": 506.0,
+        "page": "typography"
+      },
+      {
+        "id": "59579:2813",
+        "name": "Buttons",
+        "w": 3658.0,
+        "h": 4235.0,
+        "page": "buttons"
+      },
+      {
+        "id": "60414:2282",
+        "name": "Theme - Table",
+        "w": 2118.0,
+        "h": 2677.0,
+        "page": "table"
+      },
+      {
+        "id": "61781:49321",
+        "name": "Components - Building Blocks",
+        "w": 5806.0,
+        "h": 5232.0,
+        "page": "nav-ds"
+      },
+      {
+        "id": "61151:18352",
+        "name": "SideNav_CU_set",
+        "w": 5042.0,
+        "h": 3026.0,
+        "page": "nav-ds"
+      },
+      {
+        "id": "61151:18049",
+        "name": "SideNav_PPJV_set",
+        "w": 5042.0,
+        "h": 2636.0,
+        "page": "nav-ds"
+      },
+      {
+        "id": "61151:18537",
+        "name": "SideNav_Member_set",
+        "w": 5042.0,
+        "h": 2636.0,
+        "page": "nav-ds"
+      },
+      {
+        "id": "61151:18234",
+        "name": "NavMobile_PPJV_set",
+        "w": 3110.0,
+        "h": 2318.0,
+        "page": "nav-ds"
+      },
+      {
+        "id": "61151:23596",
+        "name": "XL Screen - Desktop_Laptop",
+        "w": 1512.0,
+        "h": 986.0,
+        "page": "nav-ds"
+      },
+      {
+        "id": "59503:3718",
+        "name": "Fields",
+        "w": 3494.0,
+        "h": 3773.0,
+        "page": "text-fields"
+      },
+      {
+        "id": "59892:8156",
+        "name": "Text field",
+        "w": 1186.0,
+        "h": 2480.0,
+        "page": "text-fields"
+      }
+    ]
+  }
+}

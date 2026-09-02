@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 1600px; height: 1000px;
+      display: flex; align-items: center; justify-content: center;
+      
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 45%, rgba(200, 255, 0, 0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(255,255,255,0.03) 0%, transparent 50%),
+    linear-gradient(165deg, #0a0a0a 0%, #050505 50%, #0f0f0f 100%);
+
+      font-family: system-ui, sans-serif;
+      overflow: hidden;
+    }
+    .glow {
+      position: absolute; width: 60%; height: 40%; bottom: 10%; left: 20%;
+      background: rgba(200, 255, 0, 0.05); filter: blur(80px); border-radius: 50%;
+    }
+    .laptop { position: relative; z-index: 1; width: 1000px; filter: drop-shadow(0 32px 64px rgba(0,0,0,0.6)); }
+    .laptop__screen {
+      background: #1a1a1a; border-radius: 16px 16px 0 0; padding: 12px 12px 8px;
+      border: 2px solid #2a2a2a;
+    }
+    .laptop__display { border-radius: 6px; overflow: hidden; background: #111; }
+    .laptop__display img { width: 100%; display: block; }
+    .laptop__base {
+      height: 14px; background: linear-gradient(180deg, #333, #222);
+      border-radius: 0 0 10px 10px; margin: 0 40px;
+    }
+    .phone {
+      position: relative; z-index: 1; width: 300px;
+      background: #111; border-radius: 40px; padding: 12px; border: 2px solid #333;
+      filter: drop-shadow(0 28px 56px rgba(0,0,0,0.55));
+    }
+    .phone__display { border-radius: 30px; overflow: hidden; }
+    .phone__display img { width: 100%; display: block; }
+    .duo { display: flex; align-items: flex-end; gap: 40px; position: relative; z-index: 1; }
+    .duo .laptop { width: 820px; }
+    .duo .phone { width: 260px; margin-bottom: 24px; }
+    .tablet {
+      position: relative; z-index: 1; width: 680px;
+      background: #1a1a1a; border-radius: 24px; padding: 16px; border: 2px solid #333;
+      filter: drop-shadow(0 28px 56px rgba(0,0,0,0.55));
+    }
+    .tablet__display { border-radius: 12px; overflow: hidden; }
+    .tablet__display img { width: 100%; display: block; }
+  </style></head><body>
+    <div class="glow"></div>
+    <div class="laptop"><div class="laptop__screen"><div class="laptop__display">
+      <img src="https://images.unsplash.com/photo-1436491865332-7a61a3dc8fc0?w=1400&h=900&fit=crop&q=80" alt="" /></div></div><div class="laptop__base"></div></div>
+  </body></html>

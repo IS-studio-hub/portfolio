@@ -1,0 +1,58 @@
+{
+  "_comment": "Replace placeholder URLs with your real Figma design file links. Used by scripts/capture-figma-frames.mjs",
+  "gom": {
+    "primary": "https://www.figma.com/design/UBeOIjHkB23tcxrBk9eSng/GOM---Design-Library",
+    "secondary": "https://www.figma.com/design/ZRj8qEQfz6PzfRKjOT13jk/Self-Service-e-Licence-Portal---GoM"
+  },
+  "nmbr": {
+    "primary": ""
+  },
+  "weebo": {
+    "primary": ""
+  },
+  "csc": {
+    "primary": ""
+  },
+  "gigz": {
+    "primary": "https://www.figma.com/design/cFwGUkAVoCfniW4fouSNWM/Gigz-Design-system",
+    "secondary": "https://www.figma.com/design/LUJEz2onkyACcPghOm4vah/Fine-Tune",
+    "folder": "https://www.figma.com/files/folder/286875932",
+    "flow": "https://www.figma.com/design/FokvDluz8czTvykfwgk7ws/High-level-App-Flow"
+  },
+  "obs": {
+    "primary": ""
+  },
+  "ctc": {
+    "primary": ""
+  },
+  "walmart": {
+    "primary": ""
+  },
+  "anova": {
+    "primary": "https://www.figma.com/design/ztA6OE75zCogvR0m66KUsX/Anova-Guide-Page",
+    "secondary": "https://www.figma.com/design/8l0tXjOO3JoMJp7mS0mpkk/Anova-Guide-high-level-flow",
+    "folder": "https://www.figma.com/files/folder/277943573"
+  },
+  "ymca": {
+    "primary": "https://www.figma.com/design/HgLHwG9Xmw2QgXCRGucFDh/YMCA-Handoff"
+  },
+  "ppjv": {
+    "primary": "https://www.figma.com/design/lCkuJJCNMUhCTFQAOSA85E/Handoff-file",
+    "secondary": "https://www.figma.com/design/8uI6GauoTwcBRWSV4yxBJb/PPJV-Design-System---Aurora",
+    "tertiary": "https://www.figma.com/design/M3yIrSWJ3AAPNWuRJCjWE2/Handoff-file"
+  },
+  "first-principles": {
+    "primary": ""
+  },
+  "westjet": {
+    "primary": "https://www.figma.com/design/xbi0fqTCZrKHT4SVaM1R39/WestJet---ticketing--check-in--baggage-handling--and-maintenance--Copy-",
+    "secondary": "https://www.figma.com/board/AYllSbk9AqPFPY7vi1DetA/WestJet---ticketing--check-in--baggage-handling--and-maintenance"
+  },
+  "polard": {
+    "primary": "https://www.figma.com/design/pYHsJIZqaLrJgRSzlU28fI/-WV--Web-Business-Portal",
+    "secondary": "https://www.figma.com/design/aK8AKRHXkJHUWJuoEf8PMI/-KS--Mobile-App"
+  },
+  "marks": {
+    "primary": ""
+  }
+}

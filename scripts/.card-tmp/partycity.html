@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head><style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{width:1600px;height:1000px;display:flex;align-items:center;justify-content:center;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 42%, rgba(255,255,255,0.05) 0%, transparent 65%),
+    linear-gradient(165deg, #0c0c0c 0%, #050505 55%, #101010 100%);
+;overflow:hidden;font-family:system-ui,sans-serif}
+    .stage{position:relative;width:1480px;height:920px;display:flex;align-items:center;justify-content:center}
+    .browser{position:relative;width:1180px;background:#161616;border-radius:14px;border:1px solid #2e2e2e;overflow:hidden;
+      filter:drop-shadow(0 30px 60px rgba(0,0,0,.55))}
+    .browser.solo{width:1320px}
+    .chrome{display:flex;align-items:center;gap:8px;padding:11px 14px;background:#1c1c1c;border-bottom:1px solid #2a2a2a}
+    .dot{width:10px;height:10px;border-radius:50%;background:#3a3a3a}
+    .dot:nth-child(1){background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+    .url{margin-left:10px;flex:1;height:20px;border-radius:6px;background:#111;border:1px solid #2a2a2a}
+    .screen{background:#0a0a0a;max-height:780px;overflow:hidden}
+    .screen img{width:100%;display:block;object-fit:cover;object-position:top center;max-height:780px}
+    .phone{position:absolute;right:48px;bottom:36px;width:250px;z-index:5;background:#111;border-radius:38px;padding:11px;border:2px solid #3a3a3a;
+      filter:drop-shadow(0 24px 40px rgba(0,0,0,.65))}
+    .phone img{width:100%;display:block;border-radius:28px;max-height:520px;object-fit:cover;object-position:top}
+    .trio{display:flex;gap:36px;align-items:flex-end;justify-content:center}
+    .trio .device{width:300px;background:#111;border-radius:42px;padding:12px;border:2px solid #3a3a3a;
+      filter:drop-shadow(0 28px 48px rgba(0,0,0,.55))}
+    .trio .device:nth-child(2){transform:translateY(-28px)}
+    .trio .device img{width:100%;display:block;border-radius:32px;max-height:640px;object-fit:cover;object-position:top}
+  </style></head><body>
+  <div class="stage">
+    <div class="browser">
+      <div class="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="url"></div></div>
+      <div class="screen"><img src="file:///Users/shamrikin/Desktop/ISstudio/Work/CGI Portfolio/public/projects/partycity/raw/01-home.png"/></div>
+    </div>
+    <div class="phone"><img src="file:///Users/shamrikin/Desktop/ISstudio/Work/CGI Portfolio/public/projects/partycity/raw/10-mobile.png"/></div>
+  </div>
+  </body></html>

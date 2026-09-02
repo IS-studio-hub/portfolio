@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 390px; height: 844px;
+    font-family: "SF Pro Display", Inter, system-ui, sans-serif;
+    background: #0b0b0f; color: #f4f1ea;
+    overflow: hidden;
+  }
+  .phone {
+    width: 390px; height: 844px; background: #0b0b0f;
+    display: flex; flex-direction: column; position: relative;
+  }
+  .status {
+    height: 48px; display: flex; align-items: flex-end; justify-content: space-between;
+    padding: 0 22px 8px; font: 600 14px/1 Inter, sans-serif;
+  }
+  .nav {
+    height: 56px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 18px; border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .nav h1 { font: 700 18px/1.2 Inter, sans-serif; }
+  .nav .meta { font: 500 12px/1 Inter, sans-serif; color: #9a958c; }
+  .accent { color: #c8ff00; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    border-radius: 999px; padding: 6px 10px;
+    background: rgba(200,255,0,.1); color: #c8ff00;
+    font: 600 11px/1 Inter, sans-serif;
+  }
+  .chip {
+    border-radius: 999px; padding: 7px 12px;
+    background: #17171d; border: 1px solid rgba(255,255,255,.08);
+    font: 500 12px/1 Inter, sans-serif; color: #d8d3c8;
+  }
+  .btn {
+    border: 0; border-radius: 14px; padding: 14px 16px;
+    background: #c8ff00; color: #0b0b0f; font: 700 14px/1 Inter, sans-serif;
+  }
+  .btn.ghost {
+    background: transparent; color: #f4f1ea; border: 1px solid rgba(255,255,255,.14);
+  }
+  .tabbar {
+    margin-top: auto; height: 72px; border-top: 1px solid rgba(255,255,255,.06);
+    display: grid; grid-template-columns: repeat(5, 1fr); align-items: center;
+    padding-bottom: 10px;
+  }
+  .tab { text-align: center; font: 500 10px/1 Inter, sans-serif; color: #6f6a63; }
+  .tab.active { color: #c8ff00; }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, #5b4dff, #c8ff00);
+  }
+  .avatar.lg { width: 84px; height: 84px; }
+  .card {
+    background: #121218; border: 1px solid rgba(255,255,255,.06);
+    border-radius: 18px; padding: 14px;
+  }
+  .muted { color: #9a958c; }
+  .row { display: flex; align-items: center; gap: 12px; }
+  .stack { display: flex; flex-direction: column; gap: 12px; padding: 16px 18px; }
+</style></head><body>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>•••</span></div>
+      <div class="nav"><span class="meta">← Maya</span><h1 style="font-size:16px">Conversation</h1><span class="meta"></span></div>
+      <div class="stack" style="flex:1;justify-content:flex-end">
+        <div style="align-self:flex-start;max-width:80%;background:#17171d;border-radius:18px 18px 18px 6px;padding:12px 14px">
+          <p style="font:400 14px/1.45 Inter,sans-serif">Loved the synth sketch. Want to try a guitar line on it?</p>
+        </div>
+        <div style="align-self:flex-end;max-width:80%;background:#c8ff00;color:#0b0b0f;border-radius:18px 18px 6px 18px;padding:12px 14px">
+          <p style="font:500 14px/1.45 Inter,sans-serif">Yes — send the stems and I’ll record tonight.</p>
+        </div>
+        <div style="align-self:flex-start;max-width:80%;background:#17171d;border-radius:18px 18px 18px 6px;padding:12px 14px">
+          <p style="font:400 14px/1.45 Inter,sans-serif">Shared · Demo_V3_stems.zip</p>
+        </div>
+      </div>
+      <div style="padding:12px 16px 24px;display:flex;gap:8px">
+        <div style="flex:1;height:44px;border-radius:14px;background:#17171d;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 14px;color:#6f6a63;font:500 13px/1 Inter,sans-serif">Message…</div>
+        <button class="btn" style="padding:0 16px">Send</button>
+      </div>
+    </div></body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html><html><head><style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 390px; height: 844px;
+    font-family: "SF Pro Display", Inter, system-ui, sans-serif;
+    background: #0b0b0f; color: #f4f1ea;
+    overflow: hidden;
+  }
+  .phone {
+    width: 390px; height: 844px; background: #0b0b0f;
+    display: flex; flex-direction: column; position: relative;
+  }
+  .status {
+    height: 48px; display: flex; align-items: flex-end; justify-content: space-between;
+    padding: 0 22px 8px; font: 600 14px/1 Inter, sans-serif;
+  }
+  .nav {
+    height: 56px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 18px; border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .nav h1 { font: 700 18px/1.2 Inter, sans-serif; }
+  .nav .meta { font: 500 12px/1 Inter, sans-serif; color: #9a958c; }
+  .accent { color: #c8ff00; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    border-radius: 999px; padding: 6px 10px;
+    background: rgba(200,255,0,.1); color: #c8ff00;
+    font: 600 11px/1 Inter, sans-serif;
+  }
+  .chip {
+    border-radius: 999px; padding: 7px 12px;
+    background: #17171d; border: 1px solid rgba(255,255,255,.08);
+    font: 500 12px/1 Inter, sans-serif; color: #d8d3c8;
+  }
+  .btn {
+    border: 0; border-radius: 14px; padding: 14px 16px;
+    background: #c8ff00; color: #0b0b0f; font: 700 14px/1 Inter, sans-serif;
+  }
+  .btn.ghost {
+    background: transparent; color: #f4f1ea; border: 1px solid rgba(255,255,255,.14);
+  }
+  .tabbar {
+    margin-top: auto; height: 72px; border-top: 1px solid rgba(255,255,255,.06);
+    display: grid; grid-template-columns: repeat(5, 1fr); align-items: center;
+    padding-bottom: 10px;
+  }
+  .tab { text-align: center; font: 500 10px/1 Inter, sans-serif; color: #6f6a63; }
+  .tab.active { color: #c8ff00; }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, #5b4dff, #c8ff00);
+  }
+  .avatar.lg { width: 84px; height: 84px; }
+  .card {
+    background: #121218; border: 1px solid rgba(255,255,255,.06);
+    border-radius: 18px; padding: 14px;
+  }
+  .muted { color: #9a958c; }
+  .row { display: flex; align-items: center; gap: 12px; }
+  .stack { display: flex; flex-direction: column; gap: 12px; padding: 16px 18px; }
+</style></head><body>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>•••</span></div>
+      <div class="nav"><h1>Activity</h1><span class="meta">Mark read</span></div>
+      <div class="stack">
+        
+          <div class="card row">
+            <div class="avatar"></div>
+            <div style="flex:1">
+              <p style="font:600 14px/1.35 Inter,sans-serif"><span style="color:#fff">Maya Chen</span> <span class="muted">connected with you</span></p>
+              <p class="accent" style="font:600 12px/1 Inter,sans-serif;margin-top:8px">View profile</p>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="avatar"></div>
+            <div style="flex:1">
+              <p style="font:600 14px/1.35 Inter,sans-serif"><span style="color:#fff">Jordan Lee</span> <span class="muted">liked your loop</span></p>
+              <p class="accent" style="font:600 12px/1 Inter,sans-serif;margin-top:8px">Open post</p>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="avatar"></div>
+            <div style="flex:1">
+              <p style="font:600 14px/1.35 Inter,sans-serif"><span style="color:#fff">Ava Brooks</span> <span class="muted">sent you a message</span></p>
+              <p class="accent" style="font:600 12px/1 Inter,sans-serif;margin-top:8px">Reply</p>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="avatar"></div>
+            <div style="flex:1">
+              <p style="font:600 14px/1.35 Inter,sans-serif"><span style="color:#fff">Noah Park</span> <span class="muted">started following you</span></p>
+              <p class="accent" style="font:600 12px/1 Inter,sans-serif;margin-top:8px">Say hello</p>
+            </div>
+          </div>
+      </div>
+      <div class="tabbar">
+        <div class="tab ">Feed</div><div class="tab ">Discover</div><div class="tab ">Create</div><div class="tab active">Inbox</div><div class="tab ">You</div>
+      </div>
+    </div></body></html>
