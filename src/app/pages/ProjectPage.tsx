@@ -268,6 +268,18 @@ export function ProjectPage() {
                                                   glowColor: "rgba(37,99,235,0.14)",
                                                   scale: 0.9,
                                                 }
+                                            : project.slug === "ava"
+                                              ? {
+                                                  modelPath: assetPath("/models/sleek-desk-ava.glb"),
+                                                  glowColor: "rgba(244,114,182,0.14)",
+                                                  scale: 0.9,
+                                                }
+                                            : project.slug === "50nny"
+                                              ? {
+                                                  modelPath: assetPath("/models/sleek-desk-50nny.glb"),
+                                                  glowColor: "rgba(251,191,36,0.14)",
+                                                  scale: 0.9,
+                                                }
                                             : project.slug === "westjet"
                                             ? {
                                                 modelPath: assetPath("/models/violet-bloom-westjet.glb"),
