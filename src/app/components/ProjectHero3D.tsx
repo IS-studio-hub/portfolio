@@ -6,28 +6,12 @@ import { MathUtils } from "three";
 import { assetPath } from "../lib/assetPath";
 
 const DEFAULT_MODEL = assetPath("/models/manitoba-parks.glb");
+const DRACO_DECODER = "https://www.gstatic.com/draco/versioned/decoders/1.5.7/";
 
 const MODEL_SCALE = 0.88;
 const POINTER_YAW = 0.2;
 const POINTER_PITCH = 0.08;
 const POINTER_SMOOTHING = 0.07;
-
-useGLTF.preload(DEFAULT_MODEL);
-useGLTF.preload(assetPath("/models/violet-bloom.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-all-in-one.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-slt.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-zg.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-ctc.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-sportchek.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-partycity.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-marks.glb"));
-useGLTF.preload(assetPath("/models/violet-bloom-anova.glb"));
-useGLTF.preload(assetPath("/models/violet-bloom-ymca.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-ppjv.glb"));
-useGLTF.preload(assetPath("/models/violet-bloom-westjet.glb"));
-useGLTF.preload(assetPath("/models/sleek-desk-polard.glb"));
-useGLTF.preload(assetPath("/models/violet-bloom-polard.glb"));
 
 type PointerTarget = { x: number; y: number };
 type Vec3 = [number, number, number];
@@ -41,7 +25,7 @@ function PlacedModel({
   scale: number;
   position?: Vec3;
 }) {
-  const { scene } = useGLTF(modelPath);
+  const { scene } = useGLTF(modelPath, DRACO_DECODER);
   const model = useMemo(() => scene.clone(), [scene]);
 
   return (
@@ -171,8 +155,8 @@ export function ProjectHero3D({
         className="!h-full !w-full"
         style={{ width: "100%", height: "100%" }}
         camera={{ position: [0, 0.05, 4.2], fov: 24 }}
-        dpr={[1, 1.75]}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       >
         <Suspense fallback={null}>
           <Scene
