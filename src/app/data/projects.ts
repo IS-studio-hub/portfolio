@@ -15,7 +15,7 @@ export type {
 export const SITE = {
   name: "IS",
   title: "Product Designer",
-  email: "hello@alexreyes.design",
+  email: "hello@isexperience.house",
   url: "https://alexreyes.design",
   bio: "I design digital products that feel obvious once you use them. Ten years across fintech, government, and consumer brands taught me that clarity beats clever every time.",
   seoDescription:
@@ -23,9 +23,9 @@ export const SITE = {
   location: "Toronto, Canada",
   stats: { corporates: 14, startups: 6, years: 10, clients: 20 },
   social: {
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-    dribbble: "https://dribbble.com",
+    linkedin: "https://www.linkedin.com/in/shamrikin/",
+    dribbble: "https://dribbble.com/Shamrikin",
+    instagram: "https://www.instagram.com/is.experience.house/",
   },
 };
 
@@ -1167,14 +1167,14 @@ const rawProjects = [
  },
  {
  slug: "ava",
- title: "Ava",
- shortTitle: "Ava",
- subtitle: "Product design for an early-stage startup experience",
+ title: "AVA",
+ shortTitle: "AVA",
+ subtitle: "From an idea to a live creative platform",
  description:
- "Product and UX design for Ava: shaping core flows, visual language and a shippable MVP experience for an early-stage startup team.",
+ "End-to-end product design and development for a kinetic typography studio: create, animate, save, embed and export in one workflow.",
  year: "2024",
- role: "Product Designer",
- tags: ["Startup", "Product Design", "MVP"],
+ role: "End to End Product Designer & Full Stack Product Builder",
+ tags: ["Startup", "SaaS", "Full Stack", "Design System"],
  accent: "#F472B6",
  gridSpan: "half",
  image: projectImg("ava"),
@@ -1182,54 +1182,56 @@ const rawProjects = [
  {
  type: "image" as const,
  src: projectImg("ava"),
- caption: "Ava, early-stage product experience",
+ caption: "AVA, kinetic typography studio",
  },
  ],
+ liveUrl: "https://is-studio-hub.github.io/ava/index.html",
  overview:
- "Ava is an early-stage product where I helped define the experience from concept toward a usable MVP, clarifying flows, interface patterns and what to ship first.",
+ "I worked directly with the founders and CEO to turn AVA from an idea into a live web product, designing the experience, building the application and shipping it to production.",
  challenge:
- "Early-stage startups need clarity under constraint. The challenge was focusing the product on the right journeys without overbuilding before real usage.",
+ "Creative software has a natural tension. More control creates more possibility and more complexity. AVA needed powerful Studio controls without making experimentation feel technical.",
  process: [
  {
  phase: "01",
- title: "Scope the MVP",
+ title: "Map the creative loop",
  description:
- "Aligned with founders on the core user problem and the smallest set of flows that could prove the product.",
+ "Translated product ideas into source, shape, style, animate, save and export rather than isolated screens.",
  },
  {
  phase: "02",
- title: "Design the experience",
+ title: "Design the Studio",
  description:
- "Mapped key journeys, designed screens and states, and established a simple visual system the team could extend.",
+ "Kept the canvas dominant and organized controls around creative intent with immediate visual feedback.",
  },
  {
  phase: "03",
- title: "Ship and iterate",
+ title: "Build and ship the system",
  description:
- "Partnered with engineering through implementation, then refined based on early feedback and edge cases.",
+ "Implemented library, accounts, plans, embeds and QA so the interactive experiment became a complete product.",
  },
  ],
  deliverables: [
- "MVP product UX and UI",
- "User flows and key screens",
- "Lightweight design system foundations",
+ "Studio UX, UI and interaction design",
+ "Design system across creative and SaaS surfaces",
+ "Frontend, architecture and product infrastructure",
+ "Library, embeds, accounts and subscription UX",
  ],
  outcomes: [
- "A focused MVP experience ready for early users",
- "Clearer product priorities between design and engineering",
- "A visual and interaction foundation the team can grow",
+ "A live creative platform from blank field to embed and video",
+ "One owner across product, design, development and quality",
+ "A design system that evolved with the real application",
  ],
  },
  {
  slug: "50nny",
  title: "50NNY",
  shortTitle: "50NNY",
- subtitle: "Startup product design from concept to interface",
+ subtitle: "Designing and building the system behind smarter AI",
  description:
- "Product and UX design for 50NNY: defining the experience, interface patterns and startup product narrative from early concepts into a coherent digital product.",
+ "End-to-end product design and development for a multimodal memory API: upload, process, store, test and reuse AI context in one workflow.",
  year: "2024",
- role: "Product Designer",
- tags: ["Startup", "Product Design", "Brand"],
+ role: "End to End Product Designer & Full Stack Product Builder",
+ tags: ["Startup", "AI", "Full Stack"],
  accent: "#FBBF24",
  gridSpan: "half",
  image: projectImg("50nny"),
@@ -1237,42 +1239,43 @@ const rawProjects = [
  {
  type: "image" as const,
  src: projectImg("50nny"),
- caption: "50NNY, startup product experience",
+ caption: "50NNY, multimodal memory platform",
  },
  ],
  overview:
- "50NNY is a startup product where I helped translate early ideas into a coherent digital experience, structure, flows and interface decisions that support a clear product story.",
+ "I worked directly with the founders and CEO to take 50NNY from an early product idea to a functioning live application across UX, UI, design system, frontend, architecture, content, accessibility, testing and QA.",
  challenge:
- "Startup products often grow faster than their structure. The challenge was giving 50NNY a clear experience backbone without freezing the team’s ability to experiment.",
+ "How do we make powerful AI infrastructure feel manageable? The product needed to be technical enough for real workflows while remaining understandable enough to learn without constant documentation.",
  process: [
  {
  phase: "01",
- title: "Define the product story",
+ title: "Define the interaction model",
  description:
- "Clarified who the product is for, what success looks like, and which journeys matter first.",
+ "Organised the product around input → process → understand → store → reuse.",
  },
  {
  phase: "02",
- title: "Design structure and screens",
+ title: "Design states and systems",
  description:
- "Built information architecture, key flows and UI patterns that keep the product readable as features expand.",
+ "Built visible feedback for memory, API testing, datasets and multimodal input.",
  },
  {
  phase: "03",
- title: "Support delivery",
+ title: "Build and ship",
  description:
- "Worked with the team through build and review so the live experience stayed close to the intended product feel.",
+ "Implemented, tested and shipped the live platform with the founders.",
  },
  ],
  deliverables: [
- "Product UX and UI for core journeys",
- "Information architecture and flows",
- "Visual system and interface patterns",
+ "Multimodal memory and developer platform UX/UI",
+ "Design system and technical components",
+ "Frontend, architecture and database structure",
+ "API playground, docs, auth and production QA",
  ],
  outcomes: [
- "A clearer product experience for early users",
- "Shared design direction across the startup team",
- "Foundations ready for the next iteration of features",
+ "Live multimodal memory platform on Railway",
+ "Connected workflow from upload to reusable context",
+ "One owner across product, design, development and quality",
  ],
  },
 ];

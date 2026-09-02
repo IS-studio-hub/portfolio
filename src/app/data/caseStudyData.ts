@@ -2833,8 +2833,8 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "first-principles": {
  impact:
  "Designed Saence AI as a conversational product where asking a question becomes the interface, from the first empty state through ongoing AI dialogue.",
- client: "Saence AI",
- timeline: "Solo UX/UI Designer · 7-person early-stage startup team",
+ client: "Saence AI (early-stage startup)",
+ timeline: "Ground-up conversational product · design through product definition",
  team: "Solo UX/UI Designer · founders · developers · product and technical teammates",
  tools: [
  "Figma",
@@ -2851,15 +2851,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  secondaryFigmaLabel: "Design system",
  liveUrl: "https://research.firstprinciples.org",
  context:
- "Saence AI is built around one of the most natural ways people interact with technology: conversation. Instead of asking users to navigate complex menus first, the product creates a direct relationship between the user, their question and the intelligence behind the system. I worked as the solo UX/UI Designer inside a seven-person startup, collaborating with founders and developers while the product was still being defined.",
+ "Saence AI is built around one of the most natural ways people interact with technology: conversation. Instead of asking users to navigate complex menus first, the product creates a direct relationship between the user, their question and the intelligence behind the system.",
  goals: [
  "Make advanced AI feel simple enough to start without a tutorial",
  "Help users answer: What can I ask? What is happening? What do I do next?",
- "Design empty states, message states and response length as first-class product problems",
+ "Design empty states, message states and response length as first-class problems",
  "Guide better questions without turning conversation into another menu",
  "Keep chat at the centre while supporting history, account and product tools",
  "Build a design system that grows with a fast-moving startup",
- "Stay close to founders and developers from idea through design QA",
  ],
  research: [
  {
@@ -2930,32 +2929,32 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "In a small startup, design has to protect the larger experience while ideas move quickly from conversation to production.",
  ],
  metrics: [
- { value: "1", label: "Solo UX/UI designer across the product language"},
- { value: "7", label: "Person startup team"},
- { value: "Ask → Receive → Continue", label: "Core interaction model"},
+ { value: "1", label: "Solo UX/UI designer across the product language" },
+ { value: "7", label: "Person startup team" },
+ { value: "Ask → Receive → Continue", label: "Core interaction model" },
  ],
  overview:
- "I was responsible for shaping how Saence AI should work, how it should look and how users should interact with it. That included user journeys, the chat experience, interface patterns, the visual system, prototypes and direct collaboration with developers as designs moved into the real product.",
+ "As the solo UX/UI Designer on a seven-person startup team, I shaped how Saence AI should work, look and feel while the product was still being defined. That included user journeys, the chat experience, interface patterns, the visual system, prototypes and direct collaboration with developers as designs moved into the real product.",
  challenge:
  "AI systems contain models, context, history, processing and failure states. None of that complexity should become the user's problem. The interface needed to help people focus on one thing: the conversation.",
  process: [
  {
  phase: "01",
- title: "Define the conversational product",
+ title: "Start with conversation",
  description:
- "Started from product questions with the founders: what problem are we solving, when does the user need it, does it belong inside chat, and what happens before and after.",
+ "Defined the product around asking, receiving and continuing, then decided which supporting areas belong outside the chat.",
  },
  {
  phase: "02",
- title: "Design states and content behaviour",
+ title: "Design states, not only screens",
  description:
- "Designed empty states, message states, response length handling, suggestion patterns and trust feedback before polishing individual screens.",
+ "Mapped empty, sending, thinking, responding, complete and error states so the system felt alive without feeling technical.",
  },
  {
  phase: "03",
  title: "Build the system with the product",
  description:
- "Created typography, colour, spacing, chat components, inputs, feedback and responsive behaviour as reusable structure for a fast-moving team.",
+ "Created foundations and reusable chat patterns alongside founders and developers as features moved into the build.",
  },
  {
  phase: "04",
@@ -2983,59 +2982,71 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  {
  type: "image",
  src: p("first-principles", "01-hero.png"),
- caption: "First experience, orientation before the first message",
+ caption: "The first message begins the relationship with the product",
  },
  {
  type: "image",
  src: p("first-principles", "02-detail.png"),
- caption: "Conversation beginning to carry real product content",
+ caption: "A meaningful conversation, not a generic greeting",
  },
  {
  type: "image",
  src: p("first-principles", "03-detail.png"),
- caption: "Meaningful dialogue with results, not a generic greeting",
+ caption: "A conversation is a sequence of states, not just messages",
  },
  {
  type: "image",
  src: p("first-principles", "04-detail.png"),
- caption: "Detail surfaces that keep the user inside the flow",
+ caption: "Short, medium and long responses using the same message system",
  },
  {
  type: "image",
  src: p("first-principles", "05-detail.png"),
- caption: "Chat input explorations across empty, typing and suggestion states",
+ caption: "Suggestion → question → useful response",
  },
  {
  type: "image",
  src: p("first-principles", "06-detail.png"),
- caption: "AI overview states from compact summary to expanded response",
+ caption: "The chat input across empty, typing and submitting states",
  },
  {
  type: "image",
  src: p("first-principles", "07-detail.png"),
- caption: "The same conversation adapting across mobile, tablet and desktop",
+ caption: "Conversation history beside the active dialogue",
  },
  {
  type: "image",
  src: p("first-principles", "08-detail.png"),
- caption: "One visual language across colour, type, buttons and inputs",
+ caption: "Everything supports the conversation",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "09-detail.png"),
+ caption: "One visual language across every conversation",
+ },
+ {
+ type: "image",
+ src: p("first-principles", "11-detail.png"),
+ caption: "Same conversation across mobile, tablet and desktop",
  },
  ],
  narrative: [
  {
- eyebrow: "Product",
- title: "Conversation is the interface",
- body: [
- "A chatbot can look simple: user message, AI response, input field. The real experience contains much more. Messages can be short or extremely long. Responses can include structured information. The AI may need time. Conversations continue, fail, restart and return.",
- "The chat experience needed to feel natural even when the system underneath it was doing something complex.",
- ],
- },
- {
- eyebrow: "Challenge",
+ eyebrow: "The problem",
  title: "Make advanced AI feel simple",
  body: [
- "The user should understand what they can ask, what is happening, whether the system understood them, whether it is still working, how to continue and what happens when the AI does not know.",
- "My responsibility was to create an interface that made the technology feel approachable without hiding important feedback.",
+ "A blank conversational input can feel powerful or confusing. The interface needed to help people understand what to ask, what the system was doing and how to continue, without turning AI into another complicated menu.",
+ "None of the model, context, processing or failure-state complexity should become the user's problem. The interface needed to help people focus on one thing: the conversation.",
+ ],
+ image: p("first-principles", "01-hero.png"),
+ caption: "The empty state has a larger responsibility than in traditional apps.",
+ },
+ {
+ eyebrow: "Workflow",
+ title: "Ask. Receive. Continue.",
+ body: [
+ "The product was organised around a simple interaction model, then designed for everything that happens between those moments: orientation, sending, thinking, responding, growing answers, errors and returning to previous work.",
+ "Every important screen needed a clear next step so users could start quickly and still understand how to keep the dialogue moving.",
  ],
  bullets: [
  "What can I ask?",
@@ -3043,50 +3054,35 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Can I continue this conversation?",
  "What happens when the AI does not know?",
  ],
+ image: p("first-principles", "03-detail.png"),
+ caption: "A conversation is a sequence of states, not just messages.",
  },
  {
- eyebrow: "Standout",
- title: "Empty states, message states and response length",
+ eyebrow: "Build",
+ title: "Design was part of defining the product",
  body: [
- "The first moment inside an AI product may contain no content and no history. That means the empty state has a much larger responsibility than in many traditional applications.",
- "I also designed the messaging patterns as a sequence of states rather than a single finished bubble, and built hierarchy so unpredictable AI answers could grow without losing readability.",
- ],
- cards: [
- {
- title: "First experience",
- description: "Orientation, suggested starting point and a clear primary action before the first message.",
- image: p("first-principles", "01-hero.png"),
- },
- {
- title: "Input system",
- description: "The smallest component with the biggest responsibility across empty, typing, multiline and submitting states.",
- image: p("first-principles", "05-detail.png"),
- },
- {
- title: "AI response length",
- description: "Short, medium and longer answers using the same message language.",
- image: p("first-principles", "06-detail.png"),
- },
- {
- title: "Responsive conversation",
- description: "One experience adapting across mobile, tablet and desktop.",
- image: p("first-principles", "07-detail.png"),
- },
- ],
- },
- {
- eyebrow: "Ownership",
- title: "One designer. Directly with founders and developers.",
- body: [
- "Working in a seven-person startup meant ideas often began as product questions. What if users could do this? Where should this feature live? Should it stay inside chat?",
+ "Working in a seven-person startup meant ideas often began as product questions with the founders. What if users could do this? Where should this feature live? Should it stay inside chat?",
  "I helped turn those questions into experiences, then stayed close through implementation and design QA. The design was not handed off. It evolved with the build.",
  ],
+ image: p("first-principles", "14-detail.png"),
+ caption: "The design was not handed off. It evolved with the build.",
+ },
+ {
+ eyebrow: "Live product",
+ title: "One visual language while the product grew",
+ body: [
+ "As the only designer, I was responsible for consistency across the application while new ideas and screens appeared quickly. Developers needed patterns they could reuse.",
+ "I built the design system alongside the product so the team could move fast without inventing a slightly different version of the same interaction every sprint. The live product at research.firstprinciples.org reflects that shared language.",
+ ],
+ image: p("first-principles", "09-detail.png"),
+ caption: "One visual language across every conversation.",
  },
  ],
  image: p("first-principles", "01-hero.png"),
  closing:
  "AI is complex. The conversation should not be. Ask. Receive. Continue. Saence AI · Solo UX/UI Designer.",
  },
+
 
  westjet: {
  impact:
@@ -4334,171 +4330,538 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "We designed the ecommerce. The customer was designing the moment. From we should celebrate to we’re ready, the systems behind that journey can be complicated. The experience in front of the customer should make planning feel easier.",
  },
  ava: {
- impact: "Helped shape Ava’s early product experience, focused MVP flows and a foundation the team can grow.",
- client: "Ava",
- timeline: "Early-stage startup · 2024",
- team: "Product Designer · founders · engineering",
- tools: ["Figma", "Prototyping", "Product strategy"],
+ impact:
+ "From idea to live product, design, development, architecture and QA owned end to end with the founders.",
+ client: "AVA (early-stage startup · IS Studio)",
+ timeline: "Ground-up creative SaaS · design through production · live on GitHub Pages",
+ team: "End to End Product Designer & Full Stack Product Builder · CEO · founders · development teammates",
+ tools: [
+ "Figma",
+ "React",
+ "Design system",
+ "Database design",
+ "Creative tooling",
+ "Accessibility",
+ "QA",
+ ],
+ liveUrl: "https://is-studio-hub.github.io/ava/index.html",
  context:
- "Ava is an early-stage startup product. The work focused on clarifying the core user problem and designing an MVP experience that could ship without overbuilding.",
+ "AVA is an interactive kinetic typography studio that lets designers and creators build animated visual fields from letters, words and images. Users can transform typography into moving compositions with waves, ripples, pulses, bubbles and other interactive controls, then save, embed or export the result.",
  goals: [
- "Define the MVP journeys worth shipping first",
- "Design clear flows and interface patterns",
- "Establish a lightweight visual system for iteration",
+ "Make typography behave like a living material through a visual studio",
+ "Organize powerful controls so experimentation stays enjoyable",
+ "Keep the canvas dominant while supporting dense creative parameters",
+ "Connect create → save → library → embed / video export",
+ "Ship accounts, plans and usage without overpowering the creative product",
+ "Build the design system alongside the live application",
  ],
  research: [
  {
- title: "Founder alignment",
+ title: "Starting with play",
  description:
- "Worked with founders to separate must-have journeys from later experiments.",
+ "Traditional business apps begin with a task. AVA begins with experimentation. Move the pointer, change a value, turn on a wave and watch the field respond. The interface needed to reward curiosity before requiring mastery.",
  },
  {
- title: "Early concept validation",
+ title: "Powerful without feeling technical",
  description:
- "Tested rough flows against the intended user story before committing screen polish.",
+ "More control creates more possibility and more complexity. The challenge was organizing source, typography, density, lighting, animation and interaction so the product felt powerful without feeling intimidating.",
+ },
+ {
+ title: "Design and develop together",
+ description:
+ "There was no handoff moment. I designed interactions, built them, used them, changed the design, updated implementation and tested again. The browser became part of the design process because I owned both sides.",
  },
  ],
  insights: [
- "Early products need ruthless focus, every screen should defend the core loop",
- "A small design system prevents visual drift even before the team scales",
+ "Every decision should have a visible result, density, motion and pointer feedback need to feel immediate",
+ "Complexity needs hierarchy: what am I creating, how is it shaped, how does it look, how does it move",
+ "Animation needs one interaction language across many behaviours",
+ "A creative experiment becomes a product when work can be saved, reused, embedded and exported",
+ "The interface is only the visible part, a save connects to storage, an embed connects to a saved object, a plan connects to permissions",
  ],
  solutions: [
  {
- title: "MVP journey design",
+ title: "Studio canvas first",
  description:
- "Mapped and designed the primary paths users need to complete to understand Ava’s value.",
+ "Designed the Studio so the canvas stayed primary while source, visual and animation controls remained understandable and immediately connected to the composition.",
+ image: p("ava", "solution-1.png"),
  },
  {
- title: "Interface foundations",
+ title: "Animation as a system",
  description:
- "Established hierarchy, components and empty/error states the team can reuse.",
+ "Created consistent enable, amount, speed and scale patterns across Wave, Drift, Shake, Spin, Pulse, Twinkle, Ripple and Bubble.",
+ image: p("ava", "solution-2.png"),
+ },
+ {
+ title: "Create → Save → Library → Use",
+ description:
+ "Connected Studio creation to persistence, library management, embeds and video export so creative work could continue beyond one session.",
+ image: p("ava", "solution-3.png"),
+ },
+ {
+ title: "Letter, word or image",
+ description:
+ "Supported multiple starting points inside one creative system so modes feel different in content, not like separate applications.",
+ image: p("ava", "solution-5.png"),
+ },
+ {
+ title: "Accounts & plans",
+ description:
+ "Designed sign-up, account and Free / Pro / Business / Enterprise experiences that communicate limits clearly without interrupting creative flow.",
+ image: p("ava", "solution-4.png"),
+ },
+ {
+ title: "One product across devices",
+ description:
+ "Carried the same creative language from desktop Studio to responsive marketing and account surfaces.",
+ image: p("ava", "solution-6.png"),
  },
  ],
  learnings: [
- "Startup UX is as much about what not to design yet as what to ship",
+ "AVA reinforced that the interface is only the visible part of the product, saves, embeds, plans and rendering all connect to real logic underneath",
+ "Understanding those relationships changes how you design, you stop designing only for the perfect screenshot and start designing for the system",
+ "I helped define it, design it, structure it, develop it, test it and ship it, design stopped being a handoff and became the product itself",
  ],
  metrics: [
- { value: "MVP", label: "Focused early product experience"},
- { value: "Startup", label: "Design paired with founding team"},
+ { value: "1", label: "Product builder across design and development" },
+ { value: "0→1", label: "From concept to live creative platform" },
+ { value: "Live", label: "Kinetic typography studio on GitHub Pages" },
  ],
  overview:
- "I helped design Ava’s early product experience, clarifying MVP scope, shaping core flows and establishing interface foundations for an early-stage startup.",
+ "I worked directly with the founders and CEO to turn AVA from an idea into a live web product. My role was not limited to UX or UI. I designed the experience, created the design system, developed the application, structured the database, shaped architecture, wrote product content, implemented accessibility, tested the experience, handled QA and helped take the product from idea to production. This was not a design handoff. I helped turn the idea into the actual product.",
  challenge:
- "With limited time and an evolving product story, the challenge was shipping a coherent experience without designing the whole company on day one.",
+ "AVA gives creators controls for source content, typography, density, spacing, shape, depth, lighting, animation and interaction. The challenge was not whether users should have those controls. It was organizing them so experimentation remained enjoyable and the product never felt intimidating.",
  process: [
  {
  phase: "01",
- title: "Scope",
- description: "Aligned on the smallest valuable set of journeys.",
+ title: "Idea to creative loop",
+ description:
+ "Translated founder conversations into a simple progression: source, shape, style, animate, save and export.",
  },
  {
  phase: "02",
- title: "Design",
- description: "Created flows, screens and a lightweight system.",
+ title: "Design the Studio",
+ description:
+ "Kept the canvas dominant, organized controls around creative intent and made every adjustment visibly connected to the composition.",
  },
  {
  phase: "03",
- title: "Ship",
- description: "Supported implementation and early iteration.",
+ title: "System & states",
+ description:
+ "Built foundations for real states across Studio, library, accounts, plans, loading, errors, empty states and responsive behaviour.",
+ },
+ {
+ phase: "04",
+ title: "Architecture & data",
+ description:
+ "Structured users, plans, saves, creative settings, embeds and exports so screens represented real system behaviour.",
+ },
+ {
+ phase: "05",
+ title: "Build, test, ship",
+ description:
+ "Implemented frontend and application logic, tested creative combinations end to end, ran continuous QA and shipped the live product.",
  },
  ],
  deliverables: [
- "MVP UX and UI",
- "User flows",
- "Design foundations",
+ "Product thinking, UX strategy and feature definition",
+ "Studio UX, UI, interaction design and design system",
+ "UX writing and product content",
+ "Frontend development and application logic",
+ "Database design and application architecture",
+ "Authentication, subscription and library experiences",
+ "Embeds, video export and accessibility",
+ "Functional testing, QA and production iteration",
  ],
  outcomes: [
- "A shippable early product experience",
- "Shared direction for design and engineering",
+ "Live kinetic typography platform at is-studio-hub.github.io/ava",
+ "Connected workflow from blank field to embed and video",
+ "Design system evolved alongside the real application",
+ "One owner across product, design, development, architecture, content and quality",
  ],
  gallery: [
- { type: "image", src: p("ava", "01-hero.png"), caption: "Ava, early product experience"},
+ {
+ type: "image",
+ src: p("ava", "01-hero.png"),
+ caption: "AVA, make letters move like a living field",
+ },
+ {
+ type: "image",
+ src: p("ava", "02-detail.png"),
+ caption: "Source → Shape → Style → Animate → Save → Export",
+ },
+ {
+ type: "image",
+ src: p("ava", "03-detail.png"),
+ caption: "Studio architecture, canvas, source, visual and animation controls",
+ },
+ {
+ type: "image",
+ src: p("ava", "04-detail.png"),
+ caption: "Letter, word and image inside one creative system",
+ },
+ {
+ type: "image",
+ src: p("ava", "06-detail.png"),
+ caption: "Animation behaviours with one interaction language",
+ },
+ {
+ type: "image",
+ src: p("ava", "08-detail.png"),
+ caption: "Create → Save → Library → Use",
+ },
+ {
+ type: "image",
+ src: p("ava", "10-detail.png"),
+ caption: "From Studio creation to live output",
+ },
+ {
+ type: "image",
+ src: p("ava", "11-detail.png"),
+ caption: "Account, plans and sign-in infrastructure",
+ },
+ {
+ type: "image",
+ src: p("ava", "14-detail.png"),
+ caption: "Responsive AVA across mobile and desktop",
+ },
+ {
+ type: "image",
+ src: p("ava", "15-detail.png"),
+ caption: "Design, build and live in one feedback loop",
+ },
+ ],
+ narrative: [
+ {
+ eyebrow: "The problem",
+ title: "Typography is usually static. AVA makes it a living material.",
+ body: [
+ "A letter can become a field. A word can become a composition. An image can be reconstructed from hundreds of glyphs. And every element can move: wave, pulse, ripple, twinkle, drift, shake, warp or react to the pointer.",
+ "AVA gives creators control through a visual studio rather than requiring animation code. The goal was an experience somewhere between a design application, an animation tool and an interactive visual playground.",
+ ],
+ image: p("ava", "03-detail.png"),
+ caption: "The Studio keeps the canvas primary while controls stay organized.",
+ },
+ {
+ eyebrow: "Workflow",
+ title: "A blank field becomes useful when the loop is clear",
+ body: [
+ "The product needed a simple creative progression without turning creativity into a rigid sequence: choose a source, shape the glyphs, style the look, animate the field, save the work and use it through embed or video.",
+ "Every important screen needed a clear next step so users could experiment immediately and still understand how their work becomes a reusable product asset.",
+ ],
+ bullets: [
+ "Source → Shape → Style → Animate → Save → Export",
+ "Immediate feedback between control and composition",
+ "Library, embed and video turn a session into lasting work",
+ ],
+ image: p("ava", "02-detail.png"),
+ caption: "The core journey from blank field to usable output.",
+ },
+ {
+ eyebrow: "Build",
+ title: "I did not hand off the experience. I built it.",
+ body: [
+ "Because I owned design and development, interface decisions immediately created technical questions. Saving needs data. Libraries need relationships. Plans need permissions. Embeds need persistent objects. Deletes need to affect connected outputs.",
+ "The experience and technical structure needed to support each other. I could design, build, use, change, test and repeat in a short feedback loop. The goal was never to protect the original Figma file. The goal was to improve the live product.",
+ ],
+ image: p("ava", "15-detail.png"),
+ caption: "Design, code and live product evolved together.",
+ },
+ {
+ eyebrow: "Live product",
+ title: "From the first idea to production",
+ body: [
+ "This was not a concept case study. AVA became a live web application with real accounts, saves, plans, embeds, exports, devices, limits and interactive rendering.",
+ "Building it meant working through all of those realities, not only how something should look in a mockup, but what happens when it meets production.",
+ ],
+ image: p("ava", "10-detail.png"),
+ caption: "A complete platform from Studio to library and live output.",
+ },
  ],
  image: p("ava", "01-hero.png"),
- closing: "Focus first. Polish what ships. Grow the system with the product.",
+ closing:
+ "Not a prototype. A product. Make letters move like a living field. Shape it. Animate it. Save it. Use it.",
  },
+
  "50nny": {
- impact: "Helped turn 50NNY’s early concepts into a coherent product experience and shared design direction.",
- client: "50NNY",
- timeline: "Early-stage startup · 2024",
- team: "Product Designer · founders · engineering",
- tools: ["Figma", "Prototyping", "Product strategy"],
+ impact:
+ "From idea to live product, design, development, architecture and QA owned end to end with the founders.",
+ client: "50NNY (early-stage AI startup)",
+ timeline: "Ground-up AI developer platform · design through production · live on Railway",
+ team: "End to End Product Designer & Full Stack Product Builder · CEO · founders · development team",
+ tools: [
+ "Figma",
+ "React",
+ "Design system",
+ "Database design",
+ "AI UX",
+ "API tooling",
+ "Accessibility",
+ "QA",
+ ],
+ liveUrl: "https://web-production-afb24.up.railway.app/",
  context:
- "50NNY is a startup product that needed structure, a clear experience backbone so features could grow without the interface becoming a collection of one-offs.",
+ "50NNY is an AI platform built around a fundamental challenge in modern AI products: how do we give intelligent systems useful data, reliable context and a way to remember? The product brings AI interaction together with API tooling, multimodal memory, testing and dataset creation inside one web-based system.",
  goals: [
- "Clarify the product story and primary journeys",
- "Design information architecture and key screens",
- "Establish visual and interaction patterns for iteration",
+ "Make powerful AI infrastructure feel manageable",
+ "Connect input → process → understand → store → reuse in one workflow",
+ "Support multimodal context (text, image, structured data) inside one memory model",
+ "Design API testing, memory and dataset creation as connected product experiences",
+ "Build authentication, plans and developer docs without overpowering the core work",
+ "Create the design system alongside the live application",
  ],
  research: [
  {
- title: "Concept workshops",
+ title: "AI can answer. But can it remember?",
  description:
- "Worked with the team to translate brand and product ideas into user-facing journeys.",
+ "A single AI interaction can be powerful. The larger challenge begins when a product needs context, useful data, multimodal understanding, APIs and ways to know whether those systems are actually working.",
  },
  {
- title: "Structure review",
+ title: "From tool to workflow",
  description:
- "Stress-tested navigation and flows against how the product was expected to expand.",
+ "A technical platform can easily become a collection of utilities. The real UX begins when tools become a connected workflow: where do I begin, what is happening, what did the system return, where is it stored, and what happens next?",
+ },
+ {
+ title: "Design and develop together",
+ description:
+ "There was no traditional moment where design ended and development began. I designed the product while building it, working directly with the founders and CEO from early idea through production.",
  },
  ],
  insights: [
- "Startup products need a spine early, IA and patterns beat isolated screen polish",
- "A clear product story helps the whole team say no to distractions",
+ "Conversation is only one layer, memory, APIs and datasets have to stay part of the same product language",
+ "Invisible intelligence still needs feedback: processing, saved, ready, updated and error states",
+ "Technical users still benefit from hierarchy, predictable interactions, recoverable errors and clear content",
+ "Every product decision created a system decision, authentication, persistence, processing and logging",
+ "Moving fast without a system creates disconnected patterns, the design system had to grow with the product",
  ],
  solutions: [
  {
- title: "Experience structure",
+ title: "Upload & multimodal input",
  description:
- "Defined the core journeys and information architecture for 50NNY’s digital product.",
+ "Designed the upload experience so text, images and structured files feel like different inputs inside one familiar processing system, not separate products.",
+ image: p("50nny", "solution-1.png"),
  },
  {
- title: "Interface system",
+ title: "Visible memory",
  description:
- "Designed screens and reusable patterns that keep the product feeling coherent as it grows.",
+ "Treated memory as a product concept with clear feedback around what was processed, stored and available for future use, not only a backend capability.",
+ image: p("50nny", "solution-2.png"),
+ },
+ {
+ title: "API playground",
+ description:
+ "Approached API testing as a workflow: configure, send, observe, understand, adjust and try again, keeping request and response in a clear relationship.",
+ image: p("50nny", "solution-3.png"),
+ },
+ {
+ title: "Developer documentation",
+ description:
+ "Translated system behaviour into language and examples developers can act on, so powerful infrastructure stays understandable without constant guesswork.",
+ image: p("50nny", "solution-4.png"),
+ },
+ {
+ title: "Dashboard & product spine",
+ description:
+ "Organised files, usage and next actions so the product stays oriented around real work rather than a pile of isolated technical screens.",
+ image: p("50nny", "solution-5.png"),
+ },
+ {
+ title: "Marketing to live app",
+ description:
+ "Carried one product language from the public site across devices into the desktop app experience where upload, memory and API work happen.",
+ image: p("50nny", "solution-6.png"),
  },
  ],
  learnings: [
- "Coherence is a startup advantage, users feel when every screen was invented separately",
+ "50NNY reinforced that the interface is only the visible part of an AI product. A message connects to context, context to memory, memory to data, and an API request to another service.",
+ "Understanding those relationships changes how you design. You stop asking only what a screen should look like and start asking what needs to happen for that screen to work.",
+ "Working across product, design, development, architecture, content and QA meant protecting the complete experience rather than one discipline.",
  ],
  metrics: [
- { value: "Startup", label: "Product experience from concept to interface"},
- { value: "Foundation", label: "Patterns ready for the next feature wave"},
+ { value: "1", label: "Product builder across design and development" },
+ { value: "0→1", label: "From early idea to live AI platform" },
+ { value: "Live", label: "Multimodal memory API on Railway" },
  ],
  overview:
- "I helped design 50NNY’s product experience, turning early concepts into structured journeys, screens and interface patterns for an early-stage startup.",
+ "I worked directly with the founders and CEO to take 50NNY from an early product idea to a functioning live application. My role covered product strategy, UX architecture, UX and UI design, AI interaction design, the design system, frontend development, supporting application functionality, database structure, architecture, product content, accessibility, testing, QA and production implementation. There was no handoff moment. I designed the product while building it.",
  challenge:
- "Ideas moved faster than structure. The challenge was giving 50NNY a clear experience without freezing experimentation.",
+ "The technology behind AI products becomes complicated quickly: requests, responses, memory, models, datasets, endpoints, authentication, payloads, errors, files and logs. The design challenge was creating a layer between that technical system and the person trying to use it, powerful enough for technical workflows while still learnable without constant documentation.",
  process: [
  {
  phase: "01",
- title: "Story",
- description: "Defined who the product is for and what success looks like.",
+ title: "From idea to interaction model",
+ description:
+ "Defined the product around input → process → understand → store → reuse, then decided which supporting areas belong outside the core loop.",
  },
  {
  phase: "02",
- title: "Structure",
- description: "Built IA, flows and key interface patterns.",
+ title: "Design states, not only screens",
+ description:
+ "Mapped processing, saved, ready, updated and error states across upload, memory, API testing and datasets so invisible work stayed understandable.",
  },
  {
  phase: "03",
- title: "Delivery",
- description: "Supported build and review with the startup team.",
+ title: "Build the system with the product",
+ description:
+ "Created foundations and reusable technical components alongside founders and developers as features moved into the build.",
+ },
+ {
+ phase: "04",
+ title: "Architecture & data",
+ description:
+ "Structured users, sessions, requests, responses, memory, datasets, files and history so screens represented real system behaviour.",
+ },
+ {
+ phase: "05",
+ title: "Build, test, ship",
+ description:
+ "Implemented frontend and application logic, tested workflows end to end, ran continuous QA and shipped the live product on Railway.",
  },
  ],
  deliverables: [
- "Product UX and UI",
- "Information architecture",
- "Visual and interaction patterns",
+ "Product strategy, UX architecture and feature definition",
+ "Multimodal memory, upload and AI interaction design",
+ "API playground, docs and developer experience",
+ "Design system foundations and technical components",
+ "Frontend development and supporting application logic",
+ "Database and application architecture",
+ "Authentication, plans and account experiences",
+ "Accessibility, responsive marketing, testing and QA",
  ],
  outcomes: [
- "A clearer product experience for early users",
- "Shared design direction across the team",
+ "Live multimodal memory platform at web-production-afb24.up.railway.app",
+ "Connected workflow from upload and AI processing to persistent memory, API testing and reusable data",
+ "Design system evolved alongside the real application",
+ "One owner across product, design, development, architecture, content and quality",
  ],
  gallery: [
- { type: "image", src: p("50nny", "01-hero.png"), caption: "50NNY, startup product experience"},
+ {
+ type: "image",
+ src: p("50nny", "01-hero.png"),
+ caption: "50NNY, multimodal memory platform",
+ },
+ {
+ type: "image",
+ src: p("50nny", "02-detail.png"),
+ caption: "Input → Process → Result → Memory → Reuse",
+ },
+ {
+ type: "image",
+ src: p("50nny", "03-detail.png"),
+ caption: "Text, image and structured data into one memory model",
+ },
+ {
+ type: "image",
+ src: p("50nny", "04-detail.png"),
+ caption: "Core memories extracted and ready for reuse",
+ },
+ {
+ type: "image",
+ src: p("50nny", "05-detail.png"),
+ caption: "First interaction → memory created → future interaction",
+ },
+ {
+ type: "image",
+ src: p("50nny", "06-detail.png"),
+ caption: "API playground, request and response in one workflow",
+ },
+ {
+ type: "image",
+ src: p("50nny", "07-detail.png"),
+ caption: "API documentation designed for action, not jargon",
+ },
+ {
+ type: "image",
+ src: p("50nny", "08-detail.png"),
+ caption: "Define → Generate → Review → Use",
+ },
+ {
+ type: "image",
+ src: p("50nny", "09-detail.png"),
+ caption: "One system behind every workflow",
+ },
+ {
+ type: "image",
+ src: p("50nny", "10-detail.png"),
+ caption: "Same task across desktop, tablet and mobile",
+ },
+ {
+ type: "image",
+ src: p("50nny", "11-detail.png"),
+ caption: "Sign up, sign in, account and return to work",
+ },
+ {
+ type: "image",
+ src: p("50nny", "12-detail.png"),
+ caption: "Design → Build → Live product",
+ },
+ {
+ type: "image",
+ src: p("50nny", "14-detail.png"),
+ caption: "API keys and developer infrastructure",
+ },
+ {
+ type: "image",
+ src: p("50nny", "15-detail.png"),
+ caption: "Live product dashboard",
+ },
+ {
+ type: "image",
+ src: p("50nny", "18-detail.png"),
+ caption: "Conceptual architecture behind the interface",
+ },
+ ],
+ narrative: [
+ {
+ eyebrow: "The problem",
+ title: "AI can answer. But can it remember?",
+ body: [
+ "Without structure, building AI products quickly becomes a collection of disconnected technical processes. API testing happens somewhere. Datasets live somewhere else. Memory lives somewhere else. AI interactions happen in another environment.",
+ "50NNY was created around bringing those pieces closer together, making sophisticated AI infrastructure easier to work with through one understandable product.",
  ],
  image: p("50nny", "01-hero.png"),
- closing: "Give the product a spine. Then let it grow.",
+ caption: "One platform for memory, APIs and AI context.",
+ },
+ {
+ eyebrow: "Workflow",
+ title: "Input → Process → Understand → Store → Use",
+ body: [
+ "At the centre of the product is a simple interaction model. The user provides something. 50NNY processes it. The system returns useful information. That information can become part of a larger dataset or memory system. And that data can then support future AI interactions.",
+ "The technology behind those steps can be complex. The experience in front of the user should not be.",
+ ],
+ bullets: [
+ "Where do I begin?",
+ "What is happening right now?",
+ "What did the system return?",
+ "Where is that information stored?",
+ "How can I use it again?",
+ ],
+ image: p("50nny", "02-detail.png"),
+ caption: "The core interaction model behind 50NNY.",
+ },
+ {
+ eyebrow: "Build",
+ title: "I did not hand off the experience. I built it.",
+ body: [
+ "Working inside a small startup meant product ideas could become product decisions quickly. What if the system remembered this? What if the user uploads an image? What if developers could test the API here?",
+ "Because I worked across product, design and development, those questions could move from discussion to implementation. The browser became part of the design process.",
+ ],
+ image: p("50nny", "12-detail.png"),
+ caption: "Design → Build → Live product.",
+ },
+ {
+ eyebrow: "Live product",
+ title: "From idea to production",
+ body: [
+ "50NNY was not created as a conceptual portfolio exercise. It became a working web system with real requests, real data, real processing time, real errors, real browsers and real database relationships.",
+ "Building the product required solving those realities rather than designing around them. Provide information. Understand what happened. Keep what matters. Use it again.",
+ ],
+ image: p("50nny", "15-detail.png"),
+ caption: "From product idea to working system.",
+ },
+ ],
+ image: p("50nny", "01-hero.png"),
+ closing:
+ "AI needs more than intelligence. It needs context. 50NNY · End to End Product Designer & Full Stack Product Builder.",
  },
 };

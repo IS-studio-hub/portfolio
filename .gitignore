@@ -29,3 +29,9 @@ scripts/.gom-tmp/
 *.njsproj
 *.sln
 *.sw?
+
+# Local card generation scratch
+scripts/.card-tmp/
+
+# Requires workflow OAuth scope to push; keep local only for now
+.github/workflows/

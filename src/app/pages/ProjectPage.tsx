@@ -264,9 +264,9 @@ export function ProjectPage() {
                                             }
                                             : project.slug === "first-principles"
                                               ? {
-                                                  modelPath: assetPath("/models/violet-bloom.glb"),
+                                                  modelPath: assetPath("/models/sleek-desk-saence.glb"),
                                                   glowColor: "rgba(37,99,235,0.14)",
-                                                  scale: 0.92,
+                                                  scale: 0.9,
                                                 }
                                             : project.slug === "westjet"
                                             ? {
@@ -524,8 +524,22 @@ export function ProjectPage() {
                   <BulletList items={section.bullets} muted />
                 </div>
               )}
+              {section.image && (
+                <figure className="mt-12 overflow-hidden rounded-2xl border border-border bg-surface">
+                  <img
+                    src={section.image}
+                    alt={section.caption || section.title}
+                    className="w-full object-cover"
+                  />
+                  {section.caption && (
+                    <figcaption className="border-t border-border px-6 py-4 font-mono text-xs uppercase tracking-widest text-muted">
+                      {section.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
               {section.cards && section.cards.length > 0 && (
-                <div className="mt-12 grid gap-8 md:grid-cols-2">
+                <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
                   {section.cards.map((card) => (
                     <div
                       key={card.title}
@@ -535,7 +549,7 @@ export function ProjectPage() {
                         <img
                           src={card.image}
                           alt={card.title}
-                          className="aspect-[16/10] w-full object-cover"
+                          className="aspect-[16/10] w-full object-cover object-top"
                         />
                       )}
                       <div className="p-6">

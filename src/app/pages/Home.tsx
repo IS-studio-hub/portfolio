@@ -266,9 +266,9 @@ export function Home() {
             <div className="mt-10 flex flex-col gap-12 md:mt-12 md:flex-row md:items-start md:gap-16">
               <div className="relative shrink-0 overflow-hidden rounded-2xl md:w-72 lg:w-80">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=800&fit=crop&q=80"
+                  src={assetPath("/about.jpg")}
                   alt={SITE.name}
-                  className="aspect-[4/5] w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                  className="aspect-[4/5] w-full object-cover object-top grayscale transition-all duration-700 hover:grayscale-0"
                 />
               </div>
 
@@ -291,6 +291,10 @@ export function Home() {
                     "Design Ops",
                     "Accessibility",
                     "Figma",
+                    "Frontend Developer",
+                    "Vibe Coder",
+                    "Strategy",
+                    "Leadership",
                   ].map((skill) => (
                     <div
                       key={skill}

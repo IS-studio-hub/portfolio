@@ -32,6 +32,9 @@ export interface NarrativeSection {
   title: string;
   body: string[];
   bullets?: string[];
+  /** Optional full-width figure under the copy. */
+  image?: string;
+  caption?: string;
   cards?: { title: string; description: string; image?: string }[];
 }
 
