@@ -210,8 +210,8 @@ export function Home() {
             </p>
 
             <div className="mt-16 grid grid-cols-2 gap-8 border-t border-border pt-10 sm:grid-cols-4 md:max-w-2xl">
-              <StatBlock value={corporateProjects.length} label="Corporates" delay={0.3} />
-              <StatBlock value={startupProjects.length} label="Startups" delay={0.35} />
+              <StatBlock value={startupProjects.length} label="Startups" delay={0.3} />
+              <StatBlock value={corporateProjects.length} label="Corporates" delay={0.35} />
               <StatBlock value={SITE.stats.years} label="Years" delay={0.4} />
               <StatBlock value={SITE.stats.clients} label="Clients" delay={0.5} />
             </div>
@@ -229,17 +229,17 @@ export function Home() {
                 </h2>
               </div>
               <p className="hidden max-w-xs text-right text-sm text-muted md:block">
-                {corporateProjects.length} corporates · {startupProjects.length} startups
+                {startupProjects.length} startups · {corporateProjects.length} corporates
               </p>
             </div>
 
             <div className="space-y-16 md:space-y-20">
               <div>
                 <h3 className="mb-8 font-display text-2xl font-semibold text-text md:mb-10 md:text-3xl">
-                  Corporates
+                  Startups
                 </h3>
                 <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
-                  {corporateProjects.map((project, i) => (
+                  {startupProjects.map((project, i) => (
                     <ProjectCard key={project.slug} project={project} index={i} />
                   ))}
                 </div>
@@ -247,10 +247,10 @@ export function Home() {
 
               <div>
                 <h3 className="mb-8 font-display text-2xl font-semibold text-text md:mb-10 md:text-3xl">
-                  Startups
+                  Corporates
                 </h3>
                 <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
-                  {startupProjects.map((project, i) => (
+                  {corporateProjects.map((project, i) => (
                     <ProjectCard key={project.slug} project={project} index={i} />
                   ))}
                 </div>

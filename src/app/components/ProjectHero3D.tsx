@@ -86,10 +86,10 @@ function Scene({
 }) {
   return (
     <>
-      <ambientLight intensity={0.85} />
-      <directionalLight position={[4, 6, 5]} intensity={1.8} />
-      <directionalLight position={[-3, 2, -2]} intensity={0.5} />
-      <pointLight position={[0, 1, 2]} intensity={0.6} />
+      <ambientLight intensity={0.7} />
+      <directionalLight position={[4, 6, 5]} intensity={2.05} />
+      <directionalLight position={[-3.2, 2.4, -2]} intensity={0.65} />
+      <pointLight position={[0.2, 1.1, 2.2]} intensity={0.75} />
       <PointerRig pointerRef={pointerRef}>
         <PlacedModel modelPath={modelPath} scale={scale} />
         {secondaryModelPath ? (
@@ -155,7 +155,7 @@ export function ProjectHero3D({
         className="!h-full !w-full"
         style={{ width: "100%", height: "100%" }}
         camera={{ position: [0, 0.05, 4.2], fov: 24 }}
-        dpr={[1, 1.5]}
+        dpr={[1, 2]}
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       >
         <Suspense fallback={null}>
