@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
-import { SITE, corporateProjects, startupProjects, projects, type Project } from "../data/projects";
+import { SITE, corporateProjects, startupProjects, websiteProjects, projects, type Project } from "../data/projects";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { assetPath } from "../lib/assetPath";
 
@@ -209,11 +209,12 @@ export function Home() {
               want to use.
             </p>
 
-            <div className="mt-16 grid grid-cols-2 gap-8 border-t border-border pt-10 sm:grid-cols-4 md:max-w-2xl">
+            <div className="mt-16 grid grid-cols-2 gap-8 border-t border-border pt-10 sm:grid-cols-3 lg:grid-cols-5 md:max-w-4xl">
+              <StatBlock value={websiteProjects.length} label="Websites" delay={0.25} />
               <StatBlock value={startupProjects.length} label="Startups" delay={0.3} />
               <StatBlock value={corporateProjects.length} label="Corporates" delay={0.35} />
               <StatBlock value={SITE.stats.years} label="Years" delay={0.4} />
-              <StatBlock value={SITE.stats.clients} label="Clients" delay={0.5} />
+              <StatBlock value={SITE.stats.clients} label="Clients" delay={0.45} />
             </div>
           </div>
         </section>
@@ -229,11 +230,23 @@ export function Home() {
                 </h2>
               </div>
               <p className="hidden max-w-xs text-right text-sm text-muted md:block">
-                {startupProjects.length} startups · {corporateProjects.length} corporates
+                {websiteProjects.length} websites · {startupProjects.length} startups ·{" "}
+                {corporateProjects.length} corporates
               </p>
             </div>
 
             <div className="space-y-16 md:space-y-20">
+              <div>
+                <h3 className="mb-8 font-display text-2xl font-semibold text-text md:mb-10 md:text-3xl">
+                  Website
+                </h3>
+                <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
+                  {websiteProjects.map((project, i) => (
+                    <ProjectCard key={project.slug} project={project} index={i} />
+                  ))}
+                </div>
+              </div>
+
               <div>
                 <h3 className="mb-8 font-display text-2xl font-semibold text-text md:mb-10 md:text-3xl">
                   Startups

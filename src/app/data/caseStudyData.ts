@@ -2001,118 +2001,256 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  },
 
  walmart: {
- impact: "Search-to-cart conversion rose 19% after PLP filter and checkout clarity improvements.",
- client: "Walmart (enterprise retail)",
- timeline: "10 months · 2022",
- team: "Lead UI/UX Designer · 2 product managers · 8 engineers · merchandising stakeholders",
- tools: ["Figma", "FigJam", "Optimizely", "FullStory", "Jira", "Confluence"],
+ impact:
+ "Designed the fashion PDP virtual try-on experience so shoppers can change the model to someone they recognize more with, or become the model with their own photo.",
+ client: "Walmart US Fashion · Zeekit virtual try-on",
+ timeline: "Fashion VTO product experience · 2022",
+ team: "Lead UI/UX Designer · product · fashion merchandising · Walmart Global Technology · Zeekit engineering partners",
+ tools: [
+ "Figma",
+ "FigJam",
+ "Prototyping",
+ "Usability testing",
+ "PDP patterns",
+ "Inclusive design",
+ "Design QA",
+ ],
+ liveUrl: "https://www.walmart.com/browse/clothing/virtual-try-on/5438_4879497",
  context:
- "Walmart's digital shoppers split between mobile browse, in-store pickup, and delivery, often switching mid-journey. Search relevance, promotional complexity, and checkout friction drove abandonment, especially when fees and pickup slots surfaced too late.",
+ "Buying clothes online is hard when the only model on the page does not look like you. Walmart’s US fashion experience needed a way for shoppers to change the model on product images, either by selecting a closer match or by using a photo of themselves as the model.",
  goals: [
- "Reduce pogo-sticking between search results and product pages",
- "Surface fees, promotions, and pickup slots before checkout commitment",
- "Align web and app component patterns for catalog-scale consistency",
- "Improve pickup satisfaction without slowing delivery-first flows",
+ "Put a clear Try It On control directly on fashion product imagery",
+ "Let shoppers choose a model by height, body shape, size and skin tone",
+ "Let shoppers upload or capture their own photo and become the model",
+ "Keep the existing Walmart PDP commerce actions intact while adding confidence",
+ "Make the same mental model work across desktop web and the Walmart app",
+ "Support virtual try-on across private brands and participating national brands at scale",
  ],
  research: [
  {
- title: "Journey mapping at scale",
+ title: "Representation is a conversion problem",
  description:
- "Mapped end-to-end paths for pickup, delivery, and browse-only shoppers across web and app with analytics funnels and session replay review.",
+ "Shoppers asked a practical question before buy: will this look right on someone like me? Default catalog models answered that for only a narrow set of bodies, which made fit and style feel uncertain.",
  },
  {
- title: "Checkout abandonment study",
+ title: "One feature, two motivations",
  description:
- "Analyzed drop-off points across 50,000 sessions, surprise fees, slot unavailability, and account friction topped exit triggers.",
+ "Some shoppers wanted a closer model match without sharing a photo. Others wanted the highest confidence path: see the garment on themselves. The interface needed both without forcing one path.",
  },
  {
- title: "PLP filter usability tests",
+ title: "PDP real estate is already crowded",
  description:
- "Ran moderated tests on filter discoverability, chip behavior, and mobile drawer ergonomics with mixed retail familiarity levels.",
+ "Walmart fashion pages already carry price, variants, fulfillment and trust content. Try It On had to feel discoverable on the image without competing with Add to cart or breaking merchandising hierarchy.",
  },
  ],
  insights: [
- "Promotional badges without filter parity cause trust breaks when prices change at cart",
- "Pickup shoppers need inventory confidence at slot selection, not at checkout",
- "Mobile filter drawers fail when applied state isn't visible on the results grid",
- "Enterprise retail UX wins incrementally, component reuse beats one hero redesign",
+ "The entry point belongs on the product image, not buried under item details",
+ "Choose My Model and Be Your Own Model are different promises and should stay clearly labeled",
+ "Model filters only help when they map to recognizable traits: height, shape, size and skin tone",
+ "Self as model needs guidance for lighting, framing and privacy before it feels safe",
+ "The result must replace the product image, not open a disconnected AR novelty screen",
  ],
  solutions: [
  {
- title: "Search and PLP redesign",
+ title: "Choose my model on the image",
  description:
- "Redesigned result cards, sticky filter chips, and sort logic to keep shoppers in the listing layer, reducing unnecessary PDP hops.",
+ "The shipped PDP puts a Choose my model control directly on the fashion product image, so shoppers can change representation without leaving the buying flow.",
+ image: p("walmart", "solution-1.png"),
  },
  {
- title: "Checkout simplification",
+ title: "Choose my measurements",
  description:
- "Collapsed steps, surfaced fees early, and aligned payment and address patterns with clearer error recovery on mobile.",
+ "Shoppers enter size and height so the system can find models that are the closest match across body representation.",
+ image: p("walmart", "solution-2.png"),
  },
  {
- title: "Pickup slot selector",
+ title: "Browse matching models",
  description:
- "Built slot UI with real-time inventory confidence, store distance context, and fallback paths when items weren't available for pickup.",
+ "A model carousel shows candidates with name, size and height, so shoppers can pick someone they recognize more with before applying them to the product.",
+ image: p("walmart", "solution-3.png"),
+ },
+ {
+ title: "Model applied on the PDP",
+ description:
+ "Once chosen, the product image updates and the page keeps an editable status like who the model is, their height and size.",
+ image: p("walmart", "solution-4.png"),
+ },
+ {
+ title: "Concept · first idea",
+ description:
+ "Early exploration framed the same problem as Try It On with Choose My Model and Be Your Own Model paths before the live interaction pattern settled.",
+ image: p("walmart", "solution-5.png"),
+ },
+ {
+ title: "From concept to live result",
+ description:
+ "The first idea explored a creative studio-like framing. The live Walmart result became a commerce-native modal flow embedded in the existing fashion PDP.",
+ image: p("walmart", "solution-6.png"),
  },
  ],
  learnings: [
- "At catalog scale, filter IA matters more than card visual polish",
- "Pickup and delivery are different mental models, shared checkout shells need mode-aware defaults",
+ "Inclusive model choice is not a niche accessibility add-on, it is core fashion UX",
+ "The first idea can be expressive, but the shipped result has to feel native to Walmart commerce",
+ "Measurements first, then model choice, makes representation matching feel practical instead of abstract",
  ],
  metrics: [
- { value: "+19%", label: "Search-to-cart conversion lift"},
- { value: "−14%", label: "Checkout abandonment reduction"},
- { value: "+11 pts", label: "Pickup satisfaction score increase"},
+ { value: "Concept → Result", label: "From first idea to live Choose my model"},
+ { value: "Size + height", label: "Measurement inputs that find closest models"},
+ { value: "On-image CTA", label: "Choose my model stays on the product media"},
  ],
  overview:
- "Walmart needed digital shopping to feel as straightforward as walking an aisle. I led UX for search and PLP improvements, checkout simplification, and pickup slot selection across web and responsive components.",
+ "I designed the Walmart US fashion experience around changing the model on product images. The first idea explored Try It On with Choose My Model and Be Your Own Model paths. The live result became Choose my model: a commerce-native flow for measurements, matching models and applying a closer representation on the PDP.",
  challenge:
- "Massive catalog, aggressive promotional complexity, and users who split between mobile browsing and in-store pickup. Every change had to ship without breaking merchandising campaigns or legacy backend constraints.",
+ "The first idea needed room to explore confidence and representation. The result needed to feel unmistakably Walmart: a clear button on the product image, measurement inputs, model browsing and an editable applied state inside the existing fashion PDP.",
  process: [
  {
  phase: "01",
- title: "Journey mapping",
+ title: "Frame the first idea",
  description:
- "Mapped pickup, delivery, and browse paths across web and app. Prioritized funnel drops with analytics and stakeholder alignment.",
+ "Explored an image-first fashion confidence concept: shoppers should be able to change the model to someone they recognize more with, or become the model themselves.",
  },
  {
  phase: "02",
- title: "Search and filters",
+ title: "Design the image-first entry",
  description:
- "Redesigned PLP filters, sort logic, and result cards. Validated chip behavior and mobile drawer patterns in usability tests.",
+ "Placed the control on the product image so representation lived where shoppers already evaluate style and fit.",
  },
  {
  phase: "03",
- title: "Checkout simplification",
+ title: "Shape measurements and matching",
  description:
- "Reduced steps and surfaced fees early. Aligned error states and guest checkout paths across breakpoints.",
+ "Moved from abstract filters into a practical Choose my measurements step: size, height and closest-match model recommendations.",
  },
  {
  phase: "04",
- title: "Pickup integration",
+ title: "Design the model carousel",
  description:
- "Designed slot selector with inventory confidence and store context. Piloted at regional rollout with satisfaction tracking.",
+ "Built a browseable model experience with name, size and height details so choosing a closer representation felt concrete.",
+ },
+ {
+ phase: "05",
+ title: "Ship the live PDP result",
+ description:
+ "Settled the live pattern: Choose my model on the image, measurement modal, model selection, then an applied status on the product page.",
  },
  ],
  deliverables: [
- "Search and PLP redesign specifications",
- "Filter chip and mobile drawer component set",
- "Checkout flow v2 with fee transparency patterns",
- "Pickup slot selector and inventory confidence UI",
- "Responsive component updates for shared library",
+ "Concept explorations for Try It On / Choose My Model / Be Your Own Model",
+ "Live Choose my model PDP interaction model",
+ "Choose my measurements size and height flow",
+ "Matching model carousel and apply states",
+ "Editable model status on the fashion PDP",
+ "Content and microcopy for entry, matching and result states",
+ "Design QA against the live Walmart fashion experience",
  ],
  outcomes: [
- "Search-to-cart conversion increased 19%",
- "Checkout abandonment decreased 14%",
- "Pickup satisfaction score rose 11 points in pilot regions",
- "Shared components adopted across two additional category teams",
+ "Fashion PDPs surface Choose my model directly on product imagery",
+ "Shoppers can enter size and height to find closer model matches",
+ "Shoppers can browse matching models and apply one to the product image",
+ "The first idea evolved into a live commerce-native Walmart result",
  ],
  gallery: [
- { type: "image", src: p("walmart", "01-hero.png"), caption: "Product discovery and search results redesign"},
- { type: "image", src: p("walmart", "02-detail.png"), caption: "PLP filters and sticky chip behavior"},
- { type: "image", src: p("walmart", "03-detail.png"), caption: "Result cards with promotional clarity"},
- { type: "image", src: p("walmart", "04-detail.png"), caption: "Streamlined cart and checkout flow"},
- { type: "image", src: p("walmart", "05-detail.png"), caption: "Pickup slot selector with inventory confidence"},
+ {
+ type: "image",
+ src: p("walmart", "01-hero.png"),
+ caption: "Concept · first idea for an image-first model change control",
+ },
+ {
+ type: "image",
+ src: p("walmart", "02-detail.png"),
+ caption: "Concept · early Choose My Model exploration",
+ },
+ {
+ type: "image",
+ src: p("walmart", "03-detail.png"),
+ caption: "Concept · Be Your Own Model path in the first idea",
+ },
+ {
+ type: "video",
+ src: p("walmart", "choose-my-model-walkthrough.mp4"),
+ poster: p("walmart", "04-detail.png"),
+ caption:
+ "Result · live Walmart Choose my model walkthrough, from the product image button through measurements and model selection",
+ },
+ {
+ type: "image",
+ src: p("walmart", "04-detail.png"),
+ caption: "Result · live PDP with Choose my model on the product image",
+ },
+ {
+ type: "image",
+ src: p("walmart", "05-detail.png"),
+ caption: "Result · Choose my measurements with size and height",
+ },
+ {
+ type: "image",
+ src: p("walmart", "06-detail.png"),
+ caption: "Result · Choose my model carousel with closest matches",
+ },
+ {
+ type: "image",
+ src: p("walmart", "07-detail.png"),
+ caption: "Result · selected model applied back onto the fashion PDP",
+ },
+ {
+ type: "image",
+ src: p("walmart", "08-detail.png"),
+ caption: "Result · measurements to model selection continuity",
+ },
  ],
+ narrative: [
+ {
+ eyebrow: "Concept",
+ title: "The first idea: change the model on the image",
+ body: [
+ "The early concept started with a simple fashion confidence job. If the default catalog model does not feel recognizable, the shopper should be able to change it.",
+ "That first idea explored a Try It On entry with two paths: Choose My Model for representation matching, and Be Your Own Model for using a personal photo.",
+ ],
+ image: p("walmart", "01-hero.png"),
+ caption: "Concept exploration before the live Walmart interaction pattern",
+ },
+ {
+ eyebrow: "Result",
+ title: "The live system became Choose my model",
+ body: [
+ "In the shipped Walmart fashion experience, the control sits on the product image as Choose my model. Shoppers then enter size and height, browse closest matching models and apply one back to the PDP.",
+ "The result feels less like a separate fitting-room experiment and more like a native commerce behavior: button on the image, measurements, model choice, editable applied state.",
+ ],
+ bullets: [
+ "Choose my model on the product image",
+ "Choose my measurements with size and height",
+ "Browse matching models, then apply one to the PDP",
+ ],
+ cards: [
+ {
+ title: "On-image entry",
+ description: "The live control stays on the fashion product media.",
+ image: p("walmart", "solution-1.png"),
+ },
+ {
+ title: "Measurements",
+ description: "Size and height drive closest model matching.",
+ image: p("walmart", "solution-2.png"),
+ },
+ {
+ title: "Applied model",
+ description: "The PDP updates and keeps an editable model status.",
+ image: p("walmart", "solution-4.png"),
+ },
+ ],
+ },
+ {
+ eyebrow: "Experience",
+ title: "From expressive concept to Walmart-native result",
+ body: [
+ "The concept work was useful because it clarified the job: representation and confidence before purchase.",
+ "The live result tightened that idea into Walmart’s existing fashion PDP language, so shoppers could change the model without leaving the page they were already buying from.",
+ ],
+ },
+ ],
+ image: p("walmart", "01-hero.png"),
+ closing:
+ "The first idea asked whether shoppers could change the model. The live result answered it inside Walmart fashion: Choose my model on the image, match by measurements, apply a closer representation and keep shopping.",
  },
 
  anova: {
@@ -4863,5 +5001,550 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  image: p("50nny", "01-hero.png"),
  closing:
  "AI needs more than intelligence. It needs context. 50NNY · End to End Product Designer & Full Stack Product Builder.",
+ },
+
+ superlocal: {
+ impact: "Designed and shipped a local-food discovery site for Barrie produce, vendors and market hours.",
+ client: "SuperLocal",
+ timeline: "Website design & build · 2025",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Web design", "Responsive UI", "GitHub Pages"],
+ liveUrl: "https://is-studio-hub.github.io/superlocal/",
+ context:
+ "SuperLocal helps people find fresh produce from local farms and vendors. The website needed to feel rooted in place while making practical market information easy to reach.",
+ goals: [
+ "Make local vendors and market hours easy to discover",
+ "Create a warm brand presence for Barrie local food",
+ "Keep contact and collaboration pathways obvious",
+ "Ship a responsive live website quickly",
+ ],
+ research: [
+ {
+ title: "Local discovery behaviour",
+ description:
+ "People looking for local food usually need trust signals, vendor clarity and hours before they care about brand poetry.",
+ },
+ {
+ title: "Fragmented local information",
+ description:
+ "Market details often live across social posts and word of mouth. The site needed to gather that intent into one destination.",
+ },
+ ],
+ insights: [
+ "Local brand warmth only works if practical information is still easy to find",
+ "Vendor and hours paths should feel as important as the homepage story",
+ "Contact is part of the product for a local market platform",
+ ],
+ solutions: [
+ {
+ title: "Market homepage",
+ description: "Designed a clear entry that introduces local produce discovery and routes into key sections.",
+ image: p("superlocal", "solution-1.png"),
+ },
+ {
+ title: "Lineup and vendor storytelling",
+ description: "Gave farmers and market culture a dedicated mid-page stage, not just a hero splash.",
+ image: p("superlocal", "solution-2.png"),
+ },
+ {
+ title: "Mobile market access",
+ description: "Made vendor and hours discovery comfortable on smaller screens where local search often happens.",
+ image: p("superlocal", "solution-3.png"),
+ },
+ ],
+ learnings: [
+ "Local websites win when brand and logistics share the same stage",
+ "A short content model can still feel rich if hierarchy is honest",
+ ],
+ metrics: [
+ { value: "Live", label: "GitHub Pages website" },
+ { value: "Local", label: "Barrie produce discovery focus" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ overview:
+ "I designed and built SuperLocal as a website that turns local-food intent into clear paths for vendors, market hours and contact.",
+ challenge:
+ "The brand needed to feel fresh and local without burying the practical reasons people visit: who is selling, when, and how to reach them.",
+ process: [
+ { phase: "01", title: "Frame the local job", description: "Defined discovery around vendors, hours, trust and contact." },
+ { phase: "02", title: "Design the narrative", description: "Created homepage structure and section pathways with brand-forward visuals." },
+ { phase: "03", title: "Build responsive pages", description: "Implemented desktop and mobile experiences with clear navigation." },
+ { phase: "04", title: "Publish", description: "Shipped the live SuperLocal site on GitHub Pages." },
+ ],
+ deliverables: [
+ "Website UX and visual design",
+ "Responsive content architecture",
+ "Vendor and hours pathways",
+ "Live production website",
+ ],
+ outcomes: [
+ "Live SuperLocal website",
+ "Clearer local produce discovery",
+ "Brand presence that supports real market behaviour",
+ ],
+ gallery: [
+ { type: "image", src: p("superlocal", "01-hero.png"), caption: "Homepage — produce-led hero for Barrie discovery" },
+ { type: "image", src: p("superlocal", "02-detail.png"), caption: "Line up 2025 — farmer portraits and market culture" },
+ { type: "image", src: p("superlocal", "03-detail.png"), caption: "Vendors and seasonal produce pathways" },
+ { type: "image", src: p("superlocal", "04-detail.png"), caption: "Contact and collaboration section" },
+ { type: "image", src: p("superlocal", "05-detail.png"), caption: "Mobile homepage" },
+ { type: "image", src: p("superlocal", "06-detail.png"), caption: "Mobile mid-page market browsing" },
+ ],
+ image: p("superlocal", "01-hero.png"),
+ closing: "Local food feels better when the website makes the next step obvious.",
+ },
+
+ blairandjack: {
+ impact: "Designed a physician-backed men’s skincare website around trust, ritual and conversion.",
+ client: "Blair & Jack",
+ timeline: "Website design & build · 2025",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Brand web", "Ecommerce UX", "Responsive UI"],
+ liveUrl: "https://is-studio-hub.github.io/blairandjack/",
+ context:
+ "Blair & Jack is a men’s skincare brand built around anti-bump care and a simple daily ritual. The website needed to feel premium, credible and easy to shop.",
+ goals: [
+ "Build physician-backed brand trust quickly",
+ "Explain the ritual without overcomplicating it",
+ "Create strong shop and story pathways",
+ "Ship a refined responsive brand site",
+ ],
+ research: [
+ {
+ title: "Trust before product",
+ description:
+ "Men’s skincare shoppers need proof and simplicity before they commit to a ritual or treatment claim.",
+ },
+ {
+ title: "Ritual over regimen",
+ description:
+ "A three-step system is easier to sell when the site shows calm confidence instead of 12-step complexity.",
+ },
+ ],
+ insights: [
+ "Founder and physician credibility should appear early",
+ "Product pages need benefit clarity more than clinical jargon",
+ "Premium whitespace can still convert when CTAs stay obvious",
+ ],
+ solutions: [
+ {
+ title: "Brand-led homepage",
+ description: "Designed a calm first impression with product presence and clear shop momentum.",
+ image: p("blairandjack", "solution-1.png"),
+ },
+ {
+ title: "Story and trust pages",
+ description: "Connected origin story photography with physician-backed science surfaces.",
+ image: p("blairandjack", "solution-2.png"),
+ },
+ {
+ title: "Shop and product path",
+ description: "Made anti-bump treatment shopping feel premium and decisive.",
+ image: p("blairandjack", "solution-3.png"),
+ },
+ ],
+ learnings: [
+ "Premium men’s care sites succeed when trust and action share hierarchy",
+ "A short ritual story can outperform a dense ingredient dump",
+ ],
+ metrics: [
+ { value: "3", label: "Core ritual products framed as a system" },
+ { value: "Live", label: "Brand and shop website" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ overview:
+ "I designed Blair & Jack as a brand website that makes physician-backed men’s skincare feel calm, credible and shoppable.",
+ challenge:
+ "The brand had a strong origin story and product proof. The challenge was keeping both visible without slowing the path to shop.",
+ process: [
+ { phase: "01", title: "Position trust", description: "Framed physician foundation, lived experience and ritual simplicity." },
+ { phase: "02", title: "Design the narrative", description: "Built homepage, science and shop structures around conversion confidence." },
+ { phase: "03", title: "Refine product storytelling", description: "Made benefits and ritual steps feel premium and practical." },
+ { phase: "04", title: "Ship", description: "Published the live Blair & Jack site." },
+ ],
+ deliverables: [
+ "Brand website UX/UI",
+ "Science and story modules",
+ "Shop-oriented responsive layouts",
+ "Live production website",
+ ],
+ outcomes: [
+ "Live Blair & Jack website",
+ "Clearer ritual and product trust messaging",
+ "Premium ecommerce brand presence",
+ ],
+ gallery: [
+ { type: "image", src: p("blairandjack", "01-hero.png"), caption: "Homepage — product-led brand entry" },
+ { type: "image", src: p("blairandjack", "02-detail.png"), caption: "Science — trust and clinical framing" },
+ { type: "image", src: p("blairandjack", "03-detail.png"), caption: "Our Story — lifestyle origin narrative" },
+ { type: "image", src: p("blairandjack", "04-detail.png"), caption: "Shop — anti-bump treatment pathway" },
+ { type: "image", src: p("blairandjack", "05-detail.png"), caption: "Mobile brand experience" },
+ { type: "image", src: p("blairandjack", "06-detail.png"), caption: "Science mid-page proof storytelling" },
+ ],
+ image: p("blairandjack", "01-hero.png"),
+ closing: "Men’s skincare feels better when the website is as calm as the ritual it sells.",
+ },
+
+ gatorade: {
+ impact: "Built a high-energy campaign site for formula storytelling and performance brand presence.",
+ client: "Gatorade campaign concept",
+ timeline: "Campaign website · 2025",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Campaign web", "Motion-led UI", "Responsive design"],
+ liveUrl: "https://is-studio-hub.github.io/gatorade/",
+ context:
+ "The Gatorade campaign site needed to express performance hydration with force: formula, science, athletes and product discovery in one scroll.",
+ goals: [
+ "Make formula storytelling feel athletic and modern",
+ "Keep campaign momentum across long-scroll sections",
+ "Support multilingual campaign surfaces",
+ "Create clear learn-more and find-product paths",
+ ],
+ research: [
+ {
+ title: "Campaign fatigue",
+ description:
+ "Sports brand sites often stack claims. Hierarchy and pacing matter more than more slogans.",
+ },
+ {
+ title: "Science as proof",
+ description:
+ "Electrolyte and formula details need to feel energizing, not academic.",
+ },
+ ],
+ insights: [
+ "Bold section rhythm keeps performance claims from blurring together",
+ "Product imagery should punctuate the story, not interrupt it",
+ "Campaign CTAs work best when they appear at natural energy peaks",
+ ],
+ solutions: [
+ {
+ title: "Campaign hero",
+ description: "Designed a forceful opening that sets performance tone immediately.",
+ image: p("gatorade", "solution-1.png"),
+ },
+ {
+ title: "Formula and athlete proof",
+ description: "Moved from formula storytelling into cinematic athletic science moments.",
+ image: p("gatorade", "solution-2.png"),
+ },
+ {
+ title: "Science chapter",
+ description: "Kept electrolyte and performance claims energetic instead of academic.",
+ image: p("gatorade", "solution-3.png"),
+ },
+ ],
+ learnings: [
+ "Campaign sites need pacing as much as styling",
+ "Science content converts better when framed as athletic advantage",
+ ],
+ metrics: [
+ { value: "Live", label: "Campaign website" },
+ { value: "Multi", label: "Language-ready campaign surfaces" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ overview:
+ "I designed the Gatorade campaign website as a performance story: formula, science and athlete trust moving with clear momentum.",
+ challenge:
+ "A hydration campaign can become either too loud or too technical. The site needed both energy and clarity.",
+ process: [
+ { phase: "01", title: "Set the campaign arc", description: "Organised hero, formula, science and athlete proof into one scroll." },
+ { phase: "02", title: "Design visual intensity", description: "Built bold hierarchy, section rhythm and CTA placement." },
+ { phase: "03", title: "Adapt for mobile", description: "Preserved impact on smaller screens without losing story order." },
+ { phase: "04", title: "Publish", description: "Shipped the live campaign experience." },
+ ],
+ deliverables: [
+ "Campaign website design",
+ "Formula and science modules",
+ "Responsive athletic brand UI",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Gatorade campaign website",
+ "Stronger formula storytelling",
+ "High-energy presence across devices",
+ ],
+ gallery: [
+ { type: "image", src: p("gatorade", "01-hero.png"), caption: "Campaign hero — performance opening" },
+ { type: "image", src: p("gatorade", "02-detail.png"), caption: "Experience chapter — athlete science imagery" },
+ { type: "image", src: p("gatorade", "03-detail.png"), caption: "Formula and hydration storytelling" },
+ { type: "image", src: p("gatorade", "04-detail.png"), caption: "Athletes and product discovery" },
+ { type: "image", src: p("gatorade", "05-detail.png"), caption: "Mobile campaign homepage" },
+ { type: "image", src: p("gatorade", "06-detail.png"), caption: "Mobile mid-scroll performance path" },
+ ],
+ image: p("gatorade", "01-hero.png"),
+ closing: "Performance brands need websites that move as hard as the story they sell.",
+ },
+
+ "magic-spoon": {
+ impact: "Designed a nostalgic cereal brand site with clear shoppable collections and founder story.",
+ client: "Magic Spoon",
+ timeline: "Website design & build · 2024",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Ecommerce web", "CPG brand UI", "Responsive design"],
+ liveUrl: "https://is-studio-hub.github.io/Magic-Spoon/",
+ context:
+ "Magic Spoon sits between nostalgia and modern nutrition. The website needed playful cereal energy with adult purchase clarity.",
+ goals: [
+ "Balance nostalgia with grown-up product benefits",
+ "Make cereal, treats and bundles easy to browse",
+ "Support founder story and content surfaces",
+ "Ship a colorful responsive brand site",
+ ],
+ research: [
+ {
+ title: "Nostalgia vs nutrition",
+ description:
+ "Shoppers enjoy the childhood cue, but still need protein, sugar and category clarity before buying.",
+ },
+ {
+ title: "Collection overload",
+ description:
+ "Large product catalogs need filters and visual rhythm or they turn into a wall of boxes.",
+ },
+ ],
+ insights: [
+ "Playful brand systems still need strict product hierarchy",
+ "Founder story builds trust when it sits near shoppable proof",
+ "Category browsing should feel fun without becoming chaotic",
+ ],
+ solutions: [
+ {
+ title: "Brand homepage",
+ description: "Designed a colorful entry that introduces the Magic Spoon world quickly.",
+ image: p("magic-spoon", "solution-1.png"),
+ },
+ {
+ title: "Product collections",
+ description: "Built a browsable cereal grid with category filters and playful packaging.",
+ image: p("magic-spoon", "solution-2.png"),
+ },
+ {
+ title: "About and brand story",
+ description: "Gave nostalgia and founder context their own chapter next to shop.",
+ image: p("magic-spoon", "solution-3.png"),
+ },
+ ],
+ learnings: [
+ "CPG nostalgia works best when product truth stays visible",
+ "Collection design is as important as homepage charm",
+ ],
+ metrics: [
+ { value: "Live", label: "Brand and shop website" },
+ { value: "Multi", label: "Product collections framed for browse" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ overview:
+ "I designed Magic Spoon as a brand website that keeps cereal nostalgia playful while making products and story easy to navigate.",
+ challenge:
+ "The brand is colorful and fun, but ecommerce still needs structure. The challenge was energy without confusion.",
+ process: [
+ { phase: "01", title: "Define brand + shop IA", description: "Organised about, products, blog and contact around browse intent." },
+ { phase: "02", title: "Design collection patterns", description: "Built grids and storytelling for cereals, treats and bundles." },
+ { phase: "03", title: "Polish responsive behaviour", description: "Kept color and personality intact across breakpoints." },
+ { phase: "04", title: "Publish", description: "Shipped the live Magic Spoon site." },
+ ],
+ deliverables: [
+ "Ecommerce brand website",
+ "Collection and product layouts",
+ "Founder and content sections",
+ "Live production website",
+ ],
+ outcomes: [
+ "Live Magic Spoon website",
+ "Clearer product browsing",
+ "Nostalgic brand presence with modern shop structure",
+ ],
+ gallery: [
+ { type: "image", src: p("magic-spoon", "01-hero.png"), caption: "Homepage — typographic brand entry" },
+ { type: "image", src: p("magic-spoon", "02-detail.png"), caption: "About Us — nostalgia and brand story" },
+ { type: "image", src: p("magic-spoon", "03-detail.png"), caption: "Our Products — cereal collection grid" },
+ { type: "image", src: p("magic-spoon", "04-detail.png"), caption: "Blog — content and brand journalism" },
+ { type: "image", src: p("magic-spoon", "05-detail.png"), caption: "Contact — shopper and brand pathway" },
+ { type: "image", src: p("magic-spoon", "06-detail.png"), caption: "Mobile product browsing" },
+ ],
+ image: p("magic-spoon", "01-hero.png"),
+ closing: "Nostalgia gets attention. Clear product structure earns the sale.",
+ },
+
+ dahari: {
+ impact: "Designed a Hebrew-first corporate real-estate website for projects, commercial assets and urban renewal.",
+ client: "Dahari",
+ timeline: "Website design & build · 2025",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Corporate web", "Hebrew UI", "Responsive design"],
+ liveUrl: "https://is-studio-hub.github.io/dahari/",
+ context:
+ "Dahari develops and manages commercial, logistics and urban-renewal real estate. The website needed to present a serious portfolio with local clarity.",
+ goals: [
+ "Create a confident Hebrew-first corporate presence",
+ "Make project and commercial categories easy to navigate",
+ "Support urban renewal and under-construction storytelling",
+ "Ship a responsive company website",
+ ],
+ research: [
+ {
+ title: "Portfolio density",
+ description:
+ "Real-estate companies often overwhelm visitors with every asset at once. Category clarity builds trust faster.",
+ },
+ {
+ title: "Local authority",
+ description:
+ "For Netanya and Sharon audiences, language, hierarchy and project status cues matter as much as imagery.",
+ },
+ ],
+ insights: [
+ "Hebrew-first layout needs intentional navigation rhythm",
+ "Project status should be visible before deep content",
+ "Corporate calm beats brochure excess",
+ ],
+ solutions: [
+ {
+ title: "Corporate homepage",
+ description: "Designed an authoritative entry into Dahari’s development world.",
+ image: p("dahari", "solution-1.png"),
+ },
+ {
+ title: "Project showcase",
+ description: "Presented commercial assets with blueprint-led architectural framing.",
+ image: p("dahari", "solution-2.png"),
+ },
+ {
+ title: "Renewal and company story",
+ description: "Gave urban renewal and about pathways their own scroll chapters.",
+ image: p("dahari", "solution-3.png"),
+ },
+ ],
+ learnings: [
+ "Corporate real-estate sites win with hierarchy, not volume",
+ "Language-first design decisions shape trust as much as photography",
+ ],
+ metrics: [
+ { value: "Live", label: "Corporate website" },
+ { value: "HE", label: "Hebrew-first experience" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ overview:
+ "I designed Dahari’s website as a clear corporate presence for development, commercial assets and urban renewal.",
+ challenge:
+ "The company does complex work across many asset types. The site needed to feel established without becoming dense.",
+ process: [
+ { phase: "01", title: "Map portfolio IA", description: "Organised construction, renewal, commercial and about pathways." },
+ { phase: "02", title: "Design Hebrew-first UI", description: "Built navigation, typography and project hierarchy for local confidence." },
+ { phase: "03", title: "Adapt responsively", description: "Preserved authority and clarity on mobile." },
+ { phase: "04", title: "Publish", description: "Shipped the live Dahari site." },
+ ],
+ deliverables: [
+ "Corporate website UX/UI",
+ "Hebrew-first information architecture",
+ "Project category structure",
+ "Live production website",
+ ],
+ outcomes: [
+ "Live Dahari website",
+ "Clearer project and commercial navigation",
+ "Stronger digital presence for regional development work",
+ ],
+ gallery: [
+ { type: "image", src: p("dahari", "01-hero.png"), caption: "Homepage — Hebrew-first corporate entry" },
+ { type: "image", src: p("dahari", "02-detail.png"), caption: "Projects — blueprint-framed asset showcase" },
+ { type: "image", src: p("dahari", "03-detail.png"), caption: "Urban renewal chapter" },
+ { type: "image", src: p("dahari", "04-detail.png"), caption: "About and company presence" },
+ { type: "image", src: p("dahari", "05-detail.png"), caption: "Mobile corporate homepage" },
+ { type: "image", src: p("dahari", "06-detail.png"), caption: "Mobile mid-page project browsing" },
+ ],
+ image: p("dahari", "01-hero.png"),
+ closing: "Real-estate complexity belongs behind the scenes. The website should feel decided.",
+ },
+
+ isstudio: {
+ impact: "Designed a minimal studio site for IS Experience House with showreel presence and direct contact.",
+ client: "IS Experience House",
+ timeline: "Studio website · 2025",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Studio brand web", "Interaction design", "Responsive UI"],
+ liveUrl: "https://is-studio-hub.github.io/isstudio/",
+ context:
+ "IS Experience House needed a digital home that felt like the practice: confident, concise and easy to reach.",
+ goals: [
+ "Lead with studio identity and showreel energy",
+ "Reduce friction to contact",
+ "Keep the composition minimal but memorable",
+ "Ship a live studio presence",
+ ],
+ research: [
+ {
+ title: "Studio site overload",
+ description:
+ "Many creative studios over-explain. A sharp first impression often creates more desire than a long manifesto.",
+ },
+ {
+ title: "Contact as the product",
+ description:
+ "For a practice site, the primary conversion is conversation, not deep browsing.",
+ },
+ ],
+ insights: [
+ "Brand signal should outrank secondary content on first viewport",
+ "Minimal sites still need motion and attitude to feel alive",
+ "Contact should feel immediate, not buried",
+ ],
+ solutions: [
+ {
+ title: "Studio identity homepage",
+ description: "Designed a first viewport around brand presence, reel energy and contact.",
+ image: p("isstudio", "solution-1.png"),
+ },
+ {
+ title: "House and website modes",
+ description: "Built distinct WEBSITE and OUR HOUSE experiences inside one studio system.",
+ image: p("isstudio", "solution-2.png"),
+ },
+ {
+ title: "Capabilities storytelling",
+ description: "Extended the house into what-we-do depth without losing the minimal attitude.",
+ image: p("isstudio", "solution-3.png"),
+ },
+ ],
+ learnings: [
+ "A studio website can be short if the signal is unmistakable",
+ "Restraint is a design decision, not a missing page count",
+ ],
+ metrics: [
+ { value: "Live", label: "Studio website" },
+ { value: "Minimal", label: "Identity-led composition" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ overview:
+ "I designed the IS Experience House website as a concise digital home: identity first, contact close, no unnecessary ceremony.",
+ challenge:
+ "The temptation with studio sites is to show everything. This one needed presence more than inventory.",
+ process: [
+ { phase: "01", title: "Define the house signal", description: "Centered brand, reel and contact as the primary composition." },
+ { phase: "02", title: "Design minimal interaction", description: "Used restraint, motion and typography to create attitude." },
+ { phase: "03", title: "Ship", description: "Published the live studio site." },
+ ],
+ deliverables: [
+ "Studio brand website",
+ "Showreel-led homepage",
+ "Contact-focused UI",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live IS Experience House website",
+ "Clear studio identity online",
+ "Direct path from presence to contact",
+ ],
+ gallery: [
+ { type: "image", src: p("isstudio", "01-hero.png"), caption: "Homepage — Experience House identity" },
+ { type: "image", src: p("isstudio", "02-detail.png"), caption: "WEBSITE mode — project carousel" },
+ { type: "image", src: p("isstudio", "03-detail.png"), caption: "OUR HOUSE — studio story and research" },
+ { type: "image", src: p("isstudio", "04-detail.png"), caption: "Capabilities — what we do depth" },
+ { type: "image", src: p("isstudio", "05-detail.png"), caption: "Website carousel — secondary project slide" },
+ { type: "image", src: p("isstudio", "06-detail.png"), caption: "Mobile house experience" },
+ ],
+ image: p("isstudio", "01-hero.png"),
+ closing: "A studio site should feel like walking into the house, not reading the brochure.",
  },
 };

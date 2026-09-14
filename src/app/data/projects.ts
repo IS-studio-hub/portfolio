@@ -21,16 +21,13 @@ export const SITE = {
   seoDescription:
     "IS is a product designer based in Toronto. Case studies across government, retail, fintech, native apps and design systems.",
   location: "Toronto, Canada",
-  stats: { corporates: 14, startups: 6, years: 10, clients: 20 },
+  stats: { corporates: 14, startups: 6, years: 10, clients: 26 },
   social: {
     linkedin: "https://www.linkedin.com/in/shamrikin/",
     dribbble: "https://dribbble.com/Shamrikin",
     instagram: "https://www.instagram.com/is.experience.house/",
   },
 };
-
-const img = (id: number, w = 1200, h = 800) =>
- `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&q=80`;
 
 const embed = (url: string) =>
  `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`;
@@ -760,55 +757,65 @@ const rawProjects = [
  },
  {
  slug: "walmart",
- title: "Walmart Retail Experience",
+ title: "See Yourself in Walmart Fashion",
  shortTitle: "Walmart",
- subtitle: "Retail and e-commerce UX overhaul",
+ subtitle: "From first idea to live Choose my model on Walmart fashion PDP",
  description:
- "UX overhaul for retail and e-commerce flows, from search and discovery through checkout and pickup.",
+ "Concept-to-result case study for Walmart US fashion: early Try It On ideas that became the live Choose my model experience for changing representation on product images.",
  year: "2022",
  role: "Lead UI/UX Designer",
- tags: ["Retail", "E-commerce", "Enterprise"],
- accent: "#0071CE",
+ tags: [
+ "Fashion",
+ "Virtual Try-On",
+ "Choose My Model",
+ "Be Your Own Model",
+ "PDP",
+ "Inclusive Design",
+ ],
+ accent: "#0071DC",
  gridSpan: "half",
  image: projectImg("walmart"),
  gallery: [
- { type: "image" as const, src: img(1441986300917, 1400, 900), caption: "Product discovery redesign"},
- { type: "image" as const, src: img(1472851294708, 1400, 900), caption: "Cart and checkout flow"},
+ {
+ type: "image" as const,
+ src: projectImg("walmart"),
+ caption: "Fashion PDP with Try It On on the product image",
+ },
  ],
  overview:
- "Walmart needed digital shopping to feel as straightforward as walking an aisle. The overhaul targeted search relevance, filter clarity, and checkout speed.",
+ "Online fashion fails when shoppers cannot picture an item on a body like theirs. I designed the product experience around Walmart’s virtual try-on system so fashion PDPs could swap the default model for a closer match, or dress the shopper’s own photo.",
  challenge:
- "Massive catalog, aggressive promotional complexity, and users who split between mobile browsing and in-store pickup.",
+ "Make a powerful computer-vision feature feel like a simple button on the product image, without overwhelming the existing Walmart commerce page.",
  process: [
  {
  phase: "01",
- title: "Journey mapping",
+ title: "Map the fashion confidence gap",
  description:
- "Mapped end-to-end paths for pickup, delivery, and browse-only shoppers across web and app.",
+ "Studied where shoppers hesitate on apparel PDPs: fit, length, drape and representation, then positioned Try It On as the entry to that decision.",
  },
  {
  phase: "02",
- title: "Search and filters",
+ title: "Design two clear paths",
  description:
- "Redesigned PLP filters, sort logic, and result cards to reduce pogo-sticking between pages.",
+ "Split the experience into Choose My Model for representation matching and Be Your Own Model for personal photos, with one shared entry control.",
  },
  {
  phase: "03",
- title: "Checkout simplification",
+ title: "Ship on PDP, web and app",
  description:
- "Reduced steps, surfaced fees early, and aligned pickup slot selection with inventory confidence.",
+ "Embedded the control on product imagery, designed filters and photo guidance, and aligned desktop and mobile continuation patterns.",
  },
  ],
  deliverables: [
- "Search and PLP redesign",
- "Checkout flow v2",
- "Pickup slot selector",
- "Responsive component updates",
+ "Try It On PDP interaction model",
+ "Choose My Model selection experience",
+ "Be Your Own Model capture and result flow",
+ "Responsive web and app patterns",
  ],
  outcomes: [
- "Search-to-cart conversion up 19%",
- "Checkout abandonment down 14%",
- "Pickup satisfaction score increased 11 points",
+ "Virtual try-on surfaced directly on fashion product imagery",
+ "Shoppers can change models by height, body shape and skin tone",
+ "Shoppers can use their own photo as the model on Walmart fashion items",
  ],
  },
  {
@@ -1278,9 +1285,318 @@ const rawProjects = [
  "One owner across product, design, development and quality",
  ],
  },
+ {
+ slug: "superlocal",
+ title: "SuperLocal",
+ shortTitle: "SuperLocal",
+ subtitle: "Discovering local food through a clear market experience",
+ description:
+ "Website design for SuperLocal, helping people in Barrie find fresh produce, vendors and market hours from nearby farms.",
+ year: "2025",
+ role: "Website Designer & Builder",
+ tags: ["Website", "Local", "Brand"],
+ accent: "#4ADE80",
+ gridSpan: "half",
+ image: projectImg("superlocal"),
+ gallery: [
+ { type: "image" as const, src: projectImg("superlocal"), caption: "SuperLocal market discovery" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/superlocal/",
+ overview:
+ "Designed and built a local-food website that makes vendors, market hours and nearby produce feel easy to discover.",
+ challenge:
+ "Local food systems are fragmented. The site needed to feel warm and trustworthy while still making practical information findable fast.",
+ process: [
+ {
+ phase: "01",
+ title: "Define the discovery job",
+ description: "Mapped how people look for local food: vendors, hours, contact and confidence in freshness.",
+ },
+ {
+ phase: "02",
+ title: "Design the market story",
+ description: "Created a clear homepage narrative with routes into vendors, hours and contact.",
+ },
+ {
+ phase: "03",
+ title: "Build and publish",
+ description: "Shipped a live GitHub Pages experience with responsive layouts and brand-forward visuals.",
+ },
+ ],
+ deliverables: [
+ "Website UX and visual design",
+ "Responsive homepage and content structure",
+ "Vendor and market-hours pathways",
+ "Live production build",
+ ],
+ outcomes: [
+ "Live SuperLocal website for Barrie local produce discovery",
+ "Clear paths into vendors, hours and contact",
+ "Brand presence that feels local and contemporary",
+ ],
+ },
+ {
+ slug: "blairandjack",
+ title: "Blair & Jack",
+ shortTitle: "Blair & Jack",
+ subtitle: "A calm ecommerce brand for men’s skin",
+ description:
+ "Brand website for Blair & Jack, a physician-backed men’s skincare line focused on anti-bump care and a simple daily ritual.",
+ year: "2025",
+ role: "Website Designer & Builder",
+ tags: ["Website", "Ecommerce", "Brand"],
+ accent: "#C4A484",
+ gridSpan: "half",
+ image: projectImg("blairandjack"),
+ gallery: [
+ { type: "image" as const, src: projectImg("blairandjack"), caption: "Blair & Jack brand site" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/blairandjack/",
+ overview:
+ "Designed a refined men’s skincare website that builds trust through science, story and a simple shop ritual.",
+ challenge:
+ "Men’s skincare often feels either clinical or generic. The site needed to feel premium, physician-backed and easy to act on.",
+ process: [
+ {
+ phase: "01",
+ title: "Position the brand",
+ description: "Framed the story around lived experience, physician formulation and a three-step ritual.",
+ },
+ {
+ phase: "02",
+ title: "Design the shopping narrative",
+ description: "Connected science, product proof and shop CTAs without overwhelming the first viewport.",
+ },
+ {
+ phase: "03",
+ title: "Ship the brand site",
+ description: "Built a responsive marketing and product experience ready for conversion.",
+ },
+ ],
+ deliverables: [
+ "Brand website UX/UI",
+ "Science, story and shop page structure",
+ "Responsive product storytelling",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Blair & Jack brand experience",
+ "Clear ritual and product confidence messaging",
+ "Premium ecommerce presence for men’s skin",
+ ],
+ },
+ {
+ slug: "gatorade",
+ title: "Gatorade",
+ shortTitle: "Gatorade",
+ subtitle: "Performance storytelling for a hydration campaign",
+ description:
+ "Campaign website for Gatorade focused on formula storytelling, athlete energy and product discovery.",
+ year: "2025",
+ role: "Website Designer & Builder",
+ tags: ["Website", "Campaign", "Sports"],
+ accent: "#F97316",
+ gridSpan: "half",
+ image: projectImg("gatorade"),
+ gallery: [
+ { type: "image" as const, src: projectImg("gatorade"), caption: "Gatorade campaign site" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/gatorade/",
+ overview:
+ "Designed a high-energy campaign site that turns electrolyte science and performance claims into a scrollable brand story.",
+ challenge:
+ "Sports campaign sites can drown in claims. The experience needed momentum, clarity and a strong product narrative.",
+ process: [
+ {
+ phase: "01",
+ title: "Frame the performance story",
+ description: "Organised formula, science and athlete trust into a progressive campaign narrative.",
+ },
+ {
+ phase: "02",
+ title: "Design motion and hierarchy",
+ description: "Built a bold visual system for sections, CTAs and multilingual campaign surfaces.",
+ },
+ {
+ phase: "03",
+ title: "Launch the campaign site",
+ description: "Shipped a responsive experience with clear paths to learn more and find product.",
+ },
+ ],
+ deliverables: [
+ "Campaign website design",
+ "Formula and science storytelling modules",
+ "Responsive performance-brand UI",
+ "Live production build",
+ ],
+ outcomes: [
+ "Live Gatorade campaign experience",
+ "Stronger product and formula storytelling",
+ "High-energy brand presence across desktop and mobile",
+ ],
+ },
+ {
+ slug: "magic-spoon",
+ title: "Magic Spoon",
+ shortTitle: "Magic Spoon",
+ subtitle: "Nostalgic cereal branding with grown-up product clarity",
+ description:
+ "Website for Magic Spoon combining founder story, shoppable cereal collections and nostalgic brand energy.",
+ year: "2024",
+ role: "Website Designer & Builder",
+ tags: ["Website", "Ecommerce", "CPG"],
+ accent: "#A78BFA",
+ gridSpan: "half",
+ image: projectImg("magic-spoon"),
+ gallery: [
+ { type: "image" as const, src: projectImg("magic-spoon"), caption: "Magic Spoon website" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/Magic-Spoon/",
+ overview:
+ "Designed a CPG brand site that balances childhood nostalgia with adult product benefits and shoppable collections.",
+ challenge:
+ "Cereal nostalgia is fun, but purchase confidence still needs nutrition clarity, collection browsing and brand trust.",
+ process: [
+ {
+ phase: "01",
+ title: "Structure brand + shop",
+ description: "Connected about, products, blog and contact into one coherent cereal brand world.",
+ },
+ {
+ phase: "02",
+ title: "Design the product grid",
+ description: "Created shoppable collection patterns for cereals, treats, granola and bundles.",
+ },
+ {
+ phase: "03",
+ title: "Publish the experience",
+ description: "Built and launched a colorful responsive site with clear product entry points.",
+ },
+ ],
+ deliverables: [
+ "Ecommerce brand website",
+ "Product collection and story layouts",
+ "Founder and content sections",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Magic Spoon brand and shop experience",
+ "Clearer product browsing across categories",
+ "Nostalgic brand presence with modern ecommerce structure",
+ ],
+ },
+ {
+ slug: "dahari",
+ title: "Dahari",
+ shortTitle: "Dahari",
+ subtitle: "A Hebrew real-estate development presence",
+ description:
+ "Corporate website for Dahari covering commercial real estate, logistics, urban renewal and projects under construction.",
+ year: "2025",
+ role: "Website Designer & Builder",
+ tags: ["Website", "Real Estate", "Hebrew"],
+ accent: "#60A5FA",
+ gridSpan: "half",
+ image: projectImg("dahari"),
+ gallery: [
+ { type: "image" as const, src: projectImg("dahari"), caption: "Dahari real-estate site" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/dahari/",
+ overview:
+ "Designed a bilingual-ready Hebrew real-estate website that presents projects, commercial assets and urban renewal with clarity.",
+ challenge:
+ "Development portfolios are dense. The site needed authoritative structure without becoming a brochure dump.",
+ process: [
+ {
+ phase: "01",
+ title: "Map the portfolio",
+ description: "Organised construction, urban renewal, commercial and about pathways around client intent.",
+ },
+ {
+ phase: "02",
+ title: "Design Hebrew-first UI",
+ description: "Built typography, navigation and project hierarchy for a confident local brand presence.",
+ },
+ {
+ phase: "03",
+ title: "Ship the corporate site",
+ description: "Launched a responsive experience for projects and contact across devices.",
+ },
+ ],
+ deliverables: [
+ "Corporate real-estate website",
+ "Hebrew-first information architecture",
+ "Project and commercial category pages",
+ "Live production build",
+ ],
+ outcomes: [
+ "Live Dahari corporate website",
+ "Clearer project and commercial navigation",
+ "Stronger digital presence for development work in Netanya and the Sharon",
+ ],
+ },
+ {
+ slug: "isstudio",
+ title: "IS Experience House",
+ shortTitle: "IS Studio",
+ subtitle: "A concise studio identity on the web",
+ description:
+ "Studio website for IS Experience House featuring showreel presence, house identity and direct contact.",
+ year: "2025",
+ role: "Website Designer & Builder",
+ tags: ["Website", "Studio", "Brand"],
+ accent: "#FBBF24",
+ gridSpan: "half",
+ image: projectImg("isstudio"),
+ gallery: [
+ { type: "image" as const, src: projectImg("isstudio"), caption: "IS Experience House site" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/isstudio/",
+ overview:
+ "Designed a minimal studio site that leads with identity, showreel energy and a direct path to conversation.",
+ challenge:
+ "A studio site can over-explain. This one needed presence, confidence and almost no friction to contact.",
+ process: [
+ {
+ phase: "01",
+ title: "Define the house signal",
+ description: "Centered the brand name, reel and contact as the primary first-viewport composition.",
+ },
+ {
+ phase: "02",
+ title: "Design the minimal system",
+ description: "Reduced the site to essential navigation and interaction cues with strong visual attitude.",
+ },
+ {
+ phase: "03",
+ title: "Publish the studio site",
+ description: "Shipped a live presence for IS Experience House with responsive behaviour.",
+ },
+ ],
+ deliverables: [
+ "Studio brand website",
+ "Showreel-led homepage composition",
+ "Contact and house identity UI",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live IS Experience House website",
+ "Clear studio identity and contact path",
+ "Minimal, high-presence digital home for the practice",
+ ],
+ },
 ];
 
-/** Home page section order, Corporates then Startups. */
+/** Home page section order. */
+export const WEBSITE_SLUGS = [
+ "superlocal",
+ "blairandjack",
+ "gatorade",
+ "magic-spoon",
+ "dahari",
+ "isstudio",
+] as const;
+
 export const CORPORATE_SLUGS = [
  "gom",
  "csc",
@@ -1317,7 +1633,7 @@ export const projects: Project[] = (() => {
  ...base,
  ...caseStudyData[base.slug],
  })) as Project[];
- const order = [...CORPORATE_SLUGS, ...STARTUP_SLUGS];
+ const order = [...WEBSITE_SLUGS, ...STARTUP_SLUGS, ...CORPORATE_SLUGS];
  const ordered = order
  .map((slug) => mapped.find((p) => p.slug === slug))
  .filter((p): p is Project => Boolean(p));
@@ -1325,6 +1641,7 @@ export const projects: Project[] = (() => {
  return [...ordered, ...leftovers];
 })();
 
+export const websiteProjects = bySlug(WEBSITE_SLUGS);
 export const corporateProjects = bySlug(CORPORATE_SLUGS);
 export const startupProjects = bySlug(STARTUP_SLUGS);
 

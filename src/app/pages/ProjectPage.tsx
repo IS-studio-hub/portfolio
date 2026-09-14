@@ -82,7 +82,7 @@ export function ProjectPage() {
   const contextRef = useScrollReveal<HTMLElement>();
   const researchRef = useScrollReveal<HTMLElement>();
   const processRef = useScrollReveal<HTMLElement>();
-  const solutionRef = useScrollReveal<HTMLElement>();
+  const solutionRef = useScrollReveal<HTMLDivElement>();
   const outcomesRef = useScrollReveal<HTMLElement>();
 
   const projectPath = project ? `/project/${project.slug}` : "/";
@@ -123,6 +123,8 @@ export function ProjectPage() {
   if (!project) {
     return <Navigate to="/404" replace />;
   }
+
+  const extraGalleryItems = project.gallery.slice(1);
 
   return (
     <>
@@ -244,6 +246,12 @@ export function ProjectPage() {
                                         glowColor: "rgba(251,146,60,0.14)",
                                         scale: 0.9,
                                       }
+                                    : project.slug === "walmart"
+                                      ? {
+                                          modelPath: assetPath("/models/sleek-desk-walmart.glb"),
+                                          glowColor: "rgba(0,113,220,0.14)",
+                                          scale: 0.9,
+                                        }
                                     : project.slug === "anova"
                                       ? {
                                           modelPath: assetPath("/models/violet-bloom-anova.glb"),
@@ -299,7 +307,43 @@ export function ProjectPage() {
                                                     number,
                                                   ],
                                                 }
-                                              : {})}
+                                              : project.slug === "superlocal"
+                                                ? {
+                                                    modelPath: assetPath("/models/sleek-desk.glb"),
+                                                    glowColor: "rgba(74,222,128,0.14)",
+                                                    scale: 0.9,
+                                                  }
+                                                : project.slug === "blairandjack"
+                                                  ? {
+                                                      modelPath: assetPath("/models/sleek-desk.glb"),
+                                                      glowColor: "rgba(196,164,132,0.14)",
+                                                      scale: 0.9,
+                                                    }
+                                                  : project.slug === "gatorade"
+                                                    ? {
+                                                        modelPath: assetPath("/models/sleek-desk.glb"),
+                                                        glowColor: "rgba(249,115,22,0.14)",
+                                                        scale: 0.9,
+                                                      }
+                                                    : project.slug === "magic-spoon"
+                                                      ? {
+                                                          modelPath: assetPath("/models/sleek-desk.glb"),
+                                                          glowColor: "rgba(167,139,250,0.14)",
+                                                          scale: 0.9,
+                                                        }
+                                                      : project.slug === "dahari"
+                                                        ? {
+                                                            modelPath: assetPath("/models/sleek-desk.glb"),
+                                                            glowColor: "rgba(96,165,250,0.14)",
+                                                            scale: 0.9,
+                                                          }
+                                                        : project.slug === "isstudio"
+                                                          ? {
+                                                              modelPath: assetPath("/models/sleek-desk.glb"),
+                                                              glowColor: "rgba(251,191,36,0.14)",
+                                                              scale: 0.9,
+                                                            }
+                                                          : {})}
                 />
               </Suspense>
             </div>
@@ -414,237 +458,231 @@ export function ProjectPage() {
           </div>
         </section>
 
-        {/* Goals */}
-        <section className="page-gutter border-t border-border py-16 md:py-20">
-          <div className="w-full">
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">
-              {project.narrative ? "Scope" : "Goals"}
-            </p>
-            <div className="mt-8 max-w-3xl">
-              <BulletList items={project.goals} />
-            </div>
-          </div>
-        </section>
-
-        {/* Research & insights */}
-        <section ref={researchRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
-          <div className="w-full">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Research</p>
-                <div className="mt-8 space-y-8">
-                  {project.research.map((item) => (
-                    <div key={item.title}>
-                      <h3 className="font-display text-xl font-semibold text-text">{item.title}</h3>
-                      <p className="mt-2 text-base leading-relaxed text-muted">
-                        {item.description}
-                      </p>
-                    </div>
-                  ))}
+        <>
+          {/* Strategy strip */}
+          <section className="page-gutter border-t border-border py-16 md:py-20">
+            <div className="grid w-full gap-8 lg:grid-cols-2">
+              <article className="rounded-3xl border border-border bg-surface p-6 md:p-8">
+                <p className="font-mono text-xs uppercase tracking-widest text-accent">
+                  {project.narrative ? "Scope" : "Goals"}
+                </p>
+                <div className="mt-6">
+                  <BulletList items={project.goals} />
                 </div>
-              </div>
-              <div>
+              </article>
+              <article className="rounded-3xl border border-border p-6 md:p-8">
                 <p className="font-mono text-xs uppercase tracking-widest text-accent">Key insights</p>
-                <div className="mt-8">
+                <div className="mt-6">
                   <BulletList items={project.insights} muted />
                 </div>
-              </div>
+              </article>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Process */}
-        <section ref={processRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
-          <div className="w-full">
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">Process</p>
-            <div className="mt-10 space-y-12">
-              {project.process.map((step) => (
-                <div
-                  key={step.phase}
-                  className="grid gap-4 border-b border-border pb-12 last:border-0 md:grid-cols-[80px_1fr_2fr] md:gap-8"
-                >
-                  <p className="font-mono text-sm text-accent">{step.phase}</p>
-                  <h3 className="font-display text-xl font-semibold text-text md:text-2xl">
-                    {step.title}
-                  </h3>
-                  <p className="text-base leading-relaxed text-muted">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Solution */}
-        <section ref={solutionRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
-          <div className="w-full">
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">
-              {project.slug === "gom"
-                ? "Four connected experiences"
-                : project.narrative
-                  ? "System in practice"
-                  : "Solution & key decisions"}
-            </p>
-            <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-              {project.solutions.map((item) => (
-                <div
-                  key={item.title}
-                  className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface"
-                >
-                  {item.image && (
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="aspect-[4/3] w-full object-cover"
-                    />
-                  )}
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-display text-xl font-semibold text-text">{item.title}</h3>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Long-form narrative (GoM and similar) */}
-        {project.narrative?.map((section) => (
-          <section
-            key={section.title}
-            className="page-gutter border-t border-border py-16 md:py-24"
-          >
-            <div className="w-full">
-              {section.eyebrow && (
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">
-                  {section.eyebrow}
-                </p>
-              )}
-              <h2 className="mt-3 max-w-3xl font-display text-3xl font-semibold text-text md:text-4xl">
-                {section.title}
-              </h2>
-              <div className="mt-6 max-w-3xl space-y-4">
-                {section.body.map((paragraph) => (
-                  <p key={paragraph.slice(0, 48)} className="text-base leading-relaxed text-muted md:text-lg">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              {section.bullets && section.bullets.length > 0 && (
-                <div className="mt-8 max-w-3xl">
-                  <BulletList items={section.bullets} muted />
-                </div>
-              )}
-              {section.image && (
-                <figure className="mt-12 overflow-hidden rounded-2xl border border-border bg-surface">
-                  <img
-                    src={section.image}
-                    alt={section.caption || section.title}
-                    className="w-full object-cover"
-                  />
-                  {section.caption && (
-                    <figcaption className="border-t border-border px-6 py-4 font-mono text-xs uppercase tracking-widest text-muted">
-                      {section.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              )}
-              {section.cards && section.cards.length > 0 && (
-                <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-                  {section.cards.map((card) => (
-                    <div
-                      key={card.title}
-                      className="overflow-hidden rounded-2xl border border-border bg-surface"
-                    >
-                      {card.image && (
-                        <img
-                          src={card.image}
-                          alt={card.title}
-                          className="aspect-[16/10] w-full object-cover object-top"
-                        />
-                      )}
-                      <div className="p-6">
-                        <h3 className="font-display text-xl font-semibold text-text">
-                          {card.title}
-                        </h3>
-                        <p className="mt-3 text-sm leading-relaxed text-muted">
-                          {card.description}
-                        </p>
-                      </div>
+          {/* Process timeline + solutions stack */}
+          <section ref={processRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
+            <div className="grid w-full gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] xl:gap-16">
+              <div>
+                <p className="font-mono text-xs uppercase tracking-widest text-accent">Process timeline</p>
+                <div className="mt-10 relative space-y-8 before:absolute before:bottom-0 before:left-[15px] before:top-1 before:w-px before:bg-border md:before:left-[19px]">
+                  {project.process.map((step) => (
+                    <div key={step.phase} className="relative pl-12 md:pl-16">
+                      <span className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-bg font-mono text-[11px] text-accent md:h-10 md:w-10">
+                        {step.phase}
+                      </span>
+                      <h3 className="font-display text-xl font-semibold text-text md:text-2xl">
+                        {step.title}
+                      </h3>
+                      <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">{step.description}</p>
                     </div>
                   ))}
                 </div>
-              )}
+              </div>
+              <div ref={solutionRef}>
+                <p className="font-mono text-xs uppercase tracking-widest text-accent">
+                  {project.slug === "gom"
+                    ? "Four connected experiences"
+                    : project.narrative
+                      ? "System in practice"
+                      : "Solution & key decisions"}
+                </p>
+                <div className="mt-10 space-y-6">
+                  {project.solutions.map((item, index) => (
+                    <article
+                      key={item.title}
+                      className="overflow-hidden rounded-2xl border border-border bg-surface"
+                    >
+                      <div className="grid gap-0 md:grid-cols-[72px_minmax(0,1fr)]">
+                        <div className="border-b border-border px-6 py-5 font-mono text-xs text-accent md:border-b-0 md:border-r md:px-4 md:py-6">
+                          {String(index + 1).padStart(2, "0")}
+                        </div>
+                        <div className="p-6">
+                          <h3 className="font-display text-xl font-semibold text-text">{item.title}</h3>
+                          <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                      {item.image && (
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="aspect-[16/10] w-full border-t border-border object-cover"
+                        />
+                      )}
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
-        ))}
 
-        {/* Gallery */}
-        {project.gallery.length > 1 && (
-          <section className="page-gutter py-16 md:py-24">
+          {/* Research split */}
+          <section ref={researchRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
             <div className="w-full">
-              <p className="mb-10 font-mono text-xs uppercase tracking-widest text-accent">
-                Gallery
-              </p>
-              <div className="grid gap-6 md:grid-cols-2">
-                {project.gallery.slice(1).map((item) => (
-                  <figure
-                    key={item.src}
-                    className={`group relative overflow-hidden rounded-2xl ${
-                      item.type === "video" ? "md:col-span-2" : ""
-                    }`}
-                  >
-                    <MediaBlock
-                      item={item}
-                      className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.02] ${
-                        item.type === "video" ? "aspect-video bg-surface" : "aspect-[4/3]"
-                      }`}
-                    />
-                    <figcaption className="absolute bottom-0 left-0 right-0 translate-y-full bg-bg/90 px-4 py-3 font-mono text-xs uppercase tracking-wider text-muted transition-transform duration-300 group-hover:translate-y-0">
-                      {item.caption}
-                    </figcaption>
-                  </figure>
+              <p className="font-mono text-xs uppercase tracking-widest text-accent">Research</p>
+              <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {project.research.map((item) => (
+                  <article key={item.title} className="rounded-2xl border border-border p-6">
+                    <h3 className="font-display text-xl font-semibold text-text">{item.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-muted">{item.description}</p>
+                  </article>
                 ))}
               </div>
             </div>
           </section>
-        )}
 
-        {/* Deliverables & Outcomes */}
-        <section ref={outcomesRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
-          <div className="w-full">
-            <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">
-                  Deliverables
-                </p>
+          {/* Long-form narrative */}
+          {project.narrative?.map((section) => (
+            <section
+              key={section.title}
+              className="page-gutter border-t border-border py-16 md:py-24"
+            >
+              <div className="grid w-full gap-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-12">
+                <div>
+                  {section.eyebrow && (
+                    <p className="font-mono text-xs uppercase tracking-widest text-accent">
+                      {section.eyebrow}
+                    </p>
+                  )}
+                </div>
+                <div>
+                  <h2 className="max-w-3xl font-display text-3xl font-semibold text-text md:text-4xl">
+                    {section.title}
+                  </h2>
+                  <div className="mt-6 max-w-3xl space-y-4">
+                    {section.body.map((paragraph) => (
+                      <p key={paragraph.slice(0, 48)} className="text-base leading-relaxed text-muted md:text-lg">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                  {section.bullets && section.bullets.length > 0 && (
+                    <div className="mt-8 max-w-3xl">
+                      <BulletList items={section.bullets} muted />
+                    </div>
+                  )}
+                  {section.cards && section.cards.length > 0 && (
+                    <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+                      {section.cards.map((card) => (
+                        <div
+                          key={card.title}
+                          className="overflow-hidden rounded-2xl border border-border bg-surface"
+                        >
+                          {card.image && (
+                            <img
+                              src={card.image}
+                              alt={card.title}
+                              className="aspect-[16/10] w-full object-cover object-top"
+                            />
+                          )}
+                          <div className="p-6">
+                            <h3 className="font-display text-xl font-semibold text-text">{card.title}</h3>
+                            <p className="mt-3 text-sm leading-relaxed text-muted">{card.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {section.image && (
+                    <figure className="mt-12 overflow-hidden rounded-2xl border border-border bg-surface">
+                      <img
+                        src={section.image}
+                        alt={section.caption || section.title}
+                        className="w-full object-cover"
+                      />
+                      {section.caption && (
+                        <figcaption className="border-t border-border px-6 py-4 font-mono text-xs uppercase tracking-widest text-muted">
+                          {section.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+                </div>
+              </div>
+            </section>
+          ))}
+
+          {/* Gallery masonry */}
+          {extraGalleryItems.length > 0 && (
+            <section className="page-gutter border-t border-border py-16 md:py-24">
+              <div className="w-full">
+                <p className="mb-10 font-mono text-xs uppercase tracking-widest text-accent">Gallery</p>
+                <div className="columns-1 gap-6 md:columns-2">
+                  {extraGalleryItems.map((item) => (
+                    <figure
+                      key={item.src}
+                      className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-surface"
+                    >
+                      <MediaBlock
+                        item={item}
+                        className={`w-full object-cover ${
+                          item.type === "video" ? "aspect-video" : "aspect-[4/3]"
+                        }`}
+                      />
+                      <figcaption className="border-t border-border px-4 py-3 font-mono text-xs uppercase tracking-wider text-muted">
+                        {item.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* Outcomes board */}
+          <section ref={outcomesRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
+            <div className="grid w-full gap-8 xl:grid-cols-3">
+              <article className="rounded-2xl border border-border p-6 md:p-8 xl:col-span-2">
+                <p className="font-mono text-xs uppercase tracking-widest text-accent">Deliverables</p>
                 <div className="mt-6">
                   <BulletList items={project.deliverables} />
                 </div>
-              </div>
-              <div>
+              </article>
+              <article className="rounded-2xl border border-border bg-surface p-6 md:p-8">
                 <p className="font-mono text-xs uppercase tracking-widest text-accent">Outcomes</p>
                 <div className="mt-6">
                   <BulletList items={project.outcomes} muted />
                 </div>
-              </div>
+              </article>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Learnings */}
-        <section className="page-gutter border-t border-border py-16 md:py-20">
-          <div className="w-full max-w-3xl">
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">Learnings</p>
-            <div className="mt-8">
-              <BulletList items={project.learnings} muted />
+          {/* Learnings + closing */}
+          <section className="page-gutter border-t border-border py-16 md:py-20">
+            <div className="w-full rounded-3xl border border-border p-6 md:p-10">
+              <p className="font-mono text-xs uppercase tracking-widest text-accent">Learnings</p>
+              <div className="mt-8 max-w-3xl">
+                <BulletList items={project.learnings} muted />
+              </div>
+              {project.closing && (
+                <p className="mt-12 max-w-3xl text-lg leading-relaxed text-text md:text-xl">
+                  {project.closing}
+                </p>
+              )}
             </div>
-            {project.closing && (
-              <p className="mt-12 text-lg leading-relaxed text-text md:text-xl">{project.closing}</p>
-            )}
-          </div>
-        </section>
+          </section>
+        </>
         </article>
 
         {/* Prev / Next */}
