@@ -4,7 +4,6 @@ import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
 import type { ProjectMedia } from "../data/projects";
-import { useScrollReveal } from "../hooks/useScrollReveal";
 import { assetPath } from "../lib/assetPath";
 
 const ProjectHero3D = lazy(() =>
@@ -32,39 +31,6 @@ function LiveSiteButton({ href, label = "View live site" }: { href: string; labe
   );
 }
 
-function MediaBlock({ item, className }: { item: ProjectMedia; className?: string }) {
-  if (item.type === "video") {
-    return (
-      <video
-        src={item.src}
-        poster={item.poster}
-        className={className}
-        controls
-        playsInline
-        preload="metadata"
-      />
-    );
-  }
-
-  return <img src={item.src} alt={item.caption} className={className} />;
-}
-
-function BulletList({ items, muted = false }: { items: string[]; muted?: boolean }) {
-  return (
-    <ul className="space-y-3">
-      {items.map((item) => (
-        <li
-          key={item}
-          className={`flex items-start gap-3 text-base ${muted ? "text-muted" : "text-text"}`}
-        >
-          <span className="mt-1 text-accent">+</span>
-          {item}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
 function MetaItem({ label, value }: { label: string; value: string }) {
   return (
     <div>
@@ -74,16 +40,42 @@ function MetaItem({ label, value }: { label: string; value: string }) {
   );
 }
 
+function MediaGridCell({ item }: { item?: ProjectMedia }) {
+  if (!item) {
+    return (
+      <div
+        className="aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-surface"
+        aria-hidden="true"
+      />
+    );
+  }
+
+  return (
+    <figure className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface p-8 md:p-12">
+      {item.type === "video" ? (
+        <video
+          src={item.src}
+          poster={item.poster}
+          className="max-h-[65%] max-w-[65%] rounded-lg object-contain"
+          controls
+          playsInline
+          preload="metadata"
+        />
+      ) : (
+        <img
+          src={item.src}
+          alt={item.caption}
+          className="max-h-[65%] max-w-[65%] rounded-lg object-contain"
+        />
+      )}
+    </figure>
+  );
+}
+
 export function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProject(slug) : undefined;
   const { prev, next } = slug ? getAdjacentProjects(slug) : { prev: null, next: null };
-
-  const contextRef = useScrollReveal<HTMLElement>();
-  const researchRef = useScrollReveal<HTMLElement>();
-  const processRef = useScrollReveal<HTMLElement>();
-  const solutionRef = useScrollReveal<HTMLDivElement>();
-  const outcomesRef = useScrollReveal<HTMLElement>();
 
   const projectPath = project ? `/project/${project.slug}` : "/";
   const projectImage = project
@@ -123,8 +115,6 @@ export function ProjectPage() {
   if (!project) {
     return <Navigate to="/404" replace />;
   }
-
-  const extraGalleryItems = project.gallery.slice(1);
 
   return (
     <>
@@ -423,266 +413,14 @@ export function ProjectPage() {
           </section>
         )}
 
-        {/* Context + Overview + Challenge */}
-        <section ref={contextRef} className="page-gutter reveal py-16 md:py-24">
-          <div className="w-full">
-            <div className="grid gap-12 lg:grid-cols-3 lg:gap-16">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Context</p>
-                <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
-                  {project.context}
-                </p>
-              </div>
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Overview</p>
-                <p className="mt-4 text-lg leading-relaxed text-text md:text-xl">
-                  {project.overview}
-                </p>
-              </div>
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-muted">Challenge</p>
-                <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
-                  {project.challenge}
-                </p>
-              </div>
-            </div>
-
-            {project.gallery[0] && (
-              <div className="mt-16 overflow-hidden rounded-2xl">
-                <MediaBlock item={project.gallery[0]} className="w-full object-cover" />
-                <p className="mt-3 font-mono text-xs uppercase tracking-wider text-muted">
-                  {project.gallery[0].caption}
-                </p>
-              </div>
-            )}
+        {/* Media grid — images/videos when provided, otherwise empty placeholders */}
+        <section className="page-gutter border-b border-border py-16 md:py-24">
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
+            {Array.from({ length: 8 }, (_, index) => (
+              <MediaGridCell key={index} item={project.mediaGrid?.[index]} />
+            ))}
           </div>
         </section>
-
-        <>
-          {/* Strategy strip */}
-          <section className="page-gutter border-t border-border py-16 md:py-20">
-            <div className="grid w-full gap-8 lg:grid-cols-2">
-              <article className="rounded-3xl border border-border bg-surface p-6 md:p-8">
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">
-                  {project.narrative ? "Scope" : "Goals"}
-                </p>
-                <div className="mt-6">
-                  <BulletList items={project.goals} />
-                </div>
-              </article>
-              <article className="rounded-3xl border border-border p-6 md:p-8">
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Key insights</p>
-                <div className="mt-6">
-                  <BulletList items={project.insights} muted />
-                </div>
-              </article>
-            </div>
-          </section>
-
-          {/* Process timeline + solutions stack */}
-          <section ref={processRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
-            <div className="grid w-full gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] xl:gap-16">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Process timeline</p>
-                <div className="mt-10 relative space-y-8 before:absolute before:bottom-0 before:left-[15px] before:top-1 before:w-px before:bg-border md:before:left-[19px]">
-                  {project.process.map((step) => (
-                    <div key={step.phase} className="relative pl-12 md:pl-16">
-                      <span className="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full border border-border bg-bg font-mono text-[11px] text-accent md:h-10 md:w-10">
-                        {step.phase}
-                      </span>
-                      <h3 className="font-display text-xl font-semibold text-text md:text-2xl">
-                        {step.title}
-                      </h3>
-                      <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">{step.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div ref={solutionRef}>
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">
-                  {project.slug === "gom"
-                    ? "Four connected experiences"
-                    : project.narrative
-                      ? "System in practice"
-                      : "Solution & key decisions"}
-                </p>
-                <div className="mt-10 space-y-6">
-                  {project.solutions.map((item, index) => (
-                    <article
-                      key={item.title}
-                      className="overflow-hidden rounded-2xl border border-border bg-surface"
-                    >
-                      <div className="grid gap-0 md:grid-cols-[72px_minmax(0,1fr)]">
-                        <div className="border-b border-border px-6 py-5 font-mono text-xs text-accent md:border-b-0 md:border-r md:px-4 md:py-6">
-                          {String(index + 1).padStart(2, "0")}
-                        </div>
-                        <div className="p-6">
-                          <h3 className="font-display text-xl font-semibold text-text">{item.title}</h3>
-                          <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
-                            {item.description}
-                          </p>
-                        </div>
-                      </div>
-                      {item.image && (
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="aspect-[16/10] w-full border-t border-border object-cover"
-                        />
-                      )}
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Research split */}
-          <section ref={researchRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
-            <div className="w-full">
-              <p className="font-mono text-xs uppercase tracking-widest text-accent">Research</p>
-              <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {project.research.map((item) => (
-                  <article key={item.title} className="rounded-2xl border border-border p-6">
-                    <h3 className="font-display text-xl font-semibold text-text">{item.title}</h3>
-                    <p className="mt-3 text-base leading-relaxed text-muted">{item.description}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Long-form narrative */}
-          {project.narrative?.map((section) => (
-            <section
-              key={section.title}
-              className="page-gutter border-t border-border py-16 md:py-24"
-            >
-              <div className="grid w-full gap-8 lg:grid-cols-[180px_minmax(0,1fr)] lg:gap-12">
-                <div>
-                  {section.eyebrow && (
-                    <p className="font-mono text-xs uppercase tracking-widest text-accent">
-                      {section.eyebrow}
-                    </p>
-                  )}
-                </div>
-                <div>
-                  <h2 className="max-w-3xl font-display text-3xl font-semibold text-text md:text-4xl">
-                    {section.title}
-                  </h2>
-                  <div className="mt-6 max-w-3xl space-y-4">
-                    {section.body.map((paragraph) => (
-                      <p key={paragraph.slice(0, 48)} className="text-base leading-relaxed text-muted md:text-lg">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                  {section.bullets && section.bullets.length > 0 && (
-                    <div className="mt-8 max-w-3xl">
-                      <BulletList items={section.bullets} muted />
-                    </div>
-                  )}
-                  {section.cards && section.cards.length > 0 && (
-                    <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-                      {section.cards.map((card) => (
-                        <div
-                          key={card.title}
-                          className="overflow-hidden rounded-2xl border border-border bg-surface"
-                        >
-                          {card.image && (
-                            <img
-                              src={card.image}
-                              alt={card.title}
-                              className="aspect-[16/10] w-full object-cover object-top"
-                            />
-                          )}
-                          <div className="p-6">
-                            <h3 className="font-display text-xl font-semibold text-text">{card.title}</h3>
-                            <p className="mt-3 text-sm leading-relaxed text-muted">{card.description}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  {section.image && (
-                    <figure className="mt-12 overflow-hidden rounded-2xl border border-border bg-surface">
-                      <img
-                        src={section.image}
-                        alt={section.caption || section.title}
-                        className="w-full object-cover"
-                      />
-                      {section.caption && (
-                        <figcaption className="border-t border-border px-6 py-4 font-mono text-xs uppercase tracking-widest text-muted">
-                          {section.caption}
-                        </figcaption>
-                      )}
-                    </figure>
-                  )}
-                </div>
-              </div>
-            </section>
-          ))}
-
-          {/* Gallery masonry */}
-          {extraGalleryItems.length > 0 && (
-            <section className="page-gutter border-t border-border py-16 md:py-24">
-              <div className="w-full">
-                <p className="mb-10 font-mono text-xs uppercase tracking-widest text-accent">Gallery</p>
-                <div className="columns-1 gap-6 md:columns-2">
-                  {extraGalleryItems.map((item) => (
-                    <figure
-                      key={item.src}
-                      className="mb-6 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-surface"
-                    >
-                      <MediaBlock
-                        item={item}
-                        className={`w-full object-cover ${
-                          item.type === "video" ? "aspect-video" : "aspect-[4/3]"
-                        }`}
-                      />
-                      <figcaption className="border-t border-border px-4 py-3 font-mono text-xs uppercase tracking-wider text-muted">
-                        {item.caption}
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
-              </div>
-            </section>
-          )}
-
-          {/* Outcomes board */}
-          <section ref={outcomesRef} className="page-gutter reveal border-t border-border py-16 md:py-24">
-            <div className="grid w-full gap-8 xl:grid-cols-3">
-              <article className="rounded-2xl border border-border p-6 md:p-8 xl:col-span-2">
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Deliverables</p>
-                <div className="mt-6">
-                  <BulletList items={project.deliverables} />
-                </div>
-              </article>
-              <article className="rounded-2xl border border-border bg-surface p-6 md:p-8">
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Outcomes</p>
-                <div className="mt-6">
-                  <BulletList items={project.outcomes} muted />
-                </div>
-              </article>
-            </div>
-          </section>
-
-          {/* Learnings + closing */}
-          <section className="page-gutter border-t border-border py-16 md:py-20">
-            <div className="w-full rounded-3xl border border-border p-6 md:p-10">
-              <p className="font-mono text-xs uppercase tracking-widest text-accent">Learnings</p>
-              <div className="mt-8 max-w-3xl">
-                <BulletList items={project.learnings} muted />
-              </div>
-              {project.closing && (
-                <p className="mt-12 max-w-3xl text-lg leading-relaxed text-text md:text-xl">
-                  {project.closing}
-                </p>
-              )}
-            </div>
-          </section>
-        </>
         </article>
 
         {/* Prev / Next */}

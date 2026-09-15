@@ -5061,6 +5061,21 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "Local", label: "Barrie produce discovery focus" },
  { value: "1", label: "Designer-builder across the experience" },
  ],
+ mediaGrid: [
+ { type: "image", src: p("superlocal", "grid/01-hero.png"), caption: "Homepage hero — produce-led brand entry" },
+ { type: "image", src: p("superlocal", "grid/02-partners.png"), caption: "Partners and local network" },
+ { type: "image", src: p("superlocal", "grid/03-poster.png"), caption: "Market dates poster — Oct 13–19, 2025" },
+ { type: "image", src: p("superlocal", "grid/04-schedule.png"), caption: "Cronograma — market schedule" },
+ { type: "image", src: p("superlocal", "grid/05-produce-grid.png"), caption: "Produce photography system" },
+ { type: "image", src: p("superlocal", "grid/06-experiencia.jpg"), caption: "Experiencia completa — campaign story" },
+ { type: "image", src: p("superlocal", "grid/07-pepper-trio.jpg"), caption: "Pepper series — red, yellow, green" },
+ {
+ type: "video",
+ src: p("superlocal", "grid/08-walkthrough.mp4"),
+ poster: p("superlocal", "grid/08-poster.jpg"),
+ caption: "Site walkthrough",
+ },
+ ],
  overview:
  "I designed and built SuperLocal as a website that turns local-food intent into clear paths for vendors, market hours and contact.",
  challenge:
@@ -5151,6 +5166,21 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "3", label: "Core ritual products framed as a system" },
  { value: "Live", label: "Brand and shop website" },
  { value: "1", label: "Designer-builder across the experience" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("blairandjack", "grid/01-loader.png"), caption: "Brand loader — product-led entry" },
+ { type: "image", src: p("blairandjack", "grid/02-hero.png"), caption: "Homepage hero — shop-led headline" },
+ { type: "image", src: p("blairandjack", "grid/03-ritual.png"), caption: "Ritual benefits — layered product story" },
+ { type: "image", src: p("blairandjack", "grid/04-standard.png"), caption: "New standard of men’s skin" },
+ { type: "image", src: p("blairandjack", "grid/05-story.png"), caption: "Our Story — lived experience" },
+ { type: "image", src: p("blairandjack", "grid/06-stat.png"), caption: "Razor bump statistic proof point" },
+ { type: "image", src: p("blairandjack", "grid/07-instagram.png"), caption: "Instagram product grid" },
+ {
+ type: "video",
+ src: p("blairandjack", "grid/08-walkthrough.mp4"),
+ poster: p("blairandjack", "grid/08-poster.jpg"),
+ caption: "Site walkthrough",
+ },
  ],
  overview:
  "I designed Blair & Jack as a brand website that makes physician-backed men’s skincare feel calm, credible and shoppable.",
@@ -5243,6 +5273,21 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "Multi", label: "Language-ready campaign surfaces" },
  { value: "1", label: "Designer-builder across the experience" },
  ],
+ mediaGrid: [
+ { type: "image", src: p("gatorade", "grid/01-hero.png"), caption: "Campaign hero — fuel your performance" },
+ { type: "image", src: p("gatorade", "grid/02-performance.png"), caption: "Performance that fuels champions" },
+ { type: "image", src: p("gatorade", "grid/03-science.png"), caption: "Loss, balance, replace — science story" },
+ { type: "image", src: p("gatorade", "grid/04-athletes.png"), caption: "Athlete roster carousel" },
+ { type: "image", src: p("gatorade", "grid/05-mission.png"), caption: "Our Mission — performance proof" },
+ { type: "image", src: p("gatorade", "grid/06-locator.png"), caption: "Store locator experience" },
+ { type: "image", src: p("gatorade", "grid/07-footer.png"), caption: "Join Gatorade Nation footer" },
+ {
+ type: "video",
+ src: p("gatorade", "grid/08-walkthrough.mp4"),
+ poster: p("gatorade", "grid/08-poster.jpg"),
+ caption: "Site walkthrough",
+ },
+ ],
  overview:
  "I designed the Gatorade campaign website as a performance story: formula, science and athlete trust moving with clear momentum.",
  challenge:
@@ -5333,6 +5378,21 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "Live", label: "Brand and shop website" },
  { value: "Multi", label: "Product collections framed for browse" },
  { value: "1", label: "Designer-builder across the experience" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("magic-spoon", "grid/01-home.png"), caption: "Homepage — Magic Spoon brand entry" },
+ { type: "image", src: p("magic-spoon", "grid/02-about.png"), caption: "About — founders Greg and Gabi" },
+ { type: "image", src: p("magic-spoon", "grid/03-products.png"), caption: "Our Products — cereal collection" },
+ { type: "image", src: p("magic-spoon", "grid/04-pdp.png"), caption: "Product detail — Double Choco Treats" },
+ { type: "image", src: p("magic-spoon", "grid/05-granola.png"), caption: "Granola collection" },
+ { type: "image", src: p("magic-spoon", "grid/06-blog.jpg"), caption: "Blog — editorial story surface" },
+ { type: "image", src: p("magic-spoon", "grid/07-contact.png"), caption: "Contact — get in touch" },
+ {
+ type: "video",
+ src: p("magic-spoon", "grid/08-walkthrough.mp4"),
+ poster: p("magic-spoon", "grid/08-poster.jpg"),
+ caption: "Site walkthrough",
+ },
  ],
  overview:
  "I designed Magic Spoon as a brand website that keeps cereal nostalgia playful while making products and story easy to navigate.",
@@ -5425,6 +5485,21 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "HE", label: "Hebrew-first experience" },
  { value: "1", label: "Designer-builder across the experience" },
  ],
+ mediaGrid: [
+ { type: "image", src: p("dahari", "grid/01-hero.png"), caption: "Homepage — project showcase carousel" },
+ { type: "image", src: p("dahari", "grid/02-projects.jpg"), caption: "Projects under construction" },
+ { type: "image", src: p("dahari", "grid/03-shapira.jpg"), caption: "Shapira 24 Netanya — project detail" },
+ { type: "image", src: p("dahari", "grid/04-kado.jpg"), caption: "KADO HOME — commercial showroom" },
+ { type: "image", src: p("dahari", "grid/05-renewal.png"), caption: "Urban renewal storytelling" },
+ { type: "image", src: p("dahari", "grid/06-contact.png"), caption: "Contact — Hebrew-first lead form" },
+ { type: "image", src: p("dahari", "grid/07-blueprint.png"), caption: "Technical drawings lightbox" },
+ {
+ type: "video",
+ src: p("dahari", "grid/08-walkthrough.mp4"),
+ poster: p("dahari", "grid/08-poster.jpg"),
+ caption: "Site walkthrough",
+ },
+ ],
  overview:
  "I designed Dahari’s website as a clear corporate presence for development, commercial assets and urban renewal.",
  challenge:
@@ -5515,6 +5590,21 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "Live", label: "Studio website" },
  { value: "Minimal", label: "Identity-led composition" },
  { value: "1", label: "Designer-builder across the experience" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("isstudio", "grid/01-hero.png"), caption: "Homepage — Experience House identity" },
+ { type: "image", src: p("isstudio", "grid/02-website.png"), caption: "WEBSITE mode — project carousel" },
+ { type: "image", src: p("isstudio", "grid/03-craft.png"), caption: "Craft, speed, clarity — house values" },
+ { type: "image", src: p("isstudio", "grid/04-blair.png"), caption: "Blair & Jack campaign case study" },
+ { type: "image", src: p("isstudio", "grid/05-house.png"), caption: "OUR HOUSE — studio capabilities" },
+ { type: "image", src: p("isstudio", "grid/06-talk.png"), caption: "LET'S TALK — contact experience" },
+ { type: "image", src: p("isstudio", "grid/07-casestudy.jpg"), caption: "Case study drawer — images & video" },
+ {
+ type: "video",
+ src: p("isstudio", "grid/08-walkthrough.mp4"),
+ poster: p("isstudio", "grid/08-poster.jpg"),
+ caption: "Site walkthrough",
+ },
  ],
  overview:
  "I designed the IS Experience House website as a concise digital home: identity first, contact close, no unnecessary ceremony.",

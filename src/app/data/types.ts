@@ -75,6 +75,8 @@ export interface Project {
   outcomes: string[];
   learnings: string[];
   metrics?: MetricItem[];
+  /** Optional 8-cell image/video grid shown after metrics on project pages. */
+  mediaGrid?: ProjectMedia[];
   /** Optional long-form narrative blocks (used by GoM and similar deep case studies). */
   narrative?: NarrativeSection[];
   closing?: string;
@@ -95,6 +97,7 @@ export type CaseStudyExtras = Pick<
   | "solutions"
   | "learnings"
   | "metrics"
+  | "mediaGrid"
   | "narrative"
   | "closing"
 > & {

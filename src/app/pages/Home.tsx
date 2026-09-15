@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
@@ -6,39 +6,21 @@ import { SITE, corporateProjects, startupProjects, websiteProjects, projects, ty
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { assetPath } from "../lib/assetPath";
 
-const CYCLE_WORDS = ["interfaces", "experiences", "products", "systems"];
+const SECTION_NAV = [
+  { id: "about-intro", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "websites", label: "Websites" },
+  { id: "startups", label: "Startups" },
+  { id: "corporates", label: "Corporates" },
+] as const;
 
-function HeroWordCycle() {
-  const [index, setIndex] = useState(0);
-  const [key, setKey] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((i) => (i + 1) % CYCLE_WORDS.length);
-      setKey((k) => k + 1);
-    }, 2800);
-    return () => clearInterval(timer);
-  }, []);
-
+function StatBlock({ value, label }: { value: number | string; label: string }) {
   return (
-    <span className="word-cycle text-accent">
-      <span key={key} className="word-cycle-inner">
-        {CYCLE_WORDS[index]}
-      </span>
-    </span>
-  );
-}
-
-function StatBlock({ value, label, delay }: { value: number | string; label: string; delay: number }) {
-  const ref = useScrollReveal<HTMLDivElement>();
-  return (
-    <div
-      ref={ref}
-      className="reveal"
-      style={{ transitionDelay: `${delay}s` }}
-    >
-      <p className="font-display text-4xl font-semibold text-text md:text-5xl">{value}</p>
-      <p className="mt-1 font-mono text-xs uppercase tracking-widest text-muted">{label}</p>
+    <div className="min-w-0 shrink">
+      <p className="font-display text-xl font-semibold leading-none text-text md:text-2xl">{value}</p>
+      <p className="mt-0.5 font-mono text-[9px] uppercase tracking-widest text-muted sm:text-[10px]">
+        {label}
+      </p>
     </div>
   );
 }
@@ -49,15 +31,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <div
       ref={ref}
-      className="reveal h-full min-h-0"
-      style={{ transitionDelay: `${Math.min(index, 8) * 0.06}s` }}
+      className="reveal"
+      style={{ transitionDelay: `${Math.min(index, 8) * 0.05}s` }}
     >
       <Link
         to={`/project/${project.slug}`}
-        className="group relative flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-500 hover:-translate-y-1 hover:border-white/20"
+        className="group grid grid-cols-1 items-start gap-5 sm:grid-cols-[minmax(140px,220px)_minmax(0,1fr)] sm:gap-8"
         data-cursor="View"
       >
-        <div className="relative aspect-[16/10] overflow-hidden bg-bg">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-border bg-surface">
           <img
             src={assetPath(`/projects/${project.slug}/card.png`)}
             alt={project.title}
@@ -69,35 +51,31 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               img.src = project.image;
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/20 to-transparent" />
-          <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-bg/50 backdrop-blur transition-transform duration-300 group-hover:rotate-45">
-            <span className="text-lg">↗</span>
-          </div>
         </div>
 
-        <div className="flex flex-1 flex-col gap-3 p-6 md:p-7">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-muted">{project.year}</p>
-            <h3 className="mt-1 font-display text-xl font-semibold text-text md:text-2xl">
+        <div className="min-w-0 pt-0.5">
+          <div className="flex items-start gap-2">
+            <h3 className="font-sans text-lg font-semibold leading-snug text-text transition-colors group-hover:text-accent md:text-xl">
               {project.shortTitle}
             </h3>
+            <span
+              aria-hidden="true"
+              className="mt-1 shrink-0 text-sm text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+            >
+              ↗
+            </span>
           </div>
-          <p className="line-clamp-3 text-sm leading-relaxed text-muted">
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted md:text-[15px]">
             {project.description}
           </p>
-          <div className="mt-auto flex flex-wrap gap-2 pt-2">
+          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-muted">
+              {project.year}
+            </span>
             {project.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-border px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-muted transition-colors"
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLSpanElement).style.color = project.accent;
-                  (e.currentTarget as HTMLSpanElement).style.borderColor = project.accent;
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLSpanElement).style.color = "";
-                  (e.currentTarget as HTMLSpanElement).style.borderColor = "";
-                }}
+                className="font-mono text-[10px] uppercase tracking-widest text-muted/80"
               >
                 {tag}
               </span>
@@ -109,11 +87,192 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   );
 }
 
+function ProjectGroup({
+  id,
+  title,
+  items,
+}: {
+  id: string;
+  title: string;
+  items: Project[];
+}) {
+  if (items.length === 0) return null;
+
+  return (
+    <div id={id} className="scroll-mt-28">
+      <h3 className="mb-8 font-mono text-xs uppercase tracking-widest text-accent">{title}</h3>
+      <div className="space-y-10 md:space-y-12">
+        {items.map((project, i) => (
+          <ProjectCard key={project.slug} project={project} index={i} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+type ExperienceItem = {
+  dates: string;
+  title: string;
+  company: string;
+  url?: string;
+  previousTitles?: string[];
+  description: string;
+  tags: string[];
+};
+
+const EXPERIENCE: ExperienceItem[] = [
+  {
+    dates: "2024 — Present",
+    title: "Senior Consultant, UX Lead",
+    company: "CGI",
+    url: "https://www.cgi.com",
+    description:
+      "Lead UX and product design engagements by aligning user needs, business objectives and delivery constraints. Plan and synthesize research, define journeys and product flows, and develop prototypes that clarify product direction. Guide stakeholder collaboration, accessibility decisions and design-to-development handoff across remote teams.",
+    tags: ["UX Leadership", "Product Design", "Research", "Prototyping", "Accessibility"],
+  },
+  {
+    dates: "2023 — Present",
+    title: "Product and AI Interfaces",
+    company: "IS Studio",
+    url: "https://is-studio-hub.github.io/portfolio/",
+    description:
+      "Lead end-to-end design and development of websites, landing pages, applications and AI tools for business clients. Translate business goals into product direction, user flows, prototypes, interface systems and functional digital products across UX research, web design, development and content strategy.",
+    tags: ["Product Design", "AI Interfaces", "Web Design", "Development", "Design Systems"],
+  },
+  {
+    dates: "2022 — 2024",
+    title: "Product and AI Interface Designer",
+    company: "Canadian Tire Corporation",
+    url: "https://www.canadiantire.ca",
+    description:
+      "Designed product and AI interfaces for retail experiences, translating customer and business needs into clear product flows and scalable UI. Led UX research, product design, prototyping and testing from discovery through iteration while partnering with product, engineering and business teams.",
+    tags: ["AI Interfaces", "Retail UX", "Product Design", "Prototyping", "Research"],
+  },
+  {
+    dates: "2020 — 2022",
+    title: "User Experience Lead",
+    company: "CSC Generation",
+    url: "https://www.cscgeneration.com",
+    description:
+      "Led UX strategy, user experience testing and product development for e-commerce brands. Created a master design system and brand-specific systems for One Kings Lane, Sur La Table and Z Gallerie, enabling consistent work across design and development teams.",
+    tags: ["Design Systems", "E-commerce", "UX Leadership", "Components", "Documentation"],
+  },
+  {
+    dates: "2017 — 2020",
+    title: "AI/AR Design Lead & UX Researcher",
+    company: "Walmart",
+    url: "https://www.walmart.com",
+    description:
+      "Contributed to AI/AR dress-up features for Walmart Tech’s fashion customers as a B2B2C initiative. Took the experience from in-depth research through UX/UI design, collaborating with content, accessibility, development and product teams on virtual model-switching and dress-up interactions.",
+    tags: ["AI/AR", "Fashion UX", "Research", "Prototyping", "E-commerce"],
+  },
+];
+
+function SectionNav({ activeId }: { activeId: string }) {
+  return (
+    <nav aria-label="Page sections" className="mt-12 hidden lg:block">
+      <ul className="space-y-4">
+        {SECTION_NAV.map((item) => {
+          const active = activeId === item.id;
+          return (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                className={`group flex items-center gap-3 font-mono text-xs uppercase tracking-widest transition-colors ${
+                  active ? "text-text" : "text-muted hover:text-text"
+                }`}
+                data-cursor="Jump"
+                onClick={(event) => {
+                  event.preventDefault();
+                  document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  window.history.replaceState(null, "", `#${item.id}`);
+                }}
+              >
+                <span
+                  className={`h-px transition-all duration-300 ${
+                    active ? "w-12 bg-text" : "w-6 bg-muted group-hover:w-12 group-hover:bg-text"
+                  }`}
+                  aria-hidden="true"
+                />
+                {item.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+}
+
+function ExperienceList() {
+  return (
+    <div id="experience" className="scroll-mt-28">
+      <h3 className="mb-8 font-mono text-xs uppercase tracking-widest text-accent">Experience</h3>
+      <ol className="space-y-4">
+        {EXPERIENCE.map((item) => (
+          <li key={`${item.company}-${item.dates}`}>
+            <div className="group relative grid gap-2 rounded-xl p-4 transition-colors hover:bg-surface sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-6 md:p-5 lg:grid-cols-[160px_minmax(0,1fr)]">
+              <p className="pt-1 font-mono text-[11px] uppercase tracking-widest text-muted">
+                {item.dates}
+              </p>
+              <div className="min-w-0">
+                <h4 className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-base font-semibold text-text transition-colors group-hover:text-accent md:text-lg">
+                  <span>
+                    {item.title} ·{" "}
+                    {item.url ? (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 transition-colors hover:text-accent"
+                        data-cursor="Visit"
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        {item.company}
+                        <span aria-hidden="true" className="text-sm">
+                          ↗
+                        </span>
+                      </a>
+                    ) : (
+                      item.company
+                    )}
+                  </span>
+                </h4>
+                {item.previousTitles && item.previousTitles.length > 0 && (
+                  <ul className="mt-2 space-y-1">
+                    {item.previousTitles.map((title) => (
+                      <li key={title} className="text-sm text-muted">
+                        {title}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <p className="mt-3 text-sm leading-relaxed text-muted md:text-[15px]">
+                  {item.description}
+                </p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {item.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="rounded-full border border-border bg-bg/40 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-muted transition-colors group-hover:border-accent/30 group-hover:text-accent"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 export function Home() {
-  const workRef = useScrollReveal<HTMLDivElement>();
   const aboutRef = useScrollReveal<HTMLElement>();
   const contactRef = useScrollReveal<HTMLElement>();
-  const heroRef = useRef<HTMLElement>(null);
+  const [activeSection, setActiveSection] = useState<string>(SECTION_NAV[0].id);
 
   const jsonLd = useMemo(
     () => [
@@ -156,9 +315,37 @@ export function Home() {
 
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
-    if (hash === "work" || hash === "about") {
+    if (hash === "work" || hash === "about" || SECTION_NAV.some((item) => item.id === hash)) {
       document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
     }
+  }, []);
+
+  useEffect(() => {
+    const ids = SECTION_NAV.map((item) => item.id);
+    const elements = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => Boolean(el));
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]?.target.id) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      {
+        rootMargin: "-20% 0px -55% 0px",
+        threshold: [0, 0.1, 0.25, 0.5],
+      },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -174,100 +361,73 @@ export function Home() {
       <Nav variant="home" />
 
       <main>
-        {/* Hero */}
-        <section
-          ref={heroRef}
-          className="page-gutter relative flex min-h-screen flex-col justify-end pb-20 pt-32 md:pb-28"
-        >
-          <div className="w-full">
-            <div className="mb-8 flex items-center gap-3 animate-fade-up">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-40" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
-              </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-muted">
-                Available for new projects
-              </span>
-            </div>
-
-            <h1
-              className="max-w-4xl font-display text-5xl font-semibold leading-[1.05] tracking-tight text-text animate-fade-up md:text-7xl lg:text-8xl"
-              style={{ animationDelay: "0.1s" }}
-            >
-              I design digital{" "}
-              <HeroWordCycle />
-              <br />
-              that feel{" "}
-              <span className="italic text-muted">invisible.</span>
-            </h1>
-
-            <p
-              className="mt-8 max-w-xl text-base leading-relaxed text-muted animate-fade-up md:text-lg"
-              style={{ animationDelay: "0.2s" }}
-            >
-              {SITE.title} based in {SITE.location}. I help teams ship products people actually
-              want to use.
-            </p>
-
-            <div className="mt-16 grid grid-cols-2 gap-8 border-t border-border pt-10 sm:grid-cols-3 lg:grid-cols-5 md:max-w-4xl">
-              <StatBlock value={websiteProjects.length} label="Websites" delay={0.25} />
-              <StatBlock value={startupProjects.length} label="Startups" delay={0.3} />
-              <StatBlock value={corporateProjects.length} label="Corporates" delay={0.35} />
-              <StatBlock value={SITE.stats.years} label="Years" delay={0.4} />
-              <StatBlock value={SITE.stats.clients} label="Clients" delay={0.45} />
-            </div>
-          </div>
-        </section>
-
-        {/* Work */}
-        <section id="work" className="page-gutter py-24 md:py-32">
-          <div className="w-full">
-            <div ref={workRef} className="reveal mb-12 flex items-end justify-between gap-6 md:mb-16">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-accent">Selected work</p>
-                <h2 className="mt-2 font-display text-4xl font-semibold text-text md:text-5xl">
-                  Case studies
-                </h2>
+        {/* Work — sticky intro left, project list right */}
+        <section id="work" className="page-gutter pb-24 pt-28 md:pb-32 md:pt-32">
+          <div className="grid w-full gap-14 lg:grid-cols-[minmax(280px,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-16 xl:gap-20">
+            <aside className="lg:sticky lg:top-28 lg:self-start">
+              <div className="mb-8 flex items-center gap-3">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-40" />
+                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
+                </span>
+                <span className="font-mono text-xs uppercase tracking-widest text-muted">
+                  Available for new projects
+                </span>
               </div>
-              <p className="hidden max-w-xs text-right text-sm text-muted md:block">
-                {websiteProjects.length} websites · {startupProjects.length} startups ·{" "}
-                {corporateProjects.length} corporates
+
+              <h1 className="max-w-xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-text md:text-5xl xl:text-6xl">
+                Itamar <span className="text-accent">Shamrik</span>
+              </h1>
+
+              <p className="mt-6 max-w-md text-base leading-relaxed text-muted md:text-lg">
+                I design and build accessible, pixel-perfect experiences for the web.
               </p>
-            </div>
 
-            <div className="space-y-16 md:space-y-20">
-              <div>
-                <h3 className="mb-8 font-display text-2xl font-semibold text-text md:mb-10 md:text-3xl">
-                  Website
-                </h3>
-                <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
-                  {websiteProjects.map((project, i) => (
-                    <ProjectCard key={project.slug} project={project} index={i} />
-                  ))}
-                </div>
+              <SectionNav activeId={activeSection} />
+
+              <div className="mt-12 flex flex-nowrap items-start gap-4 sm:gap-5">
+                <StatBlock value={websiteProjects.length} label="Websites" />
+                <StatBlock value={startupProjects.length} label="Startups" />
+                <StatBlock value={corporateProjects.length} label="Corporates" />
+                <StatBlock value={SITE.stats.years} label="Years" />
+                <StatBlock value={SITE.stats.clients} label="Clients" />
+              </div>
+            </aside>
+
+            <div className="min-w-0 space-y-16 md:space-y-20">
+              <div
+                id="about-intro"
+                className="max-w-2xl scroll-mt-28 space-y-5 text-base leading-relaxed text-muted md:text-[17px]"
+              >
+                <p>
+                  Hi there! I’m Itamar Shamrik, but most people call me IS, and I like building
+                  things. I’m an interface designer and developer with a background in product
+                  design, UX, AI interfaces and design systems. I like taking an idea, figuring out
+                  how it should work, and turning it into something clear, useful and real. I care a
+                  lot about the small details, but also about the bigger picture, like the business
+                  goal, the user experience and how the product will actually be built.
+                </p>
+                <p>
+                  Currently, I’m a Senior Consultant and UX Lead at CGI, where I work across
+                  research, product flows, prototypes, accessibility and design delivery. I also run
+                  IS Studio, where I design and develop websites, digital products and AI tools for
+                  different businesses. I work closely with developers, product teams and
+                  stakeholders, and I like being involved from the first idea all the way to launch.
+                </p>
+                <p>
+                  Before that, I worked on product and AI interfaces at Canadian Tire, led UX work
+                  across ecommerce brands like One Kings Lane, Sur La Table and Z Gallerie, and
+                  worked on AI and AR shopping experiences at Walmart. Most of the work I enjoy sits
+                  somewhere between design and technology, where I can design the experience and also
+                  understand how it becomes a real product.
+                </p>
               </div>
 
-              <div>
-                <h3 className="mb-8 font-display text-2xl font-semibold text-text md:mb-10 md:text-3xl">
-                  Startups
-                </h3>
-                <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
-                  {startupProjects.map((project, i) => (
-                    <ProjectCard key={project.slug} project={project} index={i} />
-                  ))}
-                </div>
-              </div>
+              <ExperienceList />
 
-              <div>
-                <h3 className="mb-8 font-display text-2xl font-semibold text-text md:mb-10 md:text-3xl">
-                  Corporates
-                </h3>
-                <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
-                  {corporateProjects.map((project, i) => (
-                    <ProjectCard key={project.slug} project={project} index={i} />
-                  ))}
-                </div>
-              </div>
+              <ProjectGroup id="websites" title="Website" items={websiteProjects} />
+              <ProjectGroup id="startups" title="Startups" items={startupProjects} />
+              <ProjectGroup id="corporates" title="Corporates" items={corporateProjects} />
             </div>
           </div>
         </section>

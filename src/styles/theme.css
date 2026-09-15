@@ -24,13 +24,25 @@
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
-  --spacing-page: 48px;
+  --spacing-page: 16px;
 }
 
 @layer components {
   .page-gutter {
     width: 100%;
-    padding-inline: var(--spacing-page);
+    padding-inline: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .page-gutter {
+      padding-inline: 32px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .page-gutter {
+      padding-inline: 120px;
+    }
   }
 }
 
