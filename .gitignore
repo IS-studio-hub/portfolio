@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-# Working copies of original unoptimized 3D assets (not deployed)
+# Legacy 3D asset leftovers (removed from site)
 /*.glb
 .glb-originals-backup/
 

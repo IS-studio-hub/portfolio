@@ -81,6 +81,21 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "65", label: "Person multidisciplinary delivery team"},
  { value: "Live", label: "Public portal at manitobaelicensing.ca"},
  ],
+ mediaGrid: [
+ { type: "image", src: p("gom", "grid/01-home.png"), caption: "Customer portal home — Welcome" },
+ { type: "image", src: p("gom", "grid/02-licences.jpg"), caption: "Licence discovery — angling, hunting, multilevel draws" },
+ { type: "image", src: p("gom", "grid/03-account.png"), caption: "My Account — personal information management" },
+ { type: "image", src: p("gom", "grid/04-personal.png"), caption: "Park vehicle permit — personal information form" },
+ { type: "image", src: p("gom", "grid/05-cart.png"), caption: "Shopping cart — licences and order summary" },
+ { type: "image", src: p("gom", "grid/06-checkout.png"), caption: "Checkout — contribution and order review" },
+ { type: "image", src: p("gom", "grid/07-snopass.png"), caption: "Snopass residency empty state" },
+ {
+ type: "video",
+ src: p("gom", "grid/08-walkthrough.mp4"),
+ poster: p("gom", "grid/08-poster.jpg"),
+ caption: "Portal walkthrough",
+ },
+ ],
  overview:
  "I led a team of two and owned the UX, UI and content direction across multiple connected products, including the Customer Portal, Admin System, Vendor Portal and Issuer Portal. My role went beyond designing individual screens, I was responsible for creating a consistent experience across the ecosystem, establishing the design system, defining content patterns and working closely with Business Analysts, QA specialists, developers and the client throughout delivery.",
  challenge:
@@ -404,6 +419,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "0→1", label: "From concept to live production app"},
  { value: "Live", label: "AI knowledge platform on Railway"},
  ],
+ mediaGrid: [
+ { type: "image", src: p("weebo", "grid/01-hero.png"), caption: "Marketing hero — Your data. Your bot." },
+ { type: "image", src: p("weebo", "grid/02-detail.png"), caption: "Product story — Collect everything. Talk to a bot that lived it." },
+ { type: "image", src: p("weebo", "grid/03-detail.png"), caption: "Plans & pricing" },
+ { type: "image", src: p("weebo", "grid/04-detail.png"), caption: "Site navigation overlay" },
+ { type: "image", src: p("weebo", "grid/05-detail.png"), caption: "Sign-up and plan selection" },
+ { type: "image", src: p("weebo", "grid/06-detail.png"), caption: "Feature narrative — archive as teammate" },
+ { type: "image", src: p("weebo", "grid/07-mobile.png"), caption: "Mobile — upload, share, and chat" },
+ ],
  overview:
  "My involvement covered almost every layer, UX strategy, UI, design system, frontend, backend, database, architecture, AI experience, content, accessibility, testing, QA and production iteration. This was not a traditional design handoff. I was helping build the actual product.",
  challenge:
@@ -628,6 +652,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "3", label: "Retail brands supported, One Kings Lane, Sur La Table, Z Gallerie"},
  { value: "10", label: "Person multidisciplinary team"},
  { value: "Live", label: "Luxury ecommerce at onekingslane.com"},
+ ],
+ mediaGrid: [
+ { type: "image", src: p("csc", "grid/01-hero.png"), caption: "One Kings Lane homepage" },
+ { type: "image", src: p("csc", "grid/02-detail.png"), caption: "Homepage mid-scroll merchandising" },
+ { type: "image", src: p("csc", "grid/03-detail.png"), caption: "Homepage lower discovery" },
+ { type: "image", src: p("csc", "grid/04-detail.png"), caption: "Clearance and sale browsing" },
+ { type: "image", src: p("csc", "grid/05-detail.png"), caption: "Category / collection pathway" },
+ { type: "image", src: p("csc", "grid/06-detail.png"), caption: "Product discovery surface" },
+ { type: "image", src: p("csc", "grid/07-detail.png"), caption: "Account and order pathway" },
  ],
  overview:
  "I worked as a Senior UX Designer as part of a 10 person team supporting three established retail brands: One Kings Lane, Sur La Table and Z Gallerie. While my work crossed all three, this case study focuses on One Kings Lane and helping create and evolve the design system behind its digital experience. I worked directly with UX teams and developers to transform individual interface patterns into reusable, documented and scalable components that could support a large ecommerce platform without losing the character of the brand.",
@@ -879,6 +912,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "3", label: "Retail brands, Sur La Table, One Kings Lane, Z Gallerie"},
  { value: "10", label: "Person multidisciplinary team"},
  { value: "Live", label: "Culinary retail at surlatable.com"},
+ ],
+ mediaGrid: [
+ { type: "image", src: p("slt", "grid/01-hero.png"), caption: "Sur La Table homepage" },
+ { type: "image", src: p("slt", "grid/02-detail.png"), caption: "Homepage mid-scroll" },
+ { type: "image", src: p("slt", "grid/03-detail.png"), caption: "Homepage lower content" },
+ { type: "image", src: p("slt", "grid/04-detail.png"), caption: "Sale shopping experience" },
+ { type: "image", src: p("slt", "grid/05-detail.png"), caption: "Category browsing" },
+ { type: "image", src: p("slt", "grid/06-detail.png"), caption: "Product listing" },
+ { type: "image", src: p("slt", "grid/07-detail.png"), caption: "Shopping journey detail" },
  ],
  overview:
  "I worked as a Senior UX Designer as part of a 10 person team supporting three established retail brands: Sur La Table, One Kings Lane and Z Gallerie. While my work extended across all three, this case study focuses on Sur La Table and creating and evolving the design system supporting its digital customer experience. I worked directly with UX teams and developers to identify recurring patterns, standardize interface behaviour, create reusable components and improve consistency between design and the live product. The challenge was not simply creating a component library, it was creating a system flexible enough to support a large ecommerce business while preserving the character and energy of Sur La Table.",
@@ -1135,6 +1177,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "3", label: "Retail brands, Z Gallerie, One Kings Lane, Sur La Table"},
  { value: "10", label: "Person multidisciplinary team"},
  { value: "Live", label: "Statement home ecommerce at zgallerie.com"},
+ ],
+ mediaGrid: [
+ { type: "image", src: p("zg", "grid/01-hero.png"), caption: "Z Gallerie homepage" },
+ { type: "image", src: p("zg", "grid/02-detail.png"), caption: "Homepage mid-scroll" },
+ { type: "image", src: p("zg", "grid/03-detail.png"), caption: "Homepage lower content" },
+ { type: "image", src: p("zg", "grid/04-detail.png"), caption: "Site scroll — lifestyle merchandising" },
+ { type: "image", src: p("zg", "grid/05-detail.png"), caption: "Site scroll — category rhythm" },
+ { type: "image", src: p("zg", "grid/06-detail.png"), caption: "Site scroll — product storytelling" },
+ { type: "image", src: p("zg", "grid/07-detail.png"), caption: "Site scroll — brand atmosphere" },
  ],
  overview:
  "I worked as a Senior UX Designer as part of a 10 person team supporting three established retail brands: Z Gallerie, One Kings Lane and Sur La Table. My work covered all three, but this case study focuses on Z Gallerie and creating and evolving the design system behind its digital customer experience. I worked directly with UX teams and developers to audit existing interface patterns, create reusable components, define interaction behaviour, improve responsive consistency and reduce the gap between design and production. The challenge was not simply creating consistency, it was creating consistency without removing the personality that makes Z Gallerie feel like Z Gallerie.",
@@ -1595,6 +1646,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "0→1", label: "From concept to live production app"},
  { value: "Live", label: "Client discovery platform on Railway"},
  ],
+ mediaGrid: [
+ { type: "image", src: p("CHaPPie", "grid/01-hero.png"), caption: "CH4PP!3 live product home" },
+ { type: "image", src: p("CHaPPie", "grid/02-detail.png"), caption: "Home mid-scroll" },
+ { type: "image", src: p("CHaPPie", "grid/03-detail.png"), caption: "Home lower content" },
+ { type: "image", src: p("CHaPPie", "grid/04-detail.png"), caption: "Primary product surface" },
+ { type: "image", src: p("CHaPPie", "grid/05-detail.png"), caption: "Product detail pathway" },
+ { type: "image", src: p("CHaPPie", "grid/06-detail.png"), caption: "Secondary product page" },
+ { type: "image", src: p("CHaPPie", "grid/07-detail.png"), caption: "Supporting product content" },
+ ],
  overview:
  "I worked directly with the founders and CEO to turn CH4PP!3 from an idea into a functioning web product. My role was not limited to UX or UI, I designed the experience, created the design system, developed the application, worked on frontend and backend, structured the database, shaped application architecture, wrote product content, implemented accessibility, tested the experience, handled QA and helped take the product from an idea to a live web system. This was not a design handoff. I was responsible for helping turn the idea into the actual product.",
  challenge:
@@ -1839,6 +1899,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "4", label: "Retail brands, Canadian Tire, Sport Chek, Mark’s, Party City"},
  { value: "Enterprise", label: "Cross-functional UX, BA, research, QA and development"},
  { value: "Live", label: "Digital retail at canadiantire.ca"},
+ ],
+ mediaGrid: [
+ { type: "image", src: p("ctc", "grid/01-hero.png"), caption: "Canadian Tire homepage" },
+ { type: "image", src: p("ctc", "grid/02-detail.png"), caption: "Homepage mid-scroll" },
+ { type: "image", src: p("ctc", "grid/03-detail.png"), caption: "Homepage lower content" },
+ { type: "image", src: p("ctc", "grid/04-detail.png"), caption: "Automotive / category browsing" },
+ { type: "image", src: p("ctc", "grid/05-detail.png"), caption: "Seasonal event page" },
+ { type: "image", src: p("ctc", "grid/06-detail.png"), caption: "Customer service" },
+ { type: "image", src: p("ctc", "grid/07-detail.png"), caption: "Bilingual entry pathway" },
  ],
  overview:
  "I worked as a Senior UX Designer inside this large digital ecosystem, collaborating across multiple UX teams and contributing to experiences for four major retail brands: Canadian Tire, Sport Chek, Mark’s and Party City. While my work extended across these brands, this case study focuses on Canadian Tire. I worked directly with UX designers, Business Analysts, Researchers, QA specialists and development teams to design and improve customer-facing web experiences. My role was not simply to create pages, it was to understand business requirements, customer needs, technical constraints and existing platform patterns, then bring those pieces together into experiences that could work at Canadian Tire scale.",
@@ -2097,6 +2166,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "Concept → Result", label: "From first idea to live Choose my model"},
  { value: "Size + height", label: "Measurement inputs that find closest models"},
  { value: "On-image CTA", label: "Choose my model stays on the product media"},
+ ],
+ mediaGrid: [
+ { type: "image", src: p("walmart", "grid/01-hero.png"), caption: "Walmart Virtual Try-On browse" },
+ { type: "image", src: p("walmart", "grid/02-detail.png"), caption: "VTO mid-scroll" },
+ { type: "image", src: p("walmart", "grid/03-detail.png"), caption: "VTO lower content" },
+ { type: "image", src: p("walmart", "grid/04-detail.png"), caption: "Walmart home entry" },
+ { type: "image", src: p("walmart", "grid/05-detail.png"), caption: "Related shopping pathway" },
+ { type: "image", src: p("walmart", "grid/06-detail.png"), caption: "Account / privacy surface" },
+ { type: "image", src: p("walmart", "grid/07-detail.png"), caption: "Browse continuation" },
  ],
  overview:
  "I designed the Walmart US fashion experience around changing the model on product images. The first idea explored Try It On with Choose My Model and Be Your Own Model paths. The live result became Choose my model: a commerce-native flow for measurements, matching models and applying a closer representation on the PDP.",
@@ -3071,6 +3149,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "7", label: "Person startup team" },
  { value: "Ask → Receive → Continue", label: "Core interaction model" },
  ],
+ mediaGrid: [
+ { type: "image", src: p("first-principles", "grid/01-hero.png"), caption: "Saence AI product hero" },
+ { type: "image", src: p("first-principles", "grid/02-detail.png"), caption: "Conversation empty state" },
+ { type: "image", src: p("first-principles", "grid/03-detail.png"), caption: "Chat and response states" },
+ { type: "image", src: p("first-principles", "grid/04-detail.png"), caption: "Product interaction detail" },
+ { type: "image", src: p("first-principles", "grid/05-detail.png"), caption: "History and continuity" },
+ { type: "image", src: p("first-principles", "grid/06-detail.png"), caption: "Supporting product UI" },
+ { type: "image", src: p("first-principles", "grid/07-detail.png"), caption: "Responsive product surface" },
+ ],
  overview:
  "As the solo UX/UI Designer on a seven-person startup team, I shaped how Saence AI should work, look and feel while the product was still being defined. That included user journeys, the chat experience, interface patterns, the visual system, prototypes and direct collaboration with developers as designs moved into the real product.",
  challenge:
@@ -3800,6 +3887,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "Enterprise", label: "Cross-functional UX, BA, research, QA and development"},
  { value: "Live", label: "Digital retail at marks.com"},
  ],
+ mediaGrid: [
+ { type: "image", src: p("marks", "grid/01-hero.png"), caption: "Mark's homepage" },
+ { type: "image", src: p("marks", "grid/02-detail.png"), caption: "Homepage mid-scroll" },
+ { type: "image", src: p("marks", "grid/03-detail.png"), caption: "Homepage lower content" },
+ { type: "image", src: p("marks", "grid/04-detail.png"), caption: "Online ordering help" },
+ { type: "image", src: p("marks", "grid/05-detail.png"), caption: "Customer service pathway" },
+ { type: "image", src: p("marks", "grid/06-detail.png"), caption: "Service content" },
+ { type: "image", src: p("marks", "grid/07-detail.png"), caption: "Homepage return state" },
+ ],
  overview:
  "I worked as a Senior UX Designer within the larger Canadian Tire Corporation digital organization, contributing to experiences across Mark’s, Canadian Tire, Sport Chek and Party City. While my role extended across all four brands, this case study focuses on Mark’s. I collaborated directly with multiple UX teams, Business Analysts, UX Researchers, QA specialists and development teams to create and improve customer-facing web experiences. My role was not simply to create pages, it was to understand business requirements, customer needs, research, existing platform patterns and technical limitations, then bring those pieces together into experiences that could work at enterprise scale.",
  challenge:
@@ -4054,6 +4150,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "4", label: "Retail brands, Sport Chek, Canadian Tire, Mark’s, Party City"},
  { value: "Enterprise", label: "Cross-functional UX, BA, research, QA and development"},
  { value: "Live", label: "Digital retail at sportchek.ca"},
+ ],
+ mediaGrid: [
+ { type: "image", src: p("sportchek", "grid/01-hero.png"), caption: "SportChek homepage" },
+ { type: "image", src: p("sportchek", "grid/02-detail.png"), caption: "Homepage mid-scroll" },
+ { type: "image", src: p("sportchek", "grid/03-detail.png"), caption: "Homepage lower content" },
+ { type: "image", src: p("sportchek", "grid/04-detail.png"), caption: "Category / campaign page" },
+ { type: "image", src: p("sportchek", "grid/05-detail.png"), caption: "Secondary shopping page" },
+ { type: "image", src: p("sportchek", "grid/06-detail.png"), caption: "Supporting content page" },
+ { type: "image", src: p("sportchek", "grid/07-detail.png"), caption: "Browse continuation" },
  ],
  overview:
  "I worked as a Senior UX Designer within the larger Canadian Tire Corporation digital organization, collaborating across multiple UX teams and contributing to experiences across Sport Chek, Canadian Tire, Mark’s and Party City. While my role extended across all four brands, this case study focuses on Sport Chek. I worked directly with UX designers, Business Analysts, UX Researchers, QA specialists, product teams and developers to create customer-facing web experiences. The work required more than designing individual pages, it required understanding how every page fits within a much larger shopping system.",
@@ -4310,6 +4415,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "Enterprise", label: "Cross-functional UX, BA, research, QA and development"},
  { value: "Live", label: "Digital retail at partycity.ca"},
  ],
+ mediaGrid: [
+ { type: "image", src: p("partycity", "grid/01-hero.png"), caption: "Party City homepage" },
+ { type: "image", src: p("partycity", "grid/02-detail.png"), caption: "Homepage mid-scroll" },
+ { type: "image", src: p("partycity", "grid/03-detail.png"), caption: "Homepage lower content" },
+ { type: "image", src: p("partycity", "grid/04-detail.png"), caption: "Category browsing" },
+ { type: "image", src: p("partycity", "grid/05-detail.png"), caption: "Seasonal / occasion page" },
+ { type: "image", src: p("partycity", "grid/06-detail.png"), caption: "Supporting content" },
+ { type: "image", src: p("partycity", "grid/07-detail.png"), caption: "Browse continuation" },
+ ],
  overview:
  "I worked as a Senior UX Designer within the larger Canadian Tire corporate digital organization, collaborating across multiple UX teams and contributing to digital experiences for Party City, Canadian Tire, Sport Chek and Mark’s. While my work extended across all four brands, this case study focuses on Party City. I worked directly with UX teams, Business Analysts, UX Researchers, QA specialists and developers to create and improve customer-facing web experiences. My role involved translating business requirements into understandable customer journeys, designing responsive experiences and working closely with the teams responsible for bringing those experiences into production.",
  challenge:
@@ -4565,6 +4679,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "0→1", label: "From concept to live creative platform" },
  { value: "Live", label: "Kinetic typography studio on GitHub Pages" },
  ],
+ mediaGrid: [
+ { type: "image", src: p("ava", "grid/01-hero.png"), caption: "AVA homepage" },
+ { type: "image", src: p("ava", "grid/02-detail.png"), caption: "Homepage mid-scroll" },
+ { type: "image", src: p("ava", "grid/03-detail.png"), caption: "Homepage lower content" },
+ { type: "image", src: p("ava", "grid/04-detail.png"), caption: "Home return / primary" },
+ { type: "image", src: p("ava", "grid/05-detail.png"), caption: "Studio experience" },
+ { type: "image", src: p("ava", "grid/06-detail.png"), caption: "Library experience" },
+ { type: "image", src: p("ava", "grid/07-detail.png"), caption: "Supporting site surface" },
+ ],
  overview:
  "I worked directly with the founders and CEO to turn AVA from an idea into a live web product. My role was not limited to UX or UI. I designed the experience, created the design system, developed the application, structured the database, shaped architecture, wrote product content, implemented accessibility, tested the experience, handled QA and helped take the product from idea to production. This was not a design handoff. I helped turn the idea into the actual product.",
  challenge:
@@ -4819,6 +4942,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { value: "1", label: "Product builder across design and development" },
  { value: "0→1", label: "From early idea to live AI platform" },
  { value: "Live", label: "Multimodal memory API on Railway" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("50nny", "grid/01-hero.png"), caption: "50NNY platform home" },
+ { type: "image", src: p("50nny", "grid/02-detail.png"), caption: "Home mid-scroll" },
+ { type: "image", src: p("50nny", "grid/03-detail.png"), caption: "Home lower content" },
+ { type: "image", src: p("50nny", "grid/04-detail.png"), caption: "Primary product surface" },
+ { type: "image", src: p("50nny", "grid/05-detail.png"), caption: "How it works" },
+ { type: "image", src: p("50nny", "grid/06-detail.png"), caption: "Pricing" },
+ { type: "image", src: p("50nny", "grid/07-detail.png"), caption: "Docs" },
  ],
  overview:
  "I worked directly with the founders and CEO to take 50NNY from an early product idea to a functioning live application. My role covered product strategy, UX architecture, UX and UI design, AI interaction design, the design system, frontend development, supporting application functionality, database structure, architecture, product content, accessibility, testing, QA and production implementation. There was no handoff moment. I designed the product while building it.",
@@ -5636,5 +5768,110 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  ],
  image: p("isstudio", "01-hero.png"),
  closing: "A studio site should feel like walking into the house, not reading the brochure.",
+ },
+
+ telaviv: {
+ impact: "Designed and shipped an interactive Tel Aviv street-corner guide for Dizengoff 23.",
+ client: "IS Studio",
+ timeline: "Interactive website · 2026",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "3D web", "Interaction design", "GitHub Pages"],
+ liveUrl: "https://is-studio-hub.github.io/TelAviv/",
+ context:
+ "Dizengoff 23 turns a Bauhaus night corner into a living weekly guide — roofs, transit, parking, food and the city’s cultural trash — for 13–19 Sept 2026.",
+ goals: [
+ "Make arriving in Tel Aviv feel spatial and playful",
+ "Connect Street, Roof, Ride, Eat, Park and Trash to one diorama",
+ "Keep weekly information useful without losing atmosphere",
+ "Ship a live interactive experience",
+ ],
+ research: [
+ {
+ title: "Guides as lists",
+ description:
+ "Most city guides bury place under menus. A corner you can orbit creates orientation before content.",
+ },
+ {
+ title: "Week as product",
+ description:
+ "Dating the experience to one week makes Roof, Ride and Trash feel current instead of generic tourism copy.",
+ },
+ ],
+ insights: [
+ "Hotspots work when the scene already explains what to click",
+ "Panels should feel like opening a door on the street, not leaving it",
+ "START is part of the brand ritual, not just a loader",
+ ],
+ solutions: [
+ {
+ title: "Diorama entry",
+ description: "Built a night-time Dizengoff corner as the primary interface for looking around and diving in.",
+ image: p("telaviv", "grid/02-street.png"),
+ },
+ {
+ title: "Week layers",
+ description: "Designed Street, Roof, Ride, Eat, Park and Trash as focused panels tied to hotspots.",
+ image: p("telaviv", "grid/03-roof.jpg"),
+ },
+ {
+ title: "Arrival ritual",
+ description: "Kept START as a deliberate pause before the city loads into view.",
+ image: p("telaviv", "grid/01-start.png"),
+ },
+ ],
+ learnings: [
+ "A spatial guide can carry more attitude than a directory",
+ "Weekly specificity makes interactive fiction feel useful",
+ ],
+ metrics: [
+ { value: "Live", label: "Interactive Tel Aviv site" },
+ { value: "6", label: "Street layers — Roof, Ride, Eat, Park, Trash" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("telaviv", "grid/01-start.png"), caption: "START — arriving in Tel Aviv" },
+ { type: "image", src: p("telaviv", "grid/02-street.png"), caption: "Street — Dizengoff 23 night diorama" },
+ { type: "image", src: p("telaviv", "grid/03-roof.jpg"), caption: "Roof — this week on the roofs" },
+ { type: "image", src: p("telaviv", "grid/04-ride.jpg"), caption: "Ride — public transport this week" },
+ { type: "image", src: p("telaviv", "grid/05-park.png"), caption: "Park — where to leave the car" },
+ { type: "image", src: p("telaviv", "grid/06-trash.png"), caption: "Trash — this week’s celebs, posts, TikToks" },
+ { type: "image", src: p("telaviv", "grid/07-street-wide.jpg"), caption: "Street — corner atmosphere" },
+ {
+ type: "video",
+ src: p("telaviv", "grid/08-walkthrough.mp4"),
+ poster: p("telaviv", "grid/08-poster.jpg"),
+ caption: "Site walkthrough",
+ },
+ ],
+ overview:
+ "I designed Dizengoff 23 as an interactive Tel Aviv guide where the street corner is the product — look around, click a hotspot, learn the week.",
+ challenge:
+ "Tourism sites flatten place into lists. This needed to feel like standing on Dizengoff at night while still answering practical questions.",
+ process: [
+ { phase: "01", title: "Compose the corner", description: "Defined the diorama, hotspots and START ritual." },
+ { phase: "02", title: "Layer the week", description: "Designed Roof, Ride, Eat, Park and Trash as scene-tied panels." },
+ { phase: "03", title: "Ship", description: "Published the live experience on GitHub Pages." },
+ ],
+ deliverables: [
+ "Interactive 3D website",
+ "Weekly guide IA and panels",
+ "Hotspot interaction design",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Dizengoff 23 experience",
+ "Spatial weekly guide for Tel Aviv",
+ "Memorable interactive presence for the street",
+ ],
+ gallery: [
+ { type: "image", src: p("telaviv", "grid/02-street.png"), caption: "Street — Dizengoff 23 night diorama" },
+ { type: "image", src: p("telaviv", "grid/03-roof.jpg"), caption: "Roof parties this week" },
+ { type: "image", src: p("telaviv", "grid/04-ride.jpg"), caption: "Getting around this week" },
+ { type: "image", src: p("telaviv", "grid/05-park.png"), caption: "Parking guidance" },
+ { type: "image", src: p("telaviv", "grid/06-trash.png"), caption: "This week’s trash" },
+ { type: "image", src: p("telaviv", "grid/01-start.png"), caption: "START arrival" },
+ ],
+ image: p("telaviv", "01-hero.png"),
+ closing: "A city guide should feel like a place first — then a list.",
  },
 };

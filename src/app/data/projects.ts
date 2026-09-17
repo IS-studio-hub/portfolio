@@ -1585,6 +1585,56 @@ const rawProjects = [
  "Minimal, high-presence digital home for the practice",
  ],
  },
+ {
+ slug: "telaviv",
+ title: "Dizengoff 23",
+ shortTitle: "Tel Aviv",
+ subtitle: "An interactive week-in-the-city guide on Dizengoff",
+ description:
+ "Interactive 3D website for Dizengoff 23 — a night-time Tel Aviv street corner that opens into roof parties, transit, parking, eating and the week’s cultural trash.",
+ year: "2026",
+ role: "Website Designer & Builder",
+ tags: ["Website", "3D", "Interactive"],
+ accent: "#7DD3FC",
+ gridSpan: "half",
+ image: projectImg("telaviv"),
+ gallery: [
+ { type: "image" as const, src: projectImg("telaviv"), caption: "Dizengoff 23 — night in Tel Aviv" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/TelAviv/",
+ overview:
+ "Designed and shipped an interactive Tel Aviv guide where a Bauhaus street corner becomes the interface for discovering the week ahead.",
+ challenge:
+ "City guides are usually lists. This one needed to feel like arriving on the street — playful, spatial and useful without losing the information.",
+ process: [
+ {
+ phase: "01",
+ title: "Frame the corner",
+ description: "Centered Dizengoff 23 as a diorama you can orbit, with clear hotspots into the week’s stories.",
+ },
+ {
+ phase: "02",
+ title: "Design the week layers",
+ description: "Mapped Street, Roof, Ride, Eat, Park and Trash into focused panels that stay tied to the scene.",
+ },
+ {
+ phase: "03",
+ title: "Ship the experience",
+ description: "Built and published the live interactive site on GitHub Pages.",
+ },
+ ],
+ deliverables: [
+ "Interactive 3D website experience",
+ "Week-guide content structure",
+ "Hotspot and panel interaction design",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Dizengoff 23 experience for Tel Aviv",
+ "Spatial city guide with clear weekly pathways",
+ "Memorable interactive presence for the street corner",
+ ],
+ },
 ];
 
 /** Home page section order. */
@@ -1595,6 +1645,7 @@ export const WEBSITE_SLUGS = [
  "magic-spoon",
  "dahari",
  "isstudio",
+ "telaviv",
 ] as const;
 
 export const CORPORATE_SLUGS = [

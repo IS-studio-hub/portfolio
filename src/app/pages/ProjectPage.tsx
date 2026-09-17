@@ -1,14 +1,10 @@
-import { lazy, Suspense, useMemo, type MouseEvent } from "react";
+import { useMemo, type MouseEvent } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
 import type { ProjectMedia } from "../data/projects";
 import { assetPath } from "../lib/assetPath";
-
-const ProjectHero3D = lazy(() =>
-  import("../components/ProjectHero3D").then((m) => ({ default: m.ProjectHero3D })),
-);
 
 function LiveSiteButton({ href, label = "View live site" }: { href: string; label?: string }) {
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -81,6 +77,18 @@ export function ProjectPage() {
   const projectImage = project
     ? assetPath(`/projects/${project.slug}/card.png`)
     : "/og-image.png";
+  const heroMedia = useMemo(() => {
+    if (!project?.mediaGrid?.length) return null;
+    const imageItem = project.mediaGrid.find((item) => item.type === "image");
+    if (imageItem) return { src: imageItem.src, alt: imageItem.caption || project.title };
+    const videoWithPoster = project.mediaGrid.find(
+      (item) => item.type === "video" && item.poster,
+    );
+    if (videoWithPoster?.poster) {
+      return { src: videoWithPoster.poster, alt: videoWithPoster.caption || project.title };
+    }
+    return null;
+  }, [project]);
   const jsonLd = useMemo(() => {
     if (!project) return undefined;
     return {
@@ -173,169 +181,14 @@ export function ProjectPage() {
               )}
             </div>
 
-            <div className="relative h-[48vh] min-h-[340px] lg:h-[64vh] lg:min-h-[460px]">
-              <Suspense
-                fallback={
-                  <div className="flex h-full items-center justify-center font-mono text-xs uppercase tracking-widest text-muted">
-                    Loading 3D preview…
-                  </div>
-                }
-              >
-                <ProjectHero3D
-                  {...(project.slug === "gigz"
-                    ? {
-                        modelPath: assetPath("/models/violet-bloom.glb"),
-                        glowColor: "rgba(255,138,101,0.1)",
-                        scale: 0.92,
-                      }
-                    : project.slug === "weebo"
-                      ? {
-                          modelPath: assetPath("/models/sleek-desk.glb"),
-                          glowColor: "rgba(129,140,248,0.12)",
-                          scale: 0.9,
-                        }
-                      : project.slug === "csc"
-                        ? {
-                            modelPath: assetPath("/models/sleek-desk-all-in-one.glb"),
-                            glowColor: "rgba(196,165,116,0.14)",
-                            scale: 0.9,
-                          }
-                        : project.slug === "slt"
-                          ? {
-                              modelPath: assetPath("/models/sleek-desk-slt.glb"),
-                              glowColor: "rgba(196,90,60,0.14)",
-                              scale: 0.9,
-                            }
-                          : project.slug === "zg"
-                            ? {
-                                modelPath: assetPath("/models/sleek-desk-zg.glb"),
-                                glowColor: "rgba(167,139,250,0.14)",
-                                scale: 0.9,
-                              }
-                            : project.slug === "ctc"
-                              ? {
-                                  modelPath: assetPath("/models/sleek-desk-ctc.glb"),
-                                  glowColor: "rgba(220,38,38,0.14)",
-                                  scale: 0.9,
-                                }
-                              : project.slug === "sportchek"
-                                ? {
-                                    modelPath: assetPath("/models/sleek-desk-sportchek.glb"),
-                                    glowColor: "rgba(225,29,46,0.14)",
-                                    scale: 0.9,
-                                  }
-                                : project.slug === "partycity"
-                                  ? {
-                                      modelPath: assetPath("/models/sleek-desk-partycity.glb"),
-                                      glowColor: "rgba(124,58,237,0.14)",
-                                      scale: 0.9,
-                                    }
-                                  : project.slug === "marks"
-                                    ? {
-                                        modelPath: assetPath("/models/sleek-desk-marks.glb"),
-                                        glowColor: "rgba(251,146,60,0.14)",
-                                        scale: 0.9,
-                                      }
-                                    : project.slug === "walmart"
-                                      ? {
-                                          modelPath: assetPath("/models/sleek-desk-walmart.glb"),
-                                          glowColor: "rgba(0,113,220,0.14)",
-                                          scale: 0.9,
-                                        }
-                                    : project.slug === "anova"
-                                      ? {
-                                          modelPath: assetPath("/models/violet-bloom-anova.glb"),
-                                          glowColor: "rgba(249,115,22,0.14)",
-                                          scale: 0.92,
-                                        }
-                                      : project.slug === "ymca"
-                                        ? {
-                                            modelPath: assetPath("/models/violet-bloom-ymca.glb"),
-                                            glowColor: "rgba(200,16,46,0.14)",
-                                            scale: 0.92,
-                                          }
-                                        : project.slug === "ppjv"
-                                          ? {
-                                              modelPath: assetPath("/models/sleek-desk-ppjv.glb"),
-                                              glowColor: "rgba(37,99,235,0.14)",
-                                              scale: 0.9,
-                                            }
-                                            : project.slug === "first-principles"
-                                              ? {
-                                                  modelPath: assetPath("/models/sleek-desk-saence.glb"),
-                                                  glowColor: "rgba(37,99,235,0.14)",
-                                                  scale: 0.9,
-                                                }
-                                            : project.slug === "ava"
-                                              ? {
-                                                  modelPath: assetPath("/models/sleek-desk-ava.glb"),
-                                                  glowColor: "rgba(244,114,182,0.14)",
-                                                  scale: 0.9,
-                                                }
-                                            : project.slug === "50nny"
-                                              ? {
-                                                  modelPath: assetPath("/models/sleek-desk-50nny.glb"),
-                                                  glowColor: "rgba(251,191,36,0.14)",
-                                                  scale: 0.9,
-                                                }
-                                            : project.slug === "westjet"
-                                            ? {
-                                                modelPath: assetPath("/models/violet-bloom-westjet.glb"),
-                                                glowColor: "rgba(14,165,168,0.14)",
-                                                scale: 0.92,
-                                              }
-                                            : project.slug === "polard"
-                                              ? {
-                                                  modelPath: assetPath("/models/sleek-desk-polard.glb"),
-                                                  glowColor: "rgba(124,58,237,0.14)",
-                                                  scale: 0.86,
-                                                  secondaryModelPath: assetPath("/models/violet-bloom-polard.glb"),
-                                                  secondaryScale: 0.28,
-                                                  secondaryPosition: [0.72, -0.22, 0.75] as [
-                                                    number,
-                                                    number,
-                                                    number,
-                                                  ],
-                                                }
-                                              : project.slug === "superlocal"
-                                                ? {
-                                                    modelPath: assetPath("/models/sleek-desk.glb"),
-                                                    glowColor: "rgba(74,222,128,0.14)",
-                                                    scale: 0.9,
-                                                  }
-                                                : project.slug === "blairandjack"
-                                                  ? {
-                                                      modelPath: assetPath("/models/sleek-desk.glb"),
-                                                      glowColor: "rgba(196,164,132,0.14)",
-                                                      scale: 0.9,
-                                                    }
-                                                  : project.slug === "gatorade"
-                                                    ? {
-                                                        modelPath: assetPath("/models/sleek-desk.glb"),
-                                                        glowColor: "rgba(249,115,22,0.14)",
-                                                        scale: 0.9,
-                                                      }
-                                                    : project.slug === "magic-spoon"
-                                                      ? {
-                                                          modelPath: assetPath("/models/sleek-desk.glb"),
-                                                          glowColor: "rgba(167,139,250,0.14)",
-                                                          scale: 0.9,
-                                                        }
-                                                      : project.slug === "dahari"
-                                                        ? {
-                                                            modelPath: assetPath("/models/sleek-desk.glb"),
-                                                            glowColor: "rgba(96,165,250,0.14)",
-                                                            scale: 0.9,
-                                                          }
-                                                        : project.slug === "isstudio"
-                                                          ? {
-                                                              modelPath: assetPath("/models/sleek-desk.glb"),
-                                                              glowColor: "rgba(251,191,36,0.14)",
-                                                              scale: 0.9,
-                                                            }
-                                                          : {})}
+            <div className="relative h-[48vh] min-h-[340px] overflow-hidden rounded-2xl border border-border bg-surface lg:h-[64vh] lg:min-h-[460px]">
+              {heroMedia ? (
+                <img
+                  src={heroMedia.src}
+                  alt={heroMedia.alt}
+                  className="h-full w-full object-cover object-center"
                 />
-              </Suspense>
+              ) : null}
             </div>
           </div>
         </section>
