@@ -27,6 +27,15 @@ export interface MetricItem {
   label: string;
 }
 
+export interface Competitor {
+  name: string;
+  /** Short category / positioning label */
+  focus: string;
+  /** Why they sit in this competitive set */
+  note: string;
+  url?: string;
+}
+
 export interface NarrativeSection {
   eyebrow?: string;
   title: string;
@@ -75,6 +84,33 @@ export interface Project {
   outcomes: string[];
   learnings: string[];
   metrics?: MetricItem[];
+  /** Competitive set shown above the media grid on project pages. */
+  competitors?: Competitor[];
+  /** Optional framing line for the competitors section. */
+  competitorsIntro?: string;
+  /** Visual atmosphere board shown above the media grid. */
+  moodBoard?: {
+    note: string;
+    colors: { hex: string; label: string }[];
+    words: string[];
+    fonts: { name: string; role: string; sample: string; stack: string }[];
+    assets: {
+      type: "image" | "video" | "model";
+      label: string;
+      note: string;
+      src?: string;
+      poster?: string;
+    }[];
+    references: { name: string; note: string; url?: string }[];
+    textures?: ("grain" | "lines" | "dots" | "mesh" | "wash")[];
+  };
+  /** Research conclusions synthesized from competitors + mood board. */
+  researchConclusions?: {
+    lead: string;
+    competitive: string[];
+    atmosphere: string[];
+    bridge: string;
+  };
   /** Optional 8-cell image/video grid shown after metrics on project pages. */
   mediaGrid?: ProjectMedia[];
   /** Optional long-form narrative blocks (used by GoM and similar deep case studies). */
@@ -97,6 +133,10 @@ export type CaseStudyExtras = Pick<
   | "solutions"
   | "learnings"
   | "metrics"
+  | "competitors"
+  | "competitorsIntro"
+  | "moodBoard"
+  | "researchConclusions"
   | "mediaGrid"
   | "narrative"
   | "closing"

@@ -4,79 +4,79 @@ import { assetPath } from "../lib/assetPath";
 const p = (slug: string, file: string) => assetPath(`/projects/${slug}/${file}`);
 
 export const caseStudyData: Record<string, CaseStudyExtras> = {
- gom: {
+  gom: {
  impact:
  "Connected Customer, Vendor, Issuer and Admin experiences (with a shared design system and content approach) for Government of Manitoba licensing.",
- client: "Government of Manitoba",
+    client: "Government of Manitoba",
  timeline: "Multi-year delivery · live at manitobaelicensing.ca",
  team: "UX and Content Lead · led a team of two · 65 person multidisciplinary delivery team",
  tools: ["Figma", "FigJam", "Design System", "Content strategy", "Design QA", "Accessibility review"],
- liveUrl: "https://www.manitobaelicensing.ca/public/home",
- context:
+    liveUrl: "https://www.manitobaelicensing.ca/public/home",
+    context:
  "Government licensing systems are more complex than they appear from the outside. The platform needed to serve members of the public while also supporting the people responsible for selling, issuing, reviewing and administering licences behind the scenes. My responsibility was to help make those experiences feel like parts of one product rather than disconnected systems.",
- goals: [
+    goals: [
  "Customer Portal, clear public discovery, account access and purchase confidence",
  "Vendor Portal, fast, repeatable operational workflows with fewer errors",
  "Issuer Portal, support users completing actions on behalf of another person",
  "Admin System, information density, consistency and clear system feedback",
  "Design System, shared patterns across the ecosystem",
  "UX Content, responsive experience, accessibility and design QA",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Business rules into journeys",
- description:
+        description:
  "A requirement might explain what the system must technically do, but that does not automatically explain how a person should experience it. I looked at complete tasks (decisions, blockers, error states and what needed to stay visible) instead of designing screen by screen.",
- },
- {
+      },
+      {
  title: "Cross-discipline collaboration",
- description:
+        description:
  "Worked directly with Business Analysts on rules and edge cases, developers on technical realism and documentation, QA on implementation fidelity, and the client on reviews, decisions and continuous improvement.",
- },
- {
+      },
+      {
  title: "Ecosystem consistency audit",
- description:
+        description:
  "As the project expanded from the Customer Portal to Vendor, Issuer and Admin experiences, I oversaw UX, UI, content and design consistency so similar actions would not drift apart across portals.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "The more complex the system is behind the interface, the simpler the experience needs to feel in front of it",
  "Good UX does not remove complexity from the business, it organizes it so users do not have to understand the entire system first",
  "Customer, vendor, issuer and admin needs cannot be identical, but they must share foundations",
  "On a 65 person project, design quality depends on shared understanding before features reach production",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Customer Portal",
- description:
+        description:
  "The public facing experience needed to make it easy to understand what could be purchased, create or access an account, find the right licence or permit, and complete the task with confidence, covering park vehicle permits, fishing, hunting, forestry, trapping, draws and other regulated activities.",
- image: p("gom", "solution-1.png"),
- },
- {
+        image: p("gom", "solution-1.png"),
+      },
+      {
  title: "Vendor Portal",
- description:
+        description:
  "Designed around speed, repeatable workflows, customer lookup, transactions and operational clarity, helping organizations complete frequent tasks efficiently while reducing the risk of errors.",
- image: p("gom", "solution-2.png"),
- },
- {
+        image: p("gom", "solution-2.png"),
+      },
+      {
  title: "Issuer Portal",
- description:
+        description:
  "Supported users helping customers purchase and manage licences on behalf of another person, adding complexity around identification, eligibility, account information, licence selection and transaction states.",
- image: p("gom", "solution-3.png"),
- },
+        image: p("gom", "solution-3.png"),
+      },
  {
  title: "Admin System",
  description:
  "Prioritized information density, consistency, efficiency and clear system feedback for users who need visibility and control over products, rules, users and operational workflows.",
  image: p("gom", "solution-4.png"),
  },
- ],
- learnings: [
+    ],
+    learnings: [
  "Working across customer, vendor, issuer and administrative experiences meant thinking about UX at a product ecosystem level, not only at the screen level",
  "Strong products happen when design, content, business analysis, development, QA and the client work toward the same experience",
  "Designing Manitoba eLicensing meant connecting government rules, operational processes, transactions and multiple user groups into one understandable digital ecosystem",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "4", label: "Connected experiences, Customer, Vendor, Issuer, Admin"},
  { value: "65", label: "Person multidisciplinary delivery team"},
  { value: "Live", label: "Public portal at manitobaelicensing.ca"},
@@ -95,34 +95,34 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  poster: p("gom", "grid/08-poster.jpg"),
  caption: "Portal walkthrough",
  },
- ],
- overview:
+    ],
+    overview:
  "I led a team of two and owned the UX, UI and content direction across multiple connected products, including the Customer Portal, Admin System, Vendor Portal and Issuer Portal. My role went beyond designing individual screens, I was responsible for creating a consistent experience across the ecosystem, establishing the design system, defining content patterns and working closely with Business Analysts, QA specialists, developers and the client throughout delivery.",
- challenge:
+    challenge:
  "The project was not a single website. It was an ecosystem of connected experiences designed for people with very different goals, levels of experience and responsibilities, and it needed to feel like one product.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Turning requirements into experiences",
- description:
+        description:
  "Translated complicated business requirements into understandable user journeys. Asked what the user was trying to accomplish, what information they needed, what could prevent them from continuing, what happens when something goes wrong, and what should happen next.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Designing for complex decisions",
- description:
+        description:
  "Product discovery and checkout needed to help users understand whether they were selecting the correct option before completing a transaction. Clear hierarchy, progressive disclosure, contextual information and consistent language became core tools.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Content was part of the UX",
- description:
+        description:
  "Shaped page titles, instructions, form labels, helper text, validation messages, error states, confirmations, navigation, buttons, product information and transactional messaging so users would not have to interpret the interface before using it.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Design system across portals",
- description:
+        description:
  "Established shared patterns for typography, colour, spacing, forms, buttons, navigation, alerts, tables, cards, modals and validation, creating a common language between UX, development, QA, Business Analysts and the client.",
  },
  {
@@ -130,9 +130,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "From design to production",
  description:
  "Stayed involved through implementation, reviewing developed screens, resolving unexpected states with developers, and collaborating with QA when UX issues appeared. Small inconsistencies become large ones when patterns repeat across an ecosystem.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "UX leadership across multiple connected applications",
  "Leadership of a two person UX and content team",
  "Customer Portal, Vendor Portal, Issuer Portal and Admin System UX/UI",
@@ -141,17 +141,17 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Design system creation and management",
  "UX writing and content strategy",
  "Developer collaboration, design QA, BA collaboration and client reviews",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Connected eLicensing ecosystem supporting public and operational government services",
  "Customers have a digital destination for discovering, purchasing and managing licences and permits",
  "Vendors and issuers have tools for serving customers and completing licensing transactions",
  "Administrators have operational interfaces to manage the system behind those experiences",
  "Shared design system and UX patterns created a foundation the platform could continue to grow on",
- ],
- gallery: [
- {
- type: "image",
+    ],
+    gallery: [
+      {
+        type: "image",
  src: p("gom", "01-hero.png"),
  caption: "Customer Portal home, Manitoba eLicensing licence discovery",
  },
@@ -161,24 +161,24 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  poster: p("gom", "portal-home.png"),
  caption:
  "A walkthrough of the Manitoba eLicensing experience, from public licence discovery and purchasing to the systems supporting vendors, issuers and administrators",
- },
- {
- type: "image",
+      },
+      {
+        type: "image",
  src: p("gom", "02-detail.png"),
  caption: "Licence category cards, Park Vehicle Permit and outdoor services",
- },
- {
- type: "image",
+      },
+      {
+        type: "image",
  src: p("gom", "03-detail.png"),
  caption: "Responsive experience, desktop and mobile Customer Portal",
- },
- {
- type: "image",
+      },
+      {
+        type: "image",
  src: p("gom", "05-detail.png"),
  caption: "Global navigation, licence types, special permits and issuers",
- },
- {
- type: "image",
+      },
+      {
+        type: "image",
  src: p("gom", "06-detail.png"),
  caption: "Issuers search, finding in-person licensing support",
  },
@@ -231,119 +231,119 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  ],
  closing:
  "Designing Manitoba eLicensing meant designing much more than an ecommerce experience. It meant connecting government rules, operational processes, transactions and multiple user groups into one understandable digital ecosystem. My role was to help make that complexity feel simple.",
- },
+  },
 
- nmbr: {
+  nmbr: {
  impact: "One daily spend number replaced category overload, onboarding completion climbed past 80% at launch.",
- client: "NMBR (Series A fintech startup)",
- timeline: "5 months · 2024",
- team: "Lead UI/UX Designer · product manager · 2 engineers · behavioral researcher",
- tools: ["Figma", "Principle", "Mixpanel", "UserTesting", "Notion", "Linear"],
- context:
+    client: "NMBR (Series A fintech startup)",
+    timeline: "5 months · 2024",
+    team: "Lead UI/UX Designer · product manager · 2 engineers · behavioral researcher",
+    tools: ["Figma", "Principle", "Mixpanel", "UserTesting", "Notion", "Linear"],
+    context:
  "NMBR's founders saw a pattern in finance app churn: people opened budgeting tools, connected accounts, then abandoned them within a week. The product hypothesis was radical, give users one number they could trust instead of dashboards full of categories and guilt-inducing charts.",
- goals: [
- "Translate complex cash-flow math into a single, transparent daily spend limit",
- "Design onboarding that connects accounts in under five minutes",
- "Build trust so users understand how the number changes when they spend",
- "Create a mobile UI calm enough for daily check-ins, not monthly dread",
- ],
- research: [
- {
- title: "Abandoned-app interviews",
- description:
- "Interviewed 30 people who quit other finance apps within 30 days. Mapped emotional triggers around shame, confusion, and distrust of automated categorization.",
- },
- {
- title: "Number transparency tests",
- description:
+    goals: [
+      "Translate complex cash-flow math into a single, transparent daily spend limit",
+      "Design onboarding that connects accounts in under five minutes",
+      "Build trust so users understand how the number changes when they spend",
+      "Create a mobile UI calm enough for daily check-ins, not monthly dread",
+    ],
+    research: [
+      {
+        title: "Abandoned-app interviews",
+        description:
+          "Interviewed 30 people who quit other finance apps within 30 days. Mapped emotional triggers around shame, confusion, and distrust of automated categorization.",
+      },
+      {
+        title: "Number transparency tests",
+        description:
  "Ran five prototype variants showing how the daily limit was calculated, users needed a tap-to-explain layer, not a spreadsheet.",
- },
- ],
- insights: [
- "Users trust a number more when they can see the three inputs that moved it",
- "Category budgets feel like homework; a daily limit feels like permission",
- "Onboarding fails when bank linking errors lack a human-readable recovery path",
- "Push notifications work only when they celebrate staying under limit, not nagging",
- ],
- solutions: [
- {
- title: "The spend number",
- description:
+      },
+    ],
+    insights: [
+      "Users trust a number more when they can see the three inputs that moved it",
+      "Category budgets feel like homework; a daily limit feels like permission",
+      "Onboarding fails when bank linking errors lack a human-readable recovery path",
+      "Push notifications work only when they celebrate staying under limit, not nagging",
+    ],
+    solutions: [
+      {
+        title: "The spend number",
+        description:
  "Designed a hero metric with expandable breakdown (bills, savings buffer, and days left in the cycle) so the math felt inspectable, not magical.",
- },
- {
- title: "Five-minute setup",
- description:
- "Built a guided onboarding flow with progressive account linking, plain-language consent screens, and skip paths for manual entry.",
- },
- {
- title: "Daily rhythm UI",
- description:
- "Created a home screen optimized for 10-second check-ins: today's number, recent transactions affecting it, and gentle overspend recovery prompts.",
- },
- ],
- learnings: [
+      },
+      {
+        title: "Five-minute setup",
+        description:
+          "Built a guided onboarding flow with progressive account linking, plain-language consent screens, and skip paths for manual entry.",
+      },
+      {
+        title: "Daily rhythm UI",
+        description:
+          "Created a home screen optimized for 10-second check-ins: today's number, recent transactions affecting it, and gentle overspend recovery prompts.",
+      },
+    ],
+    learnings: [
  "Fintech trust is a UI problem as much as a security problem, transparency beats precision",
- "Behavioral design works when the default action is glance, not configure",
- ],
- metrics: [
+      "Behavioral design works when the default action is glance, not configure",
+    ],
+    metrics: [
  { value: "82%", label: "Onboarding completion at launch"},
  { value: "3×", label: "Daily active use vs. category-based prototype"},
  { value: "4.8", label: "App Store rating in first release window"},
- ],
- overview:
- "Most budgeting apps overwhelm people with categories and charts. NMBR gives users one clear answer: what can I spend right now? I led UI/UX from behavioral research through launch-ready mobile screens and the spend-number interaction model.",
- challenge:
+    ],
+    overview:
+      "Most budgeting apps overwhelm people with categories and charts. NMBR gives users one clear answer: what can I spend right now? I led UI/UX from behavioral research through launch-ready mobile screens and the spend-number interaction model.",
+    challenge:
  "Turn complex cash flow math into a single, trustworthy number that updates in real time without feeling like a black box. Every edge case (irregular income, shared accounts, mid-cycle bills) threatened to collapse the simplicity promise.",
- process: [
- {
- phase: "01",
- title: "Behavioral research",
- description:
- "Interviewed users who abandoned other finance apps. Synthesized emotional and functional barriers to daily budgeting tool use.",
- },
- {
- phase: "02",
- title: "Number model design",
- description:
- "Prototyped surfacing the daily spend limit with varying levels of calculation transparency. Validated tap-to-explain patterns in moderated sessions.",
- },
- {
- phase: "03",
- title: "Onboarding & trust flows",
- description:
- "Designed account linking, error recovery, and first-week education sequences that explained the logic without a tutorial wall.",
- },
- {
- phase: "04",
- title: "Launch polish & validation",
- description:
- "Ran usability tests on overspend states, notification tone, and settings depth. Handed off motion specs and component library for iOS build.",
- },
- ],
- deliverables: [
- "Mobile app UI kit and component library",
- "Onboarding and account-linking flows",
- "Spend number algorithm interaction spec",
- "Notification and overspend recovery patterns",
- "Usability test report and launch QA checklist",
- ],
- outcomes: [
+    process: [
+      {
+        phase: "01",
+        title: "Behavioral research",
+        description:
+          "Interviewed users who abandoned other finance apps. Synthesized emotional and functional barriers to daily budgeting tool use.",
+      },
+      {
+        phase: "02",
+        title: "Number model design",
+        description:
+          "Prototyped surfacing the daily spend limit with varying levels of calculation transparency. Validated tap-to-explain patterns in moderated sessions.",
+      },
+      {
+        phase: "03",
+        title: "Onboarding & trust flows",
+        description:
+          "Designed account linking, error recovery, and first-week education sequences that explained the logic without a tutorial wall.",
+      },
+      {
+        phase: "04",
+        title: "Launch polish & validation",
+        description:
+          "Ran usability tests on overspend states, notification tone, and settings depth. Handed off motion specs and component library for iOS build.",
+      },
+    ],
+    deliverables: [
+      "Mobile app UI kit and component library",
+      "Onboarding and account-linking flows",
+      "Spend number algorithm interaction spec",
+      "Notification and overspend recovery patterns",
+      "Usability test report and launch QA checklist",
+    ],
+    outcomes: [
  "Onboarding completion reached 82%, highest in competitive benchmark set",
- "Daily active use tripled against the category-based prototype arm",
- "Users described the product as calming in diary study follow-ups",
- "4.8 App Store rating with praise focused on simplicity, not features",
- ],
- gallery: [
+      "Daily active use tripled against the category-based prototype arm",
+      "Users described the product as calming in diary study follow-ups",
+      "4.8 App Store rating with praise focused on simplicity, not features",
+    ],
+    gallery: [
  { type: "image", src: p("nmbr", "01-hero.png"), caption: "Daily spend number, hero home screen"},
  { type: "image", src: p("nmbr", "02-detail.png"), caption: "Tap-to-explain breakdown of the number"},
  { type: "image", src: p("nmbr", "03-detail.png"), caption: "Budget cycle overview and bills timeline"},
  { type: "image", src: p("nmbr", "04-detail.png"), caption: "Five-minute onboarding and bank linking"},
  { type: "image", src: p("nmbr", "05-detail.png"), caption: "Overspend recovery and gentle notifications"},
- ],
- },
+    ],
+  },
 
- weebo: {
+  weebo: {
  impact:
  "From idea to live AI product, design, development, architecture and QA owned end to end with the founders.",
  client: "W3380 (early-stage AI startup)",
@@ -351,54 +351,54 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  team: "Product Designer & Full Stack Product Builder · founders · CEO · development collaborators",
  tools: ["Figma", "React", "Design system", "Database design", "AI UX", "QA"],
  liveUrl: "https://w3380-production.up.railway.app/home",
- context:
+    context:
  "A project can contain hundreds of pieces of information (recordings, requirements, spreadsheets, PDFs, decisions) distributed across folders and tools. People search, teams repeat questions, and new members struggle to recover context. W3380 was built around a different idea: what if your project could answer questions about itself?",
- goals: [
+    goals: [
  "Capture knowledge from documents, spreadsheets, images, meeting audio and structured forms",
  "Create a centralized, searchable project knowledge hub",
  "Design AI chat grounded in project data, not generic internet answers",
  "Connect insights to analytics and actionable tickets",
  "Ship a production web application with accessibility, testing and iteration",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Bigger than design handoff",
- description:
+        description:
  "Worked with founders from questions like “What if users could upload an entire project and then talk to it?” through file types, processing states, AI access, permissions, database needs, mobile and accessibility, decisions that crossed UX, architecture, content and QA.",
- },
- {
+      },
+      {
  title: "AI only useful with the right context",
- description:
+        description:
  "The challenge was not putting chat on a model. The experience had to continuously reinforce that answers came from captured project knowledge, shaping capture, organization, chat, history and output.",
- },
- {
+      },
+      {
  title: "Design and develop in the same loop",
- description:
+        description:
  "Designed interactions, built them, used them, found problems, changed the design, updated implementation and tested again, the browser became part of the design process.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "When you own getting a feature into production, every UI decision looks different, buttons connect to logic, forms to data, AI answers to knowledge",
  "A blank chat field is powerful and uncertain, users need to know what they can ask and what the AI knows",
  "AI products need content that explains what is happening without exposing unnecessary technical complexity",
  "Moving fast without a system creates disconnected patterns; every feature can introduce another exception",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Capture experience",
- description:
+        description:
  "Made uploading PDFs, Excel, screenshots, images, meeting audio and structured forms feel easy while communicating processing, completion, failure and next steps.",
  image: p("weebo", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Knowledge hub",
- description:
+        description:
  "Designed the bridge from raw uploads to structured project memory, hierarchy, categories, search, states, permissions and empty/error patterns.",
  image: p("weebo", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Chat with your project",
- description:
+        description:
  "Built conversational UX for natural questions about goals, requirements, decisions and dependencies, with clear project context and response structure.",
  image: p("weebo", "solution-3.png"),
  },
@@ -407,14 +407,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Connected analytics and intelligent ticketing so teams move from understanding to structured work across Jira, Asana or Trello.",
  image: p("weebo", "solution-4.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Design becomes more interesting when you understand what exists underneath the interface",
  "W3380 was where design stopped being a handoff and became the product itself",
  "I didn't just design W3380, I built it",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "1", label: "Product builder across design and development"},
  { value: "0→1", label: "From concept to live production app"},
  { value: "Live", label: "AI knowledge platform on Railway"},
@@ -427,34 +427,34 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { type: "image", src: p("weebo", "grid/05-detail.png"), caption: "Sign-up and plan selection" },
  { type: "image", src: p("weebo", "grid/06-detail.png"), caption: "Feature narrative — archive as teammate" },
  { type: "image", src: p("weebo", "grid/07-mobile.png"), caption: "Mobile — upload, share, and chat" },
- ],
- overview:
+    ],
+    overview:
  "My involvement covered almost every layer, UX strategy, UI, design system, frontend, backend, database, architecture, AI experience, content, accessibility, testing, QA and production iteration. This was not a traditional design handoff. I was helping build the actual product.",
- challenge:
+    challenge:
  "Most teams already have the information. The problem is finding it. W3380 turns captured project information into a living knowledge source teams can explore through AI, ask instead of search.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Capture",
- description:
+        description:
  "Designed multi-source intake so users understand what they can upload, what is processing, what completed or failed, where information went, and what to do next.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Organize",
- description:
+        description:
  "Built the knowledge hub as structured project memory (not isolated files) ready for search, review and AI retrieval.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Ask",
- description:
+        description:
  "Designed chat that helps users know what to ask, which project they are talking to, how answers are structured, and what happens when information cannot be found.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Analyze & act",
- description:
+        description:
  "Shaped analytics for scanning risks and trends, and ticket flows that turn conversational output into structured work.",
  },
  {
@@ -462,23 +462,23 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "System & ship",
  description:
  "Created the design system alongside the product, implemented across frontend and data layers, tested real workflows, and shipped the live application.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Product thinking, feature definition and UX strategy",
  "UI, interaction design, responsive design and design system",
  "UX writing and content strategy",
  "Frontend implementation and backend functionality",
  "Database structure and application architecture",
  "Accessibility, functional testing, QA and production iteration",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Live AI-powered project knowledge system for capture, hub, chat, analytics and integrations",
  "Consistent product language across navigation, chat, uploads and system feedback",
  "Architecture that supports projects, conversations, knowledge processing and AI context",
  "Continuous design → build → break → fix → test → ship loop with founders",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("weebo", "01-hero.png"),
@@ -555,7 +555,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "I didn't just design W3380. I built it. Design stopped being a handoff and became the product itself.",
  },
 
- csc: {
+  csc: {
  impact:
  "Helped create and evolve the design system behind One Kings Lane, reusable foundations that let teams move faster without losing the brand.",
  client: "One Kings Lane",
@@ -570,56 +570,56 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Developer collaboration",
  ],
  liveUrl: "https://www.onekingslane.com/",
- context:
+    context:
  "One Kings Lane is a premium home and lifestyle destination offering designer, vintage and exclusive furniture and decor alongside interior design services and inspiration. The digital experience brings together a large product catalog, editorial brand expression, ecommerce functionality and services for both individual customers and professional designers.",
- goals: [
+    goals: [
  "Audit recurring UI and interaction patterns across the live ecommerce experience",
  "Establish shared visual foundations, typography, spacing, colour, grid and states",
  "Design reusable components for real commerce: cards, navigation, filters, PDP, responsive rules",
  "Separate functional consistency from brand expression across three retail brands",
  "Document usage, variants and constraints so designers and developers share the same rules",
  "Close the gap between Figma intent and production through collaboration and design QA",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "From screens to systems",
- description:
+        description:
  "Before thinking about components, we needed to think about patterns. I looked across the existing product to understand where the same problems were being solved in different ways, which components were repeated, which variations were intentional, and which were simply the result of different teams working at different times.",
- },
- {
+      },
+      {
  title: "Auditing what already existed",
- description:
+        description:
  "Building a design system for an established ecommerce product is different from creating one for a new application. There is already a live product, customer behaviours, development patterns, business requirements and edge cases. The audit exposed inconsistencies and clarified what should become part of the shared system.",
  },
  {
  title: "Designers and developers as users",
  description:
  "I treated the design system as a product. Designers were its users, their feedback determined what needed to change. I worked directly with developers on behaviour, variants, states, responsive rules, technical constraints and edge cases so the system could be built, not only documented.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "A single button variation may seem insignificant, across hundreds of screens it becomes a system problem",
  "The goal is not to make every screen identical, it is to know where consistency improves the experience and where flexibility is necessary",
  "A component is more than its default state, disabled, long text, sale pricing, missing content and narrow layouts are part of the design",
  "Functional consistency and brand expression must stay separate, especially when one team supports multiple retail brands",
  "Figma consistency is not enough, if the live product behaves differently, the design system is only documentation",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Catalog & product cards",
- description:
+        description:
  "Product cards appear everywhere and carry imagery, brand, name, pricing, promotions, availability, badges and actions in very little space. The hierarchy needed to stay clear as content changed, sale states, best sellers and ready-to-ship messaging included.",
  image: p("csc", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Product detail experiences",
- description:
+        description:
  "The PDP is where brand and commerce meet, large imagery, descriptions, pricing, options, availability, shipping, specs and actions. The system created hierarchy between those elements while keeping the premium visual character of One Kings Lane.",
  image: p("csc", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Responsive ecommerce",
- description:
+        description:
  "Every component needed rules for what happens as the viewport changes. Navigation, cards and detail layouts adapted as part of the component itself, not as a separate mobile design created later.",
  image: p("csc", "solution-3.png"),
  },
@@ -640,15 +640,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Standardization should not remove personality. Buttons, forms and modals need predictable behaviour, while typography, imagery, spacing and composition keep the experience connected to the brand.",
  image: p("csc", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Creating one strong screen is a design problem. Creating a system that allows many designers and developers to build hundreds of consistent screens is a different problem.",
  "The strongest design system is not the one with the most components, it is the one that helps teams make better decisions with fewer unnecessary decisions.",
  "It needs to be clear enough to create consistency, flexible enough for real product requirements, simple enough that people use it, and strong enough to preserve brand identity.",
  "Customers should not notice the design system. They should simply experience a product that feels consistent.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "3", label: "Retail brands supported, One Kings Lane, Sur La Table, Z Gallerie"},
  { value: "10", label: "Person multidisciplinary team"},
  { value: "Live", label: "Luxury ecommerce at onekingslane.com"},
@@ -661,34 +661,34 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { type: "image", src: p("csc", "grid/05-detail.png"), caption: "Category / collection pathway" },
  { type: "image", src: p("csc", "grid/06-detail.png"), caption: "Product discovery surface" },
  { type: "image", src: p("csc", "grid/07-detail.png"), caption: "Account and order pathway" },
- ],
- overview:
+    ],
+    overview:
  "I worked as a Senior UX Designer as part of a 10 person team supporting three established retail brands: One Kings Lane, Sur La Table and Z Gallerie. While my work crossed all three, this case study focuses on One Kings Lane and helping create and evolve the design system behind its digital experience. I worked directly with UX teams and developers to transform individual interface patterns into reusable, documented and scalable components that could support a large ecommerce platform without losing the character of the brand.",
- challenge:
+    challenge:
  "Large ecommerce platforms grow continuously, new categories, promotions, product types, designers and developers. Small differences accumulate until a button, spacing, card or form behaves differently across the experience. My work focused on reducing that fragmentation with reusable foundations so teams could move faster while keeping One Kings Lane consistent.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "From screens to systems",
- description:
+        description:
  "Mapped recurring patterns across the product, repeated components, near-identical variations, intentional brand-specific differences, and behaviours that needed to be standardized.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Auditing the experience",
- description:
+        description:
  "Compared components across pages, use cases and viewport sizes to expose inconsistencies and decide what belonged in the shared system.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Building the foundation",
- description:
+        description:
  "Started with the visual rules that influence everything else, typography, spacing, colour, layout, grid, borders, iconography, sizing and interaction states.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Components for real ecommerce",
- description:
+        description:
  "Designed for disabled states, long copy, unavailable products, sale pricing, promotions, form errors, missing content and narrow layouts, not only the perfect default.",
  },
  {
@@ -696,9 +696,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Collaborate, document, QA",
  description:
  "Partnered with UX designers and developers, wrote clear component rules, and continued design QA after handoff so production matched intent as the product kept shipping.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Design system strategy and UI audits",
  "Reusable component design, variants and interaction states",
  "Responsive behaviour and UX pattern consistency",
@@ -707,15 +707,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Implementation review and design QA",
  "Cross-brand design system thinking",
  "Ecommerce UX for catalog, discovery and product detail",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Stronger foundations for building and evolving the One Kings Lane experience",
  "Teams could increasingly work from shared patterns, behaviours and reusable components",
  "Designers gained a more structured foundation for creating experiences",
  "Developers gained clearer expectations around reusable interface behaviour",
  "Customers experience consistency without needing to notice the system behind it",
- ],
- gallery: [
+    ],
+    gallery: [
  { type: "image", src: p("csc", "01-hero.png"), caption: "One Kings Lane homepage, premium furniture, decor and editorial merchandising"},
  {
  type: "image",
@@ -1344,61 +1344,61 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Customers see the furniture, the art, the rooms, the materials, the personality. The system should disappear behind all of it. Bold on the surface. Structured underneath.",
  },
 
- gigz: {
+  gigz: {
  impact:
  "Sole UX, UI and content ownership, turning a startup idea into a complete social product for bedroom musicians.",
  client: "FineTune (early-stage startup)",
  timeline: "Ground-up product design · 2023",
  team: "Solo UX, UI and Content Designer · 7 person startup team · CEO + frontend & backend developers",
  tools: ["Figma", "Design system", "UX writing", "Developer handoff", "Design QA"],
- context:
+    context:
  "Early stage startups rarely arrive with a complete specification. Ideas change, features evolve, technical limitations appear, and new opportunities become visible while the product is being built. There was no large design department, no separate UX writing team and no established product system, design was part of product development from the beginning.",
- goals: [
+    goals: [
  "Help musicians discover each other as people and creators, not follower counts",
  "Design onboarding as the first step in creating a musician identity",
  "Make discovery, feed, messaging and notifications feel like steps toward real relationships",
  "Build a flexible design system that could grow with the product",
  "Keep language human, simple and appropriate for a creative community",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Designing for musicians, not followers",
- description:
+        description:
  "Profiles needed to answer who you are, what you create, what instruments you play, what styles you care about, what you are working on, who you want to meet, and what you have made, so musicians could decide whether to follow, talk or collaborate.",
- },
- {
+      },
+      {
  title: "One connected experience",
- description:
+        description:
  "As the only designer, every feature affected another part of the product. Profiles affected discovery. Discovery affected connections. Connections affected notifications. Content affected feeds. Messaging affected relationships. Account creation affected everything afterwards.",
- },
- {
+      },
+      {
  title: "Working with CEO and developers",
- description:
+        description:
  "Ideas often started as business goals or simple concepts. I helped turn them into experiences, where a feature should live, how someone discovers it, what happens before and after, and how it affects the rest of the application.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "The hardest part of social product design is not the interface, it is creating reasons for people to interact",
  "Discovery needs to lead somewhere; profiles need to communicate something meaningful",
  "Empty states in a new network must guide action, not just announce that nothing is there",
  "In a seven person team, design cannot operate in isolation from development and business priorities",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Onboarding as identity",
- description:
+        description:
  "Treated registration as the first step in creating a musician identity, collecting useful information while keeping the process fast enough that users actually complete it.",
  image: p("gigz", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Musician profiles",
- description:
+        description:
  "Designed profiles around scannable creative information so musicians could quickly understand who someone is, what they create, and whether they want to connect.",
  image: p("gigz", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Feed and discovery",
- description:
+        description:
  "Built everyday social rhythm around music-related content with clear hierarchy, musician visible, content in focus, actions easy without overwhelming the post.",
  image: p("gigz", "solution-3.png"),
  },
@@ -1407,45 +1407,45 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Designed feedback and messaging as the bridge between discovering someone and building a real connection, with notifications that clearly say who did something, what happened, and what to do next.",
  image: p("gigz", "solution-4.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "A button can create an action. A good experience creates a relationship between those actions.",
  "Working in a small startup taught me how to make design decisions quickly without losing sight of the larger system.",
  "Making music may start alone. The product was designed to make sure it does not have to stay that way.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "1", label: "Designer across UX, UI and content"},
  { value: "7", label: "Person startup team"},
  { value: "0→1", label: "Design system built from scratch"},
- ],
- overview:
+    ],
+    overview:
  "I worked directly with the CEO and development team to transform ideas into a working product, designing everything from the overall experience and design system to individual flows, screens, interactions and product content.",
- challenge:
+    challenge:
  "Bedroom musicians often create alone. They may want feedback, collaborators, inspiration, or simply other people who understand making music. FineTune needed to be about relationships, not another broadcast channel.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Starting from an idea",
- description:
+        description:
  "Helped shape how the product should work with the CEO and developers, continuously moving between product ideas, UX questions, technical possibilities and interface decisions.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Mapping the core experience",
- description:
+        description:
  "Designed onboarding, profiles, discovery, feed, connections, messaging and notifications as one connected loop rather than isolated screens.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Content is interface",
- description:
+        description:
  "Wrote button labels, instructions, profile prompts, empty states, errors, notifications and CTAs as part of the UX so the product felt human, not corporate.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Design system from scratch",
- description:
+        description:
  "Built typography, spacing, colours, buttons, inputs, cards, navigation, profile and content components, feedback states and modals alongside the product so new features stayed consistent.",
  },
  {
@@ -1453,9 +1453,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "From Figma to a real product",
  description:
  "Stayed involved during implementation, every interaction needed to be buildable, every component needed real states, and every flow needed to consider what could go wrong.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Solo UX and UI ownership",
  "Product design and experience strategy",
  "Information architecture and user flows",
@@ -1464,14 +1464,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "UX writing and product content",
  "Onboarding, profiles and social experiences",
  "Developer collaboration, handoff and design QA",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Complete social product experience designed from the ground up",
  "Reusable foundations for discovery, profiles, content, messaging and notifications",
  "Shared design system that sped up feature work while protecting consistency",
  "Product language tailored to a creative musician community",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("gigz", "01-hero.png"),
@@ -1564,56 +1564,56 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "QA",
  ],
  liveUrl: "https://chappie-production.up.railway.app/",
- context:
+    context:
  "CH4PP!3 is a client discovery platform built to help businesses find new opportunities and turn them into conversations. Users can search for local businesses that may need their services, review potential opportunities, prepare personalized outreach and move from discovery toward an actual sales conversation.",
- goals: [
+    goals: [
  "Connect find → understand → create → reach out in one workflow",
  "Design search and lead evaluation for rapid opportunity assessment",
  "Support prototype generation and personalized outreach before contact",
  "Build authentication, subscriptions, integrations and usage limits",
  "Ship a production web application with accessibility, testing and iteration",
  "Create the design system alongside the product, not as a handoff",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Starting with an idea",
- description:
+        description:
  "Early conversations with founders, what if we could find businesses that need a website, identify opportunities automatically, prepare something personalized and reach out from one place? I helped translate those questions into workflows, interfaces, architecture and a functioning application.",
- },
- {
+      },
+      {
  title: "A workflow, not a search",
- description:
+        description:
  "Finding a client involves moving between many tools. CH4PP!3 was designed around reducing friction across the complete journey rather than treating lead discovery as one isolated search action.",
  },
  {
  title: "Design and develop together",
  description:
  "Designed interactions, built them, used them, changed the design, updated implementation and tested again, the browser became part of the design process because I owned both sides.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "Search alone does not create a client, every important screen needs a clear next step",
  "AI should appear where it reduces real work, not as a generic chatbot attached to sales software",
  "Real applications need loading, no results, errors, disconnected services, limits and narrow screens, not only the perfect default",
  "The interface is only the visible part, a search field connects to data, a plan connects to permissions, an integration connects to an external system",
  "Moving fast without a system creates disconnected patterns; part of my job was maintaining coherence while the product evolved",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Search experience",
- description:
+        description:
  "The primary experience begins with search for a potential client, location, business opportunity and next action visible so results start a sales workflow rather than returning names alone.",
  image: p("CHaPPie", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Results into leads",
- description:
+        description:
  "Result cards support rapid evaluation (who they are, where they are, what they do, whether they already have what you are selling, and what to do next) without overwhelming scan rhythm.",
  image: p("CHaPPie", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Create before you ask",
- description:
+        description:
  "Connected lead information with a creative workflow, generating a website concept tailored to the potential client so outreach can show an idea, not only a generic pitch.",
  image: p("CHaPPie", "solution-3.png"),
  },
@@ -1634,14 +1634,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Sign up, verify, sign in and success flows designed and implemented with clear language about what is happening, what is required and what to do next.",
  image: p("CHaPPie", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "CH4PP!3 reinforced that the interface is only the visible part of the product, search, results, plans and integrations all connect to real logic underneath",
  "Understanding those relationships changes how you design, you stop designing only for the perfect screenshot and start designing for the system",
  "I helped define it, design it, structure it, develop it, test it and ship it, design stopped being a handoff and became the product itself",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "1", label: "Product builder across design and development"},
  { value: "0→1", label: "From concept to live production app"},
  { value: "Live", label: "Client discovery platform on Railway"},
@@ -1654,34 +1654,34 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { type: "image", src: p("CHaPPie", "grid/05-detail.png"), caption: "Product detail pathway" },
  { type: "image", src: p("CHaPPie", "grid/06-detail.png"), caption: "Secondary product page" },
  { type: "image", src: p("CHaPPie", "grid/07-detail.png"), caption: "Supporting product content" },
- ],
- overview:
+    ],
+    overview:
  "I worked directly with the founders and CEO to turn CH4PP!3 from an idea into a functioning web product. My role was not limited to UX or UI, I designed the experience, created the design system, developed the application, worked on frontend and backend, structured the database, shaped application architecture, wrote product content, implemented accessibility, tested the experience, handled QA and helped take the product from an idea to a live web system. This was not a design handoff. I was responsible for helping turn the idea into the actual product.",
- challenge:
+    challenge:
  "For a small studio, agency or freelancer, finding new clients means moving between many tools, search, research, contact info, offer creation, outreach and tracking. Each step is manageable; the problem is the time when the process repeats for dozens or hundreds of businesses. CH4PP!3 needed to make the entire sequence from find to contact feel connected.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Idea to workflow",
- description:
+        description:
  "Translated founder conversations into connected journeys (search, qualify, create, contact) rather than independent features.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Design the complete journey",
- description:
+        description:
  "Approached the system as a journey: searching, reviewing results, evaluating businesses, working with integrations, generating concepts, preparing outreach and managing account limits.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "System & states",
- description:
+        description:
  "Built foundations and components for real states, loading, no results, errors, disconnected services, long content, limits and responsive behaviour.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Architecture & data",
- description:
+        description:
  "Structured users, searches, leads, plans, integrations, generated content and outreach so screens represented real system behaviour.",
  },
  {
@@ -1689,9 +1689,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Build, test, ship",
  description:
  "Implemented frontend and backend, tested full workflows end to end, ran continuous QA and deployed the live application on Railway.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Product thinking, UX strategy and feature definition",
  "UI, interaction design, responsive design and design system",
  "UX writing and product content",
@@ -1700,14 +1700,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Authentication and subscription experiences",
  "Integrations, AI-assisted workflows and outreach",
  "Accessibility, functional testing, QA and production iteration",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Live client discovery platform at chappie-production.up.railway.app",
  "Connected workflow from business search to personalized outreach",
  "Design system evolved alongside the real application",
  "One owner across product, design, development, architecture, content and quality",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("CHaPPie", "01-hero.png"),
@@ -1802,7 +1802,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Search is only the beginning. A business is not a lead until you understand the opportunity. A lead is not a client until you start the conversation. Find the opportunity. Create the reason to talk. Start the conversation.",
  },
 
- ctc: {
+  ctc: {
  impact:
  "Helped translate enterprise complexity into understandable customer experiences inside one of Canada’s largest retail digital ecosystems.",
  client: "Canadian Tire",
@@ -1818,56 +1818,56 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Enterprise ecommerce",
  ],
  liveUrl: "https://www.canadiantire.ca/en.html",
- context:
+    context:
  "Canadian Tire is one of Canada’s largest and most recognizable retail brands. Its digital ecosystem supports customers across automotive, tools, hardware, home, outdoor living, sports, seasonal products and everyday essentials, while also connecting ecommerce to local store inventory, pickup and delivery, promotions, rewards, accounts, services and physical locations.",
- goals: [
+    goals: [
  "Translate business requirements into customer journeys that answer practical questions",
  "Support product discovery across a catalog customers should not need to reverse-engineer",
  "Make store context, inventory and fulfillment visible when they matter, quiet when they do not",
  "Design services flows such as automotive booking alongside ecommerce patterns",
  "Collaborate across UX, BA, research, QA and development inside a mature enterprise platform",
  "Protect accessibility, responsive behaviour and consistency at Canadian Tire scale",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Requirements are not experiences",
- description:
+        description:
  "A requirement might say a customer needs to select a preferred store. UX still has to answer when, why, what changes afterward, what happens if inventory is unavailable, how pickup and pricing are affected, and what mobile behaviour should be.",
- },
- {
+      },
+      {
  title: "Evidence from research partners",
- description:
+        description:
  "Worked with research teams to test terminology, findability, action visibility and hesitation points, then returned insights into design changes rather than defending the original solution.",
  },
  {
  title: "Enterprise UX is a team sport",
  description:
  "A single experience can involve UX, researchers, BAs, developers, QA and stakeholders. My role often sat at the intersection, understanding what each group required while protecting the customer experience.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "Canadian Tire is not one customer journey, it is thousands of journeys inside the same digital product",
  "From inside the organization, complexity is understandable; from the customer’s perspective, most of it should disappear",
  "Customers do not experience organizational structures, search, checkout, accounts and services should still feel like one Canadian Tire",
  "Fulfillment is part of the purchase decision, not only a checkout detail",
  "Good enterprise UX means knowing where change is valuable and where consistency matters more",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Product discovery at scale",
- description:
+        description:
  "Supported navigation, category browsing and listing experiences so customers who search, browse, arrive from a flyer or start with a brand can move toward the right product without understanding internal catalog structure.",
  image: p("ctc", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Product detail decisions",
- description:
+        description:
  "Brought imagery, price, promotions, ratings, availability, store context, fulfillment, variants and specifications into a consistent decision hierarchy, flexible enough for tools, automotive and seasonal products.",
  image: p("ctc", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Store context & fulfillment",
- description:
+        description:
  "Made local inventory and pickup, ship or same-day options part of the shopping journey, visible when they change the decision, quiet when they should not interrupt browsing.",
  image: p("ctc", "solution-3.png"),
  },
@@ -1888,14 +1888,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Supported flyer deals, clearance and seasonal campaigns within the broader shopping hierarchy so promotional messaging communicates value without overwhelming the product decision.",
  image: p("ctc", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "At enterprise scale, the skill is working with the people who understand different parts of the system (business, research, development and QA) until those perspectives become one experience.",
  "Design skill matters, but so do communication, listening, documentation, negotiation and systems thinking.",
  "The organization behind the experience may be enormous. The experience in front of the customer should not feel that way.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "4", label: "Retail brands, Canadian Tire, Sport Chek, Mark’s, Party City"},
  { value: "Enterprise", label: "Cross-functional UX, BA, research, QA and development"},
  { value: "Live", label: "Digital retail at canadiantire.ca"},
@@ -1908,34 +1908,34 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { type: "image", src: p("ctc", "grid/05-detail.png"), caption: "Seasonal event page" },
  { type: "image", src: p("ctc", "grid/06-detail.png"), caption: "Customer service" },
  { type: "image", src: p("ctc", "grid/07-detail.png"), caption: "Bilingual entry pathway" },
- ],
- overview:
+    ],
+    overview:
  "I worked as a Senior UX Designer inside this large digital ecosystem, collaborating across multiple UX teams and contributing to experiences for four major retail brands: Canadian Tire, Sport Chek, Mark’s and Party City. While my work extended across these brands, this case study focuses on Canadian Tire. I worked directly with UX designers, Business Analysts, Researchers, QA specialists and development teams to design and improve customer-facing web experiences. My role was not simply to create pages, it was to understand business requirements, customer needs, technical constraints and existing platform patterns, then bring those pieces together into experiences that could work at Canadian Tire scale.",
- challenge:
+    challenge:
  "Large organizations contain complexity for good reasons, departments, business rules, local stores, changing inventory and promotions, services that behave differently from products. My role was often to help translate that enterprise complexity into understandable customer decisions: Can I get this? How much does it cost? Is it available near me? When can I get it? Can I pick it up or have it delivered? What do I need to do next?",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Design inside the ecosystem",
- description:
+        description:
  "Considered navigation, search, discovery, store selection, inventory, pricing, promotions, fulfillment, accounts, rewards, services, accessibility and responsive behaviour as connected systems, not isolated pages.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "From requirements to flows",
- description:
+        description:
  "Partnered with Business Analysts to understand required vs optional behaviour, connected systems and edge cases, then organized those answers into customer-facing journeys.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Discovery, product & fulfillment",
- description:
+        description:
  "Designed listing and detail experiences that support comparison at catalog scale while keeping store context and how-to-get-it options part of the decision.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Services alongside ecommerce",
- description:
+        description:
  "Supported automotive service booking and other non-product journeys that need to feel familiar inside the same Canadian Tire ecosystem.",
  },
  {
@@ -1943,9 +1943,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Build, research, QA",
  description:
  "Collaborated with developers on constraints and states, used research to improve assumptions, and worked with QA when edge cases revealed experience problems, not only software defects.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "UX design for enterprise ecommerce experiences",
  "Information architecture, user flows and interaction design",
  "Responsive design, wireframes and prototypes",
@@ -1955,14 +1955,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Developer collaboration and implementation support",
  "Design QA with QA specialists",
  "Cross-brand digital experience work across the banner family",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Customer-facing experiences inside one of Canada’s largest and most complex retail ecosystems",
  "Stronger connection between business requirements, customer needs, research, technology and quality",
  "Clearer paths for discovery, store context, fulfillment and services",
  "Enterprise complexity kept behind the scenes, simple decisions in front of the customer",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("ctc", "01-hero.png"),
@@ -2069,7 +2069,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Enterprise behind the scenes. Simple in front of the customer. Find what you need. Understand your options. Make a decision. Get it. Book it. Pick it up. Have it delivered. Keep moving.",
  },
 
- walmart: {
+  walmart: {
  impact:
  "Designed the fashion PDP virtual try-on experience so shoppers can change the model to someone they recognize more with, or become the model with their own photo.",
  client: "Walmart US Fashion · Zeekit virtual try-on",
@@ -2085,56 +2085,56 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Design QA",
  ],
  liveUrl: "https://www.walmart.com/browse/clothing/virtual-try-on/5438_4879497",
- context:
+    context:
  "Buying clothes online is hard when the only model on the page does not look like you. Walmart’s US fashion experience needed a way for shoppers to change the model on product images, either by selecting a closer match or by using a photo of themselves as the model.",
- goals: [
+    goals: [
  "Put a clear Try It On control directly on fashion product imagery",
  "Let shoppers choose a model by height, body shape, size and skin tone",
  "Let shoppers upload or capture their own photo and become the model",
  "Keep the existing Walmart PDP commerce actions intact while adding confidence",
  "Make the same mental model work across desktop web and the Walmart app",
  "Support virtual try-on across private brands and participating national brands at scale",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Representation is a conversion problem",
- description:
+        description:
  "Shoppers asked a practical question before buy: will this look right on someone like me? Default catalog models answered that for only a narrow set of bodies, which made fit and style feel uncertain.",
- },
- {
+      },
+      {
  title: "One feature, two motivations",
- description:
+        description:
  "Some shoppers wanted a closer model match without sharing a photo. Others wanted the highest confidence path: see the garment on themselves. The interface needed both without forcing one path.",
- },
- {
+      },
+      {
  title: "PDP real estate is already crowded",
- description:
+        description:
  "Walmart fashion pages already carry price, variants, fulfillment and trust content. Try It On had to feel discoverable on the image without competing with Add to cart or breaking merchandising hierarchy.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "The entry point belongs on the product image, not buried under item details",
  "Choose My Model and Be Your Own Model are different promises and should stay clearly labeled",
  "Model filters only help when they map to recognizable traits: height, shape, size and skin tone",
  "Self as model needs guidance for lighting, framing and privacy before it feels safe",
  "The result must replace the product image, not open a disconnected AR novelty screen",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Choose my model on the image",
- description:
+        description:
  "The shipped PDP puts a Choose my model control directly on the fashion product image, so shoppers can change representation without leaving the buying flow.",
  image: p("walmart", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Choose my measurements",
- description:
+        description:
  "Shoppers enter size and height so the system can find models that are the closest match across body representation.",
  image: p("walmart", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Browse matching models",
- description:
+        description:
  "A model carousel shows candidates with name, size and height, so shoppers can pick someone they recognize more with before applying them to the product.",
  image: p("walmart", "solution-3.png"),
  },
@@ -2155,14 +2155,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "The first idea explored a creative studio-like framing. The live Walmart result became a commerce-native modal flow embedded in the existing fashion PDP.",
  image: p("walmart", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Inclusive model choice is not a niche accessibility add-on, it is core fashion UX",
  "The first idea can be expressive, but the shipped result has to feel native to Walmart commerce",
  "Measurements first, then model choice, makes representation matching feel practical instead of abstract",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "Concept → Result", label: "From first idea to live Choose my model"},
  { value: "Size + height", label: "Measurement inputs that find closest models"},
  { value: "On-image CTA", label: "Choose my model stays on the product media"},
@@ -2175,34 +2175,34 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { type: "image", src: p("walmart", "grid/05-detail.png"), caption: "Related shopping pathway" },
  { type: "image", src: p("walmart", "grid/06-detail.png"), caption: "Account / privacy surface" },
  { type: "image", src: p("walmart", "grid/07-detail.png"), caption: "Browse continuation" },
- ],
- overview:
+    ],
+    overview:
  "I designed the Walmart US fashion experience around changing the model on product images. The first idea explored Try It On with Choose My Model and Be Your Own Model paths. The live result became Choose my model: a commerce-native flow for measurements, matching models and applying a closer representation on the PDP.",
- challenge:
+    challenge:
  "The first idea needed room to explore confidence and representation. The result needed to feel unmistakably Walmart: a clear button on the product image, measurement inputs, model browsing and an editable applied state inside the existing fashion PDP.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Frame the first idea",
- description:
+        description:
  "Explored an image-first fashion confidence concept: shoppers should be able to change the model to someone they recognize more with, or become the model themselves.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Design the image-first entry",
- description:
+        description:
  "Placed the control on the product image so representation lived where shoppers already evaluate style and fit.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Shape measurements and matching",
- description:
+        description:
  "Moved from abstract filters into a practical Choose my measurements step: size, height and closest-match model recommendations.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Design the model carousel",
- description:
+        description:
  "Built a browseable model experience with name, size and height details so choosing a closer representation felt concrete.",
  },
  {
@@ -2210,9 +2210,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Ship the live PDP result",
  description:
  "Settled the live pattern: Choose my model on the image, measurement modal, model selection, then an applied status on the product page.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Concept explorations for Try It On / Choose My Model / Be Your Own Model",
  "Live Choose my model PDP interaction model",
  "Choose my measurements size and height flow",
@@ -2220,14 +2220,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Editable model status on the fashion PDP",
  "Content and microcopy for entry, matching and result states",
  "Design QA against the live Walmart fashion experience",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Fashion PDPs surface Choose my model directly on product imagery",
  "Shoppers can enter size and height to find closer model matches",
  "Shoppers can browse matching models and apply one to the product image",
  "The first idea evolved into a live commerce-native Walmart result",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("walmart", "01-hero.png"),
@@ -2329,9 +2329,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  image: p("walmart", "01-hero.png"),
  closing:
  "The first idea asked whether shoppers could change the model. The live result answered it inside Walmart fashion: Choose my model on the image, match by measurements, apply a closer representation and keep shopping.",
- },
+  },
 
- anova: {
+  anova: {
  impact:
  "Designed a native oven companion that turns appliance functions into human decisions, from choosing food to guided setup, timers and completion.",
  client: "Digital Oven Guide",
@@ -2349,56 +2349,56 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  figmaUrl: "https://www.figma.com/design/ztA6OE75zCogvR0m66KUsX/Anova-Guide-Page",
  secondaryFigmaUrl: "https://www.figma.com/design/8l0tXjOO3JoMJp7mS0mpkk/Anova-Guide-high-level-flow",
  secondaryFigmaLabel: "High-level app flow",
- context:
+    context:
  "The Digital Oven Guide is a native application designed to help people use an oven with greater clarity and confidence. Cooking with an oven sounds simple until the user needs to decide which mode to use, what temperature is appropriate, where food should be positioned, how long it should cook and what to do next. The physical appliance contains the functionality. The digital product helps make that functionality understandable.",
- goals: [
+    goals: [
  "Translate appliance complexity into practical human decisions",
  "Start with the user’s food goal rather than oven modes",
  "Support real kitchen contexts, busy hands, limited attention, parallel tasks",
  "Design guided cooking with clear hierarchy, timers, progress and states",
  "Build a design system and content language across the complete app",
  "Work hand-in-hand with product and development through implementation and design QA",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Users think in outcomes",
- description:
+        description:
  "People begin with chicken, bread, pizza or steak, not the name of an oven mode. The experience needed to start from familiar intention and introduce technical settings only when relevant.",
- },
- {
+      },
+      {
  title: "Kitchen context changes UX",
- description:
+        description:
  "Users may be standing, preparing food, waiting on heat or juggling several steps. Information must be scannable, actions obvious and instructions concise, the app should support cooking, not compete with it.",
  },
  {
  title: "Solo ownership across disciplines",
  description:
  "As the only UX/UI and content designer on a 24-person team, design decisions had to stay connected across journeys, components, writing, native behaviour and accessibility.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "The oven knows what it can do, the user needs to know what to do",
  "Guided experiences work when users always know where they are, what to do now and what happens next",
  "A timer is not just another component, during cooking it may be the most important information on screen",
  "Design for states, not only screens, default, active, loading, completed and error are the real product",
  "The app and the oven are one experience, every digital instruction connects to a physical action",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Start with the food",
- description:
+        description:
  "Organized discovery around what users want to cook, familiar goals first, appliance settings revealed when they matter.",
  image: p("anova", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Choose → prepare → set → cook → complete",
- description:
+        description:
  "Designed a guided journey that answers setting, temperature, placement, duration and next steps without dumping everything at once.",
  image: p("anova", "solution-2.png"),
- },
- {
+      },
+      {
  title: "One step at a time",
- description:
+        description:
  "Structured cooking guidance so current action, progress and next step stay clear, supportive without becoming intrusive.",
  image: p("anova", "solution-3.png"),
  },
@@ -2419,45 +2419,45 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Built reusable foundations alongside the product and partnered with developers through build and design QA for a consistent native experience.",
  image: p("anova", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Context is everything, a mobile screen exists inside a kitchen, a goal and a physical appliance.",
  "Being the sole designer means owning one product language across UX, UI, content, components, states and accessibility.",
  "The oven has the functions. The experience gives them meaning.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "1", label: "Solo UX/UI and Content Designer"},
  { value: "24", label: "Multidisciplinary product team"},
  { value: "Native", label: "iOS and Android companion experience"},
- ],
- overview:
+    ],
+    overview:
  "I worked as the sole UX/UI and Content Designer on the Digital Oven Guide as part of a 24-person multidisciplinary team. I worked directly with the VP Product and development teams throughout the process, owning the design experience from early product thinking to the design system, user flows, interface, native mobile patterns, content and implementation support. My role was not limited to individual screens, I was responsible for creating a consistent product language across the complete application and making sure that design, content and development worked together as one experience.",
- challenge:
+    challenge:
  "A physical appliance is built around functions. Users think about outcomes. The oven may think in cooking mode, temperature, rack position and duration. The user thinks: I want to cook this. The application needed to translate technical functionality into something practical, not teach everything about the oven, but help users make the right decision at the right moment.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Define the product language",
- description:
+        description:
  "Partnered with the VP Product to turn goals into experiences, who needs this, when they use it, what the appliance and app each need, and which states matter before screens are drawn.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Map the cooking journey",
- description:
+        description:
  "Designed from food choice through preparation, oven setup, cooking and completion, with hierarchy that reveals the right information at each stage.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Design system and content",
- description:
+        description:
  "Built reusable foundations and wrote guidance, labels, timers, errors and empty states as one interface language.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Native build collaboration",
- description:
+        description:
  "Worked hand-in-hand with iOS, Android and backend developers on constraints, native behaviour, data states and edge cases, design was part of the build, not a late handoff.",
  },
  {
@@ -2465,9 +2465,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Journey testing and design QA",
  description:
  "Tested complete journeys and reviewed live builds for hierarchy, content, accessibility and states until the implementation matched the intended experience.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Product UX, information architecture and user flows",
  "UI design and native mobile patterns",
  "Design system and component library",
@@ -2475,14 +2475,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Prototypes for cooking journeys and key interactions",
  "Developer collaboration and design QA",
  "Accessibility considerations at the system level",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "A connected native experience that helps users move from uncertainty to action",
  "Guidance organized around food goals rather than appliance jargon first",
  "One consistent product language across design, content and development",
  "Technology remaining complex behind the experience, simple in front of the user",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("anova", "01-hero.png"),
@@ -2568,7 +2568,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "The oven has the functions. The experience gives them meaning. Choose the food. Understand the setup. Follow the guidance. Track the process. Complete the task.",
  },
 
- ymca: {
+  ymca: {
  impact:
  "Designed a native YMCA member app that organizes facilities, activities and everyday needs around one clear member experience.",
  client: "YMCA",
@@ -2586,9 +2586,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Accessibility",
  ],
  figmaUrl: "https://www.figma.com/design/HgLHwG9Xmw2QgXCRGucFDh/YMCA-Handoff",
- context:
+    context:
  "The YMCA member app was designed to create a clearer digital connection between members and their fitness experience. A gym member may need to access services, understand what is available, manage activities, navigate different areas of the facility and return regularly to the things that matter most. The challenge was bringing those needs into one native mobile experience without making the product feel complicated.",
- goals: [
+    goals: [
  "Define product architecture before designing individual screens",
  "Organize the app around member intentions, not internal departments",
  "Help members answer: What can I do? What is relevant? Where do I go? What is next?",
@@ -2596,48 +2596,48 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Build a design system, content language and native patterns across the app",
  "Balance marketing communication with functional member utility",
  "Partner with BAs, stakeholders and developers through implementation and design QA",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Architecture before screens",
- description:
+        description:
  "It is easy to begin a mobile project by creating a home screen. But home is only useful once you understand what the complete application contains. I started by treating the product as a system, primary goals, what belongs together, what is global, frequent vs occasional, and how navigation remains understandable as the product grows.",
- },
- {
+      },
+      {
  title: "Members think in tasks",
- description:
+        description:
  "Organizations often structure information around departments. Members think: I want to work out. I want to find something. I want to manage my activity. I want to know what is happening today. That difference shaped the information architecture.",
- },
- {
+      },
+      {
  title: "Solo ownership across the product language",
- description:
+        description:
  "As the only UX/UI and content designer on a 15-person team, there was no separate information architect, visual designer, UX writer or design-system team. Architecture, UX, UI, content and components had to stay connected through one product language.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "The organization is complex, the member journey should not be",
  "Members should not need to understand how the organization is structured internally",
  "A successful home screen creates hierarchy, it should not become a directory of every feature",
  "The relationship between screens matters more than any individual page",
  "Marketing communicates value, product UX helps someone complete a task",
  "Architecture answers where something belongs, the design system answers how it should behave",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Architecture around the member",
- description:
+        description:
  "Defined the product structure with the member at the centre (Home, calendar, scan, profile, facilities and related journeys) so organizational complexity translated into a structure that made sense from the member’s perspective.",
  image: p("ymca", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Home that answers what matters now",
- description:
+        description:
  "Designed home for orientation (greeting, facility context, status, achievements and clear paths into the wider experience) without crowding the screen with every feature.",
  image: p("ymca", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Scan and membership identity",
- description:
+        description:
  "Made check-in and digital membership identity fast and glanceable, QR access, wallet integration and account details designed for use at the facility door.",
  image: p("ymca", "solution-3.png"),
  },
@@ -2658,45 +2658,45 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Created the design system and product content alongside the app, then worked with developers through states, accessibility and design QA so design was part of the build, not a late handoff.",
  image: p("ymca", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "A beautiful screen cannot solve a confusing product structure, if architecture is wrong, every future feature makes the problem larger.",
  "Marketing, business, UX, content and technology all see the product differently, the designer’s role is to connect those perspectives around the member.",
  "Users should not need to think about architecture. They should simply know where to go.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "1", label: "Solo UX/UI, Content and Product Architecture Designer"},
  { value: "15", label: "Multidisciplinary delivery team"},
  { value: "Native", label: "iOS and Android member experience"},
- ],
- overview:
+    ],
+    overview:
  "I worked as the solo UX/UI, Content and Product Architecture Designer as part of a 15-person multidisciplinary team. I worked directly with client stakeholders, marketing teams, Business Analysts and developers, owning the experience from product structure and information architecture through user flows, interface design, design system, content, prototypes and implementation support. I wasn't just deciding what individual pages should look like. I needed to define how the complete product should fit together.",
- challenge:
+    challenge:
  "Large organizations naturally contain complexity. Different services may be managed by different teams. Programs have different requirements. Marketing needs to communicate offers. Business rules determine access. Technical systems hold different kinds of data. The customer sees none of those boundaries, they see one YMCA. The product architecture needed to translate that complexity into a structure that made sense from the member’s perspective.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Design the architecture first",
- description:
+        description:
  "Before screens, defined primary member goals, which experiences belong together, what should be global, frequent vs secondary, journey starts and returns, and how navigation stays understandable as the product grows.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Design around member goals",
- description:
+        description:
  "Organized IA around recognizable intentions (work out, find something, manage an activity, know what is happening today) rather than exposing internal departments.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Home, journeys and page IA",
- description:
+        description:
  "Designed home for what matters right now, mapped discover → explore → act → manage → return, and applied hierarchy inside detail screens so identity, essentials, support and primary action stay clear.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "System, content and marketing balance",
- description:
+        description:
  "Built the design system and wrote navigation, instructions, actions, empty and error states with the UI. Worked with marketing so brand communication had a place without overwhelming member utility.",
  },
  {
@@ -2704,24 +2704,24 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Build collaboration and design QA",
  description:
  "Partnered with BAs on rules-to-journeys, stakeholders on trade-offs, and developers on native behaviour, states and edge cases. Stayed through design QA and journey testing so the live product matched the intended experience.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Product architecture and information architecture",
  "UX strategy, user flows and interaction design",
  "UI design and native mobile patterns",
  "Design system, component states and accessibility",
  "UX writing and product content",
  "Prototypes, stakeholder collaboration and design QA",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "A more connected digital YMCA member experience",
  "Architecture that organizes services and journeys around the member",
  "A design system and content language that keep the interface consistent",
  "Know what is available. Know where to go. Know what to do next.",
  "One organization. One member experience.",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("ymca", "01-hero.png"),
@@ -2807,7 +2807,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "One organization. One member experience. Know what is available. Know where to go. Know what to do next.",
  },
 
- ppjv: {
+  ppjv: {
  impact:
  "Designed an internal banking dashboard and led the Aurora design system, making complex financial operations clearer, faster and more consistent for professional users.",
  client: "PPJV · Internal Banking",
@@ -2826,57 +2826,57 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  figmaUrl: "https://www.figma.com/design/lCkuJJCNMUhCTFQAOSA85E/Handoff-file",
  secondaryFigmaUrl: "https://www.figma.com/design/8uI6GauoTwcBRWSV4yxBJb/PPJV-Design-System---Aurora",
  secondaryFigmaLabel: "Aurora Design System",
- context:
+    context:
  "Banking software does not need to impress customers walking past a storefront. It needs to help professionals make the right decisions quickly, accurately and consistently. This internal fintech dashboard was designed to support complex banking operations through a centralized digital experience, information-dense workflows, multiple roles, operational states and the accuracy expected from financial systems.",
- goals: [
+    goals: [
  "Make high information density usable without hiding essential operational data",
  "Translate business rules into clear flows, states, actions and recovery paths",
  "Create dashboard hierarchy so users know what needs attention first",
  "Lead Aurora as a shared product language across design and development",
  "Design tables, forms, status, errors and content as complete interaction systems",
  "Collaborate with BAs, stakeholders, QA and client developers through implementation and design QA",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Internal tools are used differently",
- description:
+        description:
  "Professional users are doing their job, not exploring. They learn patterns, develop routines and repeat actions. Consistency becomes critical; changing the location or behaviour of an action unnecessarily slows people down.",
- },
- {
+      },
+      {
  title: "From business rules to experience",
- description:
+        description:
  "Enterprise financial products contain detailed logic, permissions, required fields, state conditions and edge cases. Working with BAs meant answering how users know a condition exists, which action is available, and how they recover when it fails.",
  },
  {
  title: "Small UX team, large delivery org",
  description:
  "Two UX designers supporting a 58-person team needed shared patterns, interaction principles, content rules and component behaviour. Aurora became one of the tools that scaled design ownership across the product.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "How do you make complexity usable, not how do you remove it",
  "A dashboard should answer what this user needs to understand or do, not display every requested metric",
  "A table is an interaction system, scan, sort, filter, select, compare, act and recover",
  "Status cannot rely only on colour, language, placement and hierarchy create one state language",
  "Errors should answer what happened, why it matters and what to do next",
  "Design systems need ownership, without it they become another static file",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Dashboard hierarchy that answers attention",
- description:
+        description:
  "Designed operational overviews around primary information, status, items requiring attention and next actions, hierarchy instead of an unfiltered stream of metrics and shortcuts.",
  image: p("ppjv", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Data-dense workflows without chaos",
- description:
+        description:
  "Structured originator management, search and detail views with grouping, typography, progressive disclosure and clear actions so users can scan before they read.",
  image: p("ppjv", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Transfers, transactions and recovery",
- description:
+        description:
  "Designed transfer review, transaction detail and error states as complete experiences (problem, explanation and recovery) not technical messages added after development.",
  image: p("ppjv", "solution-3.png"),
  },
@@ -2897,45 +2897,45 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Designed reusable patterns with variants, states, content rules and accessibility built in, then partnered with developers so Figma intent survived into production.",
  image: p("ppjv", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Large enterprise products cannot be designed effectively one screen at a time, every new pattern has product-wide consequences.",
  "Simplicity in fintech does not always mean removing information, it means creating structure within necessary complexity.",
  "Ask whether a decision belongs to the product, not only whether it works on this page.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "58", label: "Person multidisciplinary delivery team"},
  { value: "2", label: "UX designers supporting the product"},
  { value: "Aurora", label: "Design system led across the experience"},
- ],
- overview:
+    ],
+    overview:
  "I worked as a Senior UX/UI and Content Designer and Design System Lead as part of a 58-person multidisciplinary delivery team. I worked alongside one additional UX Designer and collaborated directly with client stakeholders, Business Analysts, QA teams and client development teams. My responsibilities extended from individual workflows and pages to the system behind them, product experiences, interaction patterns, the Aurora design system, UX content, complex states, implementation collaboration and consistency across a large evolving internal banking product.",
- challenge:
+    challenge:
  "Financial systems create a unique design environment: high information density, repeated workflows, unusual states, unavailable actions and decisions with real operational consequences. The interface needed clarity, efficiency, accuracy, consistency, visibility and accessibility, helping users move quickly without encouraging careless interaction.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Translate rules into journeys",
- description:
+        description:
  "Worked with BAs and stakeholders to turn conditions, permissions and dependencies into flows that communicate availability, missing information, failure and next steps.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Product architecture and dashboard UX",
- description:
+        description:
  "Defined where workflows begin, what stays persistent, which actions are global vs contextual, and how hierarchy surfaces attention without becoming another dump of metrics.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Tables, forms, status and content",
- description:
+        description:
  "Treated tables as interaction systems; designed form stages and confirmations; built one status language; wrote labels, warnings, errors and success states with the UI.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Lead Aurora",
- description:
+        description:
  "Established foundations, component architecture, variants, states, usage rules and documentation so a small UX team could support a large delivery organization consistently.",
  },
  {
@@ -2943,24 +2943,24 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Build, QA and design QA",
  description:
  "Collaborated with client developers on behaviour and system implementation, worked with QA on edge cases, and reviewed live builds against Aurora so quality survived production.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Product UX, information architecture and complex user flows",
  "Dashboard, data-dense interfaces, tables and forms",
  "Aurora design system, foundations, components and documentation",
  "Status systems, error patterns and UX writing",
  "Accessibility patterns embedded in reusable components",
  "Developer handoff, collaboration, QA partnership and design QA",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "A more structured product language for building and evolving a complex internal financial system",
  "Dashboards and workflows that help users identify attention, status and next actions",
  "Aurora as a shared foundation between design and development",
  "Complexity remaining in the business, structure created in the interface",
  "Complex financial operations. One clear product language.",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("ppjv", "01-hero.png"),
@@ -3046,7 +3046,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Complex financial operations. One clear product language. The complexity remained in the business. The interface created structure around it.",
  },
 
- "first-principles": {
+  "first-principles": {
  impact:
  "Designed Saence AI as a conversational product where asking a question becomes the interface, from the first empty state through ongoing AI dialogue.",
  client: "Saence AI (early-stage startup)",
@@ -3066,57 +3066,57 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  secondaryFigmaUrl: "https://www.figma.com/design/ONbT13PCxxHBc9NegeowVz/FirstPrinciples-DS",
  secondaryFigmaLabel: "Design system",
  liveUrl: "https://research.firstprinciples.org",
- context:
+    context:
  "Saence AI is built around one of the most natural ways people interact with technology: conversation. Instead of asking users to navigate complex menus first, the product creates a direct relationship between the user, their question and the intelligence behind the system.",
- goals: [
+    goals: [
  "Make advanced AI feel simple enough to start without a tutorial",
  "Help users answer: What can I ask? What is happening? What do I do next?",
  "Design empty states, message states and response length as first-class problems",
  "Guide better questions without turning conversation into another menu",
  "Keep chat at the centre while supporting history, account and product tools",
  "Build a design system that grows with a fast-moving startup",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "What should I ask?",
- description:
+        description:
  "A blank chat input provides almost unlimited possibilities. That freedom can be powerful and confusing. The interface needed to help users understand what the AI could do without turning the conversation into another complicated menu.",
- },
- {
+      },
+      {
  title: "AI changes the relationship with navigation",
- description:
+        description:
  "Traditional products are built around menus, pages, forms, search and filters. AI lets people simply ask. That creates a more direct experience and a new UX problem: orientation without over-structuring the dialogue.",
  },
  {
  title: "Design was part of defining the product",
  description:
  "There was no large design department, no separate interaction designer and no dedicated design-system team. I shaped journeys, chat patterns, visual language and prototypes while founders and developers decided what the product should become.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "Conversation is the interface, not only a chat bubble pattern",
  "The empty state has a larger responsibility than in traditional apps",
  "A message is a sequence of states: input, sending, thinking, responding, complete, error",
  "AI response length is unpredictable, the system must stay readable anyway",
  "Suggestions should inspire without limiting the conversation",
  "Errors should keep users inside the flow, not push them into thinking about the technology",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "First experience that answers what this is",
- description:
+        description:
  "Designed the empty state to create orientation: what the product is, what someone can do and how to begin, so the first message starts the relationship with the product.",
  image: p("first-principles", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Input as the primary control",
- description:
+        description:
  "Detailed the chat and search input across empty, typing, multiline, submitting, disabled and error states, because users return to it after almost every response.",
  image: p("first-principles", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Conversation that carries real work",
- description:
+        description:
  "Designed meaningful research conversations, not generic greetings, so people can see how Saence AI becomes useful across questions, results and follow-ups.",
  image: p("first-principles", "solution-3.png"),
  },
@@ -3137,14 +3137,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Built foundations and reusable components alongside the product so a seven-person team could move quickly without inventing a new pattern every sprint.",
  image: p("first-principles", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Conversational UX is not simply about designing chat bubbles. Timing, feedback, content length, system states, the empty screen and the next question all matter.",
  "AI can make a product feel extremely simple because the user only needs to ask. The design work behind that simplicity can be surprisingly complex.",
  "In a small startup, design has to protect the larger experience while ideas move quickly from conversation to production.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "1", label: "Solo UX/UI designer across the product language" },
  { value: "7", label: "Person startup team" },
  { value: "Ask → Receive → Continue", label: "Core interaction model" },
@@ -3157,53 +3157,53 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { type: "image", src: p("first-principles", "grid/05-detail.png"), caption: "History and continuity" },
  { type: "image", src: p("first-principles", "grid/06-detail.png"), caption: "Supporting product UI" },
  { type: "image", src: p("first-principles", "grid/07-detail.png"), caption: "Responsive product surface" },
- ],
- overview:
+    ],
+    overview:
  "As the solo UX/UI Designer on a seven-person startup team, I shaped how Saence AI should work, look and feel while the product was still being defined. That included user journeys, the chat experience, interface patterns, the visual system, prototypes and direct collaboration with developers as designs moved into the real product.",
- challenge:
+    challenge:
  "AI systems contain models, context, history, processing and failure states. None of that complexity should become the user's problem. The interface needed to help people focus on one thing: the conversation.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Start with conversation",
- description:
+        description:
  "Defined the product around asking, receiving and continuing, then decided which supporting areas belong outside the chat.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Design states, not only screens",
- description:
+        description:
  "Mapped empty, sending, thinking, responding, complete and error states so the system felt alive without feeling technical.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Build the system with the product",
- description:
+        description:
  "Created foundations and reusable chat patterns alongside founders and developers as features moved into the build.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Evolve with the build",
- description:
+        description:
  "Worked hand in hand with developers through interaction behaviour, AI states, edge cases and design QA so the Figma file was never the goal. The product was.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Conversation UX strategy and information architecture",
  "Empty-state, suggestion and chat input patterns",
  "Message and AI response systems across content lengths",
  "Supporting product surfaces around the conversation",
  "Design system foundations and component states",
  "Responsive layouts, prototypes and design QA",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "A conversational product organised around ask, receive and continue",
  "Clear feedback for working, complete and unable-to-answer conditions",
  "Guidance that helps people begin without limiting what they can ask",
  "A shared product language that stayed consistent as the startup shipped",
  "Design that influenced product strategy, not only visual polish",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("first-principles", "01-hero.png"),
@@ -3309,10 +3309,10 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  },
 
 
- westjet: {
+  westjet: {
  impact:
  "Created a proposal vision connecting ticketing, check-in, baggage and operations into one journey from ticket to takeoff.",
- client: "WestJet",
+    client: "WestJet",
  timeline: "Creative Director · Proposal Lead Designer · 5-person proposal and design team",
  team: "Creative Director · Proposal Lead Designer · 5-person proposal team · client stakeholders · client product, business and technical teams",
  tools: [
@@ -3329,9 +3329,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  secondaryFigmaUrl:
  "https://www.figma.com/board/AYllSbk9AqPFPY7vi1DetA/WestJet---ticketing--check-in--baggage-handling--and-maintenance",
  secondaryFigmaLabel: "Proposal board",
- context:
+    context:
  "Air travel is not one interaction, it is a sequence of connected moments from planning and booking through check-in, baggage, boarding and flight. Behind every passenger journey is another operational system keeping aircraft, baggage, crews and services moving. This WestJet proposal explored a new digital product vision across those experiences.",
- goals: [
+    goals: [
  "Make the complete airline journey feel more connected, not a set of disconnected screens",
  "Reduce uncertainty by answering what is happening, what to do, when and what is next",
  "Design trip hierarchy that evolves as departure gets closer",
@@ -3339,48 +3339,48 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Translate baggage operations into passenger reassurance",
  "Connect passenger experience with operational and maintenance concepts",
  "Communicate a credible creative vision stakeholders could believe in",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Travel is decisions under time pressure",
- description:
+        description:
  "The same product moves from relaxed planning to high-pressure airport moments. Hierarchy, content and timing must continuously answer what is happening, what to do, when and what happens next.",
- },
- {
+      },
+      {
  title: "One journey, two perspectives",
- description:
+        description:
  "Passengers see one airline trip. Internally, ticketing, baggage, ground ops, aircraft and maintenance may live in different systems. Mapping both layers revealed where digital interactions could remove friction.",
- },
- {
+      },
+      {
  title: "Proposal work needs vision first",
- description:
+        description:
  "Before button placement, the team needed a compelling story of what the experience could become (why it should exist and what it could feel like) then prove it with tangible native screens.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "Passengers experience one journey, departments should not fragment that story",
  "What matters now becomes more important than what information exists",
  "A necessary process like check-in should feel predictable, with progress that reduces uncertainty",
  "Once a bag leaves the passenger’s hands, information becomes reassurance",
  "A boarding pass may need the least information when urgency is highest",
  "Passenger calm and operational density can share system thinking without looking identical",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Ticketing as an active journey start",
- description:
+        description:
  "Treated trip information as the start of everything that follows (destination, travellers, status and next action) with hierarchy that shifts as departure approaches.",
  image: p("westjet", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Native check-in with visible progress",
- description:
+        description:
  "Designed a guided transition from booking to travel-ready (passengers, baggage, seats and boarding pass) so people always know what is done, current and remaining.",
  image: p("westjet", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Baggage as its own journey",
- description:
+        description:
  "Explored baggage states from checked through ready as passenger-facing reassurance (where is my bag) rather than exposing internal system jargon.",
  image: p("westjet", "solution-3.png"),
  },
@@ -3401,45 +3401,45 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Connected FigJam journeys and opportunity framing to high-fidelity native pages, so the polished screens were evidence of structured thinking, not decoration.",
  image: p("westjet", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Creative direction is clarity around an idea, not making something look more dramatic.",
  "Design journeys rather than screens, ticketing affects check-in, check-in affects baggage, operations affect everything.",
  "Strong proposals show the right things in the right order, not everything.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "5", label: "Person proposal and design team"},
  { value: "CD", label: "Creative Director · Proposal Lead Designer"},
  { value: "Native", label: "Passenger + operational concept vision"},
- ],
- overview:
+    ],
+    overview:
  "I worked as Creative Director and Proposal Lead Designer as part of a five-person team developing a new digital product vision across key airline experiences. The proposal explored ticketing, check-in, baggage handling and maintenance, bringing customer-facing and operational thinking together. I worked directly with client stakeholders from early conversations through concept development and detailed application pages. I wasn't just designing an interface. I helped define creative direction, shape the proposal story and take concepts from presentation ideas into tangible native experiences.",
- challenge:
+    challenge:
  "To the airline, booking, baggage, check-in and operations may belong to different systems. To the passenger, they all belong to the same trip. How can digital experiences make the complete journey feel more connected, reducing uncertainty and giving clearer information when it matters?",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Proposal story and creative direction",
- description:
+        description:
  "Established challenge → opportunity → vision → experience, with a calm, modern, operationally intelligent visual tone connected to WestJet, reducing visual noise rather than adding it.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Map passenger and operational journeys",
- description:
+        description:
  "Connected book → prepare → check in → baggage → board → fly with systems for baggage, ground ops, aircraft and maintenance underneath.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Design around time and progress",
- description:
+        description:
  "Explored how trip hierarchy evolves from booked to boarding, and how check-in progress reduces uncertainty across multi-step flows.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Baggage, boarding and native context",
- description:
+        description:
  "Translated operational baggage states into passenger language, simplified boarding pass priority and designed for one-handed airport use under time pressure.",
  },
  {
@@ -3447,23 +3447,23 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "From board to high fidelity",
  description:
  "Moved FigJam thinking into polished native pages and stakeholder presentations, proving the vision with tangible screens across both Figma environments.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Creative direction and proposal narrative",
  "End-to-end journey maps, passenger and operations",
  "Native concepts for ticketing, check-in, baggage and boarding",
  "Status, notification and content direction",
  "Operational and maintenance concept screens",
  "High-fidelity UI and stakeholder presentation materials",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "A tangible vision for connecting key moments across the airline journey",
  "Ticketing, check-in, baggage and operations framed as one story",
  "Screens stakeholders could hold instead of only imagining",
  "From ticket to takeoff. One connected journey.",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("westjet", "01-hero.png"),
@@ -3549,7 +3549,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "From ticket to takeoff. One connected journey. The passenger sees one airline. The systems behind that airline may be complex. The digital experience can help connect them.",
  },
 
- polard: {
+  polard: {
  impact:
  "Designed lottery business portal workflows that help users find information, understand status and complete operational work efficiently.",
  client: "Lottery organization",
@@ -3568,9 +3568,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  figmaUrl: "https://www.figma.com/design/pYHsJIZqaLrJgRSzlU28fI/-WV--Web-Business-Portal",
  secondaryFigmaUrl: "https://www.figma.com/design/aK8AKRHXkJHUWJuoEf8PMI/-KS--Mobile-App",
  secondaryFigmaLabel: "Mobile application",
- context:
+    context:
  "Lottery products may look simple from the customer side. Behind them is a larger business ecosystem, retail operations, accounts, products, information, transactions, reporting, users, permissions, status and support. I worked as Senior UX/UI Designer on a five-person team creating business portal experiences that translate those operational requirements into clear digital workflows.",
- goals: [
+    goals: [
  "Organize complexity without hiding essential business information",
  "Prioritize clarity, speed, context, predictability, status and actions for people doing a job",
  "Design dashboard hierarchy around what needs attention",
@@ -3578,48 +3578,48 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Create consistent patterns users can learn once and use everywhere",
  "Apply consistent UX thinking across web Business Portal and native mobile",
  "Collaborate with client and developers through implementation",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Business users are there to complete work",
- description:
+        description:
  "Portal users are not visiting casually. They return to the same workflows, work for long periods and become familiar with where things live, so consistency and predictability matter more than exploration.",
- },
- {
+      },
+      {
  title: "Architecture before pages",
- description:
+        description:
  "Before individual interfaces, the portal needed structure, where users begin, which information belongs together, which actions are global vs record-specific, and how someone moves between related information.",
  },
  {
  title: "Different platforms, shared language",
  description:
  "Web can support denser information; mobile needs stronger prioritization and touch behaviour. Consistency helped where terminology, hierarchy, status language and principles transferred, without forcing identical layouts.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "How do you organize complexity without hiding what matters?",
  "A dashboard should answer what is happening, what needs attention, what changed and what can I do",
  "More information does not need more visual noise, hierarchy makes density scannable",
  "A table is an interaction system, not only rows and columns",
  "Status must be understood before the action",
  "The perfect state is only one state, design for empty, loading, unavailable and error",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Dashboard that answers attention",
- description:
+        description:
  "Structured the Business Portal home around important information, status, needs-attention and next actions, hierarchy instead of an unfiltered collection of metrics and shortcuts.",
  image: p("polard", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Retailer resources and data-dense work",
- description:
+        description:
  "Designed information-heavy areas with grouping, typography and clear actions so users can scan first, then drill into tables and tools when needed.",
  image: p("polard", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Licensing workflows and table systems",
- description:
+        description:
  "Treated tables as complete interaction systems (search, filter, open records, status and actions) with component patterns that stay consistent across the portal.",
  image: p("polard", "solution-3.png"),
  },
@@ -3640,45 +3640,45 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Built reusable modules and states so interactions learned once could be used everywhere, including confirmations and error experiences that keep the workflow understandable.",
  image: p("polard", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "Internal UX is often about creating order, the designer cannot always remove complexity, but can create structure.",
  "Innovation helps when it reduces friction; familiarity helps when users already know how their work is done.",
  "Design was not a handoff, it was part of the build with client and development teams.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "5", label: "Person multidisciplinary team"},
  { value: "2", label: "Connected products, web portal + mobile"},
  { value: "Senior", label: "UX/UI ownership across portal workflows"},
- ],
- overview:
+    ],
+    overview:
  "I worked as a Senior UX/UI Designer as part of a five-person team creating business portal experiences for a lottery organization. My work focused on translating operational and business requirements into clear digital workflows users could understand quickly and complete efficiently. I worked directly with client teams and developers from early product discussions and page structure through high-fidelity design and implementation, across a web Business Portal and a native mobile application.",
- challenge:
+    challenge:
  "Business-facing systems often contain more information than consumer applications, and that information cannot always be removed. A page may need business data, status, history, actions, related information, requirements and messages at once. The design needed hierarchy so users could scan quickly and understand what required attention.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Portal architecture",
- description:
+        description:
  "Defined primary areas, navigation, global vs contextual actions and how related records connect, structure before individual page polish.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "Dashboard and data density",
- description:
+        description:
  "Designed home hierarchy for attention, then data-dense interfaces and tables with grouping, status language and action hierarchy.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Workflows, forms and states",
- description:
+        description:
  "Mapped find → review → act → confirm → return journeys, guided forms and edge cases so incomplete or failed states remained understandable.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Web to mobile adaptation",
- description:
+        description:
  "Applied consistent terminology, hierarchy and status thinking to native mobile while changing layout and prioritization for smaller screens.",
  },
  {
@@ -3686,24 +3686,24 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Client and developer collaboration",
  description:
  "Worked through component behaviour, responsive layouts, data states and edge cases, improving the live product rather than protecting the Figma file.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "Business portal information architecture and user flows",
  "Dashboard, retailer resources, licensing and related page UX/UI",
  "Tables, forms, status patterns and component design",
  "Responsive web design across desktop breakpoints",
  "Native mobile application screens and flows",
  "Prototypes, client collaboration and implementation support",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Clearer digital experiences for complex lottery business workflows",
  "Portal structure that supports finding information, status and action",
  "Consistent UX thinking across web and mobile lottery products",
  "Complexity remaining behind the system, manageable in the interface",
  "Complex business operations. Clear digital workflows.",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("polard", "01-hero.png"),
@@ -3789,7 +3789,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Complex business operations. Clear digital workflows. Find the information. Understand the status. Take the action. Complete the work.",
  },
 
- marks: {
+  marks: {
  impact:
  "Helped translate Mark’s deep catalog into clear customer decisions, workwear requirements and everyday shopping inside one enterprise retail experience.",
  client: "Mark's",
@@ -3805,56 +3805,56 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Enterprise ecommerce",
  ],
  liveUrl: "https://www.marks.com/en.html",
- context:
+    context:
  "Mark’s is a Canadian retail brand serving customers across workwear, footwear and everyday apparel. The digital experience brings together women’s and men’s clothing, footwear, kids, workwear, work boots and shoes, safety products and professional apparel, from jeans and winter boots to safety footwear, high-visibility clothing, PPE and scrubs.",
- goals: [
+    goals: [
  "Support very different shopping behaviours in one Mark’s storefront",
  "Help customers understand whether a product is right for the job, not only whether they like it",
  "Balance powerful filters and specifications with a retail experience that still feels simple",
  "Keep workwear and casual shopping familiar while letting information hierarchy adapt",
  "Collaborate across UX, BA, research, QA and development inside Canadian Tire Corporation",
  "Protect accessibility, responsive behaviour and coherent patterns at enterprise scale",
- ],
- research: [
- {
+    ],
+    research: [
+      {
  title: "Requirements are not experiences",
- description:
+        description:
  "A requirement might say the customer needs to identify whether a work shoe meets their needs. UX still has to decide which specifications matter most, where they appear, how filters organize, and what mobile and inventory do to the decision.",
- },
- {
+      },
+      {
  title: "Evidence from research partners",
- description:
+        description:
  "Worked with research to test terminology, category findability, filter mental models and hesitation points, refining experiences rather than defending the first solution.",
- },
- {
+      },
+      {
  title: "Multiple teams, one Mark’s",
- description:
+        description:
  "UX, BAs, researchers, developers, QA and stakeholders each see a different part of the problem. The customer sees none of that, collaboration was part of creating UX at enterprise scale.",
- },
- ],
- insights: [
+      },
+    ],
+    insights: [
  "Mark’s creates an interesting challenge because intent can change dramatically across the same storefront",
  "Workwear introduces another level of importance, the customer needs to understand whether it is right for what they do",
  "The same ecommerce structure needs enough flexibility for technical products and everyday apparel",
  "Customers do not always speak in categories, they think in jobs, features, brands and fit",
  "The customer should not need to understand how many teams and systems sit behind find, fit, availability and fulfillment",
- ],
- solutions: [
- {
+    ],
+    solutions: [
+      {
  title: "Discovery across intents",
- description:
+        description:
  "Supported paths through workwear, footwear and everyday apparel so customers can move from product, job, brand, feature or search toward the right item without fighting the catalog.",
  image: p("marks", "solution-1.png"),
- },
- {
+      },
+      {
  title: "Technical product hierarchy",
- description:
+        description:
  "Helped listing and detail experiences surface meaningful workwear attributes (toe protection, waterproofing, insulation, width and more) so specifications become decisions.",
  image: p("marks", "solution-2.png"),
- },
- {
+      },
+      {
  title: "Work and everyday in one system",
- description:
+        description:
  "Kept Mark’s feeling like one brand while letting information hierarchy adapt, function-forward for work products, clearer style and fit cues for casual shopping.",
  image: p("marks", "solution-3.png"),
  },
@@ -3875,14 +3875,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Surfaced pickup, express delivery and ship-to-home when they matter, and supported changing sale and clearance states without destroying shopping hierarchy.",
  image: p("marks", "solution-6.png"),
- },
- ],
- learnings: [
+      },
+    ],
+    learnings: [
  "At enterprise scale, senior UX means connecting research, BA, development and QA around the customer, not knowing every system alone.",
  "A completely new interaction can look better alone and still make the complete product worse, consider the page and the ecosystem it joins.",
  "Complex behind the experience. Clear in front of the customer.",
- ],
- metrics: [
+    ],
+    metrics: [
  { value: "4", label: "Retail brands, Mark’s, Canadian Tire, Sport Chek, Party City"},
  { value: "Enterprise", label: "Cross-functional UX, BA, research, QA and development"},
  { value: "Live", label: "Digital retail at marks.com"},
@@ -3895,34 +3895,34 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  { type: "image", src: p("marks", "grid/05-detail.png"), caption: "Customer service pathway" },
  { type: "image", src: p("marks", "grid/06-detail.png"), caption: "Service content" },
  { type: "image", src: p("marks", "grid/07-detail.png"), caption: "Homepage return state" },
- ],
- overview:
+    ],
+    overview:
  "I worked as a Senior UX Designer within the larger Canadian Tire Corporation digital organization, contributing to experiences across Mark’s, Canadian Tire, Sport Chek and Party City. While my role extended across all four brands, this case study focuses on Mark’s. I collaborated directly with multiple UX teams, Business Analysts, UX Researchers, QA specialists and development teams to create and improve customer-facing web experiences. My role was not simply to create pages, it was to understand business requirements, customer needs, research, existing platform patterns and technical limitations, then bring those pieces together into experiences that could work at enterprise scale.",
- challenge:
+    challenge:
  "Many ecommerce decisions are subjective. Workwear introduces another level of importance, a safety shoe can include steel toe, composite toe, anti-puncture protection, waterproofing and width. The customer does not only need to discover something they like. They need to understand whether it is right for what they do. Good UX needs to support both.",
- process: [
- {
- phase: "01",
+    process: [
+      {
+        phase: "01",
  title: "Design for different customers",
- description:
+        description:
  "Considered casual apparel, work boots, PPE and scrubs as different intents inside one Mark’s experience, consistency where it helps, context where the product demands it.",
- },
- {
- phase: "02",
+      },
+      {
+        phase: "02",
  title: "From requirements to journeys",
- description:
+        description:
  "Partnered with Business Analysts to understand rules, data and edge cases, then translated those into customer-facing flows that fit existing Mark’s patterns.",
- },
- {
- phase: "03",
+      },
+      {
+        phase: "03",
  title: "Discovery through confidence",
- description:
+        description:
  "Supported listing, comparison and detail experiences that help customers reduce choice and act with confidence, especially when specifications carry weight.",
- },
- {
- phase: "04",
+      },
+      {
+        phase: "04",
  title: "Work / everyday balance",
- description:
+        description:
  "Designed so workwear can lead with function while casual shopping still benefits from imagery, fit and simpler decisions, one brand, adaptable hierarchy.",
  },
  {
@@ -3930,9 +3930,9 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  title: "Build, research, QA",
  description:
  "Collaborated with developers on constraints and states, used research to improve assumptions, and worked with QA when edge cases revealed experience problems, not only software defects.",
- },
- ],
- deliverables: [
+      },
+    ],
+    deliverables: [
  "UX design for enterprise ecommerce experiences",
  "Information architecture, user flows and interaction design",
  "Responsive design, wireframes and prototypes",
@@ -3942,14 +3942,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Developer collaboration and implementation support",
  "Design QA with QA specialists",
  "Cross-brand digital experience work across the banner family",
- ],
- outcomes: [
+    ],
+    outcomes: [
  "Customer-facing experiences inside the Mark’s digital ecosystem and larger Canadian Tire Corporation environment",
  "Stronger connection between business requirements, customer needs, research, technology and quality",
  "Clearer paths for workwear requirements, fit, availability and fulfillment",
  "Enterprise complexity kept behind the scenes, clear decisions in front of the customer",
- ],
- gallery: [
+    ],
+    gallery: [
  {
  type: "image",
  src: p("marks", "01-hero.png"),
@@ -5873,5 +5873,104 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  ],
  image: p("telaviv", "01-hero.png"),
  closing: "A city guide should feel like a place first — then a list.",
+ },
+
+ dooogs: {
+ impact: "Designed and shipped Dooogs! — a conversational dog-breed guide with a strong brand host.",
+ client: "IS Studio",
+ timeline: "Interactive website · 2026",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Conversational UI", "Brand web", "GitHub Pages"],
+ liveUrl: "https://is-studio-hub.github.io/dooogs/en",
+ context:
+ "Dooogs! is a playful dog types guide led by a character host. Visitors can pick starter prompts or ask freely about breeds, care, food and training.",
+ goals: [
+ "Make breed discovery feel like a conversation, not a directory",
+ "Lead with a memorable host character and clear ask field",
+ "Offer starter prompts that cover breeds, choosing, food and deep dives",
+ "Ship a live English experience",
+ ],
+ research: [
+ {
+ title: "Directories feel cold",
+ description:
+ "Breed sites often bury people in filters. A host with suggested questions creates momentum before expertise.",
+ },
+ {
+ title: "Prompts as IA",
+ description:
+ "Starter chips (Poodles, choose a breed, toxic foods, German Shepherd) map the main jobs people arrive with.",
+ },
+ ],
+ insights: [
+ "Character and copy carry as much of the product as the chat engine",
+ "Compact sheet UI keeps focus on the host and the question",
+ "Voice-ready input signals that talking to Dooogs! is part of the brand",
+ ],
+ solutions: [
+ {
+ title: "Host-led homepage",
+ description: "Centered the Dooogs! character with intro copy and an immediate ask pathway.",
+ image: p("dooogs", "grid/01-hero.png"),
+ },
+ {
+ title: "Starter prompt system",
+ description: "Designed chat choices that open breed, lifestyle, food and deep-dive threads.",
+ image: p("dooogs", "grid/03-chat.png"),
+ },
+ {
+ title: "Compact conversational sheet",
+ description: "Kept dialog, choices and input in one brand-forward panel beside the host.",
+ image: p("dooogs", "grid/04-poodles.png"),
+ },
+ ],
+ learnings: [
+ "A guide character makes utilitarian content feel approachable",
+ "Good starter prompts do half the information architecture work",
+ ],
+ metrics: [
+ { value: "Live", label: "Dog types guide" },
+ { value: "Chat", label: "Prompt-led breed discovery" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("dooogs", "grid/01-hero.png"), caption: "Homepage — Chat with Dooogs!" },
+ { type: "image", src: p("dooogs", "grid/02-intro.png"), caption: "Intro — host and guide voice" },
+ { type: "image", src: p("dooogs", "grid/03-chat.png"), caption: "Chat — starter prompts and ask field" },
+ { type: "image", src: p("dooogs", "grid/04-poodles.png"), caption: "Tell me about Poodles" },
+ { type: "image", src: p("dooogs", "grid/05-choose.png"), caption: "Help me choose a breed" },
+ { type: "image", src: p("dooogs", "grid/06-food.png"), caption: "Foods dogs must never eat" },
+ { type: "image", src: p("dooogs", "grid/07-shepherd.png"), caption: "German Shepherd deep dive" },
+ ],
+ overview:
+ "I designed Dooogs! as a conversational dog guide: strong host presence, clear starters, and an open ask for anything about dogs.",
+ challenge:
+ "Breed content can feel encyclopedic. The site needed warmth, pace and a reason to start a conversation.",
+ process: [
+ { phase: "01", title: "Shape the host", description: "Defined Dooogs! voice, intro lines and visual presence." },
+ { phase: "02", title: "Design chat pathways", description: "Mapped starters, choices and the open ask field." },
+ { phase: "03", title: "Ship", description: "Published the live English experience on GitHub Pages." },
+ ],
+ deliverables: [
+ "Conversational website UX/UI",
+ "Brand character and prompt structure",
+ "Chat sheet experience",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Dooogs! guide",
+ "Playful entry into breed and care topics",
+ "Memorable branded chat presence",
+ ],
+ gallery: [
+ { type: "image", src: p("dooogs", "grid/01-hero.png"), caption: "Homepage — Chat with Dooogs!" },
+ { type: "image", src: p("dooogs", "grid/03-chat.png"), caption: "Starter prompts" },
+ { type: "image", src: p("dooogs", "grid/04-poodles.png"), caption: "Poodle pathway" },
+ { type: "image", src: p("dooogs", "grid/05-choose.png"), caption: "Breed chooser" },
+ { type: "image", src: p("dooogs", "grid/06-food.png"), caption: "Food safety prompt" },
+ { type: "image", src: p("dooogs", "grid/07-shepherd.png"), caption: "German Shepherd deep dive" },
+ ],
+ image: p("dooogs", "01-hero.png"),
+ closing: "A dog guide should feel like a friend who knows the breeds — not a spreadsheet of traits.",
  },
 };

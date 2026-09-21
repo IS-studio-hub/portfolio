@@ -1,5 +1,8 @@
 import type { Project } from "./types";
 import { caseStudyData } from "./caseStudyData";
+import { competitorsData } from "./competitorsData";
+import { moodBoardData } from "./moodBoardData";
+import { researchConclusionsData } from "./researchConclusionsData";
 import { assetPath } from "../lib/assetPath";
 
 export type {
@@ -9,6 +12,7 @@ export type {
  ResearchItem,
  SolutionItem,
  MetricItem,
+ Competitor,
  NarrativeSection,
 } from "./types";
 
@@ -1635,6 +1639,56 @@ const rawProjects = [
  "Memorable interactive presence for the street corner",
  ],
  },
+ {
+ slug: "dooogs",
+ title: "Dooogs!",
+ shortTitle: "Dooogs!",
+ subtitle: "A playful dog-breed guide you can chat with",
+ description:
+ "Interactive website for Dooogs! — a poodle-led guide to dog breeds, care, food and training, with starter prompts and voice-ready chat.",
+ year: "2026",
+ role: "Website Designer & Builder",
+ tags: ["Website", "AI Chat", "Brand"],
+ accent: "#FBBF24",
+ gridSpan: "half",
+ image: projectImg("dooogs"),
+ gallery: [
+ { type: "image" as const, src: projectImg("dooogs"), caption: "Dooogs! — chat with your breed guide" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/dooogs/en",
+ overview:
+ "Designed and shipped Dooogs! as a conversational dog guide — brand character first, then clear paths into breeds, care and everyday questions.",
+ challenge:
+ "Breed guides are usually directories. This needed to feel like talking to a character while still answering real questions about dogs.",
+ process: [
+ {
+ phase: "01",
+ title: "Define the guide voice",
+ description: "Centered Dooogs! as a friendly host with intro lines, starter prompts and an open ask field.",
+ },
+ {
+ phase: "02",
+ title: "Design the chat layers",
+ description: "Mapped intro, chat choices and follow-ups into a compact sheet experience that stays on brand.",
+ },
+ {
+ phase: "03",
+ title: "Ship the experience",
+ description: "Built and published the live English experience on GitHub Pages.",
+ },
+ ],
+ deliverables: [
+ "Conversational website experience",
+ "Brand character and prompt structure",
+ "Chat UI and starter pathways",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Dooogs! dog types guide",
+ "Playful chat entry into breed and care topics",
+ "Memorable branded presence for dog discovery",
+ ],
+ },
 ];
 
 /** Home page section order. */
@@ -1646,6 +1700,7 @@ export const WEBSITE_SLUGS = [
  "dahari",
  "isstudio",
  "telaviv",
+ "dooogs",
 ] as const;
 
 export const CORPORATE_SLUGS = [
@@ -1680,10 +1735,24 @@ const bySlug = (list: readonly string[]) =>
  .filter((p): p is Project => Boolean(p));
 
 export const projects: Project[] = (() => {
- const mapped = rawProjects.map((base) => ({
+ const mapped = rawProjects.map((base) => {
+ const extras = caseStudyData[base.slug];
+ const competitive = competitorsData[base.slug];
+ const mood = moodBoardData[base.slug];
+ const conclusions = researchConclusionsData[base.slug];
+ return {
  ...base,
- ...caseStudyData[base.slug],
- })) as Project[];
+ ...extras,
+ ...(competitive
+ ? {
+ competitors: competitive.competitors,
+ competitorsIntro: competitive.intro,
+ }
+ : {}),
+ ...(mood ? { moodBoard: mood } : {}),
+ ...(conclusions ? { researchConclusions: conclusions } : {}),
+ };
+ }) as Project[];
  const order = [...WEBSITE_SLUGS, ...STARTUP_SLUGS, ...CORPORATE_SLUGS];
  const ordered = order
  .map((slug) => mapped.find((p) => p.slug === slug))

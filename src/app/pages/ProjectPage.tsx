@@ -1,5 +1,8 @@
 import { useMemo, type MouseEvent } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import { CompetitorsSection } from "../components/CompetitorsSection";
+import { MoodBoardSection } from "../components/MoodBoardSection";
+import { ResearchConclusionsSection } from "../components/ResearchConclusionsSection";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
@@ -78,17 +81,35 @@ export function ProjectPage() {
     ? assetPath(`/projects/${project.slug}/card.png`)
     : "/og-image.png";
   const heroMedia = useMemo(() => {
-    if (!project?.mediaGrid?.length) return null;
-    const imageItem = project.mediaGrid.find((item) => item.type === "image");
-    if (imageItem) return { src: imageItem.src, alt: imageItem.caption || project.title };
-    const videoWithPoster = project.mediaGrid.find(
-      (item) => item.type === "video" && item.poster,
-    );
-    if (videoWithPoster?.poster) {
-      return { src: videoWithPoster.poster, alt: videoWithPoster.caption || project.title };
+    if (!project) return null;
+
+    const fromGrid = project.mediaGrid ?? [];
+    const fromGallery = project.gallery ?? [];
+    const pool = [...fromGrid, ...fromGallery];
+
+    const video = pool.find((item) => item.type === "video");
+    if (video) {
+      return {
+        type: "video" as const,
+        src: video.src,
+        poster: video.poster,
+        alt: video.caption || project.title,
+      };
     }
+
+    const image = fromGrid.find((item) => item.type === "image")
+      ?? fromGallery.find((item) => item.type === "image");
+    if (image) {
+      return {
+        type: "image" as const,
+        src: image.src,
+        alt: image.caption || project.title,
+      };
+    }
+
     return null;
   }, [project]);
+
   const jsonLd = useMemo(() => {
     if (!project) return undefined;
     return {
@@ -182,7 +203,19 @@ export function ProjectPage() {
             </div>
 
             <div className="relative h-[48vh] min-h-[340px] overflow-hidden rounded-2xl border border-border bg-surface lg:h-[64vh] lg:min-h-[460px]">
-              {heroMedia ? (
+              {heroMedia?.type === "video" ? (
+                <video
+                  src={heroMedia.src}
+                  poster={heroMedia.poster}
+                  className="h-full w-full object-cover object-center"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={heroMedia.alt}
+                />
+              ) : heroMedia ? (
                 <img
                   src={heroMedia.src}
                   alt={heroMedia.alt}
@@ -264,6 +297,31 @@ export function ProjectPage() {
               ))}
             </div>
           </section>
+        )}
+
+        {/* Competitors — above media grid */}
+        {project.competitors && project.competitors.length > 0 && (
+          <CompetitorsSection
+            productName={project.shortTitle}
+            intro={project.competitorsIntro}
+            competitors={project.competitors}
+          />
+        )}
+
+        {/* Mood board — above media grid */}
+        {project.moodBoard && (
+          <MoodBoardSection
+            productName={project.shortTitle}
+            mood={project.moodBoard}
+          />
+        )}
+
+        {/* Research conclusions — synthesis from competitors + mood, above results */}
+        {project.researchConclusions && (
+          <ResearchConclusionsSection
+            productName={project.shortTitle}
+            conclusions={project.researchConclusions}
+          />
         )}
 
         {/* Media grid — images/videos when provided, otherwise empty placeholders */}
