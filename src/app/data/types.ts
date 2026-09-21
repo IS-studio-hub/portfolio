@@ -111,6 +111,42 @@ export interface Project {
     atmosphere: string[];
     bridge: string;
   };
+  /** Low-fi wireframe set shown above the media grid (websites / startups). */
+  wireframes?: {
+    note: string;
+    frames: {
+      label: string;
+      note: string;
+      layout:
+        | "portal"
+        | "form"
+        | "hub"
+        | "chat"
+        | "storefront"
+        | "pdp"
+        | "dashboard"
+        | "mobile"
+        | "map"
+        | "marketing"
+        | "feed"
+        | "booking"
+        | "studio"
+        | "street";
+    }[];
+  };
+  /** Design system process shown above the media grid on corporate case studies. */
+  designSystem?: {
+    note: string;
+    systemName: string;
+    foundations: string[];
+    components: string[];
+    phases: {
+      id: string;
+      title: string;
+      summary: string;
+      points: string[];
+    }[];
+  };
   /** Optional 8-cell image/video grid shown after metrics on project pages. */
   mediaGrid?: ProjectMedia[];
   /** Optional long-form narrative blocks (used by GoM and similar deep case studies). */
@@ -137,6 +173,8 @@ export type CaseStudyExtras = Pick<
   | "competitorsIntro"
   | "moodBoard"
   | "researchConclusions"
+  | "wireframes"
+  | "designSystem"
   | "mediaGrid"
   | "narrative"
   | "closing"

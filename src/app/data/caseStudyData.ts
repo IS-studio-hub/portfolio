@@ -69,7 +69,7 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  description:
  "Prioritized information density, consistency, efficiency and clear system feedback for users who need visibility and control over products, rules, users and operational workflows.",
  image: p("gom", "solution-4.png"),
- },
+      },
     ],
     learnings: [
  "Working across customer, vendor, issuer and administrative experiences meant thinking about UX at a product ecosystem level, not only at the screen level",

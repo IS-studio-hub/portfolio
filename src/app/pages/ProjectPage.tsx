@@ -3,10 +3,14 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { CompetitorsSection } from "../components/CompetitorsSection";
 import { MoodBoardSection } from "../components/MoodBoardSection";
 import { ResearchConclusionsSection } from "../components/ResearchConclusionsSection";
+import { WireframesSection } from "../components/WireframesSection";
+import { DesignSystemSection } from "../components/DesignSystemSection";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
 import type { ProjectMedia } from "../data/projects";
+import type { WireframesBoard } from "../data/wireframesData";
+import type { DesignSystemBoard } from "../data/designSystemData";
 import { assetPath } from "../lib/assetPath";
 
 function LiveSiteButton({ href, label = "View live site" }: { href: string; label?: string }) {
@@ -108,6 +112,21 @@ export function ProjectPage() {
     }
 
     return null;
+  }, [project]);
+
+  const wireframeSources = useMemo(() => {
+    if (!project) return [];
+    const fromGrid =
+      project.mediaGrid
+        ?.filter((item) => item.type === "image")
+        .slice(0, 3)
+        .map((item) => ({ src: item.src, caption: item.caption })) ?? [];
+    if (fromGrid.length >= 3) return fromGrid;
+    const fromGallery = project.gallery
+      .filter((item) => item.type === "image")
+      .slice(0, 3)
+      .map((item) => ({ src: item.src, caption: item.caption }));
+    return fromGrid.length > 0 ? fromGrid : fromGallery;
   }, [project]);
 
   const jsonLd = useMemo(() => {
@@ -322,6 +341,22 @@ export function ProjectPage() {
             productName={project.shortTitle}
             conclusions={project.researchConclusions}
           />
+        )}
+
+        {/* Design system (corporates) or wireframes (websites / startups) */}
+        {project.designSystem ? (
+          <DesignSystemSection
+            productName={project.shortTitle}
+            board={project.designSystem as DesignSystemBoard}
+          />
+        ) : (
+          project.wireframes && (
+            <WireframesSection
+              productName={project.shortTitle}
+              board={project.wireframes as WireframesBoard}
+              sources={wireframeSources}
+            />
+          )
         )}
 
         {/* Media grid — images/videos when provided, otherwise empty placeholders */}

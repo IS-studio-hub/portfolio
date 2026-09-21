@@ -3,6 +3,8 @@ import { caseStudyData } from "./caseStudyData";
 import { competitorsData } from "./competitorsData";
 import { moodBoardData } from "./moodBoardData";
 import { researchConclusionsData } from "./researchConclusionsData";
+import { wireframesData } from "./wireframesData";
+import { designSystemData } from "./designSystemData";
 import { assetPath } from "../lib/assetPath";
 
 export type {
@@ -1720,6 +1722,8 @@ export const CORPORATE_SLUGS = [
  "polard",
 ] as const;
 
+const CORPORATE_SLUG_SET = new Set<string>(CORPORATE_SLUGS);
+
 export const STARTUP_SLUGS = [
  "weebo",
  "CHaPPie",
@@ -1740,6 +1744,9 @@ export const projects: Project[] = (() => {
  const competitive = competitorsData[base.slug];
  const mood = moodBoardData[base.slug];
  const conclusions = researchConclusionsData[base.slug];
+ const isCorporate = CORPORATE_SLUG_SET.has(base.slug);
+ const designSystem = designSystemData[base.slug];
+ const wireframes = !isCorporate ? wireframesData[base.slug] : undefined;
  return {
  ...base,
  ...extras,
@@ -1751,6 +1758,8 @@ export const projects: Project[] = (() => {
  : {}),
  ...(mood ? { moodBoard: mood } : {}),
  ...(conclusions ? { researchConclusions: conclusions } : {}),
+ ...(isCorporate && designSystem ? { designSystem } : {}),
+ ...(wireframes ? { wireframes } : {}),
  };
  }) as Project[];
  const order = [...WEBSITE_SLUGS, ...STARTUP_SLUGS, ...CORPORATE_SLUGS];
