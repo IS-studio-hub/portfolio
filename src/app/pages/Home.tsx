@@ -409,10 +409,9 @@ export function Home() {
                 </p>
                 <p>
                   Currently, I’m a Senior Consultant and UX Lead at CGI, where I work across
-                  research, product flows, prototypes, accessibility and design delivery. I also run
-                  IS Studio, where I design and develop websites, digital products and AI tools for
-                  different businesses. I work closely with developers, product teams and
-                  stakeholders, and I like being involved from the first idea all the way to launch.
+                  research, product flows, prototypes, accessibility and design delivery. I work
+                  closely with developers, product teams and stakeholders, and I like being involved
+                  from the first idea all the way to launch.
                 </p>
                 <p>
                   Before that, I worked on product and AI interfaces at Canadian Tire, led UX work
