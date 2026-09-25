@@ -362,8 +362,11 @@ export function ProjectPage() {
         {/* Media grid — images/videos when provided, otherwise empty placeholders */}
         <section className="page-gutter border-b border-border py-16 md:py-24">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
-            {Array.from({ length: 8 }, (_, index) => (
-              <MediaGridCell key={index} item={project.mediaGrid?.[index]} />
+            {(project.slug === "sewer-squad"
+              ? (project.mediaGrid ?? [])
+              : Array.from({ length: 8 }, (_, index) => project.mediaGrid?.[index])
+            ).map((item, index) => (
+              <MediaGridCell key={index} item={item} />
             ))}
           </div>
         </section>

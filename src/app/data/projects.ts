@@ -1691,6 +1691,56 @@ const rawProjects = [
  "Memorable branded presence for dog discovery",
  ],
  },
+ {
+ slug: "sewer-squad",
+ title: "Sewer Squad",
+ shortTitle: "Sewer Squad",
+ subtitle: "AVA for plumbing and drains across the GTA",
+ description:
+ "Interactive website for Sewer Squad — AVA helps people in the GTA with plumbing and drain emergencies, quotes, bookings and quick questions, 24/7.",
+ year: "2026",
+ role: "Website Designer & Builder",
+ tags: ["Website", "AI Chat", "Service"],
+ accent: "#84A348",
+ gridSpan: "half",
+ image: projectImg("sewer-squad"),
+ gallery: [
+ { type: "image" as const, src: projectImg("sewer-squad"), caption: "Sewer Squad — ask AVA anything" },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/theplumber/en",
+ overview:
+ "Designed and shipped Sewer Squad as a conversational service guide — a plumber host and AVA answering emergency, quote and booking questions.",
+ challenge:
+ "Plumbing help usually starts with a phone tree. This needed to feel like talking to the crew, while still getting to an emergency, a quote or a visit.",
+ process: [
+ {
+ phase: "01",
+ title: "Put the crew on screen",
+ description: "Centered the Sewer Squad plumber with a clear ask field and voice entry for GTA drain and plumbing help.",
+ },
+ {
+ phase: "02",
+ title: "Design the service paths",
+ description: "Mapped emergency help, quotes, visit booking and the $88 camera-clear offer into one conversation.",
+ },
+ {
+ phase: "03",
+ title: "Ship the experience",
+ description: "Published the live English experience on GitHub Pages.",
+ },
+ ],
+ deliverables: [
+ "Conversational service website",
+ "Emergency, quote and booking pathways",
+ "Host and AVA chat experience",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Sewer Squad site for GTA plumbing and drains",
+ "Clear paths into emergency help, quotes and bookings",
+ "A service brand that starts with a conversation",
+ ],
+ },
 ];
 
 /** Home page section order. */
@@ -1703,6 +1753,7 @@ export const WEBSITE_SLUGS = [
  "isstudio",
  "telaviv",
  "dooogs",
+ "sewer-squad",
 ] as const;
 
 export const CORPORATE_SLUGS = [

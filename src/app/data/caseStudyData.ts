@@ -5973,4 +5973,107 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  image: p("dooogs", "01-hero.png"),
  closing: "A dog guide should feel like a friend who knows the breeds — not a spreadsheet of traits.",
  },
+ "sewer-squad": {
+ impact: "Designed and shipped Sewer Squad — AVA for plumbing and drain help across the GTA.",
+ client: "Sewer Squad",
+ timeline: "Interactive website · 2026",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Conversational UI", "Brand web", "GitHub Pages"],
+ liveUrl: "https://is-studio-hub.github.io/theplumber/en",
+ context:
+ "Sewer Squad is a GTA plumbing and drain company. AVA is the guide on the site: ask a question, or jump into emergency help, a quote, a visit, or the camera-clear offer.",
+ goals: [
+ "Make plumbing help feel like talking to the crew, not a phone tree",
+ "Lead with a plumber host, an open ask field and voice",
+ "Offer clear paths for emergencies, quotes and bookings",
+ "Ship a live English experience",
+ ],
+ research: [
+ {
+ title: "Service sites hide the next step",
+ description:
+ "People arrive in a hurry. Emergency, quote and booking need to be visible before they type a full question.",
+ },
+ {
+ title: "A host builds trust",
+ description:
+ "A plumber on screen, plus AVA’s intro, makes a 24/7 drain company feel local and reachable.",
+ },
+ ],
+ insights: [
+ "The first line should name the service area: plumbing and drains across the GTA",
+ "Suggested jobs — emergency, quote, visit, camera clear — do the navigation",
+ "Voice input fits a trade people often call while standing over a problem",
+ ],
+ solutions: [
+ {
+ title: "Host-led homepage",
+ description: "Put the Sewer Squad plumber and AVA’s greeting above an open ask field.",
+ image: p("sewer-squad", "grid/01-hero.png"),
+ },
+ {
+ title: "Service pathways",
+ description: "Designed emergency, quote, booking and the $88 camera-clear actions as the first choices.",
+ image: p("sewer-squad", "grid/02-emergency.png"),
+ },
+ {
+ title: "Quote and visit",
+ description: "Kept quote and booking inside the same conversation instead of a separate form maze.",
+ image: p("sewer-squad", "grid/03-quote.png"),
+ },
+ ],
+ learnings: [
+ "Service conversations work when the urgent job is one tap away",
+ "A real crew face makes an assistant feel like the company, not a generic bot",
+ ],
+ metrics: [
+ { value: "24/7", label: "Emergency path on the homepage" },
+ { value: "GTA", label: "Plumbing and drain service area" },
+ { value: "1", label: "Designer-builder across the experience" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("sewer-squad", "grid/01-hero.png"), caption: "Homepage — AVA for Sewer Squad" },
+ { type: "image", src: p("sewer-squad", "grid/05-pipeline.png"), caption: "AVA Dashboard — pipeline and activity" },
+ {
+ type: "video",
+ src: p("sewer-squad", "grid/09-walkthrough.mp4"),
+ poster: p("sewer-squad", "grid/09-poster.jpg"),
+ caption: "Site walkthrough",
+ },
+ {
+ type: "video",
+ src: p("sewer-squad", "grid/10-walkthrough.mp4"),
+ poster: p("sewer-squad", "grid/10-poster.jpg"),
+ caption: "Dashboard walkthrough",
+ },
+ ],
+ overview:
+ "I designed Sewer Squad as a conversational plumbing site: a plumber host, AVA’s greeting, and direct paths into emergencies, quotes and bookings.",
+ challenge:
+ "Drain and plumbing requests are often urgent. The site needed speed, trust and a way to start without hunting for a phone number.",
+ process: [
+ { phase: "01", title: "Shape the host", description: "Defined the plumber presence, AVA voice and the ask field." },
+ { phase: "02", title: "Design service pathways", description: "Mapped emergency, quote, booking and the camera-clear offer." },
+ { phase: "03", title: "Ship", description: "Published the live English experience on GitHub Pages." },
+ ],
+ deliverables: [
+ "Conversational service website",
+ "Emergency, quote and booking pathways",
+ "Host and AVA chat experience",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Sewer Squad guide for the GTA",
+ "Clear entry into emergency, quote and visit",
+ "A service brand that starts with a conversation",
+ ],
+ gallery: [
+ { type: "image", src: p("sewer-squad", "grid/01-hero.png"), caption: "Homepage — AVA for Sewer Squad" },
+ { type: "image", src: p("sewer-squad", "grid/05-pipeline.png"), caption: "AVA Dashboard — pipeline and activity" },
+ { type: "image", src: p("sewer-squad", "grid/06-bookings.png"), caption: "Dashboard — bookings filter" },
+ { type: "image", src: p("sewer-squad", "grid/08-file.png"), caption: "Appointment file — contact, price, and job" },
+ ],
+ image: p("sewer-squad", "01-hero.png"),
+ closing: "A plumbing company should feel like someone on the way — not a contact form that waits until morning.",
+ },
 };
