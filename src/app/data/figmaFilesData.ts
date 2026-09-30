@@ -36,6 +36,7 @@ export type FigmaShowcase = {
 const gom = (file: string) => assetPath(`/projects/gom/figma/${file}`);
 const csc = (file: string) => assetPath(`/projects/csc/figma/${file}`);
 const slt = (file: string) => assetPath(`/projects/slt/figma/${file}`);
+const zg = (file: string) => assetPath(`/projects/zg/figma/${file}`);
 
 export const figmaFilesData: Record<string, FigmaShowcase> = {
   gom: {
@@ -786,6 +787,128 @@ export const figmaFilesData: Record<string, FigmaShowcase> = {
             height: 3636,
             note:
               "Input rules: standard, optional, link and icon fields with their use cases, sizing rules and linked prototypes of each interaction.",
+          },
+        ],
+      },
+    ],
+  },
+  zg: {
+    note:
+      "The Z Gallerie design system, straight from its Figma file: foundations mapped to code, redlined handoff boards, a documented spacing decision and the checkout work it supported. The file itself is private to the client.",
+    files: [
+      {
+        id: "zg-design-system",
+        name: "ZG Design system",
+        kind: "Design system",
+        cover: zg("zg-cover.jpg"),
+        summary:
+          "Colour, type and spacing foundations tied to Tailwind utility classes and real CSS selectors, redlined checkout screens for developers, a spacing exercise that set the rules for form fields, and navigation, footer and payment components.",
+        stats: [
+          { value: "277", label: "Components" },
+          { value: "14", label: "Pages" },
+          { value: "149", label: "Icons" },
+        ],
+        pages: [
+          "Logo",
+          "Color",
+          "Typography",
+          "Spacing",
+          "Icons",
+          "Buttons",
+          "Page 5",
+          "Size swatches",
+          "PDP component",
+          "PLP",
+          "Footer",
+          "Top Nav bar",
+          "Spacing",
+          "Payment",
+        ],
+        views: [
+          {
+            page: "Color",
+            frame: "Color Palette",
+            src: zg("zg-color.png"),
+            width: 1200,
+            height: 4023,
+            note:
+              "The palette with an accessibility matrix showing which text and background pairs pass AA or AAA, and a utility-class palette mapped to Tailwind so developers use class names instead of hex values.",
+          },
+          {
+            page: "Typography",
+            frame: "Typography",
+            src: zg("zg-typography.png"),
+            width: 1200,
+            height: 3130,
+            note:
+              "Every text style written as usage plus CSS: font, weight, line height, letter spacing and the actual site selectors it applies to. The page was still marked as a work in progress in the file.",
+          },
+          {
+            page: "Spacing",
+            frame: "Space",
+            src: zg("zg-spacing.png"),
+            width: 1200,
+            height: 2041,
+            note: "One spacing scale from 4 to 160px, split into padding, margin and markup spacing, built as components.",
+          },
+          {
+            page: "Icons",
+            frame: "Icons",
+            label: "Whole page",
+            src: zg("zg-icons.png"),
+            width: 2981,
+            height: 3610,
+            note:
+              "Control, visual helper and payment icons, each paired with a note on what it helps the shopper do. The page holds 149 icon components.",
+          },
+          {
+            page: "Page 5",
+            frame: "Page 5",
+            label: "Whole page",
+            src: zg("zg-redlines.jpg"),
+            width: 10876,
+            height: 3415,
+            note:
+              "The developer handoff board: checkout screens and components with visible and hidden redlines for typography, spacing and every component, plus the mobile modals. Zoom in to scroll along it.",
+          },
+          {
+            page: "Spacing",
+            pageIndex: 12,
+            frame: "Spacing",
+            label: "Whole page",
+            src: zg("zg-spacing-exercise.png"),
+            width: 5994,
+            height: 4728,
+            note:
+              "A spacing exercise for the UX/UI team: guest checkout forms compared side by side to decide the spacing between form fields, with the agreed rules written beside them and the master components they fed. Sample names and a gift card number are masked here.",
+          },
+          {
+            page: "Top Nav bar",
+            frame: "Top Nav bar",
+            label: "Whole page",
+            src: zg("zg-nav.png"),
+            width: 4053,
+            height: 235,
+            note: "The top navigation at 1440, 1024, 768 and 375px, from promo bar and utility links down to search and breadcrumbs.",
+          },
+          {
+            page: "Footer",
+            frame: "Footer",
+            label: "Whole page",
+            src: zg("zg-footer.png"),
+            width: 1268,
+            height: 578,
+            note: "The footer at mobile and tablet: email sign-up, accordion link groups and legal links.",
+          },
+          {
+            page: "Payment",
+            frame: "Payment",
+            label: "Whole page",
+            src: zg("zg-payment.jpg"),
+            width: 16128,
+            height: 3081,
+            note:
+              "Checkout payment work with the reasoning on the canvas: order details that expand with edit-cart built in, edit product removed so the cart scans faster, alternative payment methods and the order summary modal. Zoom in to scroll along it.",
           },
         ],
       },
