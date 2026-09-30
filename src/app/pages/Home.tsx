@@ -9,9 +9,9 @@ import { assetPath } from "../lib/assetPath";
 const SECTION_NAV = [
   { id: "about-intro", label: "About" },
   { id: "experience", label: "Experience" },
+  { id: "corporates", label: "Corporates" },
   { id: "websites", label: "Websites" },
   { id: "startups", label: "Startups" },
-  { id: "corporates", label: "Corporates" },
 ] as const;
 
 function StatBlock({ value, label }: { value: number | string; label: string }) {
@@ -386,9 +386,9 @@ export function Home() {
               <SectionNav activeId={activeSection} />
 
               <div className="mt-12 flex flex-nowrap items-start gap-4 sm:gap-5">
+                <StatBlock value={corporateProjects.length} label="Corporates" />
                 <StatBlock value={websiteProjects.length} label="Websites" />
                 <StatBlock value={startupProjects.length} label="Startups" />
-                <StatBlock value={corporateProjects.length} label="Corporates" />
                 <StatBlock value={SITE.stats.years} label="Years" />
                 <StatBlock value={SITE.stats.clients} label="Clients" />
               </div>
@@ -424,9 +424,9 @@ export function Home() {
 
               <ExperienceList />
 
-              <ProjectGroup id="websites" title="Website" items={websiteProjects} />
-              <ProjectGroup id="startups" title="Startups" items={startupProjects} />
               <ProjectGroup id="corporates" title="Corporates" items={corporateProjects} />
+              <ProjectGroup id="websites" title="Websites" items={websiteProjects} />
+              <ProjectGroup id="startups" title="Startups" items={startupProjects} />
             </div>
           </div>
         </section>
