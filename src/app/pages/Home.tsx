@@ -400,25 +400,29 @@ export function Home() {
                 className="max-w-2xl scroll-mt-28 space-y-5 text-base leading-relaxed text-muted md:text-[17px]"
               >
                 <p>
-                  Hi there! I’m Itamar Shamrik, but most people call me IS, and I like building
-                  things. I’m an interface designer and developer with a background in product
-                  design, UX, AI interfaces and design systems. I like taking an idea, figuring out
-                  how it should work, and turning it into something clear, useful and real. I care a
-                  lot about the small details, but also about the bigger picture, like the business
-                  goal, the user experience and how the product will actually be built.
+                  I’m Itamar Shamrik, though most people know me as IS. I’m a Senior Product and UX
+                  Designer with a strong technical background in product design, AI interfaces,
+                  design systems, and interface development.
                 </p>
                 <p>
-                  Currently, I’m a Senior Consultant and UX Lead at CGI, where I work across
-                  research, product flows, prototypes, accessibility and design delivery. I work
-                  closely with developers, product teams and stakeholders, and I like being involved
-                  from the first idea all the way to launch.
+                  I specialize in turning complex ideas into clear, useful, and scalable products.
+                  My work combines product thinking, user experience, business goals, and technical
+                  understanding, allowing me to contribute from early strategy through design and
+                  delivery.
                 </p>
                 <p>
-                  Before that, I worked on product and AI interfaces at Canadian Tire, led UX work
-                  across ecommerce brands like One Kings Lane, Sur La Table and Z Gallerie, and
-                  worked on AI and AR shopping experiences at Walmart. Most of the work I enjoy sits
-                  somewhere between design and technology, where I can design the experience and also
-                  understand how it becomes a real product.
+                  Currently, I’m a Senior Consultant and UX Lead at CGI, working across research,
+                  product flows, prototyping, accessibility, design systems, and implementation with
+                  product and engineering teams.
+                </p>
+                <p>
+                  Previously, I worked on product and AI experiences at Canadian Tire, led UX work
+                  across brands including One Kings Lane, Sur La Table, and Z Gallerie, and
+                  contributed to AI and AR shopping experiences at Walmart.
+                </p>
+                <p>
+                  I’m at my best where product, design, and technology meet, helping teams create
+                  experiences that are thoughtful, practical, and built to move the business forward.
                 </p>
               </div>
 
