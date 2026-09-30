@@ -37,6 +37,7 @@ const gom = (file: string) => assetPath(`/projects/gom/figma/${file}`);
 const csc = (file: string) => assetPath(`/projects/csc/figma/${file}`);
 const slt = (file: string) => assetPath(`/projects/slt/figma/${file}`);
 const zg = (file: string) => assetPath(`/projects/zg/figma/${file}`);
+const ctc = (file: string) => assetPath(`/projects/ctc/figma/${file}`);
 
 export const figmaFilesData: Record<string, FigmaShowcase> = {
   gom: {
@@ -909,6 +910,103 @@ export const figmaFilesData: Record<string, FigmaShowcase> = {
             height: 3081,
             note:
               "Checkout payment work with the reasoning on the canvas: order details that expand with edit-cart built in, edit product removed so the cart scans faster, alternative payment methods and the order summary modal. Zoom in to scroll along it.",
+          },
+        ],
+      },
+    ],
+  },
+  ctc: {
+    note:
+      "One of the Figma files behind the Canadian Tire site: the mega navigation, worked through research, experience, design, prototype and handoff pages, and themed for Sport Chek and Atmosphere. The file itself is private to the client.",
+    files: [
+      {
+        id: "ctc-mega-nav",
+        name: "Mega Nav for Main Navigation",
+        kind: "Feature file",
+        cover: ctc("ctc-cover.jpg"),
+        summary:
+          "The main navigation for Canadian Tire's ecommerce site, from a competitor audit and the current experience through category flows, an accessibility decision on headings, and handoff specs for every level and state.",
+        stats: [
+          { value: "5", label: "Competitors audited" },
+          { value: "4", label: "Menu levels" },
+          { value: "3", label: "Brands" },
+        ],
+        pages: ["Thumbnail", "- Discovery", "- Experience", "- Design", "- Prototype", "- Hand off", "- VQA"],
+        views: [
+          {
+            page: "- Discovery",
+            frame: "- Discovery",
+            label: "Whole page",
+            src: ctc("ctc-discovery.jpg"),
+            width: 6684,
+            height: 8063,
+            note:
+              "Research: the current Canadian Tire menu measured and annotated, then Target, RONA, Amazon, Home Depot and Walmart (Canada and US) audited for how their menus open, scroll and group categories. Zoom in to read the notes.",
+          },
+          {
+            page: "- Experience",
+            frame: "- Experience",
+            label: "Whole page",
+            src: ctc("ctc-experience.jpg"),
+            width: 6936,
+            height: 3010,
+            note:
+              "The experience flow: opening the menu from a search results page and moving through Shop All, a department and its categories, laid out in three different department orders.",
+          },
+          {
+            page: "- Design",
+            frame: "Frame 75277",
+            src: ctc("ctc-mockup.jpg"),
+            width: 2677,
+            height: 1519,
+            note:
+              "The final design in a desktop mockup: the Shop All list on its own, then Automotive and its categories opened beside the sale tiles.",
+          },
+          {
+            page: "- Design",
+            frame: "SC - Meganav - 2",
+            src: ctc("ctc-sportchek.png"),
+            width: 1440,
+            height: 762,
+            note:
+              "The same mega nav themed for Sport Chek, one of Canadian Tire's sister brands, with its own departments and promo tiles.",
+          },
+          {
+            page: "- Design",
+            frame: "Atmo - Meganav - 2",
+            src: ctc("ctc-atmosphere.png"),
+            width: 1440,
+            height: 762,
+            note: "The Atmosphere version, showing the component working across a third brand.",
+          },
+          {
+            page: "- Prototype",
+            frame: "- Prototype",
+            label: "Whole page",
+            src: ctc("ctc-prototype.jpg"),
+            width: 15701,
+            height: 6685,
+            note:
+              "The prototype page: every level of the menu (L1 to L4) laid out and linked so the full browse path could be clicked through. The page holds 55 components. Zoom in to scroll along it.",
+          },
+          {
+            page: "- Hand off",
+            frame: "- Hand off",
+            label: "Whole page",
+            src: ctc("ctc-handoff.jpg"),
+            width: 9520,
+            height: 3353,
+            note:
+              "The handoff flow with notes for developers on the first drop, how each level opens, scrolling and side ads. Zoom in to read them.",
+          },
+          {
+            page: "- Hand off",
+            frame: "Elements",
+            src: ctc("ctc-elements.png"),
+            width: 1894,
+            height: 3353,
+            note:
+              "Handoff specs: L1, L2 and L3 items in default, hover, selected, focus and visited states, scrollbar positioning, and a separate heading hierarchy starting at H2, added so skipped headings wouldn't break screen reader navigation.",
           },
         ],
       },
