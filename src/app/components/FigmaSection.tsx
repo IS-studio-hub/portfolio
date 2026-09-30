@@ -99,9 +99,12 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
   const file = showcase.files[fileIndex];
   const view = file.views[viewIndex];
   const single = showcase.files.length === 1;
-  const viewsByPage = new Map<string, number[]>();
+  // Resolve each view to a position in the page list so duplicate page names stay distinct.
+  const pageIndexOf = (item: FigmaFile["views"][number]) =>
+    item.pageIndex ?? file.pages.findIndex((page) => pageKey(page) === pageKey(item.page));
+  const viewsByPage = new Map<number, number[]>();
   file.views.forEach((item, index) => {
-    const key = pageKey(item.page);
+    const key = pageIndexOf(item);
     viewsByPage.set(key, [...(viewsByPage.get(key) ?? []), index]);
   });
   const pageCount = file.pages.filter((page) => !isDivider(page)).length;
@@ -228,17 +231,17 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
                 if (isDivider(page)) {
                   return <li key={`divider-${index}`} role="separator" className="mx-4 my-1.5 h-px bg-white/10" />;
                 }
-                const targets = viewsByPage.get(pageKey(page));
+                const targets = viewsByPage.get(index);
                 if (!targets) {
                   return (
-                    <li key={page} className="truncate whitespace-pre px-4 py-1 text-[11px] text-white/35">
+                    <li key={`${index}-${page}`} className="truncate whitespace-pre px-4 py-1 text-[11px] text-white/35">
                       {page}
                     </li>
                   );
                 }
-                const active = pageKey(view.page) === pageKey(page);
+                const active = pageIndexOf(view) === index;
                 return (
-                  <li key={page}>
+                  <li key={`${index}-${page}`}>
                     <button
                       type="button"
                       onClick={() => showView(targets[0])}
@@ -287,7 +290,7 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
                 }`}
               >
                 {item.label ??
-                  ((viewsByPage.get(pageKey(item.page))?.length ?? 0) > 1 ? item.frame : pageKey(item.page))}
+                  ((viewsByPage.get(pageIndexOf(item))?.length ?? 0) > 1 ? item.frame : pageKey(item.page))}
               </button>
             ))}
           </div>

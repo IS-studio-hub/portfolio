@@ -7,6 +7,8 @@ export type FigmaView = {
   frame: string;
   /** Optional short label for frames that share a name in Figma. */
   label?: string;
+  /** Position in `pages`, only needed when two pages share a name. */
+  pageIndex?: number;
   src: string;
   /** Size of the frame on the Figma canvas. */
   width: number;
@@ -33,6 +35,7 @@ export type FigmaShowcase = {
 
 const gom = (file: string) => assetPath(`/projects/gom/figma/${file}`);
 const csc = (file: string) => assetPath(`/projects/csc/figma/${file}`);
+const slt = (file: string) => assetPath(`/projects/slt/figma/${file}`);
 
 export const figmaFilesData: Record<string, FigmaShowcase> = {
   gom: {
@@ -592,6 +595,197 @@ export const figmaFilesData: Record<string, FigmaShowcase> = {
             height: 4398,
             note:
               "A checkout product component from the older Roots system, kept in the file for reference. The page holds 246 legacy components.",
+          },
+        ],
+      },
+    ],
+  },
+  slt: {
+    note:
+      "The Sur La Table design system, straight from its Figma file: foundations, 25 component pages from buttons to a full checkout, and rules pages that spec every state for developers. The file itself is private to the client.",
+    files: [
+      {
+        id: "slt-design-system",
+        name: "SLT Design system",
+        kind: "Design system",
+        cover: slt("slt-cover.jpg"),
+        summary:
+          "Foundations for colour, type, spacing and grids, 25 component pages covering everything from inputs and alerts to drawers, gift options and a multi-step checkout, and two rules pages that turn button and input states into build specs.",
+        stats: [
+          { value: "847", label: "Components" },
+          { value: "32", label: "Pages" },
+          { value: "180", label: "Icons" },
+        ],
+        pages: [
+          "Logo",
+          "Color",
+          "Typography",
+          "Spacing",
+          "Grids/Breakpoints",
+          "Buttons",
+          "Checkout",
+          "Toggle",
+          "Radio Buttons",
+          "Icons (in process)",
+          "Input",
+          "Badges",
+          "Tooltip",
+          "Alerts & Feedback",
+          "Steps",
+          "Progressbar",
+          "Accordion",
+          "Order Summary",
+          "Modal",
+          "Drawer",
+          "Card",
+          "Regular Tabs",
+          "Pagination",
+          "Gift Options",
+          "NavBar",
+          "Footer",
+          "Containers",
+          "Checkout",
+          "Payment method",
+          "review",
+          "Rules",
+          "Rules 1",
+        ],
+        views: [
+          {
+            page: "Logo",
+            frame: "Logo",
+            src: slt("slt-logo.png"),
+            width: 1326,
+            height: 1153,
+            note:
+              "Logo variations with usage notes: the primary wordmark, the favicon for small screens, and the tagline lockup.",
+          },
+          {
+            page: "Color",
+            frame: "Color",
+            src: slt("slt-color.png"),
+            width: 3803,
+            height: 1708,
+            note:
+              "The full palette: primary and secondary colours, each with a 50 to 900 scale, token names, hex values and WCAG rating. Zoom in to read the tokens.",
+          },
+          {
+            page: "Typography",
+            frame: "Typography",
+            src: slt("slt-typography.png"),
+            width: 2637,
+            height: 5076,
+            note:
+              "Brandon Grotesque and Georgia styles written as specs developers can copy: weight, size in rem and px, line height and letter spacing for every heading, body, link and caps style.",
+          },
+          {
+            page: "Spacing",
+            frame: "Spacing",
+            src: slt("slt-spacing.png"),
+            width: 969,
+            height: 2163,
+            note:
+              "Padding and margin on an 8px grid in rem and px, from 4px to 160px, built as components so designers place real spacers rather than eyeballing gaps.",
+          },
+          {
+            page: "Grids/Breakpoints",
+            frame: "Grid System",
+            src: slt("slt-grid.png"),
+            width: 9094,
+            height: 1931,
+            note:
+              "Breakpoints and grid sizes for mobile (320 to 414px), tablet (768 to 1024px) and desktop (1280 to 1920px). Zoom in to scroll along it.",
+          },
+          {
+            page: "Buttons",
+            frame: "buttons",
+            src: slt("slt-buttons.png"),
+            width: 4740,
+            height: 1865,
+            note:
+              "Primary, secondary and tertiary buttons with icon, loading and payment variants (Apple Pay, PayPal), each in default, hover, focus and disabled states. The page holds 133 components.",
+          },
+          {
+            page: "Icons (in process)",
+            frame: "Icons",
+            src: slt("slt-icons.png"),
+            width: 2956,
+            height: 5457,
+            note:
+              "Control, visual helper and payment icons, each with a note on what it's for, from cooking class and gift registry to save payment.",
+          },
+          {
+            page: "Input",
+            frame: "Text Input field",
+            src: slt("slt-input.png"),
+            width: 2917,
+            height: 3302,
+            note:
+              "Text, password, new password and card number fields in every state, with the behaviour written beside each: show/hide, live password rules and card number grouping.",
+          },
+          {
+            page: "Alerts & Feedback",
+            frame: "Alerts",
+            src: slt("slt-alerts.png"),
+            width: 7025,
+            height: 1637,
+            note:
+              "Alert and feedback patterns: inline errors, security and privacy banners, call-outs and remaining-payment states. Gift card numbers in the example are masked here.",
+          },
+          {
+            page: "Drawer",
+            frame: "Drawer",
+            src: slt("slt-drawer.jpg"),
+            width: 17335,
+            height: 13964,
+            note: "Side drawers at every breakpoint, with and without imagery and action buttons. The page holds 59 components.",
+          },
+          {
+            page: "Gift Options",
+            frame: "Gift options",
+            src: slt("slt-gift.png"),
+            width: 4262,
+            height: 1862,
+            note: "The gift options checkout step, from off to message and packaging added, at mobile and desktop.",
+          },
+          {
+            page: "Checkout",
+            pageIndex: 27,
+            frame: "Your Delivery Options",
+            src: slt("slt-delivery.jpg"),
+            width: 9651,
+            height: 5724,
+            note:
+              "Delivery options as one component set covering standard, express and overnight shipping, split shipments and items shipped from vendors, at every breakpoint.",
+          },
+          {
+            page: "Payment method",
+            frame: "Payment method",
+            src: slt("slt-payment.png"),
+            width: 7032,
+            height: 6237,
+            note:
+              "The payment step for saved cards, billing address, PayPal, Apple Pay and Afterpay, with each option's flow designed at every breakpoint.",
+          },
+          {
+            page: "Rules",
+            frame: "Rules",
+            label: "Whole page",
+            src: slt("slt-rules.png"),
+            width: 9643,
+            height: 7431,
+            note:
+              "Button rules written for developers: when to use each state, size and group, and the exact styling of every variant (height, radius, padding, font, weight, colours). Zoom in to read the specs.",
+          },
+          {
+            page: "Rules 1",
+            frame: "Rules 1",
+            label: "Whole page",
+            src: slt("slt-rules-inputs.png"),
+            width: 7604,
+            height: 3636,
+            note:
+              "Input rules: standard, optional, link and icon fields with their use cases, sizing rules and linked prototypes of each interaction.",
           },
         ],
       },
