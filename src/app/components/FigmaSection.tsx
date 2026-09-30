@@ -7,6 +7,8 @@ type FigmaSectionProps = {
 };
 
 const isDivider = (name: string) => /^-+$/.test(name.trim());
+// Figma page names often carry leading spaces for visual nesting; match on the collapsed name.
+const pageKey = (name: string) => name.replace(/\s+/g, " ").trim();
 
 function FrameGlyph() {
   return (
@@ -25,11 +27,13 @@ function FileCard({
   file,
   index,
   active,
+  wide,
   onSelect,
 }: {
   file: FigmaFile;
   index: number;
   active: boolean;
+  wide: boolean;
   onSelect: () => void;
 }) {
   return (
@@ -40,10 +44,14 @@ function FileCard({
         aria-pressed={active}
         data-cursor="Open"
         className={`group flex h-full w-full flex-col overflow-hidden rounded-2xl border text-left transition-colors ${
-          active ? "border-accent/70 bg-white/[0.03]" : "border-border hover:border-white/25"
-        }`}
+          wide ? "md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]" : ""
+        } ${active ? "border-accent/70 bg-white/[0.03]" : "border-border hover:border-white/25"}`}
       >
-        <div className="aspect-[31/16] w-full overflow-hidden border-b border-border bg-[#1e1e1e]">
+        <div
+          className={`aspect-[31/16] w-full overflow-hidden border-b border-border bg-[#1e1e1e] ${
+            wide ? "md:border-b-0 md:border-r" : ""
+          }`}
+        >
           <img
             src={file.cover}
             alt={`${file.name} cover frame`}
@@ -90,9 +98,11 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
 
   const file = showcase.files[fileIndex];
   const view = file.views[viewIndex];
+  const single = showcase.files.length === 1;
   const viewsByPage = new Map<string, number[]>();
   file.views.forEach((item, index) => {
-    viewsByPage.set(item.page, [...(viewsByPage.get(item.page) ?? []), index]);
+    const key = pageKey(item.page);
+    viewsByPage.set(key, [...(viewsByPage.get(key) ?? []), index]);
   });
   const pageCount = file.pages.filter((page) => !isDivider(page)).length;
   // Wide boards scroll sideways, tall frames scroll down, everything else zooms both ways.
@@ -127,20 +137,21 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
           id="figma-heading"
           className="mt-3 font-display text-3xl font-semibold leading-[1.1] tracking-tight text-text md:text-4xl"
         >
-          Inside the Figma files
+          Inside the Figma {single ? "file" : "files"}
           <span className="text-muted"> for </span>
           {productName}
         </h2>
         <p className="mt-5 text-sm leading-relaxed text-muted md:text-[15px]">{showcase.note}</p>
       </div>
 
-      <ol className="grid gap-4 md:grid-cols-3 md:gap-5">
+      <ol className={`grid gap-4 md:gap-5 ${single ? "" : "md:grid-cols-3"}`}>
         {showcase.files.map((item, index) => (
           <FileCard
             key={item.id}
             file={item}
             index={index}
             active={index === fileIndex}
+            wide={single}
             onSelect={() => showFile(index, true)}
           />
         ))}
@@ -217,22 +228,22 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
                 if (isDivider(page)) {
                   return <li key={`divider-${index}`} role="separator" className="mx-4 my-1.5 h-px bg-white/10" />;
                 }
-                const targets = viewsByPage.get(page);
+                const targets = viewsByPage.get(pageKey(page));
                 if (!targets) {
                   return (
-                    <li key={page} className="truncate px-4 py-1 text-[11px] text-white/35">
+                    <li key={page} className="truncate whitespace-pre px-4 py-1 text-[11px] text-white/35">
                       {page}
                     </li>
                   );
                 }
-                const active = view.page === page;
+                const active = pageKey(view.page) === pageKey(page);
                 return (
                   <li key={page}>
                     <button
                       type="button"
                       onClick={() => showView(targets[0])}
                       aria-current={active ? "page" : undefined}
-                      className={`block w-full truncate px-4 py-1 text-left text-[11px] transition-colors ${
+                      className={`block w-full truncate whitespace-pre px-4 py-1 text-left text-[11px] transition-colors ${
                         active ? "bg-white/10 text-white" : "text-white/80 hover:bg-white/5"
                       }`}
                     >
@@ -249,7 +260,12 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
                           }`}
                         >
                           <FrameGlyph />
-                          <span className="truncate">{file.views[target].frame}</span>
+                          <span className="truncate">
+                            {file.views[target].frame}
+                            {file.views[target].label && (
+                              <span className="text-white/40"> · {file.views[target].label}</span>
+                            )}
+                          </span>
                         </button>
                       ))}
                   </li>
@@ -270,7 +286,8 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
                   index === viewIndex ? "bg-white/10 text-white" : "text-white/60"
                 }`}
               >
-                {(viewsByPage.get(item.page)?.length ?? 0) > 1 ? item.frame : item.page}
+                {item.label ??
+                  ((viewsByPage.get(pageKey(item.page))?.length ?? 0) > 1 ? item.frame : pageKey(item.page))}
               </button>
             ))}
           </div>
@@ -298,7 +315,7 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
               <img
                 key={view.src}
                 src={view.src}
-                alt={`${view.frame}, on the “${view.page}” page of ${file.name}`}
+                alt={`${view.label ?? view.frame}, on the “${pageKey(view.page)}” page of ${file.name}`}
                 decoding="async"
                 className={
                   zoomed
@@ -313,6 +330,7 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
           <aside className="border-t border-black/50 p-4 text-[11px] text-white/70 lg:max-h-[640px] lg:overflow-y-auto lg:border-l lg:border-t-0">
             <p className="font-medium text-white/85">Frame</p>
             <p className="mt-2 break-words text-white">{view.frame}</p>
+            {view.label && <p className="mt-1 text-white/50">{view.label}</p>}
             <dl className="mt-3 grid grid-cols-2 gap-2">
               <div className="rounded bg-white/5 px-2 py-1.5">
                 <dt className="inline text-white/40">W </dt>
@@ -324,7 +342,7 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
               </div>
             </dl>
             <p className="mt-5 font-medium text-white/85">Page</p>
-            <p className="mt-2 text-white/80">{view.page}</p>
+            <p className="mt-2 text-white/80">{pageKey(view.page)}</p>
             <div className="mt-5 border-t border-white/10 pt-4">
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent">What it shows</p>
               <p className="mt-2 text-[13px] leading-relaxed text-white/80">{view.note}</p>
