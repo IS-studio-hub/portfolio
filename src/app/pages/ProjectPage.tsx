@@ -5,6 +5,7 @@ import { MoodBoardSection } from "../components/MoodBoardSection";
 import { ResearchConclusionsSection } from "../components/ResearchConclusionsSection";
 import { WireframesSection } from "../components/WireframesSection";
 import { DesignSystemSection } from "../components/DesignSystemSection";
+import { FigmaSection } from "../components/FigmaSection";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
@@ -357,6 +358,11 @@ export function ProjectPage() {
               sources={wireframeSources}
             />
           )
+        )}
+
+        {/* Figma — real frames from the project's Figma files */}
+        {project.figmaShowcase && (
+          <FigmaSection productName={project.shortTitle} showcase={project.figmaShowcase} />
         )}
 
         {/* Media grid — images/videos when provided, otherwise empty placeholders */}

@@ -1,3 +1,5 @@
+import type { FigmaShowcase } from "./figmaFilesData";
+
 export interface ProcessPhase {
   phase: string;
   title: string;
@@ -147,6 +149,8 @@ export interface Project {
       points: string[];
     }[];
   };
+  /** Real Figma files behind the project, shown in an editor-style viewer. */
+  figmaShowcase?: FigmaShowcase;
   /** Optional 8-cell image/video grid shown after metrics on project pages. */
   mediaGrid?: ProjectMedia[];
   /** Optional long-form narrative blocks (used by GoM and similar deep case studies). */

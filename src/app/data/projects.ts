@@ -5,6 +5,7 @@ import { moodBoardData } from "./moodBoardData";
 import { researchConclusionsData } from "./researchConclusionsData";
 import { wireframesData } from "./wireframesData";
 import { designSystemData } from "./designSystemData";
+import { figmaFilesData } from "./figmaFilesData";
 import { assetPath } from "../lib/assetPath";
 
 export type {
@@ -1798,6 +1799,7 @@ export const projects: Project[] = (() => {
  const isCorporate = CORPORATE_SLUG_SET.has(base.slug);
  const designSystem = designSystemData[base.slug];
  const wireframes = !isCorporate ? wireframesData[base.slug] : undefined;
+ const figmaShowcase = figmaFilesData[base.slug];
  return {
  ...base,
  ...extras,
@@ -1811,6 +1813,7 @@ export const projects: Project[] = (() => {
  ...(conclusions ? { researchConclusions: conclusions } : {}),
  ...(isCorporate && designSystem ? { designSystem } : {}),
  ...(wireframes ? { wireframes } : {}),
+ ...(figmaShowcase ? { figmaShowcase } : {}),
  };
  }) as Project[];
  const order = [...WEBSITE_SLUGS, ...STARTUP_SLUGS, ...CORPORATE_SLUGS];
