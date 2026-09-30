@@ -153,7 +153,7 @@ export interface Project {
   figmaShowcase?: FigmaShowcase;
   /** Optional 8-cell image/video grid shown after metrics on project pages. */
   mediaGrid?: ProjectMedia[];
-  /** Optional long-form narrative blocks (used by GoM and similar deep case studies). */
+  /** Optional long-form narrative blocks (used by Government of Manitoba and similar deep case studies). */
   narrative?: NarrativeSection[];
   closing?: string;
 }

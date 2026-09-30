@@ -38,7 +38,7 @@ export const figmaFilesData: Record<string, FigmaShowcase> = {
     files: [
       {
         id: "library",
-        name: "GOM – Design Library",
+        name: "Government of Manitoba – Design Library",
         kind: "Design library",
         cover: gom("lib-cover.png"),
         summary:
@@ -151,7 +151,7 @@ export const figmaFilesData: Record<string, FigmaShowcase> = {
       },
       {
         id: "portal",
-        name: "Self-Service e-Licence Portal – GoM",
+        name: "Self-Service e-Licence Portal – Government of Manitoba",
         kind: "Product file",
         cover: gom("portal-cover.png"),
         summary:

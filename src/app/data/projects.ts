@@ -50,7 +50,7 @@ const rawProjects = [
  {
  slug: "gom",
  title: "Designing Manitoba’s New eLicensing Experience",
- shortTitle: "GoM",
+ shortTitle: "Government of Manitoba",
  subtitle: "Leading UX and content across a complex government service ecosystem",
  description:
  "Manitoba eLicensing is a digital platform that allows residents, visitors, vendors and government teams to purchase, issue and manage licences and permits across Manitoba.",
@@ -122,7 +122,7 @@ const rawProjects = [
  secondaryFigmaLabel: "e-Licence Portal",
  embedFigmaUrl: embed(GOM_DESIGN_LIBRARY),
  secondaryEmbedFigmaUrl: embed(GOM_PORTAL),
- embedFigmaLabel: "GOM Design Library",
+ embedFigmaLabel: "Government of Manitoba Design Library",
  overview:
  "Manitoba eLicensing is a digital platform that allows residents, visitors, vendors and government teams to purchase, issue and manage licences and permits across Manitoba. As UX and Content Lead, I worked as part of a 65 person multidisciplinary delivery team responsible for creating the new eLicensing experience for the Government of Manitoba.",
  challenge:
