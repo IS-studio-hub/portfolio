@@ -175,7 +175,7 @@ function WireframeSheet({
 }
 
 /**
- * Drafting-board wireframes — three low-fi echoes of the final screens below.
+ * Drafting-board wireframes: three low-fi echoes of the final screens below.
  * Uses the real media stills with a line/posterize treatment, not generic boxes.
  */
 export function WireframesSection({

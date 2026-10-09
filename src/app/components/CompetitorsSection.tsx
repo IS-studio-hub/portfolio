@@ -7,7 +7,7 @@ type CompetitorsSectionProps = {
 };
 
 /**
- * Competitive field — typographic ledger with a vertical spine.
+ * Competitive field: typographic ledger with a vertical spine.
  * Intentionally not a card grid: one continuous comparison strip.
  */
 export function CompetitorsSection({

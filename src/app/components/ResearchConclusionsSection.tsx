@@ -7,7 +7,7 @@ type ResearchConclusionsSectionProps = {
 
 /**
  * Synthesis step between competitive/mood research and the media results.
- * Shows conclusions only — not the full build process.
+ * Shows conclusions only, not the full build process.
  */
 export function ResearchConclusionsSection({
   productName,

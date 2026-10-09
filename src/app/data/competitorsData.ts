@@ -1,13 +1,13 @@
 import type { Competitor } from "./types";
 
-/** Competitive set per case study — company peers or concept-adjacent products. */
+/** Competitive set per case study: company peers or concept-adjacent products. */
 export const competitorsData: Record<
   string,
   { intro?: string; competitors: Competitor[] }
 > = {
   gom: {
     intro:
-      "Public licensing platforms compete on clarity under regulation — discovery, payment confidence and multi-role operations.",
+      "Public licensing platforms compete on clarity under regulation: discovery, payment confidence and multi-role operations.",
     competitors: [
       {
         name: "ServiceOntario",
@@ -67,7 +67,7 @@ export const competitorsData: Record<
   },
   csc: {
     intro:
-      "Luxury home ecommerce competes on curation, designer authority and visual merchandising — not lowest price alone.",
+      "Luxury home ecommerce competes on curation, designer authority and visual merchandising, not lowest price alone.",
     competitors: [
       {
         name: "Wayfair",
@@ -756,7 +756,7 @@ export const competitorsData: Record<
   },
   isstudio: {
     intro:
-      "Studio websites compete on presence — how quickly craft, point of view and contact feel unmistakable.",
+      "Studio websites compete on presence: how quickly craft, point of view and contact feel unmistakable.",
     competitors: [
       {
         name: "Instrument",

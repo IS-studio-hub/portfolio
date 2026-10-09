@@ -6,6 +6,7 @@ import { ResearchConclusionsSection } from "../components/ResearchConclusionsSec
 import { WireframesSection } from "../components/WireframesSection";
 import { DesignSystemSection } from "../components/DesignSystemSection";
 import { FigmaSection } from "../components/FigmaSection";
+import { WalmartOriginSection } from "../components/WalmartOriginSection";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
@@ -87,6 +88,15 @@ export function ProjectPage() {
     : "/og-image.png";
   const heroMedia = useMemo(() => {
     if (!project) return null;
+
+    // Anova only: hero uses the same image as the homepage card
+    if (project.slug === "anova") {
+      return {
+        type: "image" as const,
+        src: assetPath("/projects/anova/card.png"),
+        alt: project.title,
+      };
+    }
 
     const fromGrid = project.mediaGrid ?? [];
     const fromGallery = project.gallery ?? [];
@@ -319,7 +329,7 @@ export function ProjectPage() {
           </section>
         )}
 
-        {/* Competitors — above media grid */}
+        {/* Competitors: above media grid */}
         {project.competitors && project.competitors.length > 0 && (
           <CompetitorsSection
             productName={project.shortTitle}
@@ -328,7 +338,7 @@ export function ProjectPage() {
           />
         )}
 
-        {/* Mood board — above media grid */}
+        {/* Mood board: above media grid */}
         {project.moodBoard && (
           <MoodBoardSection
             productName={project.shortTitle}
@@ -336,7 +346,7 @@ export function ProjectPage() {
           />
         )}
 
-        {/* Research conclusions — synthesis from competitors + mood, above results */}
+        {/* Research conclusions: synthesis from competitors + mood, above results */}
         {project.researchConclusions && (
           <ResearchConclusionsSection
             productName={project.shortTitle}
@@ -360,12 +370,15 @@ export function ProjectPage() {
           )
         )}
 
-        {/* Figma — real frames from the project's Figma files */}
+        {/* Figma: real frames from the project's Figma files */}
         {project.figmaShowcase && (
           <FigmaSection productName={project.shortTitle} showcase={project.figmaShowcase} />
         )}
 
-        {/* Media grid — images/videos when provided, otherwise empty placeholders */}
+        {/* Walmart only: Zeekit start-up origin story, above the media grid */}
+        {project.slug === "walmart" && <WalmartOriginSection />}
+
+        {/* Media grid: images/videos when provided, otherwise empty placeholders */}
         <section className="page-gutter border-b border-border py-16 md:py-24">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"

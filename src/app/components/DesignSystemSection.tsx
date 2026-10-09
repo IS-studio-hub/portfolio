@@ -13,7 +13,7 @@ const PHASE_LABELS: Record<string, string> = {
 };
 
 /**
- * Design system process — for corporate case studies.
+ * Design system process: for corporate case studies.
  * Vertical spine + foundation strip + component ledger. Not a card grid.
  */
 export function DesignSystemSection({ productName, board }: DesignSystemSectionProps) {
@@ -79,7 +79,7 @@ export function DesignSystemSection({ productName, board }: DesignSystemSectionP
             How I ran it
           </p>
           <p className="mt-4 font-display text-2xl font-semibold leading-snug tracking-tight text-text md:text-3xl">
-            Create, maintain, manage — then ship it with engineering.
+            Create, maintain, manage, then ship it with engineering.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted">
             A design system only works when it stays alive in Figma, in code and in the ways teams

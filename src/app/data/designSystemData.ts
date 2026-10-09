@@ -16,7 +16,7 @@ export type DesignSystemBoard = {
 export const designSystemData: Record<string, DesignSystemBoard> = {
   gom: {
     note:
-      "On Manitoba eLicensing I established the Manitoba Portal DS so park Snopass flows, angling draws and vendor transactions read as one government product—not four unrelated sites.",
+      "On Manitoba eLicensing I established the Manitoba Portal DS so park Snopass flows, angling draws and vendor transactions read as one government product, not four unrelated sites.",
     systemName: "Manitoba Portal DS",
     foundations: [
       "WCAG-aligned colour for public forms and Admin table density",
@@ -41,7 +41,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Leading a two-person UX and content team inside a 65-person program, I audited Customer, Vendor, Issuer and Admin screens on manitobaelicensing.ca—then codified Manitoba Portal DS foundations before new fishing, hunting or cart features invented a fifth button style.",
+          "Leading a two-person UX and content team inside a 65-person program, I audited Customer, Vendor, Issuer and Admin screens on manitobaelicensing.ca, then codified Manitoba Portal DS foundations before new fishing, hunting or cart features invented a fifth button style.",
         points: [
           "Mapped complete tasks from licence discovery through checkout, separating role-specific density from shared typography, forms and validation.",
           "Named tokens and components in FigJam and Figma so BAs, QA and developers could reference the same patterns for park permits and Admin tables.",
@@ -52,7 +52,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "maintain",
         title: "Maintain",
         summary:
-          "As the ecosystem grew from Customer Portal to Vendor, Issuer and Admin, I maintained the library by versioning components when residency rules, draw logic or Snopass states changed—and kept design QA tied to what production actually shipped.",
+          "As the ecosystem grew from Customer Portal to Vendor, Issuer and Admin, I maintained the library by versioning components when residency rules, draw logic or Snopass states changed, and kept design QA tied to what production actually shipped.",
         points: [
           "Reviewed new portal features for reuse before they became one-off Issuer or Vendor patterns outside the shared vocabulary.",
           "Updated validation and helper-text variants when business rules changed eligibility messaging without rewriting entire flows.",
@@ -63,18 +63,18 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "Governance on a 65-person delivery meant deciding what belonged in Manitoba Portal DS versus a portal exception—Customer simplicity and Admin density had to coexist under one intake process I facilitated with the client.",
+          "Governance on a 65-person delivery meant deciding what belonged in Manitoba Portal DS versus a portal exception: Customer simplicity and Admin density had to coexist under one intake process I facilitated with the client.",
         points: [
           "Prioritized system backlog when similar actions drifted across Customer purchase paths and Issuer-on-behalf transactions.",
           "Set contribution rules with UX, content and development so ecosystem consistency stayed a default, not a late cleanup phase.",
-          "Tracked missing states—partial eligibility, payment failures, residency blockers—as system issues affecting multiple portals.",
+          "Tracked missing states (partial eligibility, payment failures, residency blockers) as system issues affecting multiple portals.",
         ],
       },
       {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "I stayed through implementation on Manitoba eLicensing—translating Figma into specs for responsive forms, table behaviour and checkout order with developers and QA when unexpected states appeared in live licensing flows.",
+          "I stayed through implementation on Manitoba eLicensing, translating Figma into specs for responsive forms, table behaviour and checkout order with developers and QA when unexpected states appeared in live licensing flows.",
         points: [
           "Partnered on handoff for Snopass empty states, multilevel-draw steps and secure citizen sign-in before transactional flows.",
           "Joined reviews for Vendor speed workflows and Admin operational screens, not only Customer happy paths.",
@@ -98,9 +98,9 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
     components: [
       "Product cards carrying imagery, pricing, promotions and availability in tight space",
       "PDP stacks joining large gallery, specs, shipping and premium purchase actions",
-      "Discovery modules—navigation, filters, sort and pagination for inspiration-led browsing",
+      "Discovery modules: navigation, filters, sort and pagination for inspiration-led browsing",
       "Editorial hero and room-story blocks for catalog & product cards journeys",
-      "Services beyond the catalog—interior design and professional designer program entry",
+      "Services beyond the catalog: interior design and professional designer program entry",
       "Responsive rules embedded in cards and PDP, not bolt-on mobile frames",
       "Footer, newsletter and trust modules with brand expression at scale",
       "Form fields for checkout and registry with predictable modal behaviour",
@@ -110,7 +110,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "I audited live One Kings Lane across breakpoints—from screens to systems—inventorying Catalog & product cards, Product detail experiences and Services beyond the catalog before naming OKL tokens designers could apply without re-measuring every sale state.",
+          "I audited live One Kings Lane across breakpoints, from screens to systems, inventorying Catalog & product cards, Product detail experiences and Services beyond the catalog before naming OKL tokens designers could apply without re-measuring every sale state.",
         points: [
           "Compared navigation, filters and PDP modules to separate intentional One Kings Lane character from accidental drift across hundreds of screens.",
           "Established shared visual foundations while keeping functional consistency separate from brand expression across sister brands.",
@@ -132,7 +132,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "Supporting One Kings Lane alongside Sur La Table and Z Gallerie meant governing what stayed OKL-specific versus shared engineering—prioritizing component work by checkout friction and broken responsive behaviour on luxury PDPs.",
+          "Supporting One Kings Lane alongside Sur La Table and Z Gallerie meant governing what stayed OKL-specific versus shared engineering, prioritizing component work by checkout friction and broken responsive behaviour on luxury PDPs.",
         points: [
           "Set contribution rules: propose a pattern twice across brands before it earned an OKL library slot or influenced sister systems.",
           "Stack-ranked system fixes where customers lost discovery clarity between editorial heroes and PLP filters.",
@@ -143,7 +143,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Figma consistency is not enough if onekingslane.com behaves differently. I paired with frontend on image ratios, filter behaviour and loading skeletons—design QA on promotional overlays and accessibility on sale badges.",
+          "Figma consistency is not enough if onekingslane.com behaves differently. I paired with frontend on image ratios, filter behaviour and loading skeletons, plus design QA on promotional overlays and accessibility on sale badges.",
         points: [
           "Specified breakpoints and truncation so designer product titles did not break grid rhythm on clearance browsing.",
           "Reviewed built pages against OKL specs, especially quick-view and sticky add-to-cart on premium PDPs.",
@@ -167,7 +167,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
     components: [
       "Product discovery cards with ratings, pickup and same-day delivery states",
       "PDP modules for materials, care, compatibility and sticky add-to-cart",
-      "Shop vs experience layouts—hardgoods quantity vs class date, time and location",
+      "Shop vs experience layouts: hardgoods quantity vs class date, time and location",
       "Cooking classes at scale cards for date night, baking, corporate and online enrollment",
       "Store locator rows connecting One customer ecosystem pickup and local events",
       "Filter drawers and sort controls for cookware grids and class listings",
@@ -179,7 +179,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "I audited surlatable.com from pages to patterns—Product discovery & cards, Shop vs experience and Cooking classes at scale—then tokenized type and spacing that worked on utensil grids and class schedules alike.",
+          "I audited surlatable.com from pages to patterns (Product discovery & cards, Shop vs experience and Cooking classes at scale), then tokenized type and spacing that worked on utensil grids and class schedules alike.",
         points: [
           "Separated shared ecommerce behaviour from intentional culinary editorial layouts before naming SLT components.",
           "Built foundations that survived imperfect content: long titles, missing images and promo pricing on premium cookware sets.",
@@ -201,7 +201,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "I managed SLT intake across shop, content and store teams—deciding when a class-specific UI deserved a new pattern versus extending an existing commerce component from OKL or ZG shared engineering.",
+          "I managed SLT intake across shop, content and store teams, deciding when a class-specific UI deserved a new pattern versus extending an existing commerce component from OKL or ZG shared engineering.",
         points: [
           "Prioritized fixes where customers confused class enrollment with standard add-to-cart on Sur La Table journeys.",
           "Coordinated with sister-brand systems so shared frontend did not force Sur La Table to feel like generic enterprise retail.",
@@ -223,14 +223,14 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   zg: {
     note:
-      "For Z Gallerie I created the ZG Retail System on that same 10-person team—standardizing functional layers so statement furniture, mirrors and room inspiration on zgallerie.com could stay dramatically expressive.",
+      "For Z Gallerie I created the ZG Retail System on that same 10-person team, standardizing functional layers so statement furniture, mirrors and room inspiration on zgallerie.com could stay dramatically expressive.",
     systemName: "ZG Retail System",
     foundations: [
       "High-contrast display type with refined body scale for decor and lighting specs",
       "Gallery black, warm white and metallic accent tokens for glamour merchandising",
       "Asymmetric grid rules for lifestyle full-bleed and inset photography",
       "Spacing rhythm supporting oversized heroes without breaking PLP scannability",
-      "Image treatment tokens—carousel, zoom and dimension callouts on sculptural PDPs",
+      "Image treatment tokens: carousel, zoom and dimension callouts on sculptural PDPs",
       "Subtle motion for reveal and hover on hero objects, not catalog noise",
     ],
     components: [
@@ -248,7 +248,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Z Gallerie could not afford a system that flattened personality. I audited mature zgallerie.com pages—Product cards & listing structure, Commerce meets editorial—and tokenized grid and type so designers could compose boldly within guardrails.",
+          "Z Gallerie could not afford a system that flattened personality. I audited mature zgallerie.com pages (Product cards & listing structure, Commerce meets editorial) and tokenized grid and type so designers could compose boldly within guardrails.",
         points: [
           "Distinguished brand equity drama from inconsistent button and modal implementation across promotions and PDPs.",
           "Published core carousels, cards and navigation with variants for campaign, clearance and missing lifestyle photography.",
@@ -270,7 +270,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "I governed ZG alongside OKL and SLT—triaging merchandising requests against engineering cost and making explicit calls about shared checkout versus Z-specific expression on inspiration journeys.",
+          "I governed ZG alongside OKL and SLT, triaging merchandising requests against engineering cost and making explicit calls about shared checkout versus Z-specific expression on inspiration journeys.",
         points: [
           "Set standards for when custom art direction stays outside the library versus becomes a component content slot.",
           "Prioritized system work where customers lost hierarchy between editorial heroes and functional filters.",
@@ -292,14 +292,14 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   ctc: {
     note:
-      "Inside Canadian Tire Corporation I extended shared enterprise platform patterns—store context, fulfillment and automotive booking—while owning Customer journeys on canadiantire.ca, not inventing CTR’s catalog DS from scratch.",
+      "Inside Canadian Tire Corporation I extended shared enterprise platform patterns (store context, fulfillment and automotive booking) while owning Customer journeys on canadiantire.ca, not inventing CTR’s catalog DS from scratch.",
     systemName: "CTR Pattern Extensions (Canadian Tire)",
     foundations: [
       "Canadian Tire red applied within existing enterprise neutral ramps",
       "Typography hierarchy for flyer deals, tools specs and bilingual entry pathways",
       "Spacing tokens for dense automotive and seasonal PLP grids on shared platform",
       "Store, pickup, ship and same-day status colour semantics I documented for CTR squads",
-      "Icon usage aligned with enterprise category sets—automotive, home, outdoor living",
+      "Icon usage aligned with enterprise category sets: automotive, home, outdoor living",
       "Responsive breakpoints tuned for garage phone use and in-store comparison contexts",
     ],
     components: [
@@ -307,7 +307,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
       "Product discovery at scale tiles with local inventory and fulfillment badges",
       "PDP modules for specs, services, variants and promotions on tools and seasonal SKUs",
       "Store context & fulfillment messaging visible when inventory changes the decision",
-      "Automotive services booking stepper—store, service, date, contact, confirmation",
+      "Automotive services booking stepper: store, service, date, contact, confirmation",
       "PLP filters including project attributes within enterprise filter shells",
       "Promotions & campaigns tiles absorbing flyer peaks without breaking hierarchy",
       "Cart and checkout step indicators reused from platform with CTR content rules",
@@ -317,9 +317,9 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "I contributed to enterprise reuse by auditing Canadian Tire discovery, Product detail decisions and Automotive services flows—documenting which patterns I owned versus inherited from the shared CTR platform before wireframing new fulfillment states.",
+          "I contributed to enterprise reuse by auditing Canadian Tire discovery, Product detail decisions and Automotive services flows, documenting which patterns I owned versus inherited from the shared CTR platform before wireframing new fulfillment states.",
         points: [
-          "Inventorying PLP, PDP and cart behaviour to propose extensions for store switching and unavailable combinations—not a greenfield DS charter.",
+          "Inventorying PLP, PDP and cart behaviour to propose extensions for store switching and unavailable combinations, not a greenfield DS charter.",
           "Aligned token usage with existing engineering constraints while specifying CTR-specific automotive booking and seasonal campaign modules.",
           "Defined brand-journey components for Product discovery at scale and Store context & fulfillment that other CTR brands could reference but not copy blindly.",
         ],
@@ -328,7 +328,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "maintain",
         title: "Maintain",
         summary:
-          "Seasonal peaks and new services changed inventory rules constantly. I maintained the Canadian Tire extensions I owned—updating fulfillment copy variants and keeping Figma aligned with platform component APIs after upgrades.",
+          "Seasonal peaks and new services changed inventory rules constantly. I maintained the Canadian Tire extensions I owned, updating fulfillment copy variants and keeping Figma aligned with platform component APIs after upgrades.",
         points: [
           "Refreshed modules when tire-fitment-adjacent attributes, pickup rules or flyer promo states introduced new UI edge cases on canadiantire.ca.",
           "Removed deprecated one-off fulfillment messaging that bypassed shared enterprise badges I had documented.",
@@ -339,7 +339,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "Across Canadian Tire, Sport Chek, Mark’s and Party City I helped govern what stayed enterprise-core versus Canadian Tire overlay—escalating broken filter behaviour and ambiguous store messaging to shared backlog owners when appropriate.",
+          "Across Canadian Tire, Sport Chek, Mark’s and Party City I helped govern what stayed enterprise-core versus Canadian Tire overlay, escalating broken filter behaviour and ambiguous store messaging to shared backlog owners when appropriate.",
         points: [
           "Facilitated decisions on when my automotive service stepper should influence enterprise patterns versus remain a CTR exception.",
           "Balanced BA-driven requirements with research-tested terminology on store selection and inventory visibility.",
@@ -350,7 +350,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "At CTR scale my specs had to survive handoffs to many squads. I collaborated on token usage, responsive PLP behaviour and fulfillment states—design QA on bilingual pathways and automotive booking confirmations.",
+          "At CTR scale my specs had to survive handoffs to many squads. I collaborated on token usage, responsive PLP behaviour and fulfillment states, plus design QA on bilingual pathways and automotive booking confirmations.",
         points: [
           "Clarified behaviour for inventory badges and store switching on PDP modules I delivered within platform shells.",
           "Reviewed builds for accessibility on filters, modals and checkout error recovery on Canadian Tire releases.",
@@ -361,18 +361,18 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   marks: {
     note:
-      "For Mark’s I extended enterprise retail patterns while owning workwear-specific journeys—steel toe, PPE, high-vis and scrubs specs on marks.com had to scann without reinventing CTR’s core catalog system.",
+      "For Mark’s I extended enterprise retail patterns while owning workwear-specific journeys: steel toe, PPE, high-vis and scrubs specs on marks.com had to scann without reinventing CTR’s core catalog system.",
     systemName: "Mark's Workwear Pattern Layer",
     foundations: [
       "Utility orange accents within enterprise neutral base used across CTR brands",
-      "Typography tuned for spec labels—toe protection, waterproofing, insulation—vs marketing headlines",
+      "Typography tuned for spec labels (toe protection, waterproofing, insulation) vs marketing headlines",
       "Spacing for attribute-heavy PDP layouts on boots and safety products",
       "Size, width and fit guidance colour semantics distinct from casual apparel cues",
       "Badge system for safety rating, brand exclusives and promo pricing on work SKUs",
       "Accessible form tokens shared with platform checkout and account flows",
     ],
     components: [
-      "Discovery across intents entry—workwear, footwear, kids and everyday apparel lanes",
+      "Discovery across intents entry: workwear, footwear, kids and everyday apparel lanes",
       "Product tiles with spec chips for composite toe, anti-puncture and high-visibility",
       "PLP filters for size, width, safety rating and brand within enterprise filter UI",
       "Technical product hierarchy modules surfacing meaningful workwear attributes on PDP",
@@ -386,7 +386,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Mark’s mixes Technical product hierarchy with casual shopping. I audited boots, outerwear and scrubs journeys—then documented pattern extensions on top of shared CTR components rather than claiming a standalone enterprise DS.",
+          "Mark’s mixes Technical product hierarchy with casual shopping. I audited boots, outerwear and scrubs journeys, then documented pattern extensions on top of shared CTR components rather than claiming a standalone enterprise DS.",
         points: [
           "Mapped attribute display for steel toe, waterproofing and width that repeated across work boots but not Party City kits.",
           "Established grid and token usage for function-forward PDPs while reusing platform tiles and cart primitives.",
@@ -397,7 +397,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "maintain",
         title: "Maintain",
         summary:
-          "New compliance labels and exclusive brands appeared each season. I maintained the workwear layer I owned—versioning spec modules when research refined filter mental models on marks.com.",
+          "New compliance labels and exclusive brands appeared each season. I maintained the workwear layer I owned, versioning spec modules when research refined filter mental models on marks.com.",
         points: [
           "Updated filter and chip patterns when merchandising introduced technical attributes outside casual apparel norms.",
           "Retired duplicate PDP modules that diverged from enterprise pricing treatment on shared platform components.",
@@ -408,7 +408,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "Within CTR I advocated for Mark’s-specific needs while reusing enterprise building blocks—governing when a workwear exception should feed back to shared patterns versus stay a Mark’s overlay.",
+          "Within CTR I advocated for Mark’s-specific needs while reusing enterprise building blocks, governing when a workwear exception should feed back to shared patterns versus stay a Mark’s overlay.",
         points: [
           "Prioritized fixes where customers confused size systems or missed toe-protection information on safety shoes.",
           "Coordinated with researchers and BAs to validate pattern changes before promoting them beyond marks.com journeys I owned.",
@@ -419,7 +419,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Workwear PDPs fail when spec tables wrap badly on mobile. I worked with developers on truncation, selector behaviour and promo stacking—design QA with QA when edge cases revealed experience problems on PPE listings.",
+          "Workwear PDPs fail when spec tables wrap badly on mobile. I worked with developers on truncation, selector behaviour and promo stacking, plus design QA with QA when edge cases revealed experience problems on PPE listings.",
         points: [
           "Specified expand patterns for long attribute lists on waterproofing and insulation fields.",
           "Reviewed pickup, size-unavailable and multi-SKU selectors on live work boot PDPs against my handoff specs.",
@@ -430,7 +430,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   sportchek: {
     note:
-      "On Sport Chek I contributed enterprise platform patterns while owning active-retail journeys—size, hockey-season inventory and ship/pickup toggles on sportchek.ca where footwear decisions happen fast on mobile.",
+      "On Sport Chek I contributed enterprise platform patterns while owning active-retail journeys: size, hockey-season inventory and ship/pickup toggles on sportchek.ca where footwear decisions happen fast on mobile.",
     systemName: "Sport Chek Active Retail Extensions",
     foundations: [
       "Sport Chek energetic palette within shared enterprise photography frames",
@@ -455,7 +455,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Sport Chek serves footwear, apparel and electronics in one door. I audited Size, store context & fulfillment and Product detail decisions flows—extending shared patterns for seasonal sports inventory rather than inventing a new catalog DS.",
+          "Sport Chek serves footwear, apparel and electronics in one door. I audited Size, store context & fulfillment and Product detail decisions flows, extending shared patterns for seasonal sports inventory rather than inventing a new catalog DS.",
         points: [
           "Identified structures shared between running shoes and hockey equipment despite different spec density on sportchek.ca.",
           "Documented Sport Chek-specific variants for size charts and inventory messaging atop platform tiles I did not own wholesale.",
@@ -477,7 +477,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "I managed intake from UX squads and BAs—prioritizing extensions that reduced confusion around size and fulfillment during peak sports retail, escalating systemic size-chart issues to enterprise owners when needed.",
+          "I managed intake from UX squads and BAs, prioritizing extensions that reduced confusion around size and fulfillment during peak sports retail, escalating systemic size-chart issues to enterprise owners when needed.",
         points: [
           "Recorded when Sport Chek needed a unique campaign module versus extending enterprise PLP behaviour from Canadian Tire patterns.",
           "Balanced brand energy with CTR-wide checkout constraints on account and rewards surfaces.",
@@ -488,7 +488,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Sports shoppers decide on phones in aisles. I partnered on selector logic, promo display and responsive filters—seasonal launch reviews with QA classifying repeat defects as extension gaps I owned.",
+          "Sports shoppers decide on phones in aisles. I partnered on selector logic, promo display and responsive filters, plus seasonal launch reviews with QA classifying repeat defects as extension gaps I owned.",
         points: [
           "Clarified behaviour for unavailable sizes and local store messaging on Product discovery at scale listings.",
           "Reviewed built PLPs during hockey and running campaigns, not only at initial wireframe handoff.",
@@ -499,20 +499,20 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   partycity: {
     note:
-      "For Party City I extended enterprise ecommerce patterns while owning occasion-first journeys—balloon product-plus-service flows, Halloween peaks and theme/colour discovery on partycity.ca.",
+      "For Party City I extended enterprise ecommerce patterns while owning occasion-first journeys: balloon product-plus-service flows, Halloween peaks and theme/colour discovery on partycity.ca.",
     systemName: "Party City Occasion Extensions",
     foundations: [
       "Festive purple within accessible enterprise text pairings for partycity.ca",
       "Playful display type for occasion heroes with utility body styles for kit contents",
       "Spacing for theme grids and balloon customization steppers on shared layout tokens",
-      "Occasion and season semantic colours—birthdays, weddings, Halloween campaigns",
+      "Occasion and season semantic colours: birthdays, weddings, Halloween campaigns",
       "Illustration and photography frame guidelines for curated kit carousels",
       "Form tokens tuned for party kit customization atop platform field components",
     ],
     components: [
       "Occasion-led discovery landing heroes and theme entry paths",
       "Seasonal transformation modules absorbing Halloween without retraining core interactions",
-      "Balloons as product + service steppers—type, colour, quantity, bouquet, pickup timing",
+      "Balloons as product + service steppers: type, colour, quantity, bouquet, pickup timing",
       "PLP grids with age, theme and colour filters within enterprise listing shells",
       "Choice without overload card patterns balancing browse excitement and availability",
       "PDP modules for kit contents, substitutions and deadline-driven fulfillment callouts",
@@ -524,7 +524,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Party City shoppers start with I have something to celebrate—not a SKU. I mapped Occasion-led discovery and Balloons as product + service journeys, then documented extensions on shared CTR components for kits and seasonal peaks.",
+          "Party City shoppers start with I have something to celebrate, not a SKU. I mapped Occasion-led discovery and Balloons as product + service journeys, then documented extensions on shared CTR components for kits and seasonal peaks.",
         points: [
           "Traced paths from themed entry into collections without claiming a new enterprise catalog system.",
           "Defined occasion tokens and layout rules that felt festive while reusing platform grid and button behaviour.",
@@ -546,7 +546,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "I governed what deserved a new themed template versus re-skinning enterprise components—balancing merchandising creativity with sustainability inside the four-brand CTR program.",
+          "I governed what deserved a new themed template versus re-skinning enterprise components, balancing merchandising creativity with sustainability inside the four-brand CTR program.",
         points: [
           "Prioritized fixes reducing drop-off during kit building and Promotions inside the journey peaks.",
           "Coordinated with BAs when availability rules needed clearer UI contracts on deadline-sensitive celebrations.",
@@ -557,7 +557,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Occasion retail mixes product and service behaviours on shared code. I spec’d balloon step order, substitution states and peak-traffic performance—QA on cart grouping and pickup timing messages.",
+          "Occasion retail mixes product and service behaviours on shared code. I spec’d balloon step order, substitution states and peak-traffic performance, plus QA on cart grouping and pickup timing messages.",
         points: [
           "Specified validation and recovery for balloon customization flows distinct from standard add-to-cart platform behaviour.",
           "Reviewed theme pages where content length varied wildly during Responsive celebration planning launches.",
@@ -568,7 +568,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   walmart: {
     note:
-      "For Walmart US Fashion with Zeekit partners I built a focused try-on interaction system—Choose my model on the PDP image—not a full ecommerce catalog design system.",
+      "For Walmart US Fashion with Zeekit partners I built a focused try-on interaction system: Choose my model on the PDP image, not a full ecommerce catalog design system.",
     systemName: "Walmart Fashion Try-On UI",
     foundations: [
       "Overlay colour hierarchy subordinate to existing Walmart PDP photography",
@@ -580,7 +580,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
     ],
     components: [
       "Try It On / Choose my model entry anchored on fashion product imagery",
-      "Choose my measurements panel—size and height inputs finding closest models",
+      "Choose my measurements panel: size and height inputs finding closest models",
       "Browse matching models carousel with name, size and height selection states",
       "Model applied on the PDP with editable who-is-model status on live image",
       "Be Your Own Model upload, framing guide and lighting guidance overlays",
@@ -593,10 +593,10 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Try-on began as Try It On concepts in FigJam. I scoped a feature interaction system for Choose my model on the image—measurements first, then carousel—without redesigning Walmart’s core fashion catalog components.",
+          "Try-on began as Try It On concepts in FigJam. I scoped a feature interaction system for Choose my model on the image (measurements first, then carousel) without redesigning Walmart’s core fashion catalog components.",
         points: [
           "Mapped shopper paths from representation hesitation to Choose My Model vs Be Your Own Model without forcing one path.",
-          "Defined overlay tokens respecting crowded PDP real estate—price, variants and fulfillment stayed primary.",
+          "Defined overlay tokens respecting crowded PDP real estate: price, variants and fulfillment stayed primary.",
           "Prototyped commerce-native modal flow embedded in existing fashion PDP, not a disconnected AR novelty screen.",
         ],
       },
@@ -604,7 +604,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "maintain",
         title: "Maintain",
         summary:
-          "As model filters and Zeekit platform rules evolved, I maintained try-on modules—updating consent copy, processing states and responsive shells when web and Walmart app implementations diverged.",
+          "As model filters and Zeekit platform rules evolved, I maintained try-on modules, updating consent copy, processing states and responsive shells when web and Walmart app implementations diverged.",
         points: [
           "Versioned filter and carousel behaviour after usability tests on height, shape, size and skin tone representation.",
           "Documented error patterns for upload quality, processing timeouts and unsupported garment types on live SKUs.",
@@ -615,7 +615,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "Try-on touched fashion, legal, platform and CV teams. I managed scope by separating core PDP commerce from Virtual Try-On modules—prioritizing inclusive defaults and cross-platform parity for mobile shoppers.",
+          "Try-on touched fashion, legal, platform and CV teams. I managed scope by separating core PDP commerce from Virtual Try-On modules, prioritizing inclusive defaults and cross-platform parity for mobile shoppers.",
         points: [
           "Facilitated which filters shipped first versus stayed in research backlog after Concept → Result learnings.",
           "Balanced marketing excitement with clarity on what changed on the product image after model apply.",
@@ -626,7 +626,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Computer vision behind the button required tight Zeekit and Walmart Global Technology partnership—I spec’d latency, skeleton states and API failures, joining QA on real fashion SKUs across skin tones and devices.",
+          "Computer vision behind the button required tight Zeekit and Walmart Global Technology partnership: I spec’d latency, skeleton states and API failures, joining QA on real fashion SKUs across skin tones and devices.",
         points: [
           "Worked on overlay z-index, scroll lock and handoff between PDP commerce and try-on modes.",
           "Defined acceptance criteria for model swap timing, image quality warnings and revert-to-default behaviour.",
@@ -637,7 +637,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   anova: {
     note:
-      "As solo UX/UI and content designer on a ~24-person team, I built the Anova Oven Guide DS around food-first discovery and the Choose → prepare → set → cook → complete journey—not appliance-mode jargon.",
+      "As solo UX/UI and content designer on a ~24-person team, I built the Anova Oven Guide DS around food-first discovery and the Choose → prepare → set → cook → complete journey, not appliance-mode jargon.",
     systemName: "Anova Oven Guide DS",
     foundations: [
       "Warm appliance palette with high-contrast cooking and caution states for bright kitchens",
@@ -662,10 +662,10 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Solo on Digital Oven Guide, I created the DS while designing flows—partnering with VP Product to map Choose → prepare → set → cook → complete before tokenizing components that hide oven complexity behind chicken, bread and steak goals.",
+          "Solo on Digital Oven Guide, I created the DS while designing flows, partnering with VP Product to map Choose → prepare → set → cook → complete before tokenizing components that hide oven complexity behind chicken, bread and steak goals.",
         points: [
           "Audited early screens for repeated step layouts, timers and appliance status from Figma Guide and high-level flow files.",
-          "Built foundations prioritizing legibility for busy hands and parallel kitchen tasks—not generic mobile UI kits.",
+          "Built foundations prioritizing legibility for busy hands and parallel kitchen tasks, not generic mobile UI kits.",
           "Componentized step cards and CTAs with explicit loading, failure and interrupted-cook states from the start.",
         ],
       },
@@ -673,7 +673,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "maintain",
         title: "Maintain",
         summary:
-          "New recipes and oven capabilities kept arriving on the 24-person program. I extended the library instead of cloning screens—syncing components with Swift/Kotlin after platform feedback on timers and unit switching.",
+          "New recipes and oven capabilities kept arriving on the 24-person program. I extended the library instead of cloning screens, syncing components with Swift/Kotlin after platform feedback on timers and unit switching.",
         points: [
           "Added variants for video steps, multi-rack instructions and longer Choose → prepare sequences.",
           "Updated safety and temperature copy patterns when content rules shifted without breaking component slots.",
@@ -684,7 +684,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "With one design owner and many developers, I treated Anova Oven Guide DS as the guardrail—new UI had to justify divergence from guided cooking patterns before shipping on release trains.",
+          "With one design owner and many developers, I treated Anova Oven Guide DS as the guardrail: new UI had to justify divergence from guided cooking patterns before shipping on release trains.",
         points: [
           "Prioritized system work reducing cognitive load during active cook phases when timers dominate the screen.",
           "Batched component updates with PM and engineering leads so content, UX writing and UI stayed one product language.",
@@ -695,7 +695,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Native fidelity mattered as much as pixels. I paired on timer accuracy, oven connection states, offline behaviour and design QA on device—logging gaps as system updates for the next feature.",
+          "Native fidelity mattered as much as pixels. I paired on timer accuracy, oven connection states, offline behaviour and design QA on device, logging gaps as system updates for the next feature.",
         points: [
           "Handed off animation, haptic and transition specs for connection changes between app and physical oven.",
           "Tested interrupted cooks, app backgrounding and unit switching against documented component states.",
@@ -706,7 +706,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   ymca: {
     note:
-      "Solo UX, content and product architecture on a ~15-person team—I created the YMCA Member DS around Home, calendar, scan and profile with QR check-in, not a marketing brochure home.",
+      "Solo UX, content and product architecture on a ~15-person team: I created the YMCA Member DS around Home, calendar, scan and profile with QR check-in, not a marketing brochure home.",
     systemName: "YMCA Member DS",
     foundations: [
       "YMCA red with accessible neutrals for community warmth in list-heavy views",
@@ -717,11 +717,11 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
       "Iconography for fitness, aquatics, childcare and giving tied to member IA",
     ],
     components: [
-      "Architecture around the member shell—Home, calendar, scan, profile, facilities",
-      "Home that answers what matters now—greeting, facility context, achievements",
+      "Architecture around the member shell: Home, calendar, scan, profile, facilities",
+      "Home that answers what matters now: greeting, facility context, achievements",
       "Bottom navigation and global wayfinding across recurring member tasks",
       "Class schedule lists with filters, favourites and Repeated use and calendar context",
-      "Scan and membership identity—QR check-in, wallet integration, glanceable account",
+      "Scan and membership identity: QR check-in, wallet integration, glanceable account",
       "Discovery with progressive structure for location, membership and plan selection",
       "Account cards for membership, payment and notification preference controls",
       "Empty states for first-time, lapsed and waitlist-full members",
@@ -731,7 +731,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Before polishing screens I defined product architecture—Home, calendar, scan, profile—then built YMCA Member DS tokens and components so BAs and stakeholders saw one native language, not departmental silos.",
+          "Before polishing screens I defined product architecture (Home, calendar, scan, profile), then built YMCA Member DS tokens and components so BAs and stakeholders saw one native language, not departmental silos.",
         points: [
           "Translated org complexity into member intentions: work out, find something, manage activity, know what is happening today.",
           "Tokenized colour, type and spacing for scan-at-door QR flows and busy schedule lists from the Handoff Figma file.",
@@ -753,7 +753,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "I governed intake from YMCA stakeholders and marketing—deciding when a local program needed custom presentation versus a configured instance of standard member components.",
+          "I governed intake from YMCA stakeholders and marketing, deciding when a local program needed custom presentation versus a configured instance of standard member components.",
         points: [
           "Prioritized investments helping members answer what is next near me without turning Home into a feature directory.",
           "Balanced marketing communication with functional utility on Architecture around the member navigation model.",
@@ -764,7 +764,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Member apps depend on schedule reliability. I partnered on API-driven empty states, pull-to-refresh and dynamic type—design QA with QA and BAs on real branch data, not demo content alone.",
+          "Member apps depend on schedule reliability. I partnered on API-driven empty states, pull-to-refresh and dynamic type, plus design QA with QA and BAs on real branch data, not demo content alone.",
         points: [
           "Specified skeleton loaders and offline messaging for calendar-dependent views across iOS and Android.",
           "Reviewed builds for tap targets, focus order and contrast on red CTAs at facility check-in moments.",
@@ -775,11 +775,11 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   ppjv: {
     note:
-      "As Design System Lead on a 58-person banking program, I led Aurora—foundations, Storybook and Figma—so two UX designers could scale originator, transfer and audit workflows for professional operators.",
+      "As Design System Lead on a 58-person banking program, I led Aurora (foundations, Storybook and Figma) so two UX designers could scale originator, transfer and audit workflows for professional operators.",
     systemName: "Aurora",
     foundations: [
       "Enterprise blue with strict financial status semantics for SLA and permission states",
-      "Dual typography scales—dashboard scan lines vs detail form labels on 4px grid",
+      "Dual typography scales: dashboard scan lines vs detail form labels on 4px grid",
       "Elevation and divider tokens for layered originator and transaction panels",
       "Data visualization colour ramps for balances, trends and attention callouts",
       "Focus, error and permission-denied states embedded in every Aurora primitive",
@@ -788,7 +788,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
     components: [
       "Application shell with sidebar and context header for internal banking ops",
       "Sortable data tables with bulk selection, filter bars and saved views",
-      "Dashboard hierarchy that answers attention—not unfiltered metric dumps",
+      "Dashboard hierarchy that answers attention, not unfiltered metric dumps",
       "Data-dense originator management search and detail with progressive disclosure",
       "Transfers, transactions and recovery panels with timeline history",
       "Form sections for approvals, exceptions and validation-through-confirmation stages",
@@ -800,7 +800,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Internal PPJV UI was fragmenting under delivery pressure. I audited dashboards and Transfers, transactions and recovery flows—then stood up Aurora foundations plus high-density tables and forms for client dev teams on the 58-person program.",
+          "Internal PPJV UI was fragmenting under delivery pressure. I audited dashboards and Transfers, transactions and recovery flows, then stood up Aurora foundations plus high-density tables and forms for client dev teams on the 58-person program.",
         points: [
           "Interviewed operators about scan patterns and status language during originator management workflows.",
           "Published Aurora tokens and component families in Figma with a parallel Handoff and Design System file structure.",
@@ -815,14 +815,14 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         points: [
           "Accepted or redirected pattern requests into core Aurora versus product extensions on PPJV features.",
           "Updated components when permissions, financial adjustments or audit visibility introduced new required fields.",
-          "Retired duplicate tables that undermined trust—operators notice when two grids sort differently.",
+          "Retired duplicate tables that undermined trust: operators notice when two grids sort differently.",
         ],
       },
       {
         id: "manage",
         title: "Manage",
         summary:
-          "As DS Lead with one additional UX designer supporting 58 people, I managed Aurora governance—intake, roadmap, office hours and adoption tracking across design and client development.",
+          "As DS Lead with one additional UX designer supporting 58 people, I managed Aurora governance: intake, roadmap, office hours and adoption tracking across design and client development.",
         points: [
           "Prioritized components by workflow risk: approvals, exceptions, financial adjustments and audit visibility.",
           "Ran critiques with BAs and QA before promoting experimental patterns to Aurora core.",
@@ -837,14 +837,14 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         points: [
           "Handed off props-level guidance for sort, filter, pagination and row expansion on licensing-style tables.",
           "Reviewed staging builds for permission-gated actions and error recovery on financial forms I owned.",
-          "Closed the loop with QA defect trends—patching Aurora docs and components, not single tickets alone.",
+          "Closed the loop with QA defect trends, patching Aurora docs and components, not single tickets alone.",
         ],
       },
     ],
   },
   westjet: {
     note:
-      "In the WestJet proposal I shaped a Journey DS for ticketing, check-in, baggage and maintenance concepts—implementation meant buildability with technical leads, not production design QA on live ops.",
+      "In the WestJet proposal I shaped a Journey DS for ticketing, check-in, baggage and maintenance concepts. Implementation meant buildability with technical leads, not production design QA on live ops.",
     systemName: "WestJet Journey DS",
     foundations: [
       "WestJet teal with sky neutrals for trip cards and operational density panels",
@@ -855,12 +855,12 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
       "Motion tokens for check-in stepper progress and trip phase transitions in proposals",
     ],
     components: [
-      "Ticketing as an active journey start—destination, travellers, status, next action",
+      "Ticketing as an active journey start: destination, travellers, status, next action",
       "Native check-in stepper with visible progress through passengers, baggage, seats",
       "Baggage as its own journey timeline from checked through ready for passengers",
       "Boarding pass surfaces simplified for the gate moment under time pressure",
       "Trip hub evolving from booking readiness to day-of-travel native screens",
-      "Operational dashboard concepts for ground and baggage teams—not passenger chrome clones",
+      "Operational dashboard concepts for ground and baggage teams, not passenger chrome clones",
       "Status, notifications and content modules for airport-fast travel language",
       "Disruption recovery and empty templates linked to FigJam journey maps",
     ],
@@ -869,7 +869,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "As Creative Director and Proposal Lead on a five-person team, I mapped book → prepare → check in → baggage → board in FigJam—then created Journey DS foundations and native components proving Ticketing as an active journey start in high fidelity.",
+          "As Creative Director and Proposal Lead on a five-person team, I mapped book → prepare → check in → baggage → board in FigJam, then created Journey DS foundations and native components proving Ticketing as an active journey start in high fidelity.",
         points: [
           "Audited recurring patterns across proposal Figma for passenger calm vs operational density without claiming shipped product ownership.",
           "Defined tokens and card structures escalating when trips entered delay or gate-change states in concept pages.",
@@ -880,7 +880,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "maintain",
         title: "Maintain",
         summary:
-          "Stakeholder feedback refined the vision weekly. I maintained the proposal library—merging duplicate check-in flows and versioning alert modules when ops partners added baggage scan data points to the story.",
+          "Stakeholder feedback refined the vision weekly. I maintained the proposal library, merging duplicate check-in flows and versioning alert modules when ops partners added baggage scan data points to the story.",
         points: [
           "Consolidated successful one-off native screens into shared Journey DS components under iteration pressure.",
           "Versioned timeline and notification modules when maintenance concepts surfaced new operational fields.",
@@ -891,10 +891,10 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "I governed scope across passenger and operational concepts—prioritizing patterns that demonstrated connected handoffs for the business case, not isolated app prettiness in the proposal deck.",
+          "I governed scope across passenger and operational concepts, prioritizing patterns that demonstrated connected handoffs for the business case, not isolated app prettiness in the proposal deck.",
         points: [
           "Facilitated workshops on when passengers need calm hierarchy versus ops teams need dense tables in the same Journey DS.",
-          "Tracked open questions—baggage scans, gate changes—as backlog items for future delivery phases beyond proposal.",
+          "Tracked open questions (baggage scans, gate changes) as backlog items for future delivery phases beyond proposal.",
           "Presented Journey DS as scalability evidence alongside From proposal thinking to product vision solution screens.",
         ],
       },
@@ -902,7 +902,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Proposal implementation meant buildability—I paired with client technical leads on component boundaries, API-driven delay states and native patterns engineers could estimate, preparing handoff without production QA cycles.",
+          "Proposal implementation meant buildability: I paired with client technical leads on component boundaries, API-driven delay states and native patterns engineers could estimate, preparing handoff without production QA cycles.",
         points: [
           "Documented expected realtime states for rebooking and baggage milestones as estimation input, not shipped acceptance tests.",
           "Outlined accessibility requirements for boarding passes and time-sensitive alerts in spec-ready form for a future squad.",
@@ -913,7 +913,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
   },
   polard: {
     note:
-      "On a five-person lottery team I designed portal patterns for the Business Portal and mobile PlayON—licensing table systems and retailer workflows, not an Aurora-style banking design system.",
+      "On a five-person lottery team I designed portal patterns for the Business Portal and mobile PlayON: licensing table systems and retailer workflows, not an Aurora-style banking design system.",
     systemName: "Lottery Portal DS",
     foundations: [
       "Trust-forward blues with lottery brand accents for web density and mobile priority",
@@ -926,7 +926,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
     components: [
       "Dashboard that answers attention on Business Portal home",
       "Retailer resources and data-dense grouping before drill-in table work",
-      "Licensing workflows and table systems—search, filter, open record, row actions",
+      "Licensing workflows and table systems: search, filter, open record, row actions",
       "Web portal + mobile ecosystem shells sharing terminology, not identical layouts",
       "PlayON mobile home and account flows with progressive disclosure",
       "Instant-game and ticket-ordering form wizards with permission variants",
@@ -938,7 +938,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "create",
         title: "Create",
         summary:
-          "Lottery ops mix regulation and speed. I audited WV Web Business Portal and KS Mobile App flows—Dashboard that answers attention and Licensing workflows and table systems—then created Lottery Portal DS foundations distinct from fintech Aurora patterns.",
+          "Lottery ops mix regulation and speed. I audited WV Web Business Portal and KS Mobile App flows (Dashboard that answers attention and Licensing workflows and table systems), then created Lottery Portal DS foundations distinct from fintech Aurora patterns.",
         points: [
           "Mapped retailer order, activate, settle and dispute paths to shared form and table DNA before naming components.",
           "Established status and spacing tokens working on counter tablets and wide monitors for licensing tables I designed.",
@@ -960,7 +960,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "manage",
         title: "Manage",
         summary:
-          "I governed which UX shortcuts were unacceptable in regulated lottery work—prioritizing system investments that reduced operational error on licensing tables and PlayON field tasks.",
+          "I governed which UX shortcuts were unacceptable in regulated lottery work, prioritizing system investments that reduced operational error on licensing tables and PlayON field tasks.",
         points: [
           "Worked with BAs to translate rule changes into component updates instead of one-off Business Portal pages.",
           "Prioritized backlog tied to audit trails, reversibility and clear ownership displays on dense retailer resources.",
@@ -971,7 +971,7 @@ export const designSystemData: Record<string, DesignSystemBoard> = {
         id: "implement",
         title: "Implement with engineering",
         summary:
-          "Retailers feel quality when confirmations fail or licensing tables lie. I partnered with client developers on validation order, role permissions on staging and QA scripts for money-adjacent flows—design part of the build, not a late handoff.",
+          "Retailers feel quality when confirmations fail or licensing tables lie. I partnered with client developers on validation order, role permissions on staging and QA scripts for money-adjacent flows, keeping design part of the build, not a late handoff.",
         points: [
           "Specified double-confirm, disabled and rollback messaging for critical instant-game and ticket actions.",
           "Reviewed staging with real role permissions to catch components leaking wrong retailer data.",

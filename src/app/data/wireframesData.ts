@@ -25,10 +25,10 @@ export type WireframesBoard = {
   frames: [WireframeFrame, WireframeFrame, WireframeFrame];
 };
 
-/** Minimal wireframe set per case study — three frames that mirror the final structure. */
+/** Minimal wireframe set per case study: three frames that mirror the final structure. */
 export const wireframesData: Record<string, WireframesBoard> = {
   gom: {
-    note: "Portal structure before polish — discovery, purchase and ops roles as bare bones.",
+    note: "Portal structure before polish: discovery, purchase and ops roles as bare bones.",
     frames: [
       { label: "Public portal", note: "Licence discovery", layout: "portal" },
       { label: "Checkout path", note: "Residency + pay", layout: "form" },
@@ -36,7 +36,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   weebo: {
-    note: "Capture → hub → ask — the knowledge loop as three skeleton screens.",
+    note: "Capture → hub → ask: the knowledge loop as three skeleton screens.",
     frames: [
       { label: "Capture", note: "Intake surface", layout: "form" },
       { label: "Knowledge hub", note: "Project library", layout: "hub" },
@@ -44,7 +44,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   csc: {
-    note: "Curated commerce bones — browse, product and room story without styling.",
+    note: "Curated commerce bones: browse, product and room story without styling.",
     frames: [
       { label: "Catalog", note: "Product grid", layout: "storefront" },
       { label: "PDP", note: "Object detail", layout: "pdp" },
@@ -52,7 +52,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   slt: {
-    note: "Culinary retail skeleton — shop, product and class journeys.",
+    note: "Culinary retail skeleton: shop, product and class journeys.",
     frames: [
       { label: "Shop home", note: "Cookware entry", layout: "storefront" },
       { label: "Product", note: "Material + buy", layout: "pdp" },
@@ -60,7 +60,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   zg: {
-    note: "Statement retail wireframes — mood-first home, object, collect.",
+    note: "Statement retail wireframes: mood-first home, object, collect.",
     frames: [
       { label: "Mood home", note: "Hero + grid", layout: "marketing" },
       { label: "Object PDP", note: "Gallery focus", layout: "pdp" },
@@ -68,7 +68,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   gigz: {
-    note: "Musician social bones — feed, share and peer feedback.",
+    note: "Musician social bones: feed, share and peer feedback.",
     frames: [
       { label: "Feed", note: "Loop stream", layout: "feed" },
       { label: "Share take", note: "Upload flow", layout: "form" },
@@ -84,7 +84,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   ctc: {
-    note: "Hardlines retail skeleton — home, aisle and project assist.",
+    note: "Hardlines retail skeleton: home, aisle and project assist.",
     frames: [
       { label: "Home", note: "Seasonal entry", layout: "storefront" },
       { label: "Category", note: "Aisle browse", layout: "hub" },
@@ -92,7 +92,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   marks: {
-    note: "Workwear commerce bones — home, kit and product detail.",
+    note: "Workwear commerce bones: home, kit and product detail.",
     frames: [
       { label: "Home", note: "Shift entry", layout: "storefront" },
       { label: "Category", note: "Utility grid", layout: "hub" },
@@ -100,7 +100,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   sportchek: {
-    note: "Sport retail skeleton — train home, kit browse and PDP.",
+    note: "Sport retail skeleton: train home, kit browse and PDP.",
     frames: [
       { label: "Home", note: "Season pulse", layout: "marketing" },
       { label: "Kit browse", note: "Sport grid", layout: "storefront" },
@@ -108,7 +108,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   partycity: {
-    note: "Occasion retail bones — theme entry, kits and product.",
+    note: "Occasion retail bones: theme entry, kits and product.",
     frames: [
       { label: "Occasions", note: "Theme entry", layout: "marketing" },
       { label: "Theme kit", note: "Party grid", layout: "storefront" },
@@ -116,7 +116,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   walmart: {
-    note: "Try-on flow skeleton — PDP entry, model choose and result.",
+    note: "Try-on flow skeleton: PDP entry, model choose and result.",
     frames: [
       { label: "Fashion PDP", note: "Try-on entry", layout: "pdp" },
       { label: "Choose model", note: "Self / model", layout: "mobile" },
@@ -124,7 +124,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   anova: {
-    note: "Guided cook bones — status, steps and plate.",
+    note: "Guided cook bones: status, steps and plate.",
     frames: [
       { label: "Oven status", note: "Heat + timer", layout: "dashboard" },
       { label: "Guided steps", note: "Cook sequence", layout: "mobile" },
@@ -132,7 +132,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   ymca: {
-    note: "Community fitness skeleton — belong, schedule and class.",
+    note: "Community fitness skeleton: belong, schedule and class.",
     frames: [
       { label: "Belong home", note: "Y entry", layout: "marketing" },
       { label: "Schedule", note: "Class list", layout: "hub" },
@@ -140,7 +140,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   ppjv: {
-    note: "Banking ops bones — queue, detail and audit trail.",
+    note: "Banking ops bones: queue, detail and audit trail.",
     frames: [
       { label: "Ops queue", note: "Worklist", layout: "dashboard" },
       { label: "Txn detail", note: "Clear path", layout: "form" },
@@ -148,7 +148,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   "first-principles": {
-    note: "Conversation skeleton — empty ask, reply and next.",
+    note: "Conversation skeleton: empty ask, reply and next.",
     frames: [
       { label: "Empty ask", note: "First message", layout: "chat" },
       { label: "Long reply", note: "Answer frame", layout: "hub" },
@@ -156,7 +156,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   westjet: {
-    note: "Airline journey bones — search, results and trip.",
+    note: "Airline journey bones: search, results and trip.",
     frames: [
       { label: "Find flights", note: "Search form", layout: "booking" },
       { label: "Results", note: "Route list", layout: "hub" },
@@ -164,7 +164,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   polard: {
-    note: "Lottery play skeleton — home, pick and draw.",
+    note: "Lottery play skeleton: home, pick and draw.",
     frames: [
       { label: "Play home", note: "Games entry", layout: "marketing" },
       { label: "Pick numbers", note: "Ticket form", layout: "form" },
@@ -172,7 +172,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   ava: {
-    note: "Generate studio bones — prompt, canvas and iterate.",
+    note: "Generate studio bones: prompt, canvas and iterate.",
     frames: [
       { label: "Prompt", note: "Input dock", layout: "form" },
       { label: "Canvas", note: "Output frame", layout: "studio" },
@@ -180,7 +180,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   "50nny": {
-    note: "Memory platform skeleton — store, test and reuse.",
+    note: "Memory platform skeleton: store, test and reuse.",
     frames: [
       { label: "Store", note: "Ingest API", layout: "dashboard" },
       { label: "Test", note: "Query console", layout: "form" },
@@ -188,7 +188,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   superlocal: {
-    note: "Market site bones — produce entry, vendors and hours.",
+    note: "Market site bones: produce entry, vendors and hours.",
     frames: [
       { label: "Market home", note: "Produce hero", layout: "marketing" },
       { label: "Vendors", note: "Stall grid", layout: "storefront" },
@@ -196,7 +196,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   blairandjack: {
-    note: "Ritual skincare skeleton — brand, product and buy.",
+    note: "Ritual skincare skeleton: brand, product and buy.",
     frames: [
       { label: "Ritual home", note: "Brand entry", layout: "marketing" },
       { label: "Product", note: "Bottle story", layout: "pdp" },
@@ -204,7 +204,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   gatorade: {
-    note: "Campaign site bones — hero, formula and proof.",
+    note: "Campaign site bones: hero, formula and proof.",
     frames: [
       { label: "Campaign hero", note: "Fuel entry", layout: "marketing" },
       { label: "Formula", note: "Science strip", layout: "hub" },
@@ -212,7 +212,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   "magic-spoon": {
-    note: "Cereal brand skeleton — pack, products and story.",
+    note: "Cereal brand skeleton: pack, products and story.",
     frames: [
       { label: "Brand home", note: "Type entry", layout: "marketing" },
       { label: "Products", note: "Flavour grid", layout: "storefront" },
@@ -220,7 +220,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   dahari: {
-    note: "Corporate RE skeleton — entry, projects and blueprint.",
+    note: "Corporate RE skeleton: entry, projects and blueprint.",
     frames: [
       { label: "Corporate home", note: "Hebrew entry", layout: "marketing" },
       { label: "Projects", note: "Portfolio grid", layout: "hub" },
@@ -228,7 +228,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   isstudio: {
-    note: "Studio site bones — house, work and talk.",
+    note: "Studio site bones: house, work and talk.",
     frames: [
       { label: "House", note: "Presence entry", layout: "marketing" },
       { label: "Work", note: "Case strip", layout: "studio" },
@@ -236,7 +236,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   telaviv: {
-    note: "Night street skeleton — arrive, explore and place.",
+    note: "Night street skeleton: arrive, explore and place.",
     frames: [
       { label: "Arrive", note: "Street entry", layout: "street" },
       { label: "Explore", note: "Roof / ride", layout: "map" },
@@ -244,7 +244,7 @@ export const wireframesData: Record<string, WireframesBoard> = {
     ],
   },
   dooogs: {
-    note: "Dog guide bones — host, ask and breed tips.",
+    note: "Dog guide bones: host, ask and breed tips.",
     frames: [
       { label: "Host home", note: "Poodle entry", layout: "marketing" },
       { label: "Ask", note: "Chat guide", layout: "chat" },

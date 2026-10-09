@@ -122,7 +122,7 @@ type ExperienceItem = {
 
 const EXPERIENCE: ExperienceItem[] = [
   {
-    dates: "2024 — Present",
+    dates: "2024 – Present",
     title: "Senior Consultant, UX Lead",
     company: "CGI",
     url: "https://www.cgi.com",
@@ -131,7 +131,7 @@ const EXPERIENCE: ExperienceItem[] = [
     tags: ["UX Leadership", "Product Design", "Research", "Prototyping", "Accessibility"],
   },
   {
-    dates: "2023 — Present",
+    dates: "2023 – Present",
     title: "Product and AI Interfaces",
     company: "IS Studio",
     url: "https://is-studio-hub.github.io/portfolio/",
@@ -140,7 +140,7 @@ const EXPERIENCE: ExperienceItem[] = [
     tags: ["Product Design", "AI Interfaces", "Web Design", "Development", "Design Systems"],
   },
   {
-    dates: "2022 — 2024",
+    dates: "2022 – 2024",
     title: "Product and AI Interface Designer",
     company: "Canadian Tire Corporation",
     url: "https://www.canadiantire.ca",
@@ -149,7 +149,7 @@ const EXPERIENCE: ExperienceItem[] = [
     tags: ["AI Interfaces", "Retail UX", "Product Design", "Prototyping", "Research"],
   },
   {
-    dates: "2020 — 2022",
+    dates: "2020 – 2022",
     title: "User Experience Lead",
     company: "CSC Generation",
     url: "https://www.cscgeneration.com",
@@ -158,7 +158,7 @@ const EXPERIENCE: ExperienceItem[] = [
     tags: ["Design Systems", "E-commerce", "UX Leadership", "Components", "Documentation"],
   },
   {
-    dates: "2017 — 2020",
+    dates: "2017 – 2020",
     title: "AI/AR Design Lead & UX Researcher",
     company: "Walmart",
     url: "https://www.walmart.com",
@@ -361,7 +361,7 @@ export function Home() {
       <Nav variant="home" />
 
       <main>
-        {/* Work — sticky intro left, project list right */}
+        {/* Work: sticky intro left, project list right */}
         <section id="work" className="page-gutter pb-24 pt-28 md:pb-32 md:pt-32">
           <div className="grid w-full gap-14 lg:grid-cols-[minmax(280px,0.95fr)_minmax(0,1.15fr)] lg:items-start lg:gap-16 xl:gap-20">
             <aside className="lg:sticky lg:top-28 lg:self-start">

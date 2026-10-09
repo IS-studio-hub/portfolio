@@ -110,7 +110,7 @@ function AssetCard({ asset, fallBackHex }: { asset: MoodAsset; fallBackHex: stri
 }
 
 /**
- * Tabbed mood board — palette, type, separate assets and references.
+ * Tabbed mood board: palette, type, separate assets and references.
  * Avoids full-screen UI screenshots in favor of discrete visual assets.
  */
 export function MoodBoardSection({ productName, mood }: MoodBoardSectionProps) {

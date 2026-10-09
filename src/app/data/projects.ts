@@ -1598,7 +1598,7 @@ const rawProjects = [
  shortTitle: "Tel Aviv",
  subtitle: "An interactive week-in-the-city guide on Dizengoff",
  description:
- "Interactive 3D website for Dizengoff 23 — a night-time Tel Aviv street corner that opens into roof parties, transit, parking, eating and the week’s cultural trash.",
+ "Interactive 3D website for Dizengoff 23, a night-time Tel Aviv street corner that opens into roof parties, transit, parking, eating and the week’s cultural trash.",
  year: "2026",
  role: "Website Designer & Builder",
  tags: ["Website", "3D", "Interactive"],
@@ -1606,13 +1606,13 @@ const rawProjects = [
  gridSpan: "half",
  image: projectImg("telaviv"),
  gallery: [
- { type: "image" as const, src: projectImg("telaviv"), caption: "Dizengoff 23 — night in Tel Aviv" },
+ { type: "image" as const, src: projectImg("telaviv"), caption: "Dizengoff 23: night in Tel Aviv" },
  ],
  liveUrl: "https://is-studio-hub.github.io/TelAviv/",
  overview:
  "Designed and shipped an interactive Tel Aviv guide where a Bauhaus street corner becomes the interface for discovering the week ahead.",
  challenge:
- "City guides are usually lists. This one needed to feel like arriving on the street — playful, spatial and useful without losing the information.",
+ "City guides are usually lists. This one needed to feel like arriving on the street: playful, spatial and useful without losing the information.",
  process: [
  {
  phase: "01",
@@ -1648,7 +1648,7 @@ const rawProjects = [
  shortTitle: "Dooogs!",
  subtitle: "A playful dog-breed guide you can chat with",
  description:
- "Interactive website for Dooogs! — a poodle-led guide to dog breeds, care, food and training, with starter prompts and voice-ready chat.",
+ "Interactive website for Dooogs!, a poodle-led guide to dog breeds, care, food and training, with starter prompts and voice-ready chat.",
  year: "2026",
  role: "Website Designer & Builder",
  tags: ["Website", "AI Chat", "Brand"],
@@ -1656,11 +1656,11 @@ const rawProjects = [
  gridSpan: "half",
  image: projectImg("dooogs"),
  gallery: [
- { type: "image" as const, src: projectImg("dooogs"), caption: "Dooogs! — chat with your breed guide" },
+ { type: "image" as const, src: projectImg("dooogs"), caption: "Dooogs!: chat with your breed guide" },
  ],
  liveUrl: "https://is-studio-hub.github.io/dooogs/en",
  overview:
- "Designed and shipped Dooogs! as a conversational dog guide — brand character first, then clear paths into breeds, care and everyday questions.",
+ "Designed and shipped Dooogs! as a conversational dog guide: brand character first, then clear paths into breeds, care and everyday questions.",
  challenge:
  "Breed guides are usually directories. This needed to feel like talking to a character while still answering real questions about dogs.",
  process: [
@@ -1698,7 +1698,7 @@ const rawProjects = [
  shortTitle: "Sewer Squad",
  subtitle: "AVA for plumbing and drains across the GTA",
  description:
- "Interactive website for Sewer Squad — AVA helps people in the GTA with plumbing and drain emergencies, quotes, bookings and quick questions, 24/7.",
+ "Interactive website for Sewer Squad, where AVA helps people in the GTA with plumbing and drain emergencies, quotes, bookings and quick questions, 24/7.",
  year: "2026",
  role: "Website Designer & Builder",
  tags: ["Website", "AI Chat", "Service"],
@@ -1706,11 +1706,11 @@ const rawProjects = [
  gridSpan: "half",
  image: projectImg("sewer-squad"),
  gallery: [
- { type: "image" as const, src: projectImg("sewer-squad"), caption: "Sewer Squad — ask AVA anything" },
+ { type: "image" as const, src: projectImg("sewer-squad"), caption: "Sewer Squad: ask AVA anything" },
  ],
  liveUrl: "https://is-studio-hub.github.io/theplumber/en",
  overview:
- "Designed and shipped Sewer Squad as a conversational service guide — a plumber host and AVA answering emergency, quote and booking questions.",
+ "Designed and shipped Sewer Squad as a conversational service guide: a plumber host and AVA answering emergency, quote and booking questions.",
  challenge:
  "Plumbing help usually starts with a phone tree. This needed to feel like talking to the crew, while still getting to an emergency, a quote or a visit.",
  process: [

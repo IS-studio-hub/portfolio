@@ -38,10 +38,10 @@ export type MoodBoard = {
   textures?: MoodTexture[];
 };
 
-/** Visual atmosphere — palette, type, separate assets and references. */
+/** Visual atmosphere: palette, type, separate assets and references. */
 export const moodBoardData: Record<string, MoodBoard> = {
   gom: {
-    note: "Government outdoors — trusted green, paper-white clarity, seasonal wilderness.",
+    note: "Government outdoors: trusted green, paper-white clarity, seasonal wilderness.",
     colors: [
       { hex: "#1B5E3B", label: "Park green" },
       { hex: "#F4F1EC", label: "Form paper" },
@@ -68,7 +68,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   weebo: {
-    note: "Knowledge that answers back — indigo depth, soft lilac signals, calm workspace light.",
+    note: "Knowledge that answers back: indigo depth, soft lilac signals, calm workspace light.",
     colors: [
       { hex: "#818CF8", label: "Signal" },
       { hex: "#1E1B4B", label: "Night UI" },
@@ -95,7 +95,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   csc: {
-    note: "Curated home luxury — warm linen, brass, editorial charcoal.",
+    note: "Curated home luxury: warm linen, brass, editorial charcoal.",
     colors: [
       { hex: "#C4A574", label: "Brass" },
       { hex: "#F7F3EC", label: "Linen" },
@@ -122,7 +122,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   slt: {
-    note: "Culinary energy — tomato red, steel, butcher-block warmth.",
+    note: "Culinary energy: tomato red, steel, butcher-block warmth.",
     colors: [
       { hex: "#C45A3C", label: "Tomato" },
       { hex: "#F5EDE3", label: "Marble" },
@@ -149,7 +149,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   zg: {
-    note: "Statement interiors — orchid violet, lacquer black, gallery white.",
+    note: "Statement interiors: orchid violet, lacquer black, gallery white.",
     colors: [
       { hex: "#A78BFA", label: "Orchid" },
       { hex: "#111111", label: "Lacquer" },
@@ -176,7 +176,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   gigz: {
-    note: "Bedroom musician energy — late-night coral, soft graphite, studio haze.",
+    note: "Bedroom musician energy: late-night coral, soft graphite, studio haze.",
     colors: [
       { hex: "#FF8A65", label: "Monitor glow" },
       { hex: "#1A1A1A", label: "Booth" },
@@ -203,7 +203,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   CHaPPie: {
-    note: "Opportunity hunting — sharp lime marks, slate panels, outbound electricity.",
+    note: "Opportunity hunting: sharp lime marks, slate panels, outbound electricity.",
     colors: [
       { hex: "#B8F000", label: "Ping" },
       { hex: "#0F172A", label: "Pipeline" },
@@ -230,7 +230,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   ctc: {
-    note: "Canadian hardlines — triangle red, tool-steel grey, weekend project light.",
+    note: "Canadian hardlines: triangle red, tool-steel grey, weekend project light.",
     colors: [
       { hex: "#DC2626", label: "Triangle" },
       { hex: "#F8FAFC", label: "Aisle" },
@@ -257,7 +257,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   marks: {
-    note: "Workwear grit — safety orange, denim indigo, dusty trail beige.",
+    note: "Workwear grit: safety orange, denim indigo, dusty trail beige.",
     colors: [
       { hex: "#FB923C", label: "Hi-vis" },
       { hex: "#1E3A5F", label: "Denim" },
@@ -284,7 +284,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   sportchek: {
-    note: "Game-day pulse — competitor red, ice white, night track black.",
+    note: "Game-day pulse: competitor red, ice white, night track black.",
     colors: [
       { hex: "#E11D2E", label: "Race red" },
       { hex: "#F8FAFC", label: "Jersey" },
@@ -311,7 +311,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   partycity: {
-    note: "Celebration overload — confetti violet, balloon yellow, cake frosting pink.",
+    note: "Celebration overload: confetti violet, balloon yellow, cake frosting pink.",
     colors: [
       { hex: "#7C3AED", label: "Party" },
       { hex: "#FDE047", label: "Balloon" },
@@ -338,7 +338,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   walmart: {
-    note: "Fashion try-on — spark blue, fitting-room chrome, garment black.",
+    note: "Fashion try-on: spark blue, fitting-room chrome, garment black.",
     colors: [
       { hex: "#0071DC", label: "Walmart blue" },
       { hex: "#FFC220", label: "Spark" },
@@ -365,7 +365,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   anova: {
-    note: "Guided cooking — ember orange, stainless, recipe parchment.",
+    note: "Guided cooking: ember orange, stainless, recipe parchment.",
     colors: [
       { hex: "#F97316", label: "Ember" },
       { hex: "#E8EEF2", label: "Steel" },
@@ -392,7 +392,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   ymca: {
-    note: "Community wellness — Y red, pool blue, locker-room concrete.",
+    note: "Community wellness: Y red, pool blue, locker-room concrete.",
     colors: [
       { hex: "#C8102E", label: "Y red" },
       { hex: "#0EA5E9", label: "Lane" },
@@ -419,7 +419,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   ppjv: {
-    note: "Internal banking — trust blue, ledger grey, secure midnight.",
+    note: "Internal banking: trust blue, ledger grey, secure midnight.",
     colors: [
       { hex: "#2563EB", label: "Trust" },
       { hex: "#0B1220", label: "Vault" },
@@ -446,7 +446,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   "first-principles": {
-    note: "Conversational intelligence — electric blue, empty-state white, thinking graphite.",
+    note: "Conversational intelligence: electric blue, empty-state white, thinking graphite.",
     colors: [
       { hex: "#2563EB", label: "Ask" },
       { hex: "#FAFAFA", label: "Empty" },
@@ -473,7 +473,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   westjet: {
-    note: "Prairie airline — teal cabin light, cloud white, runway night.",
+    note: "Prairie airline: teal cabin light, cloud white, runway night.",
     colors: [
       { hex: "#0EA5A8", label: "Teal" },
       { hex: "#F8FAFC", label: "Cloud" },
@@ -500,7 +500,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   polard: {
-    note: "Lottery tension — jackpot violet, ticket white, chance black.",
+    note: "Lottery tension: jackpot violet, ticket white, chance black.",
     colors: [
       { hex: "#7C3AED", label: "Draw" },
       { hex: "#FDF4FF", label: "Ticket" },
@@ -527,7 +527,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   ava: {
-    note: "Creative generation — blush pink, studio black, render silver.",
+    note: "Creative generation: blush pink, studio black, render silver.",
     colors: [
       { hex: "#F472B6", label: "Bloom" },
       { hex: "#0A0A0A", label: "Studio" },
@@ -554,7 +554,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   "50nny": {
-    note: "AI memory infrastructure — amber nodes, terminal black, data mint.",
+    note: "AI memory infrastructure: amber nodes, terminal black, data mint.",
     colors: [
       { hex: "#FBBF24", label: "Node" },
       { hex: "#020617", label: "Terminal" },
@@ -581,7 +581,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   superlocal: {
-    note: "Market-fresh — mustard stall light, pepper red, farm green.",
+    note: "Market-fresh: mustard stall light, pepper red, farm green.",
     colors: [
       { hex: "#E3B23C", label: "Mustard" },
       { hex: "#C92424", label: "Pepper" },
@@ -608,7 +608,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   blairandjack: {
-    note: "Men’s ritual skin — warm taupe, clinical cream, bottle black.",
+    note: "Men’s ritual skin: warm taupe, clinical cream, bottle black.",
     colors: [
       { hex: "#C4A484", label: "Taupe" },
       { hex: "#F5F1EA", label: "Serum" },
@@ -635,7 +635,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   gatorade: {
-    note: "Performance hydration — lightning orange, sweat graphite, freeze cyan.",
+    note: "Performance hydration: lightning orange, sweat graphite, freeze cyan.",
     colors: [
       { hex: "#F97316", label: "Bolt" },
       { hex: "#111827", label: "Sideline" },
@@ -662,7 +662,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   "magic-spoon": {
-    note: "Nostalgic cereal future — bowl lilac, milk white, cartoon yellow.",
+    note: "Nostalgic cereal future: bowl lilac, milk white, cartoon yellow.",
     colors: [
       { hex: "#A78BFA", label: "Bowl" },
       { hex: "#FFFBEB", label: "Milk" },
@@ -689,7 +689,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   dahari: {
-    note: "Hebrew corporate real estate — blueprint blue, limestone, ink black.",
+    note: "Hebrew corporate real estate: blueprint blue, limestone, ink black.",
     colors: [
       { hex: "#60A5FA", label: "Blueprint" },
       { hex: "#E7E2D6", label: "Limestone" },
@@ -716,7 +716,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   isstudio: {
-    note: "Studio house signal — experience gold, void black, showreel white.",
+    note: "Studio house signal: experience gold, void black, showreel white.",
     colors: [
       { hex: "#FBBF24", label: "House" },
       { hex: "#050505", label: "Void" },
@@ -743,7 +743,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   telaviv: {
-    note: "Dizengoff night — Bauhaus cream, wet asphalt, palm neon.",
+    note: "Dizengoff night: Bauhaus cream, wet asphalt, palm neon.",
     colors: [
       { hex: "#7DD3FC", label: "Night air" },
       { hex: "#F5E6C8", label: "Bauhaus" },
@@ -770,7 +770,7 @@ export const moodBoardData: Record<string, MoodBoard> = {
     ],
   },
   dooogs: {
-    note: "Poodle host charm — shirt yellow, groom white, dachshund ink.",
+    note: "Poodle host charm: shirt yellow, groom white, dachshund ink.",
     colors: [
       { hex: "#FBBF24", label: "Shirt" },
       { hex: "#E5E5E5", label: "Studio grey" },

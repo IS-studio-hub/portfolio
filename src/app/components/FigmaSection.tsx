@@ -88,7 +88,7 @@ function FileCard({
 }
 
 /**
- * Figma proof — real frames exported from the project's Figma files,
+ * Figma proof: real frames exported from the project's Figma files,
  * shown in a viewer laid out like the Figma editor (pages · canvas · inspector).
  */
 export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
