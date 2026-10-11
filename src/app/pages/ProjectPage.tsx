@@ -7,6 +7,7 @@ import { WireframesSection } from "../components/WireframesSection";
 import { DesignSystemSection } from "../components/DesignSystemSection";
 import { FigmaSection } from "../components/FigmaSection";
 import { WalmartOriginSection } from "../components/WalmartOriginSection";
+import { AnovaComponentsSection } from "../components/AnovaComponentsSection";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
@@ -370,6 +371,9 @@ export function ProjectPage() {
           )
         )}
 
+        {/* Anova only: example design system components, under the design system */}
+        {project.slug === "anova" && <AnovaComponentsSection />}
+
         {/* Figma: real frames from the project's Figma files */}
         {project.figmaShowcase && (
           <FigmaSection productName={project.shortTitle} showcase={project.figmaShowcase} />
@@ -383,7 +387,12 @@ export function ProjectPage() {
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"
               ? (project.mediaGrid ?? [])
-              : Array.from({ length: 8 }, (_, index) => project.mediaGrid?.[index])
+              : project.slug === "anova"
+                ? Array.from(
+                    { length: Math.ceil((project.mediaGrid?.length ?? 0) / 2) * 2 },
+                    (_, index) => project.mediaGrid?.[index],
+                  )
+                : Array.from({ length: 8 }, (_, index) => project.mediaGrid?.[index])
             ).map((item, index) => (
               <MediaGridCell key={index} item={item} />
             ))}

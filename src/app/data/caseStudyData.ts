@@ -2332,6 +2332,23 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
   },
 
   anova: {
+    mediaGrid: [
+      { type: "image", src: p("anova", "grid/01-home.png"), caption: "Home: recipe collections and favorites" },
+      { type: "image", src: p("anova", "grid/02-recipe-steak.png"), caption: "Strip steak recipe, ready to preheat" },
+      { type: "image", src: p("anova", "grid/03-recipe-cauliflower.png"), caption: "Cauliflower recipe with texture choice" },
+      { type: "image", src: p("anova", "grid/04-ingredients-steak.png"), caption: "Ingredients sheet: strip steak" },
+      { type: "image", src: p("anova", "grid/05-ingredients-cauliflower.png"), caption: "Ingredients sheet: cauliflower" },
+      { type: "image", src: p("anova", "grid/06-preheat-steak.png"), caption: "Live cook: steak preheating" },
+      { type: "image", src: p("anova", "grid/07-preheat-cauliflower.png"), caption: "Live cook: cauliflower steam stage" },
+      { type: "image", src: p("anova", "grid/08-preheat-complete-overlay.png"), caption: "Preheat complete alert in context" },
+      { type: "image", src: p("anova", "grid/09-preheat-complete.png"), caption: "Preheat complete: plug in the probe" },
+      { type: "image", src: p("anova", "grid/10-cooking-steak.png"), caption: "Live oven, steam, elapsed and probe readings" },
+      { type: "image", src: p("anova", "grid/11-cooking-cauliflower.png"), caption: "Cauliflower mid-cook with steam" },
+      { type: "image", src: p("anova", "grid/12-cooking-steak-target.png"), caption: "Probe reaches target doneness" },
+      { type: "image", src: p("anova", "grid/13-roast-stage-cauliflower.png"), caption: "Roasting stage with countdown timer" },
+      { type: "image", src: p("anova", "grid/14-cook-finished-overlay.png"), caption: "Cook finished alert in context" },
+      { type: "image", src: p("anova", "grid/15-cook-finished.png"), caption: "Cook finished: stop or hold stage" },
+    ],
  impact:
  "Designed a native oven companion that turns appliance functions into human decisions, from choosing food to guided setup, timers and completion.",
  client: "Digital Oven Guide",
