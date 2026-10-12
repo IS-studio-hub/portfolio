@@ -2825,6 +2825,16 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  },
 
   ppjv: {
+    mediaGrid: [
+      { type: "image", src: p("ppjv", "grid/01-create-password.png"), caption: "Create password with live validation states" },
+      { type: "image", src: p("ppjv", "grid/02-search-originators.png"), caption: "Search originators with status chips" },
+      { type: "image", src: p("ppjv", "grid/03-add-originator.png"), caption: "Add originator, desktop and mobile" },
+      { type: "image", src: p("ppjv", "grid/04-originator-details.png"), caption: "Originator details, desktop and mobile" },
+      { type: "image", src: p("ppjv", "grid/05-notifications.png"), caption: "Notifications panel" },
+      { type: "image", src: p("ppjv", "grid/06-view-transactions.png"), caption: "View transactions" },
+      { type: "image", src: p("ppjv", "grid/07-transactions-filter.png"), caption: "Advanced transaction filters" },
+      { type: "image", src: p("ppjv", "grid/08-access-controls-report.png"), caption: "Access controls report search" },
+    ],
  impact:
  "Designed an internal banking dashboard and led the Aurora design system, making complex financial operations clearer, faster and more consistent for professional users.",
  client: "PPJV · Internal Banking",

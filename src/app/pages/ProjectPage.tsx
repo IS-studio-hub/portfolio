@@ -99,7 +99,8 @@ export function ProjectPage() {
       };
     }
 
-    const fromGrid = project.mediaGrid ?? [];
+    // PPJV keeps its original hero; its grid images are for the grid only
+    const fromGrid = project.slug === "ppjv" ? [] : (project.mediaGrid ?? []);
     const fromGallery = project.gallery ?? [];
     const pool = [...fromGrid, ...fromGallery];
 
