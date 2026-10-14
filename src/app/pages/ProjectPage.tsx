@@ -8,6 +8,10 @@ import { DesignSystemSection } from "../components/DesignSystemSection";
 import { FigmaSection } from "../components/FigmaSection";
 import { WalmartOriginSection } from "../components/WalmartOriginSection";
 import { AnovaComponentsSection } from "../components/AnovaComponentsSection";
+import { GomResearchSection } from "../components/GomResearchSection";
+import { GomFlowsSection } from "../components/GomFlowsSection";
+import { GomDesignProcessSection } from "../components/GomDesignProcessSection";
+import { GomCommunicationSection } from "../components/GomCommunicationSection";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
 import { SITE, getAdjacentProjects, getProject } from "../data/projects";
@@ -331,8 +335,19 @@ export function ProjectPage() {
           </section>
         )}
 
+        {/* GOM only: mood board above competitors */}
+        {project.slug === "gom" && project.moodBoard && (
+          <MoodBoardSection
+            productName={project.shortTitle}
+            mood={project.moodBoard}
+          />
+        )}
+
+        {/* GOM only: research tabs replace the competitive field */}
+        {project.slug === "gom" && <GomResearchSection />}
+
         {/* Competitors: above media grid */}
-        {project.competitors && project.competitors.length > 0 && (
+        {project.slug !== "gom" && project.competitors && project.competitors.length > 0 && (
           <CompetitorsSection
             productName={project.shortTitle}
             intro={project.competitorsIntro}
@@ -341,7 +356,7 @@ export function ProjectPage() {
         )}
 
         {/* Mood board: above media grid */}
-        {project.moodBoard && (
+        {project.slug !== "gom" && project.moodBoard && (
           <MoodBoardSection
             productName={project.shortTitle}
             mood={project.moodBoard}
@@ -349,15 +364,22 @@ export function ProjectPage() {
         )}
 
         {/* Research conclusions: synthesis from competitors + mood, above results */}
-        {project.researchConclusions && (
+        {project.slug === "gom" && <GomFlowsSection />}
+        {project.slug !== "gom" && project.researchConclusions && (
           <ResearchConclusionsSection
             productName={project.shortTitle}
             conclusions={project.researchConclusions}
           />
         )}
 
-        {/* Design system (corporates) or wireframes (websites / startups) */}
-        {project.designSystem ? (
+        {/* GOM only: design process (atoms, components, pages) */}
+        {project.slug === "gom" && <GomDesignProcessSection pages={project.mediaGrid ?? []} />}
+
+        {/* GOM only: communication (presentation, fixing sessions, dev stories) */}
+        {project.slug === "gom" && <GomCommunicationSection />}
+
+        {/* Design system (corporates) or wireframes (websites / startups). Hidden on GOM. */}
+        {project.slug === "gom" ? null : project.designSystem ? (
           <DesignSystemSection
             productName={project.shortTitle}
             board={project.designSystem as DesignSystemBoard}
@@ -383,7 +405,9 @@ export function ProjectPage() {
         {/* Walmart only: Zeekit start-up origin story, above the media grid */}
         {project.slug === "walmart" && <WalmartOriginSection />}
 
-        {/* Media grid: images/videos when provided, otherwise empty placeholders */}
+        {/* Media grid: images/videos when provided, otherwise empty placeholders.
+            GOM shows these inside the design process section instead. */}
+        {project.slug !== "gom" && (
         <section className="page-gutter border-b border-border py-16 md:py-24">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"
@@ -399,6 +423,7 @@ export function ProjectPage() {
             ))}
           </div>
         </section>
+        )}
         </article>
 
         {/* Prev / Next */}
