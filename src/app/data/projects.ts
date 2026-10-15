@@ -1759,6 +1759,8 @@ export const WEBSITE_SLUGS = [
 
 export const CORPORATE_SLUGS = [
  "gom",
+ "ppjv",
+ "ymca",
  "csc",
  "slt",
  "zg",
@@ -1768,8 +1770,6 @@ export const CORPORATE_SLUGS = [
  "partycity",
  "walmart",
  "anova",
- "ymca",
- "ppjv",
  "westjet",
  "polard",
 ] as const;

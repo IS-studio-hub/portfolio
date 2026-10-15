@@ -9,6 +9,10 @@ import { FigmaSection } from "../components/FigmaSection";
 import { WalmartOriginSection } from "../components/WalmartOriginSection";
 import { AnovaComponentsSection } from "../components/AnovaComponentsSection";
 import { GomResearchSection } from "../components/GomResearchSection";
+import { YmcaResearchSection } from "../components/YmcaResearchSection";
+import { YmcaFlowsSection } from "../components/YmcaFlowsSection";
+import { YmcaDesignProcessSection } from "../components/YmcaDesignProcessSection";
+import { YmcaCommunicationSection } from "../components/YmcaCommunicationSection";
 import { GomFlowsSection } from "../components/GomFlowsSection";
 import { GomDesignProcessSection } from "../components/GomDesignProcessSection";
 import { GomCommunicationSection } from "../components/GomCommunicationSection";
@@ -104,7 +108,7 @@ export function ProjectPage() {
     }
 
     // PPJV keeps its original hero; its grid images are for the grid only
-    const fromGrid = project.slug === "ppjv" ? [] : (project.mediaGrid ?? []);
+    const fromGrid = project.slug === "ppjv" || project.slug === "ymca" ? [] : (project.mediaGrid ?? []);
     const fromGallery = project.gallery ?? [];
     const pool = [...fromGrid, ...fromGallery];
 
@@ -347,7 +351,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomResearchSection />}
 
         {/* Competitors: above media grid */}
-        {project.slug !== "gom" && project.competitors && project.competitors.length > 0 && (
+        {project.slug !== "gom" && project.slug !== "ymca" && project.competitors && project.competitors.length > 0 && (
           <CompetitorsSection
             productName={project.shortTitle}
             intro={project.competitorsIntro}
@@ -365,7 +369,11 @@ export function ProjectPage() {
 
         {/* Research conclusions: synthesis from competitors + mood, above results */}
         {project.slug === "gom" && <GomFlowsSection />}
-        {project.slug !== "gom" && project.researchConclusions && (
+        {project.slug === "ymca" && <YmcaResearchSection />}
+        {project.slug === "ymca" && <YmcaFlowsSection />}
+        {project.slug === "ymca" && <YmcaDesignProcessSection />}
+        {project.slug === "ymca" && <YmcaCommunicationSection />}
+        {project.slug !== "gom" && project.slug !== "ymca" && project.researchConclusions && (
           <ResearchConclusionsSection
             productName={project.shortTitle}
             conclusions={project.researchConclusions}
@@ -379,7 +387,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomCommunicationSection />}
 
         {/* Design system (corporates) or wireframes (websites / startups). Hidden on GOM. */}
-        {project.slug === "gom" ? null : project.designSystem ? (
+        {project.slug === "gom" || project.slug === "ymca" ? null : project.designSystem ? (
           <DesignSystemSection
             productName={project.shortTitle}
             board={project.designSystem as DesignSystemBoard}

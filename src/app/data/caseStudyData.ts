@@ -2586,6 +2586,15 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  },
 
   ymca: {
+    mediaGrid: [
+      { type: "image", src: p("ymca", "grid/01-intro-home-calendar.png"), caption: "Intro, member moments, home and calendar" },
+      { type: "image", src: p("ymca", "grid/02-login-signup-payment.png"), caption: "Login, sign-up, add a member and payment" },
+      { type: "image", src: p("ymca", "grid/03-profile-setup.png"), caption: "Profile setup, location and membership type" },
+      { type: "image", src: p("ymca", "grid/04-scan-cards.png"), caption: "Scan and membership card colours" },
+      { type: "image", src: p("ymca", "grid/05-achievements-booking.png"), caption: "Achievements, booking, profile and filters" },
+      { type: "image", src: p("ymca", "grid/06-settings-help.png"), caption: "Settings, notifications, password and help" },
+      { type: "image", src: p("ymca", "grid/07-components.png"), caption: "Components: checkbox, tabs, cards and offerings" },
+    ],
  impact:
  "Designed a native YMCA member app that organizes facilities, activities and everyday needs around one clear member experience.",
  client: "YMCA",
