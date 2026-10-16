@@ -13,6 +13,7 @@ import { WestjetDesignProcessSection } from "../components/WestjetDesignProcessS
 import { WestjetCommunicationSection } from "../components/WestjetCommunicationSection";
 import { WestjetEvolutionSection } from "../components/WestjetEvolutionSection";
 import { WestjetFlowsSection } from "../components/WestjetFlowsSection";
+import { PolardProjectsSection } from "../components/PolardProjectsSection";
 import { WestjetResearchSection } from "../components/WestjetResearchSection";
 import { YmcaResearchSection } from "../components/YmcaResearchSection";
 import { YmcaFlowsSection } from "../components/YmcaFlowsSection";
@@ -360,7 +361,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomResearchSection />}
 
         {/* Competitors: above media grid */}
-        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.competitors && project.competitors.length > 0 && (
+        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.slug !== "polard" && project.competitors && project.competitors.length > 0 && (
           <CompetitorsSection
             productName={project.shortTitle}
             intro={project.competitorsIntro}
@@ -375,6 +376,9 @@ export function ProjectPage() {
             mood={project.moodBoard}
           />
         )}
+
+        {/* Lottery Portal only: project switcher; everything below it is per project */}
+        {project.slug === "polard" && <PolardProjectsSection />}
 
         {/* Research conclusions: synthesis from competitors + mood, above results */}
         {project.slug === "gom" && <GomFlowsSection />}
@@ -391,7 +395,7 @@ export function ProjectPage() {
         {project.slug === "ymca" && <YmcaFlowsSection />}
         {project.slug === "ymca" && <YmcaDesignProcessSection />}
         {project.slug === "ymca" && <YmcaCommunicationSection />}
-        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.researchConclusions && (
+        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.slug !== "polard" && project.researchConclusions && (
           <ResearchConclusionsSection
             productName={project.shortTitle}
             conclusions={project.researchConclusions}
@@ -405,7 +409,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomCommunicationSection />}
 
         {/* Design system (corporates) or wireframes (websites / startups). Hidden on GOM. */}
-        {project.slug === "gom" || project.slug === "ymca" || project.slug === "ppjv" || project.slug === "westjet" ? null : project.designSystem ? (
+        {project.slug === "gom" || project.slug === "ymca" || project.slug === "ppjv" || project.slug === "westjet" || project.slug === "polard" ? null : project.designSystem ? (
           <DesignSystemSection
             productName={project.shortTitle}
             board={project.designSystem as DesignSystemBoard}
@@ -433,7 +437,7 @@ export function ProjectPage() {
 
         {/* Media grid: images/videos when provided, otherwise empty placeholders.
             GOM shows these inside the design process section instead. */}
-        {project.slug !== "gom" && project.slug !== "ppjv" && (
+        {project.slug !== "gom" && project.slug !== "ppjv" && project.slug !== "polard" && (
         <section className="page-gutter border-b border-border py-16 md:py-24">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"

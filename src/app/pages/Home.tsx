@@ -9,9 +9,9 @@ import { assetPath } from "../lib/assetPath";
 const SECTION_NAV = [
   { id: "about-intro", label: "About" },
   { id: "experience", label: "Experience" },
-  { id: "corporates", label: "Corporates" },
-  { id: "websites", label: "Websites" },
-  { id: "startups", label: "Startups" },
+  { id: "corporates", label: "UX/UI specialist" },
+  { id: "websites", label: "One Man Show" },
+  { id: "startups", label: "Creative Director" },
 ] as const;
 
 function StatBlock({ value, label }: { value: number | string; label: string }) {
@@ -90,17 +90,26 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 function ProjectGroup({
   id,
   title,
+  description,
   items,
 }: {
   id: string;
   title: string;
+  description?: string;
   items: Project[];
 }) {
   if (items.length === 0) return null;
 
   return (
     <div id={id} className="scroll-mt-28">
-      <h3 className="mb-8 font-mono text-xs uppercase tracking-widest text-accent">{title}</h3>
+      <div className="mb-8">
+        <h3 className="font-mono text-xs uppercase tracking-widest text-accent">{title}</h3>
+        {description && (
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted md:text-[15px]">
+            {description}
+          </p>
+        )}
+      </div>
       <div className="space-y-10 md:space-y-12">
         {items.map((project, i) => (
           <ProjectCard key={project.slug} project={project} index={i} />
@@ -385,10 +394,10 @@ export function Home() {
 
               <SectionNav activeId={activeSection} />
 
-              <div className="mt-12 flex flex-nowrap items-start gap-4 sm:gap-5">
-                <StatBlock value={corporateProjects.length} label="Corporates" />
-                <StatBlock value={websiteProjects.length} label="Websites" />
-                <StatBlock value={startupProjects.length} label="Startups" />
+              <div className="mt-12 flex flex-wrap items-start gap-x-5 gap-y-4">
+                <StatBlock value={corporateProjects.length} label="UX/UI specialist" />
+                <StatBlock value={websiteProjects.length} label="One Man Show" />
+                <StatBlock value={startupProjects.length} label="Creative Director" />
                 <StatBlock value={SITE.stats.years} label="Years" />
                 <StatBlock value={SITE.stats.clients} label="Clients" />
               </div>
@@ -428,9 +437,24 @@ export function Home() {
 
               <ExperienceList />
 
-              <ProjectGroup id="corporates" title="Corporates" items={corporateProjects} />
-              <ProjectGroup id="websites" title="Websites" items={websiteProjects} />
-              <ProjectGroup id="startups" title="Startups" items={startupProjects} />
+              <ProjectGroup
+                id="corporates"
+                title="UX/UI specialist"
+                description="Enterprise, government and retail products where I led UX inside larger teams: research, flows, design systems, accessibility and dev-ready handoff, for clients like the Government of Manitoba, YMCA, WestJet and Walmart."
+                items={corporateProjects}
+              />
+              <ProjectGroup
+                id="websites"
+                title="One Man Show"
+                description="Websites I took from idea to launch on my own: strategy, UX, visual design, content and front-end development, all in one pair of hands."
+                items={websiteProjects}
+              />
+              <ProjectGroup
+                id="startups"
+                title="Creative Director"
+                description="Startups and new products where I set the creative direction: shaping the brand and product vision, leading the design and taking ideas from zero to a first release."
+                items={startupProjects}
+              />
             </div>
           </div>
         </section>

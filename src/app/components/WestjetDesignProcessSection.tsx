@@ -145,14 +145,15 @@ export function WestjetDesignProcessSection() {
         role="tabpanel"
         id={`westjet-design-panel-${tab}`}
         aria-labelledby={`westjet-design-tab-${tab}`}
-        className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.35fr)] lg:gap-16"
       >
-        <div>
-          <h3 className="font-display text-2xl font-semibold tracking-tight text-text">
-            {current.title}
-          </h3>
-          <p className="mt-4 text-sm leading-relaxed text-muted md:text-[15px]">{current.lead}</p>
-          <ol className="mt-8 m-0 list-none space-y-6 p-0">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.35fr)] lg:gap-16">
+          <div className="max-w-md">
+            <h3 className="font-display text-2xl font-semibold tracking-tight text-text">
+              {current.title}
+            </h3>
+            <p className="mt-4 text-sm leading-relaxed text-muted md:text-[15px]">{current.lead}</p>
+          </div>
+          <ol className="m-0 grid list-none gap-6 p-0 sm:grid-cols-2">
             {current.points.map((point, index) => (
               <li key={point.title} className="border-t border-border pt-5">
                 <span className="font-mono text-[11px] tabular-nums text-accent">
@@ -164,14 +165,17 @@ export function WestjetDesignProcessSection() {
             ))}
           </ol>
         </div>
-        <ImageLightboxGallery
-          key={current.id}
-          label="screen"
-          items={current.images.map((image) => ({
-            src: assetPath(`/projects/westjet/raw/${image.file}`),
-            title: image.title,
-          }))}
-        />
+        <div className="mt-12">
+          <ImageLightboxGallery
+            columns={5}
+            key={current.id}
+            label="screen"
+            items={current.images.map((image) => ({
+              src: assetPath(`/projects/westjet/raw/${image.file}`),
+              title: image.title,
+            }))}
+          />
+        </div>
       </div>
     </section>
   );

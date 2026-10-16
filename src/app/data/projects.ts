@@ -1755,6 +1755,10 @@ export const WEBSITE_SLUGS = [
  "telaviv",
  "dooogs",
  "sewer-squad",
+ "weebo",
+ "CHaPPie",
+ "ava",
+ "50nny",
 ] as const;
 
 export const CORPORATE_SLUGS = [
@@ -1777,12 +1781,8 @@ export const CORPORATE_SLUGS = [
 const CORPORATE_SLUG_SET = new Set<string>(CORPORATE_SLUGS);
 
 export const STARTUP_SLUGS = [
- "weebo",
- "CHaPPie",
  "gigz",
  "first-principles",
- "ava",
- "50nny",
 ] as const;
 
 const bySlug = (list: readonly string[]) =>

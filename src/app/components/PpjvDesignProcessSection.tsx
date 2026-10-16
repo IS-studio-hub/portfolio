@@ -144,7 +144,8 @@ export function PpjvDesignProcessSection({ pages }: { pages: ProjectMedia[] }) {
         )}
         {tab === "atoms" && (
           <div className="mt-12">
-            <ImageLightboxGallery label="atoms" items={atomImages} />
+            <ImageLightboxGallery
+          columns={5} label="atoms" items={atomImages} />
           </div>
         )}
 
@@ -158,7 +159,8 @@ export function PpjvDesignProcessSection({ pages }: { pages: ProjectMedia[] }) {
         )}
         {tab === "components" && (
           <div className="mt-12">
-            <ImageLightboxGallery label="component" items={componentImages} />
+            <ImageLightboxGallery
+          columns={5} label="component" items={componentImages} />
           </div>
         )}
 
@@ -175,6 +177,7 @@ export function PpjvDesignProcessSection({ pages }: { pages: ProjectMedia[] }) {
               </p>
             </div>
             <ImageLightboxGallery
+          columns={5}
               label="page"
               items={pages.map((item) => ({
                 src: item.src,

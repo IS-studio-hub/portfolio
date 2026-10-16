@@ -15,7 +15,19 @@ export type LightboxItem = {
  * Gallery that keeps each image's original ratio and opens a full-screen
  * lightbox on click (click image to zoom, arrows to navigate, Esc to close).
  */
-export function ImageLightboxGallery({ items, label }: { items: LightboxItem[]; label: string }) {
+export function ImageLightboxGallery({
+  items,
+  label,
+  crop = false,
+  columns = 3,
+}: {
+  items: LightboxItem[];
+  label: string;
+  /** Show uniform, top-aligned thumbnails (for very tall full-page screens). The lightbox still shows the full image. */
+  crop?: boolean;
+  /** Images per row on desktop: 3 (default) or 5. */
+  columns?: 3 | 5;
+}) {
   const [open, setOpen] = useState<number | null>(null);
   const images = items.filter((item) => item.type !== "video");
   const [zoomed, setZoomed] = useState(false);
@@ -52,9 +64,13 @@ export function ImageLightboxGallery({ items, label }: { items: LightboxItem[]; 
 
   return (
     <>
-      <div className="grid items-start gap-4 md:grid-cols-3 md:gap-6">
+      <div
+        className={`grid items-start gap-4 md:gap-6 ${
+          columns === 5 ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-5" : "md:grid-cols-3"
+        }`}
+      >
         {items.map((item) => (
-          <figure key={item.src} className={`m-0 ${item.wide ? "md:col-span-3" : ""}`}>
+          <figure key={item.src} className={`m-0 ${item.wide ? "col-span-full" : ""}`}>
             {item.type === "video" ? (
               <video
                 src={item.src}
@@ -77,7 +93,7 @@ export function ImageLightboxGallery({ items, label }: { items: LightboxItem[]; 
                 src={item.src}
                 alt={`${item.title} ${label}`}
                 loading="lazy"
-                className="block h-auto w-full"
+                className={crop ? "block aspect-[4/5] w-full object-cover object-top" : "block h-auto w-full"}
               />
             </button>
             )}
