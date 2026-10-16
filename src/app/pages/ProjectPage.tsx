@@ -9,6 +9,9 @@ import { FigmaSection } from "../components/FigmaSection";
 import { WalmartOriginSection } from "../components/WalmartOriginSection";
 import { AnovaComponentsSection } from "../components/AnovaComponentsSection";
 import { GomResearchSection } from "../components/GomResearchSection";
+import { WestjetDesignProcessSection } from "../components/WestjetDesignProcessSection";
+import { WestjetCommunicationSection } from "../components/WestjetCommunicationSection";
+import { WestjetEvolutionSection } from "../components/WestjetEvolutionSection";
 import { WestjetFlowsSection } from "../components/WestjetFlowsSection";
 import { WestjetResearchSection } from "../components/WestjetResearchSection";
 import { YmcaResearchSection } from "../components/YmcaResearchSection";
@@ -104,17 +107,17 @@ export function ProjectPage() {
   const heroMedia = useMemo(() => {
     if (!project) return null;
 
-    // Anova only: hero uses the same image as the homepage card
-    if (project.slug === "anova") {
+    // Anova, YMCA and WestJet: hero uses the same image as the homepage card
+    if (project.slug === "anova" || project.slug === "ymca" || project.slug === "westjet") {
       return {
         type: "image" as const,
-        src: assetPath("/projects/anova/card.png"),
+        src: assetPath(`/projects/${project.slug}/card.png`),
         alt: project.title,
       };
     }
 
     // PPJV keeps its original hero; its grid images are for the grid only
-    const fromGrid = project.slug === "ppjv" || project.slug === "ymca" ? [] : (project.mediaGrid ?? []);
+    const fromGrid = project.slug === "ppjv" || project.slug === "ymca" || project.slug === "westjet" ? [] : (project.mediaGrid ?? []);
     const fromGallery = project.gallery ?? [];
     const pool = [...fromGrid, ...fromGallery];
 
@@ -378,6 +381,9 @@ export function ProjectPage() {
         {project.slug === "ymca" && <YmcaResearchSection />}
         {project.slug === "westjet" && <WestjetResearchSection />}
         {project.slug === "westjet" && <WestjetFlowsSection />}
+        {project.slug === "westjet" && <WestjetDesignProcessSection />}
+        {project.slug === "westjet" && <WestjetCommunicationSection />}
+        {project.slug === "westjet" && <WestjetEvolutionSection />}
         {project.slug === "ppjv" && <PpjvResearchSection />}
         {project.slug === "ppjv" && <PpjvFlowsSection />}
         {project.slug === "ppjv" && <PpjvDesignProcessSection pages={project.mediaGrid ?? []} />}
@@ -432,7 +438,7 @@ export function ProjectPage() {
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"
               ? (project.mediaGrid ?? [])
-              : project.slug === "anova"
+              : project.slug === "anova" || project.slug === "westjet"
                 ? Array.from(
                     { length: Math.ceil((project.mediaGrid?.length ?? 0) / 2) * 2 },
                     (_, index) => project.mediaGrid?.[index],

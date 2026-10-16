@@ -3346,6 +3346,27 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
 
 
   westjet: {
+    mediaGrid: [
+      { type: "image", src: p("westjet", "grid/01-where-to.png"), caption: "Book: where would you like to go?" },
+      { type: "image", src: p("westjet", "grid/02-book-a-flight.png"), caption: "Book a flight: return, one-way or multi-city" },
+      { type: "image", src: p("westjet", "grid/03-choose-fare.png"), caption: "Choose a date and fare" },
+      { type: "image", src: p("westjet", "grid/04-flight-services.png"), caption: "Flight services: bags, Wi-Fi, seats and pets" },
+      { type: "image", src: p("westjet", "grid/05-price-summary.png"), caption: "Price summary before payment" },
+      { type: "image", src: p("westjet", "grid/06-trips.png"), caption: "Trips: upcoming flights at a glance" },
+      { type: "image", src: p("westjet", "grid/07-trips-check-in.png"), caption: "Check-in opens on the trip card" },
+      { type: "image", src: p("westjet", "grid/08-check-in-notification.png"), caption: "Time-sensitive check-in notification" },
+      { type: "image", src: p("westjet", "grid/09-trip-details.png"), caption: "Trip details: passengers, bags, insurance, cars" },
+      { type: "image", src: p("westjet", "grid/10-add-baggage.png"), caption: "Add extra baggage with a clear total" },
+      { type: "image", src: p("westjet", "grid/11-checked-in.png"), caption: "Checked in: boarding passes available offline" },
+      { type: "image", src: p("westjet", "grid/12-trip-home.png"), caption: "Trip home: timeline from check-in to the airport" },
+      { type: "image", src: p("westjet", "grid/13-trip-home-baggage.png"), caption: "Trip home with baggage and gate updates" },
+      { type: "image", src: p("westjet", "grid/14-bags-priority.png"), caption: "Bag drop guidance and baggage notifications" },
+      { type: "image", src: p("westjet", "grid/15-quick-drop.png"), caption: "Quick Drop baggage service" },
+      { type: "image", src: p("westjet", "grid/16-airport-map.png"), caption: "Airport map with boarding pass on top" },
+      { type: "image", src: p("westjet", "grid/17-map-baggage-status.png"), caption: "Baggage status over the airport map" },
+      { type: "image", src: p("westjet", "grid/18-boarding-pass-status.png"), caption: "Boarding pass, gate and baggage status" },
+      { type: "image", src: p("westjet", "grid/19-ops-baggage-status.png"), caption: "Operations view: baggage loading confirmation" },
+    ],
  impact:
  "Created a proposal vision connecting ticketing, check-in, baggage and operations into one journey from ticket to takeoff.",
     client: "WestJet",

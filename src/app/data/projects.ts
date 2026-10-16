@@ -1762,6 +1762,7 @@ export const CORPORATE_SLUGS = [
  "ppjv",
  "ymca",
  "westjet",
+ "polard",
  "csc",
  "slt",
  "zg",
@@ -1771,7 +1772,6 @@ export const CORPORATE_SLUGS = [
  "partycity",
  "walmart",
  "anova",
- "polard",
 ] as const;
 
 const CORPORATE_SLUG_SET = new Set<string>(CORPORATE_SLUGS);

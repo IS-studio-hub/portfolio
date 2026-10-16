@@ -31,7 +31,7 @@ const narratives: { name: string; detail?: string; parts: string[] }[] = [
 ];
 
 const flowExamples = [
-  { file: "01-current-app-flows.png", title: "Current WestJet app flows", note: "Book, trips, flight status and travel ready", wide: true },
+  { file: "01-current-app-flows.png", title: "Current WestJet app flows", note: "Book, trips, flight status and travel ready" },
 ].map((item) => ({ ...item, src: assetPath(`/projects/westjet/flows/${item.file}`) }));
 
 const contentPoints = [
