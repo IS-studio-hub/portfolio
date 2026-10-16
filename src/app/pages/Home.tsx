@@ -25,14 +25,23 @@ function StatBlock({ value, label }: { value: number | string; label: string }) 
   );
 }
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({
+  project,
+  index,
+  noReveal = false,
+}: {
+  project: Project;
+  index: number;
+  /** Skip the scroll reveal (used inside an animated group). */
+  noReveal?: boolean;
+}) {
   const ref = useScrollReveal<HTMLDivElement>();
 
   return (
     <div
-      ref={ref}
-      className="reveal"
-      style={{ transitionDelay: `${Math.min(index, 8) * 0.05}s` }}
+      ref={noReveal ? undefined : ref}
+      className={noReveal ? "" : "reveal"}
+      style={noReveal ? undefined : { transitionDelay: `${Math.min(index, 8) * 0.05}s` }}
     >
       <Link
         to={`/project/${project.slug}`}
@@ -87,6 +96,173 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   );
 }
 
+type CardGroup = {
+  id: string;
+  slugs: string[];
+  label: string;
+  title: string;
+  description: string;
+  year: string;
+  tags: string[];
+};
+
+/** Projects that collapse under one card on the home page and open on click. */
+const CARD_GROUPS: CardGroup[] = [
+  {
+    id: "csc-generation",
+    slugs: ["csc", "slt", "zg"],
+    label: "CSC Generation",
+    title: "CSC Generation · 3 brands",
+    description:
+      "As User Experience Lead at CSC Generation, I led UX and design systems across three retail brands: One Kings Lane, Sur La Table and Z Gallerie. Click to open the brands.",
+    year: "2020 – 2022",
+    tags: ["Design systems", "Ecommerce", "UX Lead"],
+  },
+  {
+    id: "canadian-tire-corporation",
+    slugs: ["ctc", "marks", "sportchek", "partycity"],
+    label: "Canadian Tire Corporation",
+    title: "Canadian Tire Corporation · 4 brands",
+    description:
+      "As Product and AI Interface Designer at Canadian Tire Corporation, I worked across four of its retail brands: Canadian Tire, Mark's, Sport Chek and Party City. Click to open the brands.",
+    year: "2022 – 2024",
+    tags: ["Product design", "AI interfaces", "Ecommerce"],
+  },
+];
+
+function GroupCard({
+  group,
+  projects,
+  index,
+}: {
+  group: CardGroup;
+  projects: Project[];
+  index: number;
+}) {
+  const ref = useScrollReveal<HTMLDivElement>();
+  // "closed" → "open" → "closing" → "closed"; closing keeps the cards mounted while they animate out.
+  const [state, setState] = useState<"closed" | "open" | "closing">("closed");
+  const open = state === "open";
+  const panelId = `${group.id}-projects`;
+  const closeStagger = 90;
+  const closeDuration = 400;
+
+  useEffect(() => {
+    if (state !== "closing") return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const total = reduce ? 0 : closeDuration + (projects.length - 1) * closeStagger;
+    const t = window.setTimeout(() => setState("closed"), total);
+    return () => window.clearTimeout(t);
+  }, [state, projects.length]);
+
+  const toggle = () => setState((s) => (s === "open" ? "closing" : "open"));
+
+  return (
+    <div
+      ref={ref}
+      className="reveal"
+      style={{ transitionDelay: `${Math.min(index, 8) * 0.05}s` }}
+    >
+      <button
+        type="button"
+        onClick={toggle}
+        aria-expanded={open}
+        aria-controls={panelId}
+        className="group grid w-full grid-cols-1 items-start gap-5 text-left sm:grid-cols-[minmax(140px,220px)_minmax(0,1fr)] sm:gap-8"
+        data-cursor={open ? "Close" : "Open"}
+      >
+        <div className="relative aspect-[16/10]">
+          {projects.map((project, i) => {
+            const offset = (projects.length - 1 - i) * 8;
+            return (
+              <div
+                key={project.slug}
+                className="absolute inset-0 overflow-hidden rounded-xl border border-border bg-surface shadow-lg transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                style={{
+                  transform: open
+                    ? `translate(${(i - 1) * 6}px, ${(i - 1) * 6}px) rotate(${(i - 1) * 4}deg)`
+                    : `translate(${-offset}px, ${-offset}px)`,
+                  zIndex: i,
+                }}
+              >
+                <img
+                  src={assetPath(`/projects/${project.slug}/card.png`)}
+                  alt=""
+                  className="h-full w-full object-cover object-center"
+                  onError={(event) => {
+                    const img = event.currentTarget;
+                    if (img.dataset.fallback === "1") return;
+                    img.dataset.fallback = "1";
+                    img.src = project.image;
+                  }}
+                />
+              </div>
+            );
+          })}
+          <span className="absolute -right-2 -top-2 z-10 rounded-full bg-accent px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-widest text-bg">
+            {projects.length}
+          </span>
+        </div>
+
+        <div className="min-w-0 pt-0.5">
+          <div className="flex items-start gap-2">
+            <h3 className="font-sans text-lg font-semibold leading-snug text-text transition-colors group-hover:text-accent md:text-xl">
+              {group.title}
+            </h3>
+            <span
+              aria-hidden="true"
+              className={`mt-1 shrink-0 text-sm text-muted transition-transform duration-300 group-hover:text-accent ${
+                open ? "rotate-180" : ""
+              }`}
+            >
+              ↓
+            </span>
+          </div>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted md:text-[15px]">
+            {group.description}
+          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-muted">
+              {group.year}
+            </span>
+            {group.tags.map((tag) => (
+              <span key={tag} className="font-mono text-[10px] uppercase tracking-widest text-muted/80">
+                {tag}
+              </span>
+            ))}
+            <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-accent">
+              {open ? "Hide brands" : `Show ${projects.length} brands`}
+            </span>
+          </div>
+        </div>
+      </button>
+
+      {state !== "closed" && (
+        <div
+          id={panelId}
+          className="mt-10 space-y-10 border-l border-border pl-4 sm:pl-6 md:mt-12 md:space-y-12"
+        >
+          {projects.map((project, i) => (
+            <div
+              key={project.slug}
+              className={state === "closing" ? "group-slide-up" : "group-slide-down"}
+              style={{
+                // Open: top card first. Close: bottom card first.
+                animationDelay:
+                  state === "closing"
+                    ? `${(projects.length - 1 - i) * closeStagger}ms`
+                    : `${i * 140}ms`,
+              }}
+            >
+              <ProjectCard project={project} index={i} noReveal />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ProjectGroup({
   id,
   title,
@@ -111,9 +287,17 @@ function ProjectGroup({
         )}
       </div>
       <div className="space-y-10 md:space-y-12">
-        {items.map((project, i) => (
-          <ProjectCard key={project.slug} project={project} index={i} />
-        ))}
+        {items.map((project, i) => {
+          const group = CARD_GROUPS.find((g) => g.slugs.includes(project.slug));
+          if (!group) return <ProjectCard key={project.slug} project={project} index={i} />;
+          // Render the group once, at the position of its first project.
+          const first = items.find((p) => group.slugs.includes(p.slug));
+          if (first?.slug !== project.slug) return null;
+          const groupProjects = group.slugs
+            .map((slug) => items.find((p) => p.slug === slug))
+            .filter((p): p is Project => Boolean(p));
+          return <GroupCard key={group.id} group={group} projects={groupProjects} index={i} />;
+        })}
       </div>
     </div>
   );

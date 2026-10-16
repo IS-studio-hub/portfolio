@@ -14,6 +14,8 @@ import { WestjetCommunicationSection } from "../components/WestjetCommunicationS
 import { WestjetEvolutionSection } from "../components/WestjetEvolutionSection";
 import { WestjetFlowsSection } from "../components/WestjetFlowsSection";
 import { PolardProjectsSection } from "../components/PolardProjectsSection";
+import { WalmartFlowsSection } from "../components/WalmartFlowsSection";
+import { WalmartResearchSection } from "../components/WalmartResearchSection";
 import { WestjetResearchSection } from "../components/WestjetResearchSection";
 import { YmcaResearchSection } from "../components/YmcaResearchSection";
 import { YmcaFlowsSection } from "../components/YmcaFlowsSection";
@@ -361,7 +363,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomResearchSection />}
 
         {/* Competitors: above media grid */}
-        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.slug !== "polard" && project.competitors && project.competitors.length > 0 && (
+        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.slug !== "polard" && project.slug !== "walmart" && project.competitors && project.competitors.length > 0 && (
           <CompetitorsSection
             productName={project.shortTitle}
             intro={project.competitorsIntro}
@@ -384,6 +386,8 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomFlowsSection />}
         {project.slug === "ymca" && <YmcaResearchSection />}
         {project.slug === "westjet" && <WestjetResearchSection />}
+        {project.slug === "walmart" && <WalmartResearchSection />}
+        {project.slug === "walmart" && <WalmartFlowsSection />}
         {project.slug === "westjet" && <WestjetFlowsSection />}
         {project.slug === "westjet" && <WestjetDesignProcessSection />}
         {project.slug === "westjet" && <WestjetCommunicationSection />}
@@ -395,7 +399,7 @@ export function ProjectPage() {
         {project.slug === "ymca" && <YmcaFlowsSection />}
         {project.slug === "ymca" && <YmcaDesignProcessSection />}
         {project.slug === "ymca" && <YmcaCommunicationSection />}
-        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.slug !== "polard" && project.researchConclusions && (
+        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.slug !== "polard" && project.slug !== "walmart" && project.researchConclusions && (
           <ResearchConclusionsSection
             productName={project.shortTitle}
             conclusions={project.researchConclusions}
@@ -409,7 +413,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomCommunicationSection />}
 
         {/* Design system (corporates) or wireframes (websites / startups). Hidden on GOM. */}
-        {project.slug === "gom" || project.slug === "ymca" || project.slug === "ppjv" || project.slug === "westjet" || project.slug === "polard" ? null : project.designSystem ? (
+        {project.slug === "gom" || project.slug === "ymca" || project.slug === "ppjv" || project.slug === "westjet" || project.slug === "polard" || project.slug === "walmart" ? null : project.designSystem ? (
           <DesignSystemSection
             productName={project.shortTitle}
             board={project.designSystem as DesignSystemBoard}
