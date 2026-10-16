@@ -19,16 +19,29 @@ const atomPoints = [
 ];
 
 const atomImages = [
-  { file: "18-aurora-colours.png", title: "Colours", note: "Aurora foundations" },
-  { file: "19-aurora-buttons.png", title: "Buttons", note: "Variants & states" },
-  { file: "22-aurora-fields.png", title: "Fields", note: "Inputs & validation" },
-].map((item) => ({ ...item, src: assetPath(`/projects/ppjv/figma/${item.file}`) }));
+  { file: "01-colours.png", title: "Colours", note: "Primary, secondary, tertiary & Auth0" },
+  { file: "02-typography.png", title: "Typography", note: "Roboto type scale" },
+  { file: "03-brand-fonts.png", title: "Brand fonts", note: "Arial brand guidelines" },
+  { file: "04-icons.png", title: "Icons", note: "Material icon set" },
+  { file: "05-sizes-spacings.png", title: "Sizes & spacings", note: "Multiples of 4 and 8" },
+  { file: "06-layout-grid.png", title: "Layout grid", note: "Desktop, tablet & mobile" },
+  { file: "07-css-grid.png", title: "CSS grid containers", note: "Large & XL breakpoints" },
+  { file: "08-grid-applied.png", title: "Grid applied", note: "Manage originators" },
+  { file: "09-buttons.png", title: "Buttons", note: "Light, Auth0 & dark themes", wide: true },
+  { file: "10-switch.png", title: "Switch", note: "Default, hover, focused & disabled", wide: true },
+].map((item) => ({ ...item, src: assetPath(`/projects/ppjv/atoms/${item.file}`) }));
 
 const componentImages = [
   { file: "20-aurora-table.png", title: "Data table", note: "Sort, filter & status" },
   { file: "21-aurora-nav.png", title: "Navigation", note: "Header & dashboard" },
   { file: "23-aurora-sidenav.png", title: "Side navigation", note: "States", wide: true },
-].map((item) => ({ ...item, src: assetPath(`/projects/ppjv/figma/${item.file}`) }));
+].map((item) => ({ ...item, src: assetPath(`/projects/ppjv/figma/${item.file}`) })).concat(
+  [
+    { file: "02-time-picker.png", title: "Time picker", note: "12h, 24h & building blocks" },
+    { file: "03-menus.png", title: "Menus", note: "Credit union selector states" },
+    { file: "01-utilities.png", title: "Utilities", note: "Keyboards & device frames" },
+  ].map((item) => ({ ...item, src: assetPath(`/projects/ppjv/components/${item.file}`) })),
+);
 
 const componentPoints = [
   { title: "Data tables", body: "Tables as interaction systems: scan, sort, filter, select, compare, act and recover, with consistent status chips." },

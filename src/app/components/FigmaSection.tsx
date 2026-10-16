@@ -186,6 +186,17 @@ export function FigmaSection({ productName, showcase }: FigmaSectionProps) {
             ))}
           </div>
           <div className="flex shrink-0 items-center gap-1">
+            {file.url && (
+              <a
+                href={file.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="Figma"
+                className="mr-1 hidden rounded-md border border-white/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-white/70 hover:border-white/25 hover:text-white sm:block"
+              >
+                Open in Figma ↗
+              </a>
+            )}
             <button
               type="button"
               onClick={() => step(-1)}

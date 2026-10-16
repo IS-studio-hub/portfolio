@@ -22,6 +22,8 @@ export type FigmaFile = {
   kind: string;
   cover: string;
   summary: string;
+  /** Optional link to the real Figma file. */
+  url?: string;
   stats: { value: string; label: string }[];
   /** Full page list in file order. Divider pages (dashes only) render as separators. */
   pages: string[];
@@ -38,8 +40,96 @@ const csc = (file: string) => assetPath(`/projects/csc/figma/${file}`);
 const slt = (file: string) => assetPath(`/projects/slt/figma/${file}`);
 const zg = (file: string) => assetPath(`/projects/zg/figma/${file}`);
 const ctc = (file: string) => assetPath(`/projects/ctc/figma/${file}`);
+const ppjv = (file: string) => assetPath(`/projects/ppjv/figma/${file}`);
 
 export const figmaFilesData: Record<string, FigmaShowcase> = {
+  ppjv: {
+    note:
+      "Selected frames from three of the working files behind PPJV: two sprint handoff files and the Aurora design system. Frames are grouped by product area; the files themselves are private to the client.",
+    files: [
+      {
+        id: "handoff-a",
+        url: "https://www.figma.com/design/M3yIrSWJ3AAPNWuRJCjWE2/Handoff-file?node-id=6374-21083",
+        name: "PPJV – Handoff file (originators & access)",
+        kind: "Handoff file",
+        cover: ppjv("01-dashboard.png"),
+        summary:
+          "Developer-ready screens for the dashboard, originator management, access controls and sign-in, with every state documented for the build.",
+        stats: [
+          { value: "8", label: "Frames shown" },
+          { value: "4", label: "Areas" },
+          { value: "Desktop", label: "Breakpoint" },
+        ],
+        pages: [
+          "Dashboard",
+          "Originators",
+          "Access controls",
+          "Navigation & sign-in",
+        ],
+        views: [
+          { page: "Dashboard", frame: "Dashboard", src: ppjv("01-dashboard.png"), width: 1512, height: 982, note: "Overview of pending, released and failed activity" },
+          { page: "Originators", frame: "Search originators", src: ppjv("02-search-originators.png"), width: 1512, height: 986, note: "Search with status chips" },
+          { page: "Originators", frame: "Originator details", src: ppjv("03-originator-details.png"), width: 1134, height: 1296, note: "Business, contact and branch info" },
+          { page: "Originators", frame: "Manage originators", src: ppjv("12-manage-originators.png"), width: 1512, height: 920, note: "Originator management" },
+          { page: "Access controls", frame: "Permissions grid", src: ppjv("06-permissions-grid.png"), width: 1134, height: 1927, note: "Roles and permission types" },
+          { page: "Access controls", frame: "Security search", src: ppjv("08-security-search.png"), width: 1512, height: 1089, note: "Access controls report search" },
+          { page: "Navigation & sign-in", frame: "Navigation", src: ppjv("13-navigation.png"), width: 1512, height: 920, note: "Side navigation" },
+          { page: "Navigation & sign-in", frame: "Sign in", src: ppjv("17-signin.png"), width: 1280, height: 924, note: "Credit union sign-in" },
+        ],
+      },
+      {
+        id: "handoff-b",
+        url: "https://www.figma.com/design/lCkuJJCNMUhCTFQAOSA85E/Handoff-file?node-id=6374-21083",
+        name: "PPJV – Handoff file (transfers)",
+        kind: "Handoff file",
+        cover: ppjv("15-transfer-summary.png"),
+        summary:
+          "Developer-ready screens for scheduling and reviewing transfers: transaction details, validation, recalls, upload summaries and error handling.",
+        stats: [
+          { value: "5", label: "Frames shown" },
+          { value: "2", label: "Areas" },
+          { value: "Desktop", label: "Breakpoint" },
+        ],
+        pages: [
+          "Transactions",
+          "Transfers",
+        ],
+        views: [
+          { page: "Transactions", frame: "Transaction details", src: ppjv("05-transaction-details.png"), width: 1134, height: 1486, note: "Full transaction record" },
+          { page: "Transactions", frame: "Confirm recall", src: ppjv("11-confirm-recall.png"), width: 1512, height: 986, note: "Recall confirmation" },
+          { page: "Transfers", frame: "Form validation", src: ppjv("09-form-validation.png"), width: 756, height: 1453, note: "Inline field validation" },
+          { page: "Transfers", frame: "Transfer summary", src: ppjv("15-transfer-summary.png"), width: 1134, height: 1265, note: "Upload file summary" },
+          { page: "Transfers", frame: "Transfer errors", src: ppjv("16-transfer-errors.png"), width: 1134, height: 1025, note: "Field-level errors" },
+        ],
+      },
+      {
+        id: "aurora",
+        url: "https://www.figma.com/design/8uI6GauoTwcBRWSV4yxBJb/PPJV-Design-System---Aurora?node-id=59136-18656",
+        name: "PPJV Design System – Aurora",
+        kind: "Design system",
+        cover: ppjv("18-aurora-colours.png"),
+        summary:
+          "Aurora, the design system I led for PPJV: foundations, buttons, fields, data tables and navigation shared by design and development.",
+        stats: [
+          { value: "6", label: "Frames shown" },
+          { value: "2", label: "Areas" },
+          { value: "Shared", label: "Design & dev" },
+        ],
+        pages: [
+          "Foundations",
+          "Components",
+        ],
+        views: [
+          { page: "Foundations", frame: "Colours", src: ppjv("18-aurora-colours.png"), width: 1280, height: 1833, note: "Colour foundations" },
+          { page: "Components", frame: "Buttons", src: ppjv("19-aurora-buttons.png"), width: 1959, height: 2117, note: "Variants and states" },
+          { page: "Components", frame: "Fields", src: ppjv("22-aurora-fields.png"), width: 889, height: 1860, note: "Inputs and validation" },
+          { page: "Components", frame: "Data table", src: ppjv("20-aurora-table.png"), width: 1588, height: 2008, note: "Sort, filter and status" },
+          { page: "Components", frame: "Navigation", src: ppjv("21-aurora-nav.png"), width: 1512, height: 986, note: "Header and dashboard" },
+          { page: "Components", frame: "Side navigation", src: ppjv("23-aurora-sidenav.png"), width: 2521, height: 1318, note: "States" },
+        ],
+      },
+    ],
+  },
   gom: {
     note:
       "Three of the working files behind Manitoba eLicensing: the design library, the portal product file and a sprint handoff file. The page lists, sizes and frames below are exported directly from Figma. The files themselves are private to the client.",

@@ -9,10 +9,16 @@ import { FigmaSection } from "../components/FigmaSection";
 import { WalmartOriginSection } from "../components/WalmartOriginSection";
 import { AnovaComponentsSection } from "../components/AnovaComponentsSection";
 import { GomResearchSection } from "../components/GomResearchSection";
+import { WestjetFlowsSection } from "../components/WestjetFlowsSection";
+import { WestjetResearchSection } from "../components/WestjetResearchSection";
 import { YmcaResearchSection } from "../components/YmcaResearchSection";
 import { YmcaFlowsSection } from "../components/YmcaFlowsSection";
 import { YmcaDesignProcessSection } from "../components/YmcaDesignProcessSection";
 import { YmcaCommunicationSection } from "../components/YmcaCommunicationSection";
+import { PpjvResearchSection } from "../components/PpjvResearchSection";
+import { PpjvFlowsSection } from "../components/PpjvFlowsSection";
+import { PpjvDesignProcessSection } from "../components/PpjvDesignProcessSection";
+import { PpjvCommunicationSection } from "../components/PpjvCommunicationSection";
 import { GomFlowsSection } from "../components/GomFlowsSection";
 import { GomDesignProcessSection } from "../components/GomDesignProcessSection";
 import { GomCommunicationSection } from "../components/GomCommunicationSection";
@@ -351,7 +357,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomResearchSection />}
 
         {/* Competitors: above media grid */}
-        {project.slug !== "gom" && project.slug !== "ymca" && project.competitors && project.competitors.length > 0 && (
+        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.competitors && project.competitors.length > 0 && (
           <CompetitorsSection
             productName={project.shortTitle}
             intro={project.competitorsIntro}
@@ -370,10 +376,16 @@ export function ProjectPage() {
         {/* Research conclusions: synthesis from competitors + mood, above results */}
         {project.slug === "gom" && <GomFlowsSection />}
         {project.slug === "ymca" && <YmcaResearchSection />}
+        {project.slug === "westjet" && <WestjetResearchSection />}
+        {project.slug === "westjet" && <WestjetFlowsSection />}
+        {project.slug === "ppjv" && <PpjvResearchSection />}
+        {project.slug === "ppjv" && <PpjvFlowsSection />}
+        {project.slug === "ppjv" && <PpjvDesignProcessSection pages={project.mediaGrid ?? []} />}
+        {project.slug === "ppjv" && <PpjvCommunicationSection />}
         {project.slug === "ymca" && <YmcaFlowsSection />}
         {project.slug === "ymca" && <YmcaDesignProcessSection />}
         {project.slug === "ymca" && <YmcaCommunicationSection />}
-        {project.slug !== "gom" && project.slug !== "ymca" && project.researchConclusions && (
+        {project.slug !== "gom" && project.slug !== "ymca" && project.slug !== "ppjv" && project.slug !== "westjet" && project.researchConclusions && (
           <ResearchConclusionsSection
             productName={project.shortTitle}
             conclusions={project.researchConclusions}
@@ -387,7 +399,7 @@ export function ProjectPage() {
         {project.slug === "gom" && <GomCommunicationSection />}
 
         {/* Design system (corporates) or wireframes (websites / startups). Hidden on GOM. */}
-        {project.slug === "gom" || project.slug === "ymca" ? null : project.designSystem ? (
+        {project.slug === "gom" || project.slug === "ymca" || project.slug === "ppjv" || project.slug === "westjet" ? null : project.designSystem ? (
           <DesignSystemSection
             productName={project.shortTitle}
             board={project.designSystem as DesignSystemBoard}
@@ -415,7 +427,7 @@ export function ProjectPage() {
 
         {/* Media grid: images/videos when provided, otherwise empty placeholders.
             GOM shows these inside the design process section instead. */}
-        {project.slug !== "gom" && (
+        {project.slug !== "gom" && project.slug !== "ppjv" && (
         <section className="page-gutter border-b border-border py-16 md:py-24">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"
