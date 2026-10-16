@@ -6133,4 +6133,181 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  image: p("sewer-squad", "01-hero.png"),
  closing: "A plumbing company should feel like someone on the way, not a contact form that waits until morning.",
  },
+ ozint: {
+ impact:
+ "Designed and developed ozintsecurity.com end to end, giving OZINT Security Group a premium digital presence for its Overwatch™ residential protection program, services, intel reports, careers and lead capture.",
+ client: "OZINT Security Group",
+ timeline: "Full-stack developer · Design to launch · live at ozintsecurity.com",
+ team: "Full-Stack Developer · OZINT leadership and operations team",
+ tools: [
+ "Webflow",
+ "Custom JavaScript",
+ "CMS",
+ "Responsive front end",
+ "Forms & lead capture",
+ "SEO",
+ "Analytics (GA4, GTM, Meta Pixel)",
+ ],
+ liveUrl: "https://www.ozintsecurity.com/",
+ context:
+ "OZINT Security Group started as a discreet private protection and executive security firm in Toronto. As demand grew, the team launched Overwatch™, a zone-based residential protection program that combines elite patrol units, AI-supported surveillance and a 24/7 Command Centre. The company needed a website that felt as precise and serious as its field teams, and that could turn visitors into consultations.",
+ goals: [
+ "Present OZINT as a modern, elite security group, not a generic guard company",
+ "Explain Overwatch™ clearly: patrols, AI surveillance and Command Centre working as one system",
+ "Give every service division its own page: private, corporate, investigations, events and armoured transport",
+ "Turn interest into action with Book a Call, consultation and newsletter forms",
+ "Publish reports and neighbourhood security articles through a CMS for SEO",
+ "Support recruiting with a careers section built around OZINT's personnel standards",
+ ],
+ research: [
+ {
+ title: "Trust before anything else",
+ description:
+ "Security is bought on trust. Visitors need to see discipline, real people and real standards, like vetted officers with military, tactical or MMA backgrounds, before they book a call.",
+ },
+ {
+ title: "One system, many layers",
+ description:
+ "Overwatch™ is easy to misunderstand as just patrols or just cameras. The site had to show three integrated layers of protection working together in real time.",
+ },
+ {
+ title: "Local and timely",
+ description:
+ "Toronto homeowners care about what is happening on their street. Live calls-for-service data, neighbourhood reports and localized advisories make the service feel relevant right now.",
+ },
+ ],
+ insights: [
+ "A dark, cinematic interface signals precision and discretion",
+ "Clear numbers sell the service: under 90-second response, 24/7 Command Centre, 3 layers of defence",
+ "Every page needs a path to a confidential consultation",
+ "Fresh, local content builds both credibility and search traffic",
+ "The officers are the product, so the team deserves its own section",
+ ],
+ solutions: [
+ {
+ title: "Overwatch™ program page",
+ description:
+ "A dedicated page explaining the membership program, response times, continuous coverage and the elite experience, with a live Toronto calls-for-service feed for real-time context.",
+ },
+ {
+ title: "Service divisions",
+ description:
+ "A services hub and pages for private street patrols, private, corporate and event security, private investigations and armoured transport, all under one command structure.",
+ },
+ {
+ title: "Reports & intel CMS",
+ description:
+ "A reports section powered by the CMS, publishing residential security guides and neighbourhood articles that support SEO and position OZINT as an expert voice.",
+ },
+ {
+ title: "Lead capture everywhere",
+ description:
+ "Book a Call, a confidential consultation form with service selection, a postal-code intel signup and a security network newsletter, each with success and error states.",
+ },
+ {
+ title: "Careers & personnel standards",
+ description:
+ "A careers page and personnel standards that show how officers are selected and trained, supporting both trust with clients and recruiting.",
+ },
+ {
+ title: "Responsive, measurable build",
+ description:
+ "A fully responsive front end with analytics and marketing tags (GA4, Google Tag Manager, Meta Pixel) so the team can measure campaigns and conversions.",
+ },
+ ],
+ learnings: [
+ "As a full-stack developer, owning the whole build meant every decision, from layout to forms to tracking, served one goal: booking consultations.",
+ "For a security brand, restraint is a feature. Fewer, stronger messages build more trust than more content.",
+ "Content that stays fresh, like live data and reports, keeps a site useful long after launch.",
+ ],
+ metrics: [
+ { value: "<90s", label: "Patrol response, communicated across the site" },
+ { value: "5+", label: "Service divisions, each with its own page" },
+ { value: "Live", label: "Production site at ozintsecurity.com" },
+ ],
+ overview:
+ "I was the full-stack developer of ozintsecurity.com for OZINT Security Group, a Toronto private protection and security company. I took the website from structure to launch: building the responsive front end, the Overwatch™ program and service pages, the reports CMS, careers, contact and newsletter forms, the live calls-for-service integration, and the analytics setup that lets the team measure leads.",
+ challenge:
+ "OZINT needed to explain a new kind of residential security, a membership program that combines patrol units, AI surveillance and a Command Centre, while still presenting its private, corporate and investigation services. The site had to feel elite and discreet, build trust quickly, and move visitors toward a confidential consultation.",
+ process: [
+ {
+ phase: "01",
+ title: "Structure & content",
+ description:
+ "Mapped the site around OZINT's offer: Overwatch™, five service divisions, about, reports, careers and contact, with a consultation path on every page.",
+ },
+ {
+ phase: "02",
+ title: "Front-end build",
+ description:
+ "Built a dark, cinematic, fully responsive interface with motion, layered sections and clear proof points like response times and coverage.",
+ },
+ {
+ phase: "03",
+ title: "CMS & integrations",
+ description:
+ "Set up the reports CMS, a live Toronto calls-for-service feed, and forms for consultations, intel signups and the security network newsletter.",
+ },
+ {
+ phase: "04",
+ title: "SEO & analytics",
+ description:
+ "Structured pages and articles for search, and connected GA4, Google Tag Manager and Meta Pixel to track campaigns and conversions.",
+ },
+ {
+ phase: "05",
+ title: "Launch & iterate",
+ description:
+ "Launched the live site and kept improving it with new reports, service updates and refinements based on how visitors use it.",
+ },
+ ],
+ deliverables: [
+ "Full-stack website build, design to launch",
+ "Responsive front end for desktop, tablet and mobile",
+ "Overwatch™ program and service division pages",
+ "Reports and articles CMS",
+ "Live calls-for-service integration",
+ "Consultation, intel signup and newsletter forms",
+ "SEO structure and analytics setup",
+ ],
+ outcomes: [
+ "A live, premium website for OZINT Security Group",
+ "A clear story for Overwatch™ and every service division",
+ "Consultation and newsletter paths on every page",
+ "A CMS that lets the team publish reports and grow search traffic",
+ ],
+ gallery: [
+ {
+ type: "image",
+ src: p("ozint", "01-hero.png"),
+ caption: "OZINT Security Group, ozintsecurity.com",
+ },
+ ],
+ narrative: [
+ {
+ eyebrow: "The client",
+ title: "From discreet protection to a public program",
+ body: [
+ "OZINT began as a private protection and executive security firm, working quietly behind the scenes for families, principals and sensitive operations.",
+ "With growing security concerns in Toronto communities, the team created Overwatch™, bringing professional protective standards to whole neighbourhoods. That meant OZINT needed to be visible, and its website had to carry that shift.",
+ ],
+ },
+ {
+ eyebrow: "Full stack",
+ title: "One developer, the whole build",
+ body: [
+ "I owned the website end to end: structure, responsive front end, CMS, forms, integrations and analytics.",
+ "That made it possible to keep every part of the site pointed at the same goal, building trust and booking confidential consultations.",
+ ],
+ bullets: [
+ "Overwatch™ → services → proof → consultation",
+ "Live data and fresh reports keep the site relevant",
+ "Every page has a path to Book a Call",
+ ],
+ },
+ ],
+ image: p("ozint", "01-hero.png"),
+ closing:
+ "Security is sold on trust. The website's job was to make OZINT's discipline, precision and response visible before the first call.",
+ },
 };

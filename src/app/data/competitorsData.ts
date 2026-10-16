@@ -844,4 +844,34 @@ export const competitorsData: Record<
       },
     ],
   },
+  ozint: {
+    intro:
+      "Private security in Toronto competes with national guard companies, alarm and camera providers, and smart-home security.",
+    competitors: [
+      {
+        name: "GardaWorld",
+        focus: "National security services",
+        note: "Large-scale guarding and cash services, strong on scale but less personal.",
+        url: "https://www.garda.com/",
+      },
+      {
+        name: "Paladin Security",
+        focus: "Canadian security company",
+        note: "Broad commercial and residential security offering across Canada.",
+        url: "https://paladinsecurity.com/",
+      },
+      {
+        name: "ADT",
+        focus: "Alarms & monitoring",
+        note: "Monitored alarm systems that set expectations for 24/7 monitoring.",
+        url: "https://www.adt.ca/",
+      },
+      {
+        name: "Ring",
+        focus: "Smart-home cameras",
+        note: "Consumer cameras and neighbourhood alerts that homeowners already know.",
+        url: "https://ring.com/",
+      },
+    ],
+  },
 };

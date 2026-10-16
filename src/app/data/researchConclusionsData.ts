@@ -403,4 +403,18 @@ export const researchConclusionsData: Record<string, ResearchConclusions> = {
     ],
     bridge: "The conversational results below follow that competitive and mood research.",
   },
+  ozint: {
+    lead: "Security peers compete on scale, monitoring and gadgets. Mood research kept OZINT dark, calm and precise, so the site feels elite rather than loud.",
+    competitive: [
+      "GardaWorld and Paladin sell scale; ADT and Ring sell devices and monitoring.",
+      "OZINT's difference is people plus system: vetted officers, AI surveillance and a Command Centre working as one.",
+      "Clear proof points, like under 90-second response, matter more than long feature lists.",
+    ],
+    atmosphere: [
+      "Night-ops black and signal violet framed the brand as discreet and modern.",
+      "Discipline, Precision and Response became the verbal system.",
+      "Lines and mesh textures echo zones, grids and surveillance without feeling cold.",
+    ],
+    bridge: "Those conclusions shaped the full-stack build below.",
+  },
 };

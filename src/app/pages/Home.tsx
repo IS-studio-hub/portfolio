@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Nav } from "../components/Nav";
 import { Seo } from "../components/Seo";
-import { SITE, corporateProjects, startupProjects, websiteProjects, projects, type Project } from "../data/projects";
+import { SITE, corporateProjects, developerProjects, startupProjects, websiteProjects, projects, type Project } from "../data/projects";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { assetPath } from "../lib/assetPath";
 
@@ -12,6 +12,7 @@ const SECTION_NAV = [
   { id: "corporates", label: "UX/UI specialist" },
   { id: "websites", label: "One Man Show" },
   { id: "startups", label: "Creative Director" },
+  { id: "developer", label: "Developer · Full Stack" },
 ] as const;
 
 function StatBlock({ value, label }: { value: number | string; label: string }) {
@@ -638,6 +639,12 @@ export function Home() {
                 title="Creative Director"
                 description="Startups and new products where I set the creative direction: shaping the brand and product vision, leading the design and taking ideas from zero to a first release."
                 items={startupProjects}
+              />
+              <ProjectGroup
+                id="developer"
+                title="Developer · Full Stack"
+                description="Websites I built end to end as a full-stack developer: front end, CMS, forms, integrations and analytics, from first structure to a live production site."
+                items={developerProjects}
               />
             </div>
           </div>

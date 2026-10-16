@@ -1742,6 +1742,27 @@ const rawProjects = [
  "A service brand that starts with a conversation",
  ],
  },
+ {
+ slug: "ozint",
+ title: "OZINT Security Group",
+ shortTitle: "OZINT Security",
+ subtitle: "Building a full-stack website for a modern private security group",
+ description:
+ "Full-stack development of ozintsecurity.com for OZINT Security Group: a dark, premium site for the Overwatch™ residential protection program, services, reports, careers and lead capture.",
+ year: "2026",
+ role: "Full-Stack Developer",
+ tags: ["Full stack", "Webflow", "Security", "Lead generation"],
+ accent: "#8B7CF6",
+ gridSpan: "half",
+ image: assetPath("/projects/ozint/card.png"),
+ gallery: [
+ {
+ type: "image" as const,
+ src: assetPath("/projects/ozint/01-hero.png"),
+ caption: "OZINT Security Group, ozintsecurity.com",
+ },
+ ],
+ },
 ];
 
 /** Home page section order. */
@@ -1785,6 +1806,10 @@ export const STARTUP_SLUGS = [
  "first-principles",
 ] as const;
 
+export const DEVELOPER_SLUGS = [
+ "ozint",
+] as const;
+
 const bySlug = (list: readonly string[]) =>
  list
  .map((slug) => projects.find((p) => p.slug === slug))
@@ -1816,7 +1841,7 @@ export const projects: Project[] = (() => {
  ...(figmaShowcase ? { figmaShowcase } : {}),
  };
  }) as Project[];
- const order = [...WEBSITE_SLUGS, ...STARTUP_SLUGS, ...CORPORATE_SLUGS];
+ const order = [...WEBSITE_SLUGS, ...STARTUP_SLUGS, ...CORPORATE_SLUGS, ...DEVELOPER_SLUGS];
  const ordered = order
  .map((slug) => mapped.find((p) => p.slug === slug))
  .filter((p): p is Project => Boolean(p));
@@ -1827,6 +1852,7 @@ export const projects: Project[] = (() => {
 export const websiteProjects = bySlug(WEBSITE_SLUGS);
 export const corporateProjects = bySlug(CORPORATE_SLUGS);
 export const startupProjects = bySlug(STARTUP_SLUGS);
+export const developerProjects = bySlug(DEVELOPER_SLUGS);
 
 export function getProject(slug: string): Project | undefined {
  // Keep old /project/obs links working after the CH4PP!3 rename.

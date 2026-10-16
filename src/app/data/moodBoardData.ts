@@ -796,4 +796,30 @@ export const moodBoardData: Record<string, MoodBoard> = {
       { name: "Dooogs live", note: "Product reference", url: "https://is-studio-hub.github.io/dooogs/en" },
     ],
   },
+  ozint: {
+    note: "Night operations: command-centre black, signal violet and steel white, calm, precise and discreet.",
+    colors: [
+      { hex: "#08070E", label: "Night ops" },
+      { hex: "#8B7CF6", label: "Signal" },
+      { hex: "#C9C2FF", label: "Radar" },
+      { hex: "#F5F3FF", label: "Steel white" },
+      { hex: "#1E1B2E", label: "Command" },
+    ],
+    words: ["Discipline", "Precision", "Response", "Zone", "Overwatch"],
+    textures: ["lines", "mesh", "dots"],
+    fonts: [
+      { name: "Command Sans", role: "UI", sample: "Real security in real time", stack: "system-ui, sans-serif" },
+      { name: "Wide Caps", role: "Labels", sample: "STRATEGIC SECURITY", stack: "Arial, Helvetica, sans-serif" },
+      { name: "Ops Mono", role: "Data", sample: "PATROL UNIT · ACTIVE", stack: "ui-monospace, Menlo, monospace" },
+    ],
+    assets: [
+      { type: "image", label: "Zone radar", note: "Overwatch signal", src: "projects/ozint/card.png" },
+      { type: "image", label: "Command view", note: "Night atmosphere", src: "projects/ozint/01-hero.png" },
+    ],
+    references: [
+      { name: "OZINT live", note: "Production site", url: "https://www.ozintsecurity.com/" },
+      { name: "GardaWorld", note: "Industry reference", url: "https://www.garda.com/" },
+      { name: "Ring", note: "Consumer security reference", url: "https://ring.com/" },
+    ],
+  },
 };

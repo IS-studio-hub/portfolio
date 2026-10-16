@@ -441,7 +441,7 @@ export function ProjectPage() {
 
         {/* Media grid: images/videos when provided, otherwise empty placeholders.
             GOM shows these inside the design process section instead. */}
-        {project.slug !== "gom" && project.slug !== "ppjv" && project.slug !== "polard" && (
+        {project.slug !== "gom" && project.slug !== "ppjv" && project.slug !== "polard" && !(project.slug === "ozint" && !project.mediaGrid?.length) && (
         <section className="page-gutter border-b border-border py-16 md:py-24">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"
