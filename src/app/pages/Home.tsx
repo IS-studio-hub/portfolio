@@ -115,7 +115,7 @@ const CARD_GROUPS: CardGroup[] = [
     label: "CSC Generation",
     title: "CSC Generation · 3 brands",
     description:
-      "As User Experience Lead at CSC Generation, I led UX and design systems across three retail brands: One Kings Lane, Sur La Table and Z Gallerie. Click to open the brands.",
+      "As Design Systems Lead at CSC Generation, I led UX and design systems across three retail brands: One Kings Lane, Sur La Table and Z Gallerie. Click to open the brands.",
     year: "2020 – 2022",
     tags: ["Design systems", "Ecommerce", "UX Lead"],
   },
@@ -125,7 +125,7 @@ const CARD_GROUPS: CardGroup[] = [
     label: "Canadian Tire Corporation",
     title: "Canadian Tire Corporation · 4 brands",
     description:
-      "As Product and AI Interface Designer at Canadian Tire Corporation, I worked across four of its retail brands: Canadian Tire, Mark's, Sport Chek and Party City. Click to open the brands.",
+      "As Senior Product Designer at Canadian Tire Corporation, I worked across four of its retail brands: Canadian Tire, Mark's, Sport Chek and Party City. Click to open the brands.",
     year: "2022 – 2024",
     tags: ["Product design", "AI interfaces", "Ecommerce"],
   },
@@ -317,7 +317,7 @@ type ExperienceItem = {
 const EXPERIENCE: ExperienceItem[] = [
   {
     dates: "Mar 2024 – Present",
-    title: "Senior Consultant, UX Lead",
+    title: "Experience Lead",
     company: "CGI",
     url: "https://www.cgi.com",
     description:
@@ -326,7 +326,7 @@ const EXPERIENCE: ExperienceItem[] = [
   },
   {
     dates: "Jan 2022 – Mar 2024",
-    title: "Senior Product and AI Designer",
+    title: "Senior Product Designer",
     company: "Canadian Tire Corporation",
     url: "https://www.canadiantire.ca",
     description:
@@ -335,7 +335,7 @@ const EXPERIENCE: ExperienceItem[] = [
   },
   {
     dates: "Feb 2020 – Jan 2022",
-    title: "Design System Lead",
+    title: "Design Systems Lead",
     company: "CSC Generation",
     url: "https://www.cscgeneration.com",
     description:
@@ -344,7 +344,7 @@ const EXPERIENCE: ExperienceItem[] = [
   },
   {
     dates: "Aug 2017 – Feb 2020",
-    title: "AI/AR Designer & UX Researcher",
+    title: "Product Designer Lead",
     company: "Walmart Global Tech",
     url: "https://tech.walmart.com",
     description:
@@ -352,13 +352,13 @@ const EXPERIENCE: ExperienceItem[] = [
     tags: ["AI/AR", "Design Systems", "UX Research", "Product Design", "E-commerce"],
   },
   {
-    dates: "Jan 2015 – Jun 2017",
-    title: "Senior UX/UI Designer and Developer",
-    company: "NEWPAN",
-    url: "https://www.linkedin.com/company/newpan",
+    dates: "Jul 2016 – Jul 2019",
+    title: "UX/UI Designer & Web Developer",
+    company: "AndromediA",
+    url: "https://www.andromedia.co.il",
     description:
-      "Newpan is an importer for multiple brands, such as Toshiba, Grundig, Bose, KitchenAid and more. I worked on creating websites and web systems to support marketing processes. After a year, I built a team of five people, which I led, to handle SEO, PPC, web development and design, and marketing design.",
-    tags: ["UX/UI", "Web Design", "Web Development", "Marketing", "Team Lead"],
+      "Designed and developed user interfaces, websites and digital campaign pages for AndromediA’s clients, working across UX, visual design and front-end implementation.",
+    tags: ["UX/UI", "Web Design", "Web Development"],
   },
 ];
 
@@ -605,7 +605,7 @@ export function Home() {
                   delivery.
                 </p>
                 <p>
-                  Currently, I’m a Senior Consultant and UX Lead at CGI, working across research,
+                  Currently, I’m an Experience Lead at CGI, working across research,
                   product flows, prototyping, accessibility, design systems, and implementation with
                   product and engineering teams.
                 </p>
