@@ -316,7 +316,7 @@ type ExperienceItem = {
 
 const EXPERIENCE: ExperienceItem[] = [
   {
-    dates: "2024 – Present",
+    dates: "Mar 2024 – Present",
     title: "Senior Consultant, UX Lead",
     company: "CGI",
     url: "https://www.cgi.com",
@@ -325,40 +325,40 @@ const EXPERIENCE: ExperienceItem[] = [
     tags: ["UX Leadership", "Product Design", "Research", "Prototyping", "Accessibility"],
   },
   {
-    dates: "2023 – Present",
-    title: "Product and AI Interfaces",
-    company: "IS Studio",
-    url: "https://is-studio-hub.github.io/portfolio/",
-    description:
-      "Lead end-to-end design and development of websites, landing pages, applications and AI tools for business clients. Translate business goals into product direction, user flows, prototypes, interface systems and functional digital products across UX research, web design, development and content strategy.",
-    tags: ["Product Design", "AI Interfaces", "Web Design", "Development", "Design Systems"],
-  },
-  {
-    dates: "2022 – 2024",
-    title: "Product and AI Interface Designer",
+    dates: "Jan 2022 – Mar 2024",
+    title: "Senior Product and AI Designer",
     company: "Canadian Tire Corporation",
     url: "https://www.canadiantire.ca",
     description:
-      "Designed product and AI interfaces for retail experiences, translating customer and business needs into clear product flows and scalable UI. Led UX research, product design, prototyping and testing from discovery through iteration while partnering with product, engineering and business teams.",
-    tags: ["AI Interfaces", "Retail UX", "Product Design", "Prototyping", "Research"],
+      "Designed product and AI interfaces for retail experiences, translating customer and business needs into clear product flows and scalable UI. Led UX research, product design, prototyping and testing from discovery through iteration. Partnered with product, engineering and business teams in a remote, cross-functional environment.",
+    tags: ["AI Interfaces", "Retail UX", "Product Design", "Prototyping", "UX Research"],
   },
   {
-    dates: "2020 – 2022",
-    title: "User Experience Lead",
+    dates: "Feb 2020 – Jan 2022",
+    title: "Design System Lead",
     company: "CSC Generation",
     url: "https://www.cscgeneration.com",
     description:
-      "Led UX strategy, user experience testing and product development for e-commerce brands. Created a master design system and brand-specific systems for One Kings Lane, Sur La Table and Z Gallerie, enabling consistent work across design and development teams.",
-    tags: ["Design Systems", "E-commerce", "UX Leadership", "Components", "Documentation"],
+      "Led UX strategy, user experience testing and product development for e-commerce brands. Created a master design system and brand-specific design systems for One Kings Lane, Sur La Table and Z Gallerie. Designed reusable components, organized system documentation and enabled consistent work across design and development teams.",
+    tags: ["Design Systems", "E-commerce", "UX Testing", "Components", "Documentation"],
   },
   {
-    dates: "2017 – 2020",
-    title: "AI/AR Design Lead & UX Researcher",
-    company: "Walmart",
-    url: "https://www.walmart.com",
+    dates: "Aug 2017 – Feb 2020",
+    title: "AI/AR Designer & UX Researcher",
+    company: "Walmart Global Tech",
+    url: "https://tech.walmart.com",
     description:
-      "Contributed to AI/AR dress-up features for Walmart Tech’s fashion customers as a B2B2C initiative. Took the experience from in-depth research through UX/UI design, collaborating with content, accessibility, development and product teams on virtual model-switching and dress-up interactions.",
-    tags: ["AI/AR", "Fashion UX", "Research", "Prototyping", "E-commerce"],
+      "I started as a solo product designer at a small startup (30 people) called Zeekit. I created the design system from scratch, worked on all the screen designs, worked with the front-end and back-end developers on implementation, and worked directly with the founders. I also wore the QA hat and tested the results. We were a white-label feature for fashion e-commerce, and we worked with Tommy Hilfiger, ASOS, Farfetch and more. After a year and a half, Walmart bought us for $90 million. I became the UX lead on Walmart’s team for AI/AR features and continued working with the rest of my team as Walmart employees.",
+    tags: ["AI/AR", "Design Systems", "UX Research", "Product Design", "E-commerce"],
+  },
+  {
+    dates: "Jan 2015 – Jun 2017",
+    title: "Senior UX/UI Designer and Developer",
+    company: "NEWPAN",
+    url: "https://www.linkedin.com/company/newpan",
+    description:
+      "Newpan is an importer for multiple brands, such as Toshiba, Grundig, Bose, KitchenAid and more. I worked on creating websites and web systems to support marketing processes. After a year, I built a team of five people, which I led, to handle SEO, PPC, web development and design, and marketing design.",
+    tags: ["UX/UI", "Web Design", "Web Development", "Marketing", "Team Lead"],
   },
 ];
 
