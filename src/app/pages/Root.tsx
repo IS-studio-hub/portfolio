@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { CustomCursor } from "../components/CustomCursor";
 import { ScrollToTop } from "../components/ScrollToTop";
+import { ContactPage } from "./ContactPage";
 import { Home } from "./Home";
 import { NotFound } from "./NotFound";
 import { ProjectPage } from "./ProjectPage";
@@ -12,6 +13,7 @@ export function Root() {
       <CustomCursor />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/project/:slug" element={<ProjectPage />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />

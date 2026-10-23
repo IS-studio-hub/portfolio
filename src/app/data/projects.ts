@@ -23,6 +23,9 @@ export const SITE = {
   name: "IS",
   title: "Product Designer",
   email: "hello@isexperience.house",
+  contactEmail: "itamarshamrik@outlook.com",
+  phone: "+16139226604",
+  phoneDisplay: "+1 613 922 6604",
   url: "https://alexreyes.design",
   bio: "I design digital products that feel obvious once you use them. Ten years across fintech, government, and consumer brands taught me that clarity beats clever every time.",
   seoDescription:

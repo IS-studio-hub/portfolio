@@ -87,13 +87,13 @@ export function Nav({ variant = "home" }: NavProps) {
           )}
         </nav>
 
-        <a
-          href={`mailto:${SITE.email}`}
+        <Link
+          to="/contact"
           className="rounded-full bg-accent px-4 py-2 font-mono text-xs font-medium uppercase tracking-wider text-black transition-transform hover:scale-105 md:px-5"
-          data-cursor="Say hi"
+          data-cursor="Contact"
         >
           Contact
-        </a>
+        </Link>
       </div>
     </header>
   );
