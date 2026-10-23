@@ -317,48 +317,57 @@ type ExperienceItem = {
 const EXPERIENCE: ExperienceItem[] = [
   {
     dates: "Mar 2024 – Present",
-    title: "Experience Lead",
+    title: "Design Engineer Lead",
     company: "CGI",
     url: "https://www.cgi.com",
     description:
       "Lead UX and product design engagements by aligning user needs, business objectives and delivery constraints. Plan and synthesize research, define journeys and product flows, and develop prototypes that clarify product direction. Guide stakeholder collaboration, accessibility decisions and design-to-development handoff across remote teams.",
-    tags: ["UX Leadership", "Product Design", "Research", "Prototyping", "Accessibility"],
+    tags: ["Figma", "Prototyping"],
   },
   {
-    dates: "Jan 2022 – Mar 2024",
-    title: "Senior Product Designer",
+    dates: "Mar 2023 – Mar 2024",
+    title: "Senior Design Engineer",
     company: "Canadian Tire Corporation",
     url: "https://www.canadiantire.ca",
     description:
       "Designed product and AI interfaces for retail experiences, translating customer and business needs into clear product flows and scalable UI. Led UX research, product design, prototyping and testing from discovery through iteration. Partnered with product, engineering and business teams in a remote, cross-functional environment.",
-    tags: ["AI Interfaces", "Retail UX", "Product Design", "Prototyping", "UX Research"],
+    tags: ["UX Research", "Product Design"],
   },
   {
-    dates: "Feb 2020 – Jan 2022",
-    title: "Design Systems Lead",
+    dates: "Jan 2022 – Mar 2023",
+    title: "Design Engineer Lead",
     company: "CSC Generation",
     url: "https://www.cscgeneration.com",
     description:
-      "Led UX strategy, user experience testing and product development for e-commerce brands. Created a master design system and brand-specific design systems for One Kings Lane, Sur La Table and Z Gallerie. Designed reusable components, organized system documentation and enabled consistent work across design and development teams.",
-    tags: ["Design Systems", "E-commerce", "UX Testing", "Components", "Documentation"],
+      "Led UX strategy, user experience testing and product development for ecommerce brands. Created a master design system and brand-specific design systems for One Kings Lane, Sur La Table and Z Gallerie. Designed reusable components, organized system documentation and enabled consistent work across design and development teams.",
+    tags: ["User Experience Testing", "Product Concept"],
   },
   {
-    dates: "Aug 2017 – Feb 2020",
-    title: "Product Designer Lead",
+    dates: "Aug 2019 – Jan 2022",
+    title: "Design Engineer Lead",
     company: "Walmart Global Tech",
     url: "https://tech.walmart.com",
     description:
       "I started as a solo product designer at a small startup (30 people) called Zeekit. I created the design system from scratch, worked on all the screen designs, worked with the front-end and back-end developers on implementation, and worked directly with the founders. I also wore the QA hat and tested the results. We were a white-label feature for fashion e-commerce, and we worked with Tommy Hilfiger, ASOS, Farfetch and more. After a year and a half, Walmart bought us for $90 million. I became the UX lead on Walmart’s team for AI/AR features and continued working with the rest of my team as Walmart employees.",
-    tags: ["AI/AR", "Design Systems", "UX Research", "Product Design", "E-commerce"],
+    tags: ["UX Research", "Product Design"],
   },
   {
-    dates: "Jul 2016 – Jul 2019",
-    title: "UX/UI Designer & Web Developer",
+    dates: "Jul 2018 – Jul 2019",
+    title: "UX/UI Designer & Web developer",
     company: "AndromediA",
     url: "https://www.andromedia.co.il",
+    description: "",
+    tags: [],
+  },
+  {
+    dates: "Jan 2017 – Jun 2018",
+    title: "UX/UI Designer & Web developer",
+    company: "NEWPAN",
+    url: "https://www.linkedin.com/company/newpan",
+    previousTitles: ["Permanent Full-time"],
     description:
-      "Designed and developed user interfaces, websites and digital campaign pages for AndromediA’s clients, working across UX, visual design and front-end implementation.",
-    tags: ["UX/UI", "Web Design", "Web Development"],
+      "Newpan is an importer for multiple brands, such as Toshiba, Grundig, Bose, KitchenAid and more. I worked on creating websites to support marketing processes. After a year, I built a team of 5 people, which I led, to handle SEO, web development and design, and marketing design.",
+    tags: ["Illustration", "Social Media"],
   },
 ];
 
@@ -441,19 +450,23 @@ function ExperienceList() {
                     ))}
                   </ul>
                 )}
-                <p className="mt-3 text-sm leading-relaxed text-muted md:text-[15px]">
-                  {item.description}
-                </p>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <li
-                      key={tag}
-                      className="rounded-full border border-border bg-bg/40 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-muted transition-colors group-hover:border-accent/30 group-hover:text-accent"
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
+                {item.description ? (
+                  <p className="mt-3 text-sm leading-relaxed text-muted md:text-[15px]">
+                    {item.description}
+                  </p>
+                ) : null}
+                {item.tags.length > 0 ? (
+                  <ul className="mt-4 flex flex-wrap gap-2">
+                    {item.tags.map((tag) => (
+                      <li
+                        key={tag}
+                        className="rounded-full border border-border bg-bg/40 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-muted transition-colors group-hover:border-accent/30 group-hover:text-accent"
+                      >
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </div>
           </li>
