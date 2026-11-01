@@ -1779,10 +1779,7 @@ export const WEBSITE_SLUGS = [
  "telaviv",
  "dooogs",
  "sewer-squad",
- "weebo",
- "CHaPPie",
  "ava",
- "50nny",
 ] as const;
 
 export const CORPORATE_SLUGS = [
@@ -1813,13 +1810,16 @@ export const DEVELOPER_SLUGS = [
  "ozint",
 ] as const;
 
+/** Projects removed from the site: no card and no page (their URLs go to 404). */
+const REMOVED_SLUGS = new Set<string>(["weebo", "CHaPPie", "50nny"]);
+
 const bySlug = (list: readonly string[]) =>
  list
  .map((slug) => projects.find((p) => p.slug === slug))
  .filter((p): p is Project => Boolean(p));
 
 export const projects: Project[] = (() => {
- const mapped = rawProjects.map((base) => {
+ const mapped = rawProjects.filter((base) => !REMOVED_SLUGS.has(base.slug)).map((base) => {
  const extras = caseStudyData[base.slug];
  const competitive = competitorsData[base.slug];
  const mood = moodBoardData[base.slug];

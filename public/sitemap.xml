@@ -76,16 +76,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alexreyes.design/project/weebo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alexreyes.design/project/CHaPPie</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://alexreyes.design/project/gigz</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -97,11 +87,6 @@
   </url>
   <url>
     <loc>https://alexreyes.design/project/ava</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alexreyes.design/project/50nny</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
