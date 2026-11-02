@@ -6276,6 +6276,14 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  "Consultation and newsletter paths on every page",
  "A CMS that lets the team publish reports and grow search traffic",
  ],
+ mediaGrid: [
+ { type: "image", src: p("ozint", "grid/01-hero.jpg"), caption: "Homepage hero: A New Era of Security & Protection" },
+ { type: "image", src: p("ozint", "grid/02-overwatch.jpg"), caption: "Overwatch™ zone-based residential protection" },
+ { type: "image", src: p("ozint", "grid/03-services.jpg"), caption: "Service divisions: corporate, investigations, private and event security" },
+ { type: "image", src: p("ozint", "grid/04-recruit.jpg"), caption: "Discipline. Precision. Integrity. Personnel and protection standards" },
+ { type: "image", src: p("ozint", "grid/05-officers.jpg"), caption: "Protection officers carousel" },
+ { type: "image", src: p("ozint", "grid/06-app.jpg"), caption: "OZINT app intel signup and community newsletter" },
+ ],
  gallery: [
  {
  type: "image",

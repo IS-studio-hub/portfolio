@@ -446,7 +446,7 @@ export function ProjectPage() {
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {(project.slug === "sewer-squad"
               ? (project.mediaGrid ?? [])
-              : project.slug === "anova" || project.slug === "westjet"
+              : project.slug === "anova" || project.slug === "westjet" || project.slug === "ozint"
                 ? Array.from(
                     { length: Math.ceil((project.mediaGrid?.length ?? 0) / 2) * 2 },
                     (_, index) => project.mediaGrid?.[index],
