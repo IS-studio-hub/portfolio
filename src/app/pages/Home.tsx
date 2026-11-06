@@ -310,7 +310,6 @@ type ExperienceItem = {
   company: string;
   url?: string;
   previousTitles?: string[];
-  description: string;
   tags: string[];
 };
 
@@ -320,8 +319,6 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Design Engineer Lead",
     company: "CGI",
     url: "https://www.cgi.com",
-    description:
-      "Lead UX and product design engagements by aligning user needs, business objectives and delivery constraints. Plan and synthesize research, define journeys and product flows, and develop prototypes that clarify product direction. Guide stakeholder collaboration, accessibility decisions and design-to-development handoff across remote teams.",
     tags: ["Figma", "Prototyping"],
   },
   {
@@ -329,8 +326,6 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Senior Design Engineer",
     company: "Canadian Tire Corporation",
     url: "https://www.canadiantire.ca",
-    description:
-      "Designed product and AI interfaces for retail experiences, translating customer and business needs into clear product flows and scalable UI. Led UX research, product design, prototyping and testing from discovery through iteration. Partnered with product, engineering and business teams in a remote, cross-functional environment.",
     tags: ["UX Research", "Product Design"],
   },
   {
@@ -338,8 +333,6 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Design Engineer Lead",
     company: "CSC Generation",
     url: "https://www.cscgeneration.com",
-    description:
-      "Led UX strategy, user experience testing and product development for ecommerce brands. Created a master design system and brand-specific design systems for One Kings Lane, Sur La Table and Z Gallerie. Designed reusable components, organized system documentation and enabled consistent work across design and development teams.",
     tags: ["User Experience Testing", "Product Concept"],
   },
   {
@@ -347,8 +340,6 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Design Engineer Lead",
     company: "Walmart Global Tech",
     url: "https://tech.walmart.com",
-    description:
-      "I started as a solo product designer at a small startup (30 people) called Zeekit. I created the design system from scratch, worked on all the screen designs, worked with the front-end and back-end developers on implementation, and worked directly with the founders. I also wore the QA hat and tested the results. We were a white-label feature for fashion e-commerce, and we worked with Tommy Hilfiger, ASOS, Farfetch and more. After a year and a half, Walmart bought us for $90 million. I became the UX lead on Walmart’s team for AI/AR features and continued working with the rest of my team as Walmart employees.",
     tags: ["UX Research", "Product Design"],
   },
   {
@@ -356,7 +347,6 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "UX/UI Designer & Web developer",
     company: "AndromediA",
     url: "https://www.andromedia.co.il",
-    description: "",
     tags: [],
   },
   {
@@ -365,8 +355,6 @@ const EXPERIENCE: ExperienceItem[] = [
     company: "NEWPAN",
     url: "https://www.linkedin.com/company/newpan",
     previousTitles: ["Permanent Full-time"],
-    description:
-      "Newpan is an importer for multiple brands, such as Toshiba, Grundig, Bose, KitchenAid and more. I worked on creating websites to support marketing processes. After a year, I built a team of 5 people, which I led, to handle SEO, web development and design, and marketing design.",
     tags: ["Illustration", "Social Media"],
   },
 ];
@@ -450,11 +438,6 @@ function ExperienceList() {
                     ))}
                   </ul>
                 )}
-                {item.description ? (
-                  <p className="mt-3 text-sm leading-relaxed text-muted md:text-[15px]">
-                    {item.description}
-                  </p>
-                ) : null}
                 {item.tags.length > 0 ? (
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
