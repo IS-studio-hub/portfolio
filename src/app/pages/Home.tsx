@@ -319,7 +319,7 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Design Engineer Lead",
     company: "CGI",
     url: "https://www.cgi.com",
-    tags: ["Development", "Leadership", "Strategy"],
+    tags: ["Development", "Leadership", "Strategy", "Presentation", "Design"],
   },
   {
     dates: "Mar 2023 – Mar 2024",
@@ -333,14 +333,14 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Design Engineer Lead",
     company: "CSC Generation",
     url: "https://www.cscgeneration.com",
-    tags: ["Development", "Leadership", "Strategy"],
+    tags: ["Development", "Leadership", "Strategy", "Presentation", "Design"],
   },
   {
     dates: "Aug 2019 – Jan 2022",
     title: "Design Engineer Lead",
     company: "Walmart Global Tech",
     url: "https://tech.walmart.com",
-    tags: ["Development", "Leadership", "Strategy"],
+    tags: ["Development", "Leadership", "Strategy", "Presentation", "Design"],
   },
   {
     dates: "Jul 2018 – Jul 2019",
