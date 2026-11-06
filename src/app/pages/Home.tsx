@@ -326,7 +326,7 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Senior Design Engineer",
     company: "Canadian Tire Corporation",
     url: "https://www.canadiantire.ca",
-    tags: ["UX Research", "Product Design"],
+    tags: ["UX Research", "Design", "Strategy", "Prototype", "Presentation"],
   },
   {
     dates: "Jan 2022 – Mar 2023",
