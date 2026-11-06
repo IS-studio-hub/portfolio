@@ -319,7 +319,7 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Design Engineer Lead",
     company: "CGI",
     url: "https://www.cgi.com",
-    tags: ["Figma", "Prototyping"],
+    tags: ["Development", "Leadership", "Strategy"],
   },
   {
     dates: "Mar 2023 – Mar 2024",
@@ -333,21 +333,21 @@ const EXPERIENCE: ExperienceItem[] = [
     title: "Design Engineer Lead",
     company: "CSC Generation",
     url: "https://www.cscgeneration.com",
-    tags: ["User Experience Testing", "Product Concept"],
+    tags: ["Development", "Leadership", "Strategy"],
   },
   {
     dates: "Aug 2019 – Jan 2022",
     title: "Design Engineer Lead",
     company: "Walmart Global Tech",
     url: "https://tech.walmart.com",
-    tags: ["UX Research", "Product Design"],
+    tags: ["Development", "Leadership", "Strategy"],
   },
   {
     dates: "Jul 2018 – Jul 2019",
     title: "UX/UI Designer & Web developer",
     company: "AndromediA",
     url: "https://www.andromedia.co.il",
-    tags: [],
+    tags: ["Design", "Development", "Strategy"],
   },
   {
     dates: "Jan 2017 – Jun 2018",
@@ -355,7 +355,7 @@ const EXPERIENCE: ExperienceItem[] = [
     company: "NEWPAN",
     url: "https://www.linkedin.com/company/newpan",
     previousTitles: ["Permanent Full-time"],
-    tags: ["Illustration", "Social Media"],
+    tags: ["Design", "Development", "Strategy"],
   },
 ];
 
