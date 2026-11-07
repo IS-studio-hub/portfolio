@@ -6133,6 +6133,103 @@ export const caseStudyData: Record<string, CaseStudyExtras> = {
  image: p("sewer-squad", "01-hero.png"),
  closing: "A plumbing company should feel like someone on the way, not a contact form that waits until morning.",
  },
+
+ "lonely-ghost": {
+ impact:
+ "Designed and shipped Lonely Ghost as a conversational storefront with Max as the host for product questions, brand story, contact and live calls.",
+ client: "IS Studio",
+ timeline: "Interactive website · 2026",
+ team: "Website Designer & Builder",
+ tools: ["Figma", "Conversational UI", "Ecommerce chat", "GitHub Pages"],
+ liveUrl: "https://is-studio-hub.github.io/AIweb/",
+ context:
+ "Lonely Ghost is a brand site led by Max, an AI assistant. Visitors can type or talk to learn what the brand offers, hear the story, get in touch or request a live call.",
+ goals: [
+ "Make shopping discovery feel like a conversation, not a catalog hunt",
+ "Lead with a memorable host and clear ask field for text or voice",
+ "Offer starter prompts that cover products, story, contact and calls",
+ "Ship a live experience",
+ ],
+ research: [
+ {
+ title: "Catalogs bury answers",
+ description:
+ "People arrive with one question. A host with suggested prompts creates momentum before the product grid.",
+ },
+ {
+ title: "Prompts as IA",
+ description:
+ "Starter chips (offer, story, contact, call) map the main jobs people bring to a brand site.",
+ },
+ ],
+ insights: [
+ "Character and voice carry as much of the product as the chat engine",
+ "Voice and live-call entry make the assistant feel present, not static",
+ "Bag and checkout can sit beside chat without breaking the conversation",
+ ],
+ solutions: [
+ {
+ title: "Host-led homepage",
+ description: "Centered Max with intro copy, starter prompts and an immediate ask pathway.",
+ image: p("lonely-ghost", "grid/01-hero.png"),
+ },
+ {
+ title: "Starter prompt system",
+ description: "Designed chat choices that open offer, story, contact and call threads.",
+ image: p("lonely-ghost", "grid/02-offer.png"),
+ },
+ {
+ title: "Voice and live call",
+ description: "Kept mic input and a call pathway visible so talking to Max feels part of the brand.",
+ image: p("lonely-ghost", "grid/04-contact.png"),
+ },
+ ],
+ learnings: [
+ "A host makes product questions feel like a conversation, not a catalog search",
+ "Starter prompts do half the information architecture for a brand assistant",
+ "Voice and live call keep the assistant feeling present, not static",
+ ],
+ metrics: [
+ { value: "Text + voice", label: "Ask Max any way" },
+ { value: "Live call", label: "Real-time follow-up" },
+ { value: "Bag", label: "Beside the chat" },
+ ],
+ mediaGrid: [
+ { type: "image", src: p("lonely-ghost", "grid/01-hero.png"), caption: "Homepage: Hey, I’m Max" },
+ { type: "image", src: p("lonely-ghost", "grid/02-offer.png"), caption: "What do you offer?" },
+ { type: "image", src: p("lonely-ghost", "grid/03-story.png"), caption: "Tell me your story" },
+ { type: "image", src: p("lonely-ghost", "grid/04-contact.png"), caption: "How can I get in touch?" },
+ ],
+ overview:
+ "I designed and built Lonely Ghost as a website that turns brand and product questions into a conversation with Max.",
+ challenge:
+ "A fashion brand site can feel like a brochure. This needed a host, clear prompts and paths into shopping and contact.",
+ process: [
+ { phase: "01", title: "Define the host", description: "Centered Max, intro copy and the ask field as the first composition." },
+ { phase: "02", title: "Map the jobs", description: "Designed starter prompts for offer, story, contact and live call." },
+ { phase: "03", title: "Ship the site", description: "Published the live experience on GitHub Pages." },
+ ],
+ deliverables: [
+ "Conversational brand website",
+ "Host character and prompt structure",
+ "Chat, voice and call pathways",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Lonely Ghost AI shopping experience",
+ "Clear entry into products, story and contact",
+ "A brand site that starts with a conversation",
+ ],
+ gallery: [
+ { type: "image", src: p("lonely-ghost", "grid/01-hero.png"), caption: "Homepage: Hey, I’m Max" },
+ { type: "image", src: p("lonely-ghost", "grid/02-offer.png"), caption: "What do you offer?" },
+ { type: "image", src: p("lonely-ghost", "grid/03-story.png"), caption: "Tell me your story" },
+ { type: "image", src: p("lonely-ghost", "grid/04-contact.png"), caption: "How can I get in touch?" },
+ ],
+ image: p("lonely-ghost", "01-hero.png"),
+ closing: "A brand site should feel like someone ready to talk, not a catalog waiting for a search.",
+ },
+
  ozint: {
  impact:
  "Designed and developed ozintsecurity.com end to end, giving OZINT Security Group a premium digital presence for its Overwatch™ residential protection program, services, intel reports, careers and lead capture.",

@@ -1746,6 +1746,60 @@ const rawProjects = [
  ],
  },
  {
+ slug: "lonely-ghost",
+ title: "Lonely Ghost",
+ shortTitle: "Lonely Ghost",
+ subtitle: "Max, an AI shop assistant you can talk to",
+ description:
+ "Interactive website for Lonely Ghost, where Max answers product questions, tells the brand story, helps with contact and can start a live call — by text or voice.",
+ year: "2026",
+ role: "Website Designer & Builder",
+ tags: ["Website", "AI Chat", "Ecommerce"],
+ accent: "#D4FF5E",
+ gridSpan: "half",
+ image: projectImg("lonely-ghost"),
+ gallery: [
+ {
+ type: "image" as const,
+ src: projectImg("lonely-ghost"),
+ caption: "Lonely Ghost: ask Max anything",
+ },
+ ],
+ liveUrl: "https://is-studio-hub.github.io/AIweb/",
+ overview:
+ "Designed and shipped Lonely Ghost as a conversational storefront: Max on screen, starter prompts, voice-ready chat and a path into live calls and checkout.",
+ challenge:
+ "Brand sites usually make people hunt for product answers. This needed to feel like talking to someone who knows Lonely Ghost, while still supporting shopping and contact.",
+ process: [
+ {
+ phase: "01",
+ title: "Put Max on screen",
+ description: "Centered the host character with clear intro copy, starter prompts and an ask field for text or voice.",
+ },
+ {
+ phase: "02",
+ title: "Design the shop paths",
+ description: "Mapped offers, brand story, contact, live call and bag/checkout into one conversation.",
+ },
+ {
+ phase: "03",
+ title: "Ship the experience",
+ description: "Published the live experience on GitHub Pages.",
+ },
+ ],
+ deliverables: [
+ "Conversational ecommerce website",
+ "Host-led chat and starter prompts",
+ "Voice and live-call pathways",
+ "Live production site",
+ ],
+ outcomes: [
+ "Live Lonely Ghost AI shopping experience",
+ "Clear paths into products, story, contact and calls",
+ "A brand site that starts with a conversation",
+ ],
+ },
+ {
  slug: "ozint",
  title: "OZINT Security Group",
  shortTitle: "OZINT Security",
@@ -1779,6 +1833,7 @@ export const WEBSITE_SLUGS = [
  "telaviv",
  "dooogs",
  "sewer-squad",
+ "lonely-ghost",
  "ava",
 ] as const;
 

@@ -444,7 +444,7 @@ export function ProjectPage() {
         {project.slug !== "gom" && project.slug !== "ppjv" && project.slug !== "polard" && !(project.slug === "ozint" && !project.mediaGrid?.length) && (
         <section className="page-gutter border-b border-border py-16 md:py-24">
           <div className="grid grid-cols-2 gap-4 md:gap-6">
-            {(project.slug === "sewer-squad"
+            {(project.slug === "sewer-squad" || project.slug === "lonely-ghost"
               ? (project.mediaGrid ?? [])
               : project.slug === "anova" || project.slug === "westjet" || project.slug === "ozint"
                 ? Array.from(
